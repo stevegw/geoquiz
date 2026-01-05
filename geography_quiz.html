@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v13.0</div>
+    <div class="version-info">v14.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -566,6 +566,11 @@
                 if (firstWrongQuestion) {
                     firstWrongQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
+
+                // Make sure Submit button is enabled and ready for resubmission
+                this.disabled = false;
+                this.textContent = 'Submit Quiz';
+                this.style.cursor = 'pointer';
 
                 // Stay on main quiz screen - don't show results
                 return;

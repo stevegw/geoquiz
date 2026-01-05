@@ -6,8 +6,16 @@ const urlsToCache = [
   './manifest.json'
 ];
 
+// Listen for SKIP_WAITING message
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
 // Install event - cache files
 self.addEventListener('install', event => {
+  console.log('Installing new service worker, version:', CACHE_VERSION);
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {

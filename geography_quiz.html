@@ -12,6 +12,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Geo Quiz">
 
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <!-- Manifest -->
     <link rel="manifest" href="manifest.json">
 
@@ -293,9 +298,57 @@
             font-weight: bold;
             margin-right: 5px;
         }
+
+        .update-banner {
+            background: #ffc107;
+            color: #000;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .update-banner button {
+            background: #000;
+            color: #ffc107;
+            border: none;
+            padding: 8px 20px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .update-banner button:hover {
+            background: #333;
+        }
+
+        .version-info {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.7em;
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
+    <div id="updateBanner" class="update-banner" style="display: none;">
+        New version available!
+        <button onclick="updateApp()">Update Now</button>
+    </div>
+
+    <div class="version-info">v3.0</div>
+
     <div class="quiz-container">
         <div class="header-controls">
             <h1>Geography Quiz</h1>
@@ -593,28 +646,49 @@
             }
         });
 
+        // Global variable for new worker
+        let newWorker;
+
+        function updateApp() {
+            if (newWorker) {
+                newWorker.postMessage({ type: 'SKIP_WAITING' });
+            }
+        }
+
         // Register service worker for PWA functionality
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
+                // Unregister all existing service workers first (for clean slate)
+                navigator.serviceWorker.getRegistrations().then(registrations => {
+                    console.log('Found', registrations.length, 'service workers');
+                });
+
                 navigator.serviceWorker.register('./service-worker.js')
                     .then(registration => {
                         console.log('Service Worker registered successfully:', registration.scope);
 
-                        // Check for updates every 60 seconds
+                        // Check for updates immediately and every 10 seconds
+                        registration.update();
                         setInterval(() => {
+                            console.log('Checking for updates...');
                             registration.update();
-                        }, 60000);
+                        }, 10000);
 
                         // Handle service worker updates
                         registration.addEventListener('updatefound', () => {
-                            const newWorker = registration.installing;
+                            newWorker = registration.installing;
+                            console.log('New service worker found, state:', newWorker.state);
 
                             newWorker.addEventListener('statechange', () => {
-                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                    // New service worker available, prompt user to refresh
-                                    if (confirm('A new version is available! Click OK to refresh and get the latest updates.')) {
-                                        newWorker.postMessage({ type: 'SKIP_WAITING' });
-                                        window.location.reload();
+                                console.log('Service worker state changed to:', newWorker.state);
+                                if (newWorker.state === 'installed') {
+                                    if (navigator.serviceWorker.controller) {
+                                        // New service worker available, show update banner
+                                        console.log('New version available!');
+                                        document.getElementById('updateBanner').style.display = 'block';
+                                    } else {
+                                        // First time installation
+                                        console.log('Service worker installed for the first time');
                                     }
                                 }
                             });
@@ -628,6 +702,7 @@
                 let refreshing = false;
                 navigator.serviceWorker.addEventListener('controllerchange', () => {
                     if (!refreshing) {
+                        console.log('Controller changed, reloading page');
                         refreshing = true;
                         window.location.reload();
                     }

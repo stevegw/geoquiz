@@ -31,7 +31,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
         }
 
         .quiz-container {
@@ -40,41 +40,99 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             max-width: 600px;
             width: 100%;
-            padding: 40px;
+            padding: 20px;
+        }
+
+        .header-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         h1 {
             color: #667eea;
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 2em;
+            margin: 0;
+            font-size: 1.5em;
+            flex: 1;
+        }
+
+        .font-toggle-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 0.85em;
+            border-radius: 5px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .font-toggle-btn:hover {
+            background: #5568d3;
         }
 
         .question-section {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .question {
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: bold;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
 
         .options {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 8px;
         }
 
         .option {
             background: #f5f5f5;
             border: 2px solid #e0e0e0;
             border-radius: 8px;
-            padding: 15px;
+            padding: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        /* Large font size mode */
+        body.large-font .quiz-container {
+            padding: 30px;
+        }
+
+        body.large-font h1 {
+            font-size: 2em;
+        }
+
+        body.large-font .question {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        body.large-font .option {
+            font-size: 1.1em;
+            padding: 15px;
+        }
+
+        body.large-font .question-section {
+            margin-bottom: 25px;
+        }
+
+        body.large-font button {
+            font-size: 1.1em;
+            padding: 15px 40px;
+        }
+
+        body.large-font .font-toggle-btn {
             font-size: 1em;
+            padding: 10px 18px;
         }
 
         .option:hover {
@@ -104,15 +162,15 @@
 
         .btn-container {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         button {
             background: #667eea;
             color: white;
             border: none;
-            padding: 15px 40px;
-            font-size: 1.1em;
+            padding: 12px 30px;
+            font-size: 0.95em;
             border-radius: 8px;
             cursor: pointer;
             transition: background 0.3s ease;
@@ -129,18 +187,28 @@
 
         .result {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: #f0f0f0;
             border-radius: 8px;
-            margin-top: 20px;
-            font-size: 1.2em;
+            margin-top: 15px;
+            font-size: 1em;
         }
 
         .score {
-            font-size: 2em;
+            font-size: 1.5em;
             font-weight: bold;
             color: #667eea;
+            margin: 15px 0;
+        }
+
+        body.large-font .score {
+            font-size: 2.2em;
             margin: 20px 0;
+        }
+
+        body.large-font .result {
+            font-size: 1.2em;
+            padding: 20px;
         }
 
         .hidden {
@@ -148,30 +216,50 @@
         }
 
         .review-section {
-            margin-top: 30px;
+            margin-top: 20px;
             text-align: left;
         }
 
         .review-item {
             background: white;
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
             border: 2px solid #e0e0e0;
         }
 
         .review-question {
             font-weight: bold;
             color: #333;
-            margin-bottom: 15px;
-            font-size: 1.1em;
+            margin-bottom: 10px;
+            font-size: 0.95em;
         }
 
         .review-answer {
+            padding: 8px;
+            margin: 6px 0;
+            border-radius: 5px;
+            font-size: 0.85em;
+        }
+
+        body.large-font .review-section {
+            margin-top: 30px;
+        }
+
+        body.large-font .review-item {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        body.large-font .review-question {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        body.large-font .review-answer {
+            font-size: 1em;
             padding: 10px;
             margin: 8px 0;
-            border-radius: 5px;
-            font-size: 0.95em;
         }
 
         .review-answer.user-answer.correct-user {
@@ -209,7 +297,10 @@
 </head>
 <body>
     <div class="quiz-container">
-        <h1>Geography Quiz</h1>
+        <div class="header-controls">
+            <h1>Geography Quiz</h1>
+            <button class="font-toggle-btn" id="fontToggle">Large Text</button>
+        </div>
 
         <div id="quiz">
             <div id="questionsContainer"></div>
@@ -476,6 +567,31 @@
 
         // Initialize quiz on page load
         generateQuiz();
+
+        // Font size toggle functionality
+        const fontToggleBtn = document.getElementById('fontToggle');
+        let isLargeFont = false;
+
+        // Check if user has a saved preference
+        if (localStorage.getItem('largeFontMode') === 'true') {
+            isLargeFont = true;
+            document.body.classList.add('large-font');
+            fontToggleBtn.textContent = 'Small Text';
+        }
+
+        fontToggleBtn.addEventListener('click', function() {
+            isLargeFont = !isLargeFont;
+
+            if (isLargeFont) {
+                document.body.classList.add('large-font');
+                fontToggleBtn.textContent = 'Small Text';
+                localStorage.setItem('largeFontMode', 'true');
+            } else {
+                document.body.classList.remove('large-font');
+                fontToggleBtn.textContent = 'Large Text';
+                localStorage.setItem('largeFontMode', 'false');
+            }
+        });
 
         // Register service worker for PWA functionality
         if ('serviceWorker' in navigator) {

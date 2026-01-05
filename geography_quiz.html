@@ -366,7 +366,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v20.0</div>
+    <div class="version-info">v21.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -558,6 +558,18 @@
 
                     // Add selected to the newly clicked option
                     this.classList.add('selected');
+
+                    // If user changed an answer for a question that was marked wrong,
+                    // remove it from wrongQuestions (they're attempting to fix it)
+                    if (wrongQuestions.has(name)) {
+                        wrongQuestions.delete(name);
+
+                        // Also remove the has-error class from the question section
+                        const questionSection = this.closest('.question-section');
+                        if (questionSection) {
+                            questionSection.classList.remove('has-error');
+                        }
+                    }
 
                     // Re-apply all wrong highlights based on the current state
                     applyWrongHighlights();

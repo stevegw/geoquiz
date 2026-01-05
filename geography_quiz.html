@@ -347,7 +347,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v6.0</div>
+    <div class="version-info">v7.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -505,12 +505,37 @@
             let answered = 0;
             let userAnswers = {};
 
+            // First, check if all questions are answered
+            for (let question in answers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected) {
+                    answered++;
+                    userAnswers[question] = parseInt(selected.value);
+                    if (parseInt(selected.value) === answers[question]) {
+                        score++;
+                    }
+                }
+            }
+
+            if (answered < 5) {
+                alert('Please answer all questions before submitting!');
+                return;
+            }
+
+            // Show confirmation with score
+            const confirmMessage = `You scored ${score} out of 5!\n\nDo you want to submit and see the full results?\n\nClick "OK" to submit or "Cancel" to go back and review your answers.`;
+            const confirmed = confirm(confirmMessage);
+
+            if (!confirmed) {
+                // User wants to go back and keep trying
+                return;
+            }
+
+            // User confirmed, now show the results
             for (let question in answers) {
                 const selected = document.querySelector(`input[name="${question}"]:checked`);
 
                 if (selected) {
-                    answered++;
-                    userAnswers[question] = parseInt(selected.value);
                     const correctAnswer = answers[question];
                     const allOptions = document.querySelectorAll(`input[name="${question}"]`);
 
@@ -526,22 +551,7 @@
                             label.classList.add('incorrect');
                         }
                     });
-
-                    if (parseInt(selected.value) === correctAnswer) {
-                        score++;
-                    }
                 }
-            }
-
-            if (answered < 5) {
-                alert('Please answer all questions before submitting!');
-                document.querySelectorAll('input[type="radio"]').forEach(input => {
-                    input.disabled = false;
-                });
-                document.querySelectorAll('.option').forEach(opt => {
-                    opt.classList.remove('correct', 'incorrect');
-                });
-                return;
             }
 
             const reviewSection = document.getElementById('reviewSection');

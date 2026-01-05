@@ -1,0 +1,491 @@
+{
+    "quizName": "Geography Quiz",
+    "description": "Test your geography knowledge with randomized questions",
+    "questions": [
+        {
+            "text": "What is the capital of Australia?",
+            "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+            "correct": 2
+        },
+        {
+            "text": "Which is the longest river in the world?",
+            "options": ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"],
+            "correct": 1
+        },
+        {
+            "text": "What is the smallest country in the world by area?",
+            "options": ["Monaco", "San Marino", "Vatican City", "Liechtenstein"],
+            "correct": 2
+        },
+        {
+            "text": "Which mountain range separates Europe from Asia?",
+            "options": ["Alps", "Himalayas", "Ural Mountains", "Andes"],
+            "correct": 2
+        },
+        {
+            "text": "What is the largest desert in the world?",
+            "options": ["Sahara Desert", "Arabian Desert", "Gobi Desert", "Antarctic Desert"],
+            "correct": 3
+        },
+        {
+            "text": "What is the capital of Japan?",
+            "options": ["Osaka", "Tokyo", "Kyoto", "Hiroshima"],
+            "correct": 1
+        },
+        {
+            "text": "Which ocean is the largest?",
+            "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+            "correct": 3
+        },
+        {
+            "text": "What is the tallest mountain in the world?",
+            "options": ["K2", "Mount Everest", "Kangchenjunga", "Makalu"],
+            "correct": 1
+        },
+        {
+            "text": "Which country has the most time zones?",
+            "options": ["Russia", "USA", "France", "China"],
+            "correct": 2
+        },
+        {
+            "text": "What is the longest mountain range in the world?",
+            "options": ["Himalayas", "Rocky Mountains", "Andes", "Alps"],
+            "correct": 2
+        },
+        {
+            "text": "Which continent has the most countries?",
+            "options": ["Asia", "Europe", "Africa", "South America"],
+            "correct": 2
+        },
+        {
+            "text": "What is the deepest ocean trench?",
+            "options": ["Tonga Trench", "Philippine Trench", "Mariana Trench", "Java Trench"],
+            "correct": 2
+        },
+        {
+            "text": "Which lake is the largest by surface area?",
+            "options": ["Lake Superior", "Caspian Sea", "Lake Victoria", "Lake Huron"],
+            "correct": 1
+        },
+        {
+            "text": "What is the driest place on Earth?",
+            "options": ["Death Valley", "Sahara Desert", "Atacama Desert", "Arabian Desert"],
+            "correct": 2
+        },
+        {
+            "text": "Which country has the longest coastline?",
+            "options": ["Australia", "Russia", "Canada", "Indonesia"],
+            "correct": 2
+        },
+        {
+            "text": "What is the capital of Brazil?",
+            "options": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
+            "correct": 2
+        },
+        {
+            "text": "Which river flows through Paris?",
+            "options": ["Thames", "Rhine", "Seine", "Danube"],
+            "correct": 2
+        },
+        {
+            "text": "What is the largest island in the world?",
+            "options": ["Greenland", "New Guinea", "Borneo", "Madagascar"],
+            "correct": 0
+        },
+        {
+            "text": "Which country is home to the Great Barrier Reef?",
+            "options": ["Australia", "Philippines", "Indonesia", "Mexico"],
+            "correct": 0
+        },
+        {
+            "text": "What is the capital of Canada?",
+            "options": ["Toronto", "Vancouver", "Ottawa", "Montreal"],
+            "correct": 2
+        },
+        {
+            "text": "Which desert is located in northern Africa?",
+            "options": ["Kalahari", "Sahara", "Namib", "Arabian"],
+            "correct": 1
+        },
+        {
+            "text": "What is the highest waterfall in the world?",
+            "options": ["Niagara Falls", "Victoria Falls", "Angel Falls", "Iguazu Falls"],
+            "correct": 2
+        },
+        {
+            "text": "Which country has the largest population?",
+            "options": ["India", "China", "USA", "Indonesia"],
+            "correct": 0
+        },
+        {
+            "text": "What is the capital of Egypt?",
+            "options": ["Alexandria", "Cairo", "Luxor", "Giza"],
+            "correct": 1
+        },
+        {
+            "text": "Which sea is the saltiest in the world?",
+            "options": ["Mediterranean Sea", "Red Sea", "Dead Sea", "Black Sea"],
+            "correct": 2
+        },
+        {
+            "text": "What is the largest country by land area?",
+            "options": ["Canada", "China", "USA", "Russia"],
+            "correct": 3
+        },
+        {
+            "text": "Which city is known as the 'Eternal City'?",
+            "options": ["Athens", "Rome", "Jerusalem", "Cairo"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Spain?",
+            "options": ["Barcelona", "Madrid", "Valencia", "Seville"],
+            "correct": 1
+        },
+        {
+            "text": "Which strait separates Europe and Africa?",
+            "options": ["Bering Strait", "Strait of Gibraltar", "Strait of Hormuz", "Bosphorus Strait"],
+            "correct": 1
+        },
+        {
+            "text": "What is the largest rainforest in the world?",
+            "options": ["Congo Rainforest", "Amazon Rainforest", "Daintree Rainforest", "Borneo Rainforest"],
+            "correct": 1
+        },
+        {
+            "text": "Which country is known as the 'Land of the Rising Sun'?",
+            "options": ["China", "Thailand", "Japan", "South Korea"],
+            "correct": 2
+        },
+        {
+            "text": "What is the capital of Italy?",
+            "options": ["Milan", "Venice", "Rome", "Florence"],
+            "correct": 2
+        },
+        {
+            "text": "Which mountain is the highest in North America?",
+            "options": ["Mount Whitney", "Pikes Peak", "Denali", "Mount Rainier"],
+            "correct": 2
+        },
+        {
+            "text": "What is the longest river in Europe?",
+            "options": ["Danube", "Rhine", "Volga", "Thames"],
+            "correct": 2
+        },
+        {
+            "text": "Which country is home to the ancient city of Petra?",
+            "options": ["Egypt", "Jordan", "Syria", "Iraq"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Argentina?",
+            "options": ["Buenos Aires", "Córdoba", "Rosario", "Mendoza"],
+            "correct": 0
+        },
+        {
+            "text": "Which African country has the largest land area?",
+            "options": ["Sudan", "Libya", "Algeria", "Democratic Republic of Congo"],
+            "correct": 2
+        },
+        {
+            "text": "What is the deepest lake in the world?",
+            "options": ["Lake Superior", "Lake Tanganyika", "Lake Baikal", "Crater Lake"],
+            "correct": 2
+        },
+        {
+            "text": "Which country is made up of 7,000+ islands?",
+            "options": ["Indonesia", "Philippines", "Japan", "Maldives"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Germany?",
+            "options": ["Munich", "Hamburg", "Berlin", "Frankfurt"],
+            "correct": 2
+        },
+        {
+            "text": "Which river flows through Egypt?",
+            "options": ["Tigris", "Euphrates", "Nile", "Congo"],
+            "correct": 2
+        },
+        {
+            "text": "What is the largest coral reef system in the world?",
+            "options": ["Red Sea Coral Reef", "Great Barrier Reef", "Belize Barrier Reef", "New Caledonia Barrier Reef"],
+            "correct": 1
+        },
+        {
+            "text": "Which continent is the Sahara Desert located on?",
+            "options": ["Asia", "Africa", "Australia", "South America"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Turkey?",
+            "options": ["Istanbul", "Ankara", "Izmir", "Antalya"],
+            "correct": 1
+        },
+        {
+            "text": "Which country has the most UNESCO World Heritage Sites?",
+            "options": ["China", "France", "Italy", "Spain"],
+            "correct": 2
+        },
+        {
+            "text": "What is the smallest continent by land area?",
+            "options": ["Europe", "Antarctica", "Australia", "South America"],
+            "correct": 2
+        },
+        {
+            "text": "Which city is located on two continents?",
+            "options": ["Cairo", "Istanbul", "Moscow", "Athens"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of South Korea?",
+            "options": ["Busan", "Seoul", "Incheon", "Daegu"],
+            "correct": 1
+        },
+        {
+            "text": "Which ocean is the Bermuda Triangle located in?",
+            "options": ["Pacific Ocean", "Indian Ocean", "Atlantic Ocean", "Arctic Ocean"],
+            "correct": 2
+        },
+        {
+            "text": "What is the largest lake in Africa?",
+            "options": ["Lake Tanganyika", "Lake Malawi", "Lake Victoria", "Lake Turkana"],
+            "correct": 2
+        },
+        {
+            "text": "Which country has the most volcanoes?",
+            "options": ["Japan", "Indonesia", "USA", "Philippines"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Greece?",
+            "options": ["Thessaloniki", "Athens", "Sparta", "Crete"],
+            "correct": 1
+        },
+        {
+            "text": "Which river is the longest in South America?",
+            "options": ["Paraná", "Orinoco", "São Francisco", "Amazon"],
+            "correct": 3
+        },
+        {
+            "text": "What is the highest capital city in the world?",
+            "options": ["Quito", "Bogotá", "La Paz", "Kathmandu"],
+            "correct": 2
+        },
+        {
+            "text": "Which country is the largest producer of coffee?",
+            "options": ["Colombia", "Vietnam", "Brazil", "Ethiopia"],
+            "correct": 2
+        },
+        {
+            "text": "What is the capital of Norway?",
+            "options": ["Bergen", "Oslo", "Trondheim", "Stavanger"],
+            "correct": 1
+        },
+        {
+            "text": "Which peninsula is Spain located on?",
+            "options": ["Italian Peninsula", "Balkan Peninsula", "Iberian Peninsula", "Scandinavian Peninsula"],
+            "correct": 2
+        },
+        {
+            "text": "What is the largest city in the United States by population?",
+            "options": ["Los Angeles", "Chicago", "New York City", "Houston"],
+            "correct": 2
+        },
+        {
+            "text": "Which country is known as the 'Land of Fire and Ice'?",
+            "options": ["Norway", "Iceland", "Finland", "Greenland"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Mexico?",
+            "options": ["Guadalajara", "Monterrey", "Mexico City", "Cancún"],
+            "correct": 2
+        },
+        {
+            "text": "Which sea separates Italy from the Balkan Peninsula?",
+            "options": ["Mediterranean Sea", "Adriatic Sea", "Aegean Sea", "Ionian Sea"],
+            "correct": 1
+        },
+        {
+            "text": "What is the longest river in Asia?",
+            "options": ["Mekong", "Ganges", "Yangtze", "Yellow River"],
+            "correct": 2
+        },
+        {
+            "text": "Which country is Machu Picchu located in?",
+            "options": ["Ecuador", "Peru", "Bolivia", "Colombia"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Thailand?",
+            "options": ["Phuket", "Chiang Mai", "Bangkok", "Pattaya"],
+            "correct": 2
+        },
+        {
+            "text": "Which mountain range runs along the border of France and Spain?",
+            "options": ["Alps", "Pyrenees", "Carpathians", "Apennines"],
+            "correct": 1
+        },
+        {
+            "text": "What is the southernmost continent?",
+            "options": ["South America", "Australia", "Antarctica", "Africa"],
+            "correct": 2
+        },
+        {
+            "text": "Which country has the most islands?",
+            "options": ["Philippines", "Indonesia", "Sweden", "Canada"],
+            "correct": 2
+        },
+        {
+            "text": "What is the capital of Russia?",
+            "options": ["St. Petersburg", "Moscow", "Vladivostok", "Novosibirsk"],
+            "correct": 1
+        },
+        {
+            "text": "Which body of water connects the Mediterranean Sea to the Atlantic Ocean?",
+            "options": ["Suez Canal", "Strait of Gibraltar", "Bosphorus", "Strait of Hormuz"],
+            "correct": 1
+        },
+        {
+            "text": "What is the largest desert in Asia?",
+            "options": ["Thar Desert", "Taklamakan Desert", "Gobi Desert", "Arabian Desert"],
+            "correct": 2
+        },
+        {
+            "text": "Which country is home to Mount Kilimanjaro?",
+            "options": ["Kenya", "Tanzania", "Uganda", "Ethiopia"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Sweden?",
+            "options": ["Gothenburg", "Malmö", "Stockholm", "Uppsala"],
+            "correct": 2
+        },
+        {
+            "text": "Which river flows through London?",
+            "options": ["Severn", "Mersey", "Thames", "Trent"],
+            "correct": 2
+        },
+        {
+            "text": "What is the largest bay in the world?",
+            "options": ["Hudson Bay", "Bay of Bengal", "Gulf of Mexico", "Baffin Bay"],
+            "correct": 1
+        },
+        {
+            "text": "Which country is the Taj Mahal located in?",
+            "options": ["Pakistan", "Bangladesh", "India", "Nepal"],
+            "correct": 2
+        },
+        {
+            "text": "What is the capital of Poland?",
+            "options": ["Kraków", "Warsaw", "Gdańsk", "Wrocław"],
+            "correct": 1
+        },
+        {
+            "text": "Which country shares the longest border with China?",
+            "options": ["Russia", "Mongolia", "India", "Kazakhstan"],
+            "correct": 1
+        },
+        {
+            "text": "What is the capital of Chile?",
+            "options": ["Valparaíso", "Concepción", "Santiago", "Antofagasta"],
+            "correct": 2
+        },
+        {
+            "text": "Which is the only sea without any coasts?",
+            "options": ["Red Sea", "Baltic Sea", "Sargasso Sea", "Arabian Sea"],
+            "correct": 2
+        },
+        {
+            "text": "What is the smallest ocean?",
+            "options": ["Indian Ocean", "Southern Ocean", "Arctic Ocean", "Atlantic Ocean"],
+            "correct": 2
+        },
+        {
+            "text": "Which country is home to the Amazon Rainforest's largest portion?",
+            "options": ["Peru", "Colombia", "Brazil", "Venezuela"],
+            "correct": 2
+        },
+        {
+            "text": "What is the capital of Austria?",
+            "options": ["Salzburg", "Innsbruck", "Vienna", "Graz"],
+            "correct": 2
+        },
+        {
+            "text": "Which country has the most active geysers?",
+            "options": ["Iceland", "New Zealand", "USA", "Chile"],
+            "correct": 2
+        },
+        {
+            "text": "What is the longest cave system in the world?",
+            "options": ["Sistema Sac Actun", "Jewel Cave", "Mammoth Cave", "Optymistychna Cave"],
+            "correct": 2
+        },
+        {
+            "text": "Which European city is known as the 'Venice of the North'?",
+            "options": ["Amsterdam", "Copenhagen", "Stockholm", "Bruges"],
+            "correct": 0
+        },
+        {
+            "text": "What is the capital of Portugal?",
+            "options": ["Porto", "Lisbon", "Faro", "Braga"],
+            "correct": 1
+        },
+        {
+            "text": "Which mountain range is the longest in the world?",
+            "options": ["Rockies", "Himalayas", "Andes", "Alps"],
+            "correct": 2
+        },
+        {
+            "text": "What is the most populous city in Australia?",
+            "options": ["Melbourne", "Brisbane", "Sydney", "Perth"],
+            "correct": 2
+        },
+        {
+            "text": "Which African country was formerly known as Abyssinia?",
+            "options": ["Eritrea", "Somalia", "Ethiopia", "Sudan"],
+            "correct": 2
+        },
+        {
+            "text": "What is the capital of Switzerland?",
+            "options": ["Zurich", "Geneva", "Bern", "Basel"],
+            "correct": 2
+        },
+        {
+            "text": "Which country has the most pyramids?",
+            "options": ["Egypt", "Sudan", "Mexico", "Peru"],
+            "correct": 1
+        },
+        {
+            "text": "What is the largest gulf in the world?",
+            "options": ["Gulf of Mexico", "Persian Gulf", "Gulf of Alaska", "Gulf of Guinea"],
+            "correct": 0
+        },
+        {
+            "text": "Which island nation is located in the Indian Ocean near Madagascar?",
+            "options": ["Seychelles", "Maldives", "Mauritius", "Comoros"],
+            "correct": 2
+        },
+        {
+            "text": "What is the capital of New Zealand?",
+            "options": ["Auckland", "Wellington", "Christchurch", "Hamilton"],
+            "correct": 1
+        },
+        {
+            "text": "Which country is the Galápagos Islands a part of?",
+            "options": ["Colombia", "Peru", "Ecuador", "Chile"],
+            "correct": 2
+        },
+        {
+            "text": "What is the hottest desert in the world?",
+            "options": ["Sahara Desert", "Arabian Desert", "Lut Desert", "Sonoran Desert"],
+            "correct": 2
+        },
+        {
+            "text": "Which country has three capital cities?",
+            "options": ["Switzerland", "Netherlands", "South Africa", "Bolivia"],
+            "correct": 2
+        }
+    ]
+}

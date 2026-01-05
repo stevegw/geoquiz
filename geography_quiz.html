@@ -347,7 +347,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v3.0</div>
+    <div class="version-info">v6.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -372,86 +372,53 @@
     </div>
 
     <script>
-        const questionPool = [
-            {
-                text: 'What is the capital of Australia?',
-                options: ['Sydney', 'Melbourne', 'Canberra', 'Brisbane'],
-                correct: 2
-            },
-            {
-                text: 'Which is the longest river in the world?',
-                options: ['Amazon River', 'Nile River', 'Yangtze River', 'Mississippi River'],
-                correct: 1
-            },
-            {
-                text: 'What is the smallest country in the world by area?',
-                options: ['Monaco', 'San Marino', 'Vatican City', 'Liechtenstein'],
-                correct: 2
-            },
-            {
-                text: 'Which mountain range separates Europe from Asia?',
-                options: ['Alps', 'Himalayas', 'Ural Mountains', 'Andes'],
-                correct: 2
-            },
-            {
-                text: 'What is the largest desert in the world?',
-                options: ['Sahara Desert', 'Arabian Desert', 'Gobi Desert', 'Antarctic Desert'],
-                correct: 3
-            },
-            {
-                text: 'What is the capital of Japan?',
-                options: ['Osaka', 'Tokyo', 'Kyoto', 'Hiroshima'],
-                correct: 1
-            },
-            {
-                text: 'Which ocean is the largest?',
-                options: ['Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean', 'Pacific Ocean'],
-                correct: 3
-            },
-            {
-                text: 'What is the tallest mountain in the world?',
-                options: ['K2', 'Mount Everest', 'Kangchenjunga', 'Makalu'],
-                correct: 1
-            },
-            {
-                text: 'Which country has the most time zones?',
-                options: ['Russia', 'USA', 'France', 'China'],
-                correct: 2
-            },
-            {
-                text: 'What is the longest mountain range in the world?',
-                options: ['Himalayas', 'Rocky Mountains', 'Andes', 'Alps'],
-                correct: 2
-            },
-            {
-                text: 'Which continent has the most countries?',
-                options: ['Asia', 'Europe', 'Africa', 'South America'],
-                correct: 2
-            },
-            {
-                text: 'What is the deepest ocean trench?',
-                options: ['Tonga Trench', 'Philippine Trench', 'Mariana Trench', 'Java Trench'],
-                correct: 2
-            },
-            {
-                text: 'Which lake is the largest by surface area?',
-                options: ['Lake Superior', 'Caspian Sea', 'Lake Victoria', 'Lake Huron'],
-                correct: 1
-            },
-            {
-                text: 'What is the driest place on Earth?',
-                options: ['Death Valley', 'Sahara Desert', 'Atacama Desert', 'Arabian Desert'],
-                correct: 2
-            },
-            {
-                text: 'Which country has the longest coastline?',
-                options: ['Australia', 'Russia', 'Canada', 'Indonesia'],
-                correct: 2
-            }
-        ];
-
+        let quizData = null;
+        let questionPool = [];
         let currentQuestions = [];
         let answers = {};
+        let questionsLoaded = false;
+
+        // Load questions from JSON file
+        async function loadQuestions() {
+            try {
+                const response = await fetch('./questions.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load questions');
+                }
+                quizData = await response.json();
+
+                // Support both old array format and new object format
+                if (Array.isArray(quizData)) {
+                    // Old format: just an array of questions
+                    questionPool = quizData;
+                    quizData = {
+                        quizName: 'Quiz',
+                        questions: questionPool
+                    };
+                } else {
+                    // New format: object with quizName and questions
+                    questionPool = quizData.questions;
+
+                    // Update page title and heading
+                    document.title = quizData.quizName;
+                    document.querySelector('h1').textContent = quizData.quizName;
+
+                    // Update meta description
+                    const metaDesc = document.querySelector('meta[name="description"]');
+                    if (metaDesc && quizData.description) {
+                        metaDesc.content = quizData.description;
+                    }
+                }
+
+                questionsLoaded = true;
+                console.log(`Loaded "${quizData.quizName}" with ${questionPool.length} questions`);
+                return true;
+            } catch (error) {
+                console.error('Error loading questions:', error);
+                alert('Failed to load quiz questions. Please refresh the page.');
+                return false;
+            }
+        }
 
         function shuffleArray(array) {
             const newArray = [...array];
@@ -467,7 +434,13 @@
             return shuffled.slice(0, 5);
         }
 
-        function generateQuiz() {
+        async function generateQuiz() {
+            // Load questions if not already loaded
+            if (!questionsLoaded) {
+                const loaded = await loadQuestions();
+                if (!loaded) return;
+            }
+
             currentQuestions = selectRandomQuestions();
             answers = {};
             const container = document.getElementById('questionsContainer');
@@ -611,15 +584,17 @@
             this.disabled = true;
         });
 
-        document.getElementById('retryBtn').addEventListener('click', function() {
+        document.getElementById('retryBtn').addEventListener('click', async function() {
             document.getElementById('quiz').classList.remove('hidden');
             document.getElementById('result').classList.add('hidden');
             document.getElementById('submitBtn').disabled = false;
-            generateQuiz();
+            await generateQuiz();
         });
 
         // Initialize quiz on page load
-        generateQuiz();
+        (async function() {
+            await generateQuiz();
+        })();
 
         // Font size toggle functionality
         const fontToggleBtn = document.getElementById('fontToggle');

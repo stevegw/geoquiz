@@ -1,9 +1,10 @@
 // IMPORTANT: Increment this version number whenever you deploy changes
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v6';
 const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
 const urlsToCache = [
   './geography_quiz.html',
-  './manifest.json'
+  './manifest.json',
+  './questions.json'
 ];
 
 // Listen for SKIP_WAITING message
@@ -50,9 +51,10 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
-  // Network-first strategy for HTML files to ensure fresh content
+  // Network-first strategy for HTML and JSON files to ensure fresh content
   if (event.request.headers.get('accept')?.includes('text/html') ||
       url.pathname.endsWith('.html') ||
+      url.pathname.endsWith('.json') ||
       url.pathname === '/' || url.pathname === '') {
     event.respondWith(
       fetch(event.request)

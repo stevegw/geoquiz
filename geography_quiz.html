@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v8.0</div>
+    <div class="version-info">v9.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -540,7 +540,14 @@
 
             if (!confirmed) {
                 // User wants to go back and keep trying
-                // Highlight the wrong answers without revealing correct ones
+                // Clear any previous highlighting first
+                document.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('wrong-hint', 'correct', 'incorrect');
+                    opt.removeAttribute('data-scrolled');
+                });
+
+                // Only highlight the wrong answers (yellow) without revealing correct ones
+                let firstWrongQuestion = null;
                 for (let question in answers) {
                     const selected = document.querySelector(`input[name="${question}"]:checked`);
 
@@ -548,34 +555,30 @@
                         const isCorrect = parseInt(selected.value) === answers[question];
                         const label = selected.parentElement;
 
-                        // Remove any existing wrong-hint class first
-                        const allOptions = document.querySelectorAll(`input[name="${question}"]`);
-                        allOptions.forEach(opt => {
-                            opt.parentElement.classList.remove('wrong-hint');
-                        });
-
-                        // If wrong, highlight it
+                        // If wrong, highlight it in yellow
                         if (!isCorrect) {
                             label.classList.add('wrong-hint');
-
-                            // Scroll to first wrong answer
-                            if (!document.querySelector('.wrong-hint:not([data-scrolled])')) {
-                                label.setAttribute('data-scrolled', 'true');
-                                label.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            if (!firstWrongQuestion) {
+                                firstWrongQuestion = label;
                             }
                         }
                     }
                 }
+
+                // Scroll to first wrong answer
+                if (firstWrongQuestion) {
+                    firstWrongQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
                 return;
             }
 
-            // Clear any wrong-hint highlighting before showing final results
+            // User confirmed - clear yellow hints and show final results
             document.querySelectorAll('.option').forEach(opt => {
                 opt.classList.remove('wrong-hint');
                 opt.removeAttribute('data-scrolled');
             });
 
-            // User confirmed, now show the results
+            // Now show the full results with correct (green) and incorrect (red)
             for (let question in answers) {
                 const selected = document.querySelector(`input[name="${question}"]:checked`);
 

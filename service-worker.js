@@ -1,5 +1,5 @@
 // IMPORTANT: Increment this version number whenever you deploy changes
-const CACHE_VERSION = 'v10';
+const CACHE_VERSION = 'v11';
 const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
 const urlsToCache = [
   './geography_quiz.html',

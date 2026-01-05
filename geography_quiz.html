@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v10.0</div>
+    <div class="version-info">v11.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -539,33 +539,31 @@
             const confirmed = confirm(confirmMessage);
 
             if (!confirmed) {
-                // User wants to go back and keep trying
-                // Clear ALL highlighting and ensure inputs are enabled
+                // User clicked Cancel - just return to main quiz screen
+                // Remove any result highlighting (green/red) from previous attempts
+                document.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('correct', 'incorrect');
+                });
+
+                // Make sure all inputs are enabled
                 document.querySelectorAll('input[type="radio"]').forEach(input => {
                     input.disabled = false;
-                    const label = input.parentElement;
-                    label.classList.remove('wrong-hint', 'correct', 'incorrect', 'selected');
                 });
 
-                // Re-add 'selected' class to currently selected options
-                document.querySelectorAll('input[type="radio"]:checked').forEach(input => {
-                    input.parentElement.classList.add('selected');
+                // Clear previous wrong hints
+                document.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('wrong-hint');
                 });
 
-                // Only highlight the user's wrong selections (yellow) - do NOT show correct answers
+                // Now add yellow highlight ONLY to user's wrong answers
                 let firstWrongQuestion = null;
                 for (let question in answers) {
                     const selected = document.querySelector(`input[name="${question}"]:checked`);
-
-                    if (selected) {
-                        const isCorrect = parseInt(selected.value) === answers[question];
-
-                        // If wrong, highlight ONLY the user's wrong selection in yellow
-                        if (!isCorrect) {
-                            selected.parentElement.classList.add('wrong-hint');
-                            if (!firstWrongQuestion) {
-                                firstWrongQuestion = selected.parentElement;
-                            }
+                    if (selected && parseInt(selected.value) !== answers[question]) {
+                        // This is a wrong answer - highlight it in yellow
+                        selected.parentElement.classList.add('wrong-hint');
+                        if (!firstWrongQuestion) {
+                            firstWrongQuestion = selected.parentElement;
                         }
                     }
                 }
@@ -574,6 +572,8 @@
                 if (firstWrongQuestion) {
                     firstWrongQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
+
+                // Stay on main quiz screen - don't show results
                 return;
             }
 

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Quiz</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Test your geography knowledge with randomized questions">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Geo Quiz">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .question-section {
+            margin-bottom: 30px;
+        }
+
+        .question {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+
+        .option:hover {
+            background: #e8e8e8;
+            border-color: #667eea;
+        }
+
+        .option input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .option.selected {
+            background: #e8e8ff;
+            border-color: #667eea;
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .option.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .result {
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .score {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .review-section {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .review-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .review-question {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .review-answer {
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        .review-answer.user-answer.correct-user {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        .review-answer.user-answer.incorrect-user {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+
+        .review-answer.correct-answer {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+
+        .review-label {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .checkmark {
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .crossmark {
+            color: #dc3545;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Geography Quiz</h1>
+
+        <div id="quiz">
+            <div id="questionsContainer"></div>
+
+            <div class="btn-container">
+                <button id="submitBtn">Submit Quiz</button>
+            </div>
+        </div>
+
+        <div id="result" class="result hidden">
+            <h2>Quiz Complete!</h2>
+            <div class="score" id="scoreDisplay"></div>
+            <div id="reviewSection" class="review-section"></div>
+            <button id="retryBtn">New Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        const questionPool = [
+            {
+                text: 'What is the capital of Australia?',
+                options: ['Sydney', 'Melbourne', 'Canberra', 'Brisbane'],
+                correct: 2
+            },
+            {
+                text: 'Which is the longest river in the world?',
+                options: ['Amazon River', 'Nile River', 'Yangtze River', 'Mississippi River'],
+                correct: 1
+            },
+            {
+                text: 'What is the smallest country in the world by area?',
+                options: ['Monaco', 'San Marino', 'Vatican City', 'Liechtenstein'],
+                correct: 2
+            },
+            {
+                text: 'Which mountain range separates Europe from Asia?',
+                options: ['Alps', 'Himalayas', 'Ural Mountains', 'Andes'],
+                correct: 2
+            },
+            {
+                text: 'What is the largest desert in the world?',
+                options: ['Sahara Desert', 'Arabian Desert', 'Gobi Desert', 'Antarctic Desert'],
+                correct: 3
+            },
+            {
+                text: 'What is the capital of Japan?',
+                options: ['Osaka', 'Tokyo', 'Kyoto', 'Hiroshima'],
+                correct: 1
+            },
+            {
+                text: 'Which ocean is the largest?',
+                options: ['Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean', 'Pacific Ocean'],
+                correct: 3
+            },
+            {
+                text: 'What is the tallest mountain in the world?',
+                options: ['K2', 'Mount Everest', 'Kangchenjunga', 'Makalu'],
+                correct: 1
+            },
+            {
+                text: 'Which country has the most time zones?',
+                options: ['Russia', 'USA', 'France', 'China'],
+                correct: 2
+            },
+            {
+                text: 'What is the longest mountain range in the world?',
+                options: ['Himalayas', 'Rocky Mountains', 'Andes', 'Alps'],
+                correct: 2
+            },
+            {
+                text: 'Which continent has the most countries?',
+                options: ['Asia', 'Europe', 'Africa', 'South America'],
+                correct: 2
+            },
+            {
+                text: 'What is the deepest ocean trench?',
+                options: ['Tonga Trench', 'Philippine Trench', 'Mariana Trench', 'Java Trench'],
+                correct: 2
+            },
+            {
+                text: 'Which lake is the largest by surface area?',
+                options: ['Lake Superior', 'Caspian Sea', 'Lake Victoria', 'Lake Huron'],
+                correct: 1
+            },
+            {
+                text: 'What is the driest place on Earth?',
+                options: ['Death Valley', 'Sahara Desert', 'Atacama Desert', 'Arabian Desert'],
+                correct: 2
+            },
+            {
+                text: 'Which country has the longest coastline?',
+                options: ['Australia', 'Russia', 'Canada', 'Indonesia'],
+                correct: 2
+            }
+        ];
+
+        let currentQuestions = [];
+        let answers = {};
+
+        function shuffleArray(array) {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+
+        function selectRandomQuestions() {
+            const shuffled = shuffleArray(questionPool);
+            return shuffled.slice(0, 5);
+        }
+
+        function generateQuiz() {
+            currentQuestions = selectRandomQuestions();
+            answers = {};
+            const container = document.getElementById('questionsContainer');
+            container.innerHTML = '';
+
+            currentQuestions.forEach((q, index) => {
+                const questionSection = document.createElement('div');
+                questionSection.className = 'question-section';
+
+                const questionText = document.createElement('div');
+                questionText.className = 'question';
+                questionText.textContent = `${index + 1}. ${q.text}`;
+                questionSection.appendChild(questionText);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options';
+
+                q.options.forEach((option, optIndex) => {
+                    const label = document.createElement('label');
+                    label.className = 'option';
+
+                    const input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = `q${index}`;
+                    input.value = optIndex;
+
+                    const span = document.createElement('span');
+                    span.textContent = option;
+
+                    label.appendChild(input);
+                    label.appendChild(span);
+                    optionsDiv.appendChild(label);
+                });
+
+                questionSection.appendChild(optionsDiv);
+                container.appendChild(questionSection);
+
+                answers[`q${index}`] = q.correct;
+            });
+
+            setupOptionListeners();
+        }
+
+        function setupOptionListeners() {
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = true;
+
+                    const name = radio.name;
+                    document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
+                        r.parentElement.classList.remove('selected');
+                    });
+                    this.classList.add('selected');
+                });
+            });
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            let score = 0;
+            let answered = 0;
+            let userAnswers = {};
+
+            for (let question in answers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+
+                if (selected) {
+                    answered++;
+                    userAnswers[question] = parseInt(selected.value);
+                    const correctAnswer = answers[question];
+                    const allOptions = document.querySelectorAll(`input[name="${question}"]`);
+
+                    allOptions.forEach(option => {
+                        const label = option.parentElement;
+                        option.disabled = true;
+
+                        if (parseInt(option.value) === correctAnswer) {
+                            label.classList.add('correct');
+                        }
+
+                        if (selected === option && parseInt(option.value) !== correctAnswer) {
+                            label.classList.add('incorrect');
+                        }
+                    });
+
+                    if (parseInt(selected.value) === correctAnswer) {
+                        score++;
+                    }
+                }
+            }
+
+            if (answered < 5) {
+                alert('Please answer all questions before submitting!');
+                document.querySelectorAll('input[type="radio"]').forEach(input => {
+                    input.disabled = false;
+                });
+                document.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('correct', 'incorrect');
+                });
+                return;
+            }
+
+            const reviewSection = document.getElementById('reviewSection');
+            reviewSection.innerHTML = '';
+
+            currentQuestions.forEach((q, index) => {
+                const questionKey = `q${index}`;
+                const userAnswer = userAnswers[questionKey];
+                const correctAnswer = answers[questionKey];
+                const isCorrect = userAnswer === correctAnswer;
+
+                const reviewItem = document.createElement('div');
+                reviewItem.className = 'review-item';
+
+                const questionText = document.createElement('div');
+                questionText.className = 'review-question';
+                questionText.textContent = `${index + 1}. ${q.text}`;
+                reviewItem.appendChild(questionText);
+
+                const userAnswerDiv = document.createElement('div');
+                userAnswerDiv.className = `review-answer user-answer ${isCorrect ? 'correct-user' : 'incorrect-user'}`;
+                const icon = isCorrect ? '<span class="checkmark">✓</span>' : '<span class="crossmark">✗</span>';
+                userAnswerDiv.innerHTML = `${icon}<span class="review-label">Your answer:</span> ${q.options[userAnswer]}`;
+                reviewItem.appendChild(userAnswerDiv);
+
+                if (!isCorrect) {
+                    const correctAnswerDiv = document.createElement('div');
+                    correctAnswerDiv.className = 'review-answer correct-answer';
+                    correctAnswerDiv.innerHTML = `<span class="checkmark">✓</span><span class="review-label">Correct answer:</span> ${q.options[correctAnswer]}`;
+                    reviewItem.appendChild(correctAnswerDiv);
+                }
+
+                reviewSection.appendChild(reviewItem);
+            });
+
+            document.getElementById('quiz').classList.add('hidden');
+            document.getElementById('result').classList.remove('hidden');
+            document.getElementById('scoreDisplay').textContent = `You scored ${score} out of 5!`;
+
+            this.disabled = true;
+        });
+
+        document.getElementById('retryBtn').addEventListener('click', function() {
+            document.getElementById('quiz').classList.remove('hidden');
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('submitBtn').disabled = false;
+            generateQuiz();
+        });
+
+        // Initialize quiz on page load
+        generateQuiz();
+
+        // Register service worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

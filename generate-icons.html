@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+        }
+        .preview {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .icon-preview {
+            text-align: center;
+        }
+        .icon-preview img {
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #5568d3;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        canvas {
+            display: none;
+        }
+        .instructions {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Geography Quiz Icon Generator</h1>
+
+        <div class="preview">
+            <div class="icon-preview">
+                <h3>192x192</h3>
+                <img id="preview192" width="192" height="192" alt="192x192 preview">
+            </div>
+            <div class="icon-preview">
+                <h3>512x512</h3>
+                <img id="preview512" width="192" height="192" alt="512x512 preview" style="width: 192px; height: 192px;">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="downloadIcon(192)">Download icon-192.png</button>
+            <button onclick="downloadIcon(512)">Download icon-512.png</button>
+            <button onclick="downloadBoth()">Download Both Icons</button>
+        </div>
+
+        <div id="successMessage" class="success" style="display: none;">
+            Icons downloaded! Place them in the same folder as geography_quiz.html
+        </div>
+
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Click "Download Both Icons" to get both required files</li>
+                <li>Save both files to the same folder as your quiz files</li>
+                <li>Make sure they're named exactly: <code>icon-192.png</code> and <code>icon-512.png</code></li>
+                <li>Upload all files to your web host</li>
+                <li>Your PWA is ready to install!</li>
+            </ol>
+        </div>
+    </div>
+
+    <canvas id="canvas192" width="192" height="192"></canvas>
+    <canvas id="canvas512" width="512" height="512"></canvas>
+
+    <script>
+        // SVG icon design
+        const svgContent = `
+            <svg width="SIZE" height="SIZE" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect width="SIZE" height="SIZE" fill="url(#grad)" rx="RADIUS"/>
+                <circle cx="CENTER" cy="CENTER" r="GLOBE_R" fill="none" stroke="white" stroke-width="STROKE_W"/>
+                <ellipse cx="CENTER" cy="CENTER" rx="GLOBE_R" ry="ELLIPSE_RY1" fill="none" stroke="white" stroke-width="STROKE_S" opacity="0.8"/>
+                <ellipse cx="CENTER" cy="CENTER" rx="GLOBE_R" ry="ELLIPSE_RY2" fill="none" stroke="white" stroke-width="STROKE_S" opacity="0.8"/>
+                <ellipse cx="CENTER" cy="CENTER" rx="ELLIPSE_RY1" ry="GLOBE_R" fill="none" stroke="white" stroke-width="STROKE_S" opacity="0.8"/>
+                <ellipse cx="CENTER" cy="CENTER" rx="ELLIPSE_RY2" ry="GLOBE_R" fill="none" stroke="white" stroke-width="STROKE_S" opacity="0.8"/>
+                <line x1="LINE_X1" y1="CENTER" x2="LINE_X2" y2="CENTER" stroke="white" stroke-width="STROKE_S" opacity="0.8"/>
+                <text x="CENTER" y="TEXT_Y" font-family="Arial, sans-serif" font-size="FONT_SIZE" font-weight="bold" fill="white" text-anchor="middle">GEO</text>
+            </svg>
+        `;
+
+        function getSVG(size) {
+            const center = size / 2;
+            const globeR = size * 0.273; // Proportional to original 140/512
+            const radius = size * 0.195;
+            const strokeW = size * 0.0156;
+            const strokeS = size * 0.0078;
+            const ellipseRY1 = size * 0.098;
+            const ellipseRY2 = size * 0.176;
+            const lineX1 = center - globeR;
+            const lineX2 = center + globeR;
+            const textY = size * 0.879;
+            const fontSize = size * 0.156;
+
+            return svgContent
+                .replace(/SIZE/g, size)
+                .replace(/CENTER/g, center)
+                .replace(/GLOBE_R/g, globeR)
+                .replace(/RADIUS/g, radius)
+                .replace(/STROKE_W/g, strokeW)
+                .replace(/STROKE_S/g, strokeS)
+                .replace(/ELLIPSE_RY1/g, ellipseRY1)
+                .replace(/ELLIPSE_RY2/g, ellipseRY2)
+                .replace(/LINE_X1/g, lineX1)
+                .replace(/LINE_X2/g, lineX2)
+                .replace(/TEXT_Y/g, textY)
+                .replace(/FONT_SIZE/g, fontSize);
+        }
+
+        function generateIcon(size) {
+            return new Promise((resolve) => {
+                const canvas = document.getElementById(`canvas${size}`);
+                const ctx = canvas.getContext('2d');
+                const svg = getSVG(size);
+                const blob = new Blob([svg], { type: 'image/svg+xml' });
+                const url = URL.createObjectURL(blob);
+                const img = new Image();
+
+                img.onload = function() {
+                    ctx.drawImage(img, 0, 0);
+                    URL.revokeObjectURL(url);
+
+                    // Update preview
+                    const preview = document.getElementById(`preview${size}`);
+                    preview.src = canvas.toDataURL('image/png');
+
+                    resolve(canvas);
+                };
+
+                img.src = url;
+            });
+        }
+
+        function downloadIcon(size) {
+            const canvas = document.getElementById(`canvas${size}`);
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `icon-${size}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                document.getElementById('successMessage').style.display = 'block';
+            }, 'image/png');
+        }
+
+        function downloadBoth() {
+            downloadIcon(192);
+            setTimeout(() => downloadIcon(512), 500);
+        }
+
+        // Generate icons on page load
+        window.addEventListener('load', async () => {
+            await generateIcon(192);
+            await generateIcon(512);
+        });
+    </script>
+</body>
+</html>

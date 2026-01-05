@@ -366,7 +366,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v19.0</div>
+    <div class="version-info">v20.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -391,6 +391,22 @@
         let answers = {};
         let questionsLoaded = false;
         let wrongQuestions = new Set(); // Track which questions have wrong answers
+
+        // Function to apply yellow highlights based on wrongQuestions Set
+        function applyWrongHighlights() {
+            // First, remove all wrong-hint classes
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('wrong-hint');
+            });
+
+            // Then, add wrong-hint to currently selected options for wrong questions
+            wrongQuestions.forEach(questionName => {
+                const selected = document.querySelector(`input[name="${questionName}"]:checked`);
+                if (selected) {
+                    selected.parentElement.classList.add('wrong-hint');
+                }
+            });
+        }
 
         // Load questions from JSON file
         async function loadQuestions() {
@@ -535,18 +551,16 @@
                     // Check the new option
                     radio.checked = true;
 
-                    // Remove 'selected' and 'wrong-hint' from ALL options in this question
+                    // Remove 'selected' from ALL options in this question
                     document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
-                        r.parentElement.classList.remove('selected', 'wrong-hint');
+                        r.parentElement.classList.remove('selected');
                     });
 
                     // Add selected to the newly clicked option
                     this.classList.add('selected');
 
-                    // If this question is tracked as wrong, re-apply the yellow hint to the new selection
-                    if (wrongQuestions.has(name)) {
-                        this.classList.add('wrong-hint');
-                    }
+                    // Re-apply all wrong highlights based on the current state
+                    applyWrongHighlights();
                 });
             });
         }
@@ -589,7 +603,7 @@
                     input.disabled = false;
                 });
 
-                // Track which questions are wrong and highlight the entire question section
+                // Track which questions are wrong
                 wrongQuestions.clear();
                 let firstWrongSection = null;
 
@@ -607,11 +621,11 @@
                                 firstWrongSection = questionSection;
                             }
                         }
-
-                        // Also highlight the currently selected wrong option
-                        selected.parentElement.classList.add('wrong-hint');
                     }
                 }
+
+                // Apply yellow highlights to all wrong answers
+                applyWrongHighlights();
 
                 // Scroll to first wrong answer
                 if (firstWrongSection) {

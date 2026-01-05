@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v11.0</div>
+    <div class="version-info">v12.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -372,14 +372,8 @@
 
             <div class="btn-container">
                 <button id="submitBtn">Submit Quiz</button>
+                <button id="retryBtn" style="margin-left: 10px;">New Quiz</button>
             </div>
-        </div>
-
-        <div id="result" class="result hidden">
-            <h2>Quiz Complete!</h2>
-            <div class="score" id="scoreDisplay"></div>
-            <div id="reviewSection" class="review-section"></div>
-            <button id="retryBtn">New Quiz</button>
         </div>
     </div>
 
@@ -582,7 +576,7 @@
                 opt.classList.remove('wrong-hint', 'selected');
             });
 
-            // Now show the full results with correct (green) and incorrect (red)
+            // Now show the results with correct (green) and incorrect (red)
             for (let question in answers) {
                 const selected = document.querySelector(`input[name="${question}"]:checked`);
                 const correctAnswer = answers[question];
@@ -604,51 +598,15 @@
                 });
             }
 
-            const reviewSection = document.getElementById('reviewSection');
-            reviewSection.innerHTML = '';
-
-            currentQuestions.forEach((q, index) => {
-                const questionKey = `q${index}`;
-                const userAnswer = userAnswers[questionKey];
-                const correctAnswer = answers[questionKey];
-                const isCorrect = userAnswer === correctAnswer;
-
-                const reviewItem = document.createElement('div');
-                reviewItem.className = 'review-item';
-
-                const questionText = document.createElement('div');
-                questionText.className = 'review-question';
-                questionText.textContent = `${index + 1}. ${q.text}`;
-                reviewItem.appendChild(questionText);
-
-                const userAnswerDiv = document.createElement('div');
-                userAnswerDiv.className = `review-answer user-answer ${isCorrect ? 'correct-user' : 'incorrect-user'}`;
-                const icon = isCorrect ? '<span class="checkmark">✓</span>' : '<span class="crossmark">✗</span>';
-                userAnswerDiv.innerHTML = `${icon}<span class="review-label">Your answer:</span> ${q.options[userAnswer]}`;
-                reviewItem.appendChild(userAnswerDiv);
-
-                if (!isCorrect) {
-                    const correctAnswerDiv = document.createElement('div');
-                    correctAnswerDiv.className = 'review-answer correct-answer';
-                    correctAnswerDiv.innerHTML = `<span class="checkmark">✓</span><span class="review-label">Correct answer:</span> ${q.options[correctAnswer]}`;
-                    reviewItem.appendChild(correctAnswerDiv);
-                }
-
-                reviewSection.appendChild(reviewItem);
-            });
-
-            document.getElementById('quiz').classList.add('hidden');
-            document.getElementById('result').classList.remove('hidden');
-            document.getElementById('scoreDisplay').textContent = `You scored ${score} out of 5!`;
-
+            // Disable the submit button and show score at the top
             this.disabled = true;
+            this.textContent = `Final Score: ${score} out of 5`;
+            this.style.cursor = 'not-allowed';
         });
 
-        document.getElementById('retryBtn').addEventListener('click', async function() {
-            document.getElementById('quiz').classList.remove('hidden');
-            document.getElementById('result').classList.add('hidden');
-            document.getElementById('submitBtn').disabled = false;
-            await generateQuiz();
+        // New Quiz button (reload page for fresh start)
+        document.getElementById('retryBtn')?.addEventListener('click', async function() {
+            window.location.reload();
         });
 
         // Initialize quiz on page load

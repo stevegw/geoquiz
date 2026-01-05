@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v9.0</div>
+    <div class="version-info">v10.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -540,26 +540,31 @@
 
             if (!confirmed) {
                 // User wants to go back and keep trying
-                // Clear any previous highlighting first
-                document.querySelectorAll('.option').forEach(opt => {
-                    opt.classList.remove('wrong-hint', 'correct', 'incorrect');
-                    opt.removeAttribute('data-scrolled');
+                // Clear ALL highlighting and ensure inputs are enabled
+                document.querySelectorAll('input[type="radio"]').forEach(input => {
+                    input.disabled = false;
+                    const label = input.parentElement;
+                    label.classList.remove('wrong-hint', 'correct', 'incorrect', 'selected');
                 });
 
-                // Only highlight the wrong answers (yellow) without revealing correct ones
+                // Re-add 'selected' class to currently selected options
+                document.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+                    input.parentElement.classList.add('selected');
+                });
+
+                // Only highlight the user's wrong selections (yellow) - do NOT show correct answers
                 let firstWrongQuestion = null;
                 for (let question in answers) {
                     const selected = document.querySelector(`input[name="${question}"]:checked`);
 
                     if (selected) {
                         const isCorrect = parseInt(selected.value) === answers[question];
-                        const label = selected.parentElement;
 
-                        // If wrong, highlight it in yellow
+                        // If wrong, highlight ONLY the user's wrong selection in yellow
                         if (!isCorrect) {
-                            label.classList.add('wrong-hint');
+                            selected.parentElement.classList.add('wrong-hint');
                             if (!firstWrongQuestion) {
-                                firstWrongQuestion = label;
+                                firstWrongQuestion = selected.parentElement;
                             }
                         }
                     }
@@ -574,31 +579,29 @@
 
             // User confirmed - clear yellow hints and show final results
             document.querySelectorAll('.option').forEach(opt => {
-                opt.classList.remove('wrong-hint');
-                opt.removeAttribute('data-scrolled');
+                opt.classList.remove('wrong-hint', 'selected');
             });
 
             // Now show the full results with correct (green) and incorrect (red)
             for (let question in answers) {
                 const selected = document.querySelector(`input[name="${question}"]:checked`);
+                const correctAnswer = answers[question];
+                const allOptions = document.querySelectorAll(`input[name="${question}"]`);
 
-                if (selected) {
-                    const correctAnswer = answers[question];
-                    const allOptions = document.querySelectorAll(`input[name="${question}"]`);
+                allOptions.forEach(option => {
+                    const label = option.parentElement;
+                    option.disabled = true;
 
-                    allOptions.forEach(option => {
-                        const label = option.parentElement;
-                        option.disabled = true;
+                    // Show ALL correct answers in green
+                    if (parseInt(option.value) === correctAnswer) {
+                        label.classList.add('correct');
+                    }
 
-                        if (parseInt(option.value) === correctAnswer) {
-                            label.classList.add('correct');
-                        }
-
-                        if (selected === option && parseInt(option.value) !== correctAnswer) {
-                            label.classList.add('incorrect');
-                        }
-                    });
-                }
+                    // Show user's incorrect selection in red
+                    if (selected && selected === option && parseInt(option.value) !== correctAnswer) {
+                        label.classList.add('incorrect');
+                    }
+                });
             }
 
             const reviewSection = document.getElementById('reviewSection');

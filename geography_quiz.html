@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v17.0</div>
+    <div class="version-info">v18.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -516,24 +516,19 @@
                         submitBtn.style.cursor = 'pointer';
                     }
 
-                    // Find the previously selected option for THIS question only
-                    const previouslySelected = document.querySelector(`input[name="${name}"]:checked`);
-
                     // Check the new option
                     radio.checked = true;
 
-                    // Remove 'selected' and 'wrong-hint' from ALL options in this question
+                    // Remove 'selected' from ALL options in this question (but keep 'wrong-hint')
                     document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
                         r.parentElement.classList.remove('selected');
                     });
 
-                    // Only remove wrong-hint from the previously selected option (not all options)
-                    if (previouslySelected && previouslySelected !== radio) {
-                        previouslySelected.parentElement.classList.remove('wrong-hint');
-                    }
-
                     // Add selected to the newly clicked option
                     this.classList.add('selected');
+
+                    // Note: We intentionally do NOT remove 'wrong-hint' here
+                    // The yellow highlight should persist until the user resubmits and gets it right
                 });
             });
         }

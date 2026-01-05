@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v12.0</div>
+    <div class="version-info">v13.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -576,26 +576,20 @@
                 opt.classList.remove('wrong-hint', 'selected');
             });
 
-            // Now show the results with correct (green) and incorrect (red)
+            // Only show the user's incorrect selections in red (don't reveal correct answers)
             for (let question in answers) {
                 const selected = document.querySelector(`input[name="${question}"]:checked`);
                 const correctAnswer = answers[question];
                 const allOptions = document.querySelectorAll(`input[name="${question}"]`);
 
                 allOptions.forEach(option => {
-                    const label = option.parentElement;
                     option.disabled = true;
-
-                    // Show ALL correct answers in green
-                    if (parseInt(option.value) === correctAnswer) {
-                        label.classList.add('correct');
-                    }
-
-                    // Show user's incorrect selection in red
-                    if (selected && selected === option && parseInt(option.value) !== correctAnswer) {
-                        label.classList.add('incorrect');
-                    }
                 });
+
+                // Only highlight user's incorrect selection in red
+                if (selected && parseInt(selected.value) !== correctAnswer) {
+                    selected.parentElement.classList.add('incorrect');
+                }
             }
 
             // Disable the submit button and show score at the top

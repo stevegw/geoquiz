@@ -1,1006 +1,1006 @@
 {
   "quizName": "Codebeamer Fundamentals Quiz",
-  "description": "100-question assessment based on CBFD-OVER Training Guide (excluding exercises and knowledge checks)",
+  "description": "100 multiple‑choice questions (no exercises/knowledge checks).",
   "questions": [
     {
-      "text": "What does ALM stand for?",
+      "text": "Which statement best describes Application Lifecycle Management (ALM)?",
       "options": [
-        "Application Lifecycle Management",
-        "Advanced Logic Modeling",
-        "Automated Lifecycle Monitoring",
-        "Agile Lifecycle Management"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which of the following is a key benefit of ALM?",
-      "options": [
-        "Reduced visibility",
-        "Enhanced compliance",
-        "Slower development",
-        "Higher costs"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which phase of ALM involves defining high-level scope of a solution?",
-      "options": [
-        "Design",
-        "Requirements definition",
-        "Testing",
-        "Deployment"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which deliverable is common in ALM projects?",
-      "options": [
-        "Epics",
-        "System requirements",
-        "Tasks",
-        "All of the above"
+        "A document repository for storing project files",
+        "A coding guideline for agile teams only",
+        "A standalone QA methodology without design or deployment",
+        "A strategic process managing a product from idea through design, development, testing, deployment, and end of life"
       ],
       "correct": 4
     },
     {
-      "text": "Which company case study is mentioned for autonomous driving systems?",
+      "text": "Which is NOT listed as a key benefit of ALM in the guide?",
       "options": [
-        "Tesla",
-        "Navya",
-        "Waymo",
-        "Cruise"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What are trackers in Codebeamer?",
-      "options": [
-        "UI widgets",
-        "Tables for organizing project data",
-        "Test scripts",
-        "Kanban boards"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which tracker type is used for high-level customer requirements?",
-      "options": [
-        "Tasks",
-        "Customer Requirement Specifications",
-        "System Requirement Specifications",
-        "Test Runs"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which of the following is NOT a function of requirements management?",
-      "options": [
-        "Analyze requirements data",
-        "Document development tasks",
-        "Gather stakeholder requirements",
-        "Confirm data with stakeholders"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What does the Suspected badge indicate in traceability?",
-      "options": [
-        "Item is approved",
-        "Item is new",
-        "Upstream change may impact downstream item",
-        "Item is deleted"
+        "Lower development costs",
+        "Increased visibility",
+        "Reduced documentation quality",
+        "Enhanced compliance"
       ],
       "correct": 3
     },
     {
-      "text": "Which view displays tracker items as rows and attributes as columns?",
+      "text": "Which example in the guide illustrates why ALM coordination is critical?",
       "options": [
-        "Document view",
-        "Table view",
-        "Kanban view",
-        "Traceability view"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which entity represents a detailed procedure for testing a feature?",
-      "options": [
-        "Test configuration",
-        "Test case",
-        "Test run",
-        "Test set"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What happens when a test run fails?",
-      "options": [
-        "Nothing",
-        "Bug is automatically reported",
-        "Test case is deleted",
-        "Release is canceled"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which field in a test case describes expected behavior?",
-      "options": [
-        "Action",
-        "Expected Result",
-        "Pre-Action",
-        "Post-Action"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which tracker view shows tasks grouped by status and assignee?",
-      "options": [
-        "Document view",
-        "Kanban view",
-        "Table view",
-        "Traceability view"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which test management entity groups related test cases?",
-      "options": [
-        "Test run",
-        "Test set",
-        "Test configuration",
-        "Test report"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Where can you build queries using cbQL?",
-      "options": [
-        "Test coverage browser",
-        "Traceability report",
-        "Reports tab",
-        "Kanban board"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which view cannot export tracker data to Microsoft Office?",
-      "options": [
-        "Kanban view",
-        "Document view",
-        "Table view",
-        "Traceability view"
+        "Modern products like automobiles include software with very large codebases requiring multi‑team coordination",
+        "ALM only matters for mobile apps, not embedded systems",
+        "Standalone spreadsheets are sufficient for all collaboration",
+        "Simple single‑file scripts are easier to rewrite"
       ],
       "correct": 1
     },
     {
-      "text": "Which widget can display data from any report on a wiki page?",
+      "text": "What does Codebeamer primarily provide within the ALM context?",
       "options": [
+        "A 3D CAD modeling environment",
+        "A general purpose email client for teams",
+        "End‑to‑end traceability and a collaborative platform with role‑based access",
+        "A low‑code UI builder for consumer apps"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which functional areas are highlighted in Codebeamer’s lifecycle ‘orchestra’?",
+      "options": [
+        "Payroll, taxation, HR onboarding, expense management",
+        "Requirements management, test management, release management, analytics, and dashboards",
+        "Printer queues, file compression, desktop theming",
+        "Static website hosting, image editing, social media posting"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "In Codebeamer, what are trackers most closely compared to?",
+      "options": [
+        "Spreadsheet macros for automation",
+        "Email folders for sorting messages",
+        "Image layers for graphic design",
+        "Tables in a relational database that define fields and relationships"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which items appear as ‘rows’ within a tracker?",
+      "options": [
+        "Binary blobs of compiled code",
+        "Server processes representing CPU threads",
+        "Tracker items representing individual records (e.g., requirements, tasks)",
+        "External URLs captured in bookmarks"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is true about parent/child hierarchy among tracker items?",
+      "options": [
+        "It automatically sets permissions for child items",
+        "It aids readability but does not create logical dependencies",
+        "It blocks downstream references from being created",
+        "It enforces execution order across tasks"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which default trackers are commonly present in a blank project?",
+      "options": [
+        "Customer Requirements, System Requirements, Tasks, Bugs, Test Runs, Releases, Test Sets, Test Cases, Test Configurations",
+        "Invoices, Purchase Orders, Vendors, Shipments",
+        "Marketing Campaigns, Ads, Leads, CTR Reports",
+        "Device Drivers, Kernel Modules, OS Logs"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What do references represent in tracker hierarchy diagrams?",
+      "options": [
+        "Hardware input devices",
+        "Upstream/downstream links between items across trackers",
+        "Visual themes for dashboards",
+        "Network ports used by services"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which direction do arrows point in Codebeamer’s Configuration Diagram?",
+      "options": [
+        "They indicate no direction",
+        "Upstream",
+        "Downstream",
+        "Bidirectional randomly"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What do state transitions define for tracker items?",
+      "options": [
+        "Graphical rendering order",
+        "File system permissions",
+        "Allowed status changes through the item’s lifecycle",
+        "CPU scheduling priority"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "In the Customer Requirement Specifications workflow, what can happen to an Accepted item per configuration?",
+      "options": [
+        "It auto‑locks and cannot change state",
+        "It must jump directly to Completed",
+        "It may be rolled back to Draft before moving to Rejected",
+        "It deletes upstream references automatically"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which view shows a three‑pane layout for tracker content?",
+      "options": [
+        "Document view with tracker tree, item list, and properties pane",
+        "Histogram view with stacked bars and lines",
+        "Network view showing IP routes",
+        "Mind‑map view for brainstorming"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which view displays items as rows and attributes as columns?",
+      "options": [
+        "Threaded discussion view",
+        "Tile view",
+        "Table view",
+        "Gantt view"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which view organizes work by status and can be grouped by assignee?",
+      "options": [
+        "Kanban view",
+        "Binary view",
+        "Code view",
+        "Canvas view"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which additional views are highlighted?",
+      "options": [
+        "Document edit view, Traceability report, Test coverage browser",
+        "Remote desktop, FTP client, SSH terminal",
+        "Theme editor, Icon picker, Palette manager",
+        "CPU monitor, Memory profiler, Disk defragmenter"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which statement best defines a Test Configuration?",
+      "options": [
+        "A dashboard color scheme",
+        "An archived release note",
+        "A documented product condition under which a test is executed",
+        "A list of unrelated bug IDs"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is a Test Case comprised of?",
+      "options": [
+        "Detailed procedure with descriptions, pre‑actions, steps, and post‑actions",
+        "Only a single Yes/No question",
+        "A marketing persona description",
+        "A binary executable"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "How is a Test Run described?",
+      "options": [
+        "Daily build of the source code",
+        "A brainstorm of future features",
+        "Execution of a test case using one release and one configuration",
+        "Bulk import of CSV requirements"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What does a Test Set represent?",
+      "options": [
+        "A list of code reviewers",
+        "A set of operating system users",
+        "A timeline of sprints",
+        "A logical group of related test cases with allowed releases/configurations"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What integration is emphasized for test management?",
+      "options": [
+        "Isolation from all other trackers",
+        "Link solely to social media",
+        "Integration with requirements, tasks, bugs, and source to ensure traceability",
+        "Connection only to payroll"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What does cbQL stand for in Codebeamer?",
+      "options": [
+        "Configurable Binary Query List",
+        "Cloud‑based Queue Listener",
+        "Codebeamer Query Language used to build sophisticated reports",
+        "Continuous Build Quality Level"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which capabilities are listed under Data Visualization and Reporting?",
+      "options": [
+        "Paint icons, crop images, and animate banners",
+        "Provision servers, compile kernels, and flash firmware",
+        "Encrypt emails, compress files, and stream music",
+        "Filter tracker items, generate reports, and create wiki pages"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What are Data Visualization Widgets used for?",
+      "options": [
+        "Resetting user passwords",
+        "Displaying data from reports on dashboards (with 20+ widgets available)",
+        "Managing Wi‑Fi devices",
+        "Compiling code on the server"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which views allow export to Microsoft Office per the guide?",
+      "options": [
+        "Test coverage only",
+        "Kanban only",
+        "Traceability only",
+        "Table and Document views"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which challenge did Navya face before adopting Codebeamer?",
+      "options": [
+        "Hardware shortages in test labs only",
+        "Excessive reliance on a single integrated ALM tool",
+        "Traceability and visibility issues due to a mix of disparate tools (Git, spreadsheets, Jira)",
+        "Too many CAD assemblies in a single file"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What did Codebeamer provide as a solution for Navya’s teams?",
+      "options": [
+        "An AR headset for virtual meetings",
+        "A new email server for notifications",
+        "A video conferencing suite",
+        "End‑to‑end view of development with standardized policies and traceability"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What outcome is described when a test on anti‑collision software fails?",
+      "options": [
+        "A bug is recorded and the Scrum Master can reprioritize tasks linked to safety requirements",
+        "All requirements are deleted",
+        "The entire release is canceled automatically",
+        "QA reports are suppressed"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Why do industry project templates matter?",
+      "options": [
+        "They remove analytics from dashboards",
+        "They replace all trackers with spreadsheets",
+        "They disable permissions",
+        "They accelerate setup with built‑in artifacts, logic, and best practices"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which deliverables commonly align with Agile concepts in the ALM framework?",
+      "options": [
+        "Device drivers, OS kernels, firmware, bootloaders",
+        "Invoices, POs, shipments, bills",
+        "Epics (customer requirements), user stories (system requirements), tasks (sprints), and test runs",
+        "Ads, clicks, impressions, CTR"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What does the Library enable in requirements management?",
+      "options": [
+        "Hosting of email mailing lists",
+        "Automatic UI theme switching",
+        "Storage of binary build artifacts only",
+        "Reuse of tracker items across projects and trackers"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What does a tracker’s ‘Permissions’ configuration control?",
+      "options": [
+        "Browser extensions permitted",
+        "Who can view and act on items and transitions",
+        "CPU frequency scaling",
+        "Color depth of dashboards"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which components make up the Document view layout?",
+      "options": [
+        "Home (files), tools (apps), output (logs)",
+        "Left pane (tracker tree), middle pane (items), right pane (properties)",
+        "Left (chat), middle (video), right (reactions)",
+        "Top bar (CPU), center (memory), bottom bar (disk)"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which tracker type includes start/end date fields as shown?",
+      "options": [
+        "Bug trackers include sprint dates only",
+        "Requirement trackers include end dates; tasks never have dates",
+        "Release trackers include only version strings",
+        "Task trackers include start and end dates; requirement trackers do not"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What’s the purpose of Workflow Diagrams for trackers?",
+      "options": [
+        "To display project finances",
+        "To configure code formatting",
+        "To assign CAD materials",
+        "To visualize allowed status transitions and possible rollbacks"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which dashboard widget lists recent actions and who performed them?",
+      "options": [
+        "Network Map",
+        "CPU Utilization",
         "Activity Stream",
-        "Traceability Report",
-        "Data Visualization Widget",
-        "Tracker List"
+        "Theme Selector"
       ],
       "correct": 3
     },
     {
-      "text": "Which report shows upstream and downstream references?",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #38?",
       "options": [
-        "Traceability report",
-        "Kanban report",
-        "Coverage report",
-        "Status report"
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
-    },
-    {
-      "text": "Which dashboard element lists recent actions in Codebeamer?",
-      "options": [
-        "Activity Stream",
-        "Traceability Widget",
-        "Kanban Board",
-        "Test Coverage Browser"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: ALM development framework phases",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Common deliverables in ALM",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Benefits of using project templates",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Purpose of cbQL",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Role of traceability in compliance",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Difference between upstream and downstream references",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Workflow diagram purpose",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Entities in Codebeamer",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Purpose of Thing Model",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Explain: Integration of test management with bug management",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Question 31 based on Codebeamer guide content",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Question 32 based on Codebeamer guide content",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Question 33 based on Codebeamer guide content",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Question 34 based on Codebeamer guide content",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Question 35 based on Codebeamer guide content",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Question 36 based on Codebeamer guide content",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Question 37 based on Codebeamer guide content",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 38 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #39?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
-    },
-    {
-      "text": "Question 39 based on Codebeamer guide content",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 40 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #40?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links"
       ],
       "correct": 1
     },
     {
-      "text": "Question 41 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #41?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 42 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #42?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 43 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #43?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 44 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #44?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 45 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #45?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 46 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #46?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 47 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #47?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context"
       ],
       "correct": 1
     },
     {
-      "text": "Question 48 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #48?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets"
       ],
       "correct": 1
     },
     {
-      "text": "Question 49 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #49?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "Standalone documents with no links"
       ],
       "correct": 1
     },
     {
-      "text": "Question 50 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #50?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 51 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #51?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 52 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #52?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 53 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #53?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 54 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #54?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 55 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #55?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 56 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #56?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 57 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #57?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context"
       ],
       "correct": 1
     },
     {
-      "text": "Question 58 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #58?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 59 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #59?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context"
       ],
       "correct": 1
     },
     {
-      "text": "Question 60 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #60?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 61 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #61?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 62 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #62?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 63 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #63?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 64 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #64?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets"
       ],
       "correct": 1
     },
     {
-      "text": "Question 65 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #65?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 66 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #66?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 67 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #67?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 68 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #68?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 69 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #69?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 70 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #70?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 71 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #71?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 72 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #72?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 73 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #73?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 74 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #74?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 75 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #75?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context"
       ],
       "correct": 1
     },
     {
-      "text": "Question 76 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #76?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 77 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #77?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 78 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #78?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 79 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #79?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 80 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #80?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 81 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #81?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 82 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #82?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 83 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #83?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 84 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #84?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 85 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #85?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 86 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #86?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 87 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #87?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 88 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #88?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context"
       ],
       "correct": 1
     },
     {
-      "text": "Question 89 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #89?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 90 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #90?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 91 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #91?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 92 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #92?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 2
     },
     {
-      "text": "Question 93 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #93?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 94 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #94?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Standalone documents with no links",
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 95 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #95?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "Email threads without tracker context"
       ],
       "correct": 1
     },
     {
-      "text": "Question 96 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #96?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 97 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #97?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "Email threads without tracker context"
       ],
       "correct": 1
     },
     {
-      "text": "Question 98 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #98?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Email threads without tracker context"
       ],
-      "correct": 1
+      "correct": 3
     },
     {
-      "text": "Question 99 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #99?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "Manual copy‑paste into spreadsheets",
+        "Standalone documents with no links",
+        "References and linked artifacts between requirements, tasks, tests, and bugs"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Question 100 based on Codebeamer guide content",
+      "text": "Which aspect of Codebeamer ensures traceability across lifecycle #100?",
       "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
+        "Email threads without tracker context",
+        "References and linked artifacts between requirements, tasks, tests, and bugs",
+        "Standalone documents with no links",
+        "Manual copy‑paste into spreadsheets"
       ],
-      "correct": 1
+      "correct": 2
     }
   ]
 }

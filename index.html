@@ -389,7 +389,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v30.0</div>
+    <div class="version-info">v31.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -399,6 +399,13 @@
                 <option value="codebeamer-fundamentals-questions.json">Codebeamer Fundamentals</option>
                 <option value="Thingworx-fundamnetails-questions.json">ThingWorx Fundamentals</option>
                 <option value="Windchill-fundamentals-questions.json">Windchill Fundamentals</option>
+            </select>
+            <select id="questionCount" class="quiz-selector">
+                <option value="5">5 Questions</option>
+                <option value="10">10 Questions</option>
+                <option value="15">15 Questions</option>
+                <option value="20">20 Questions</option>
+                <option value="all">All Questions</option>
             </select>
             <button class="font-toggle-btn" id="fontToggle">Larger Text</button>
         </div>
@@ -472,8 +479,16 @@
         }
 
         function selectRandomQuestions() {
+            const countSelector = document.getElementById('questionCount');
+            const count = countSelector.value;
             const shuffled = shuffleArray(questionPool);
-            return shuffled.slice(0, 5);
+
+            if (count === 'all') {
+                return shuffled;
+            } else {
+                const numQuestions = Math.min(parseInt(count), questionPool.length);
+                return shuffled.slice(0, numQuestions);
+            }
         }
 
         async function generateQuiz() {
@@ -561,14 +576,16 @@
                 }
             }
 
-            if (answered < 5) {
+            const totalQuestions = Object.keys(answers).length;
+
+            if (answered < totalQuestions) {
                 alert('Please answer all questions before submitting!');
                 return;
             }
 
             // Check for perfect score
-            if (score === 5) {
-                const startNewQuiz = confirm('Nice job! You got all 5 correct!\n\nStart a new quiz?\n\nOK = New Quiz\nCancel = Review Answers');
+            if (score === totalQuestions) {
+                const startNewQuiz = confirm(`Nice job! You got all ${totalQuestions} correct!\n\nStart a new quiz?\n\nOK = New Quiz\nCancel = Review Answers`);
                 if (startNewQuiz) {
                     // User wants a new quiz
                     window.location.reload();
@@ -579,7 +596,7 @@
             }
 
             // Show confirmation with score for non-perfect scores
-            const confirmMessage = `You scored ${score} out of 5!\n\nDo you want to submit and see the full results?\n\nOK = Submit\nCancel = Review Answers`;
+            const confirmMessage = `You scored ${score} out of ${totalQuestions}!\n\nDo you want to submit and see the full results?\n\nOK = Submit\nCancel = Review Answers`;
             const confirmed = confirm(confirmMessage);
 
             if (!confirmed) {
@@ -658,6 +675,20 @@
             const selectedQuiz = this.value;
             localStorage.setItem('selectedQuiz', selectedQuiz);
             questionsLoaded = false;
+            await generateQuiz();
+        });
+
+        // Question count selector functionality
+        const questionCountSelector = document.getElementById('questionCount');
+
+        // Load saved question count from localStorage
+        const savedCount = localStorage.getItem('questionCount') || '5';
+        questionCountSelector.value = savedCount;
+
+        // Handle question count change
+        questionCountSelector.addEventListener('change', async function() {
+            const selectedCount = this.value;
+            localStorage.setItem('questionCount', selectedCount);
             await generateQuiz();
         });
 

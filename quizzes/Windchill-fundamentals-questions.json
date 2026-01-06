@@ -1,0 +1,1007 @@
+
+{
+  "quizName": "Windchill Fundamentals Quiz",
+  "description": "100 multiple-choice questions derived from WCFD-OVER Training Guide (concept-based; excludes exercises/knowledge checks).",
+  "questions": [
+    {
+      "text": "What is the primary purpose of PLM in an organization?",
+      "options": [
+        "Render 3D visualizations only",
+        "Manage the complete journey of a product and make accurate data available across teams",
+        "Provide email services for engineering teams",
+        "Replace ERP and CRM systems entirely"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which statement describes the 'digital thread' in PLM?",
+      "options": [
+        "A taxonomy of suppliers",
+        "Digital tools and representations connecting design, evaluation, and lifecycle data",
+        "Only CAD file archiving",
+        "Manual paper-based routing of change notices"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which lifecycle stages typically appear in product development?",
+      "options": [
+        "Procurement, HR, Payroll, Legal",
+        "Marketing, Sales, Events, Sponsorships",
+        "Shipping, Invoicing, Taxation, Auditing",
+        "Requirements, Design, Manufacture, Service"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Why does PLM emphasize organizing diverse data sources?",
+      "options": [
+        "Complex products generate multi-format data that must be controlled and accessed reliably",
+        "To prevent any data reuse",
+        "To minimize storage and delete history",
+        "Because teams should not collaborate"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What role does Windchill play in PLM?",
+      "options": [
+        "Standalone CAD authoring tool",
+        "Backbone that organizes, stores, and provides access to product data",
+        "A spreadsheet macro engine",
+        "An email client for notifications"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which kinds of product data are examples mentioned in the guide?",
+      "options": [
+        "Social media posts, newsletters",
+        "Firewall rules, router configs",
+        "Parts, requirements, processes, documents",
+        "Employee salaries, vacation calendars"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which three main sections comprise the Windchill UI?",
+      "options": [
+        "Chat, Video, Reactions",
+        "Header, Main Page, Navigator",
+        "Canvas, Gantt, Console",
+        "Toolbar, Status Bar, Footer"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What does the Quick Links menu provide?",
+      "options": [
+        "GPU overclock settings",
+        "External social feeds",
+        "Access to Help, preferences, job monitors, clipboard, and useful utilities",
+        "Payroll approvals"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are the two tabs in the Navigator panel?",
+      "options": [
+        "Users and Roles",
+        "Search and Browse",
+        "CAD and Documents",
+        "Projects and Programs"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which option in Navigator Browse lists recently accessed contexts?",
+      "options": [
+        "Recently Visited",
+        "Admin Console",
+        "Global Settings",
+        "Deleted Items"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a Product context used for?",
+      "options": [
+        "HR onboarding records",
+        "General organizational information only",
+        "Storage for information related to a specific product or deliverable",
+        "Network device configurations"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is a Library context used for?",
+      "options": [
+        "Shared information across the organization (templates, standards)",
+        "Only personal notebooks",
+        "Source code compilation",
+        "Email routing"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which links appear under a context node (e.g., Product)?",
+      "options": [
+        "CPU, Memory, Disk, Network",
+        "Theme, Icons, Wallpapers, Skins",
+        "Payroll, Billing, Taxes, Expenses",
+        "Details, Folders, Workspaces, Packages, Team, Tasks, Change Monitor, Discussions, Reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Change options are accessible in Navigator?",
+      "options": [
+        "Payments, Invoices, Credits",
+        "Issues, Variances, Change Requests, Change Notices, Change Monitor, Reports",
+        "Printers, Scanners, Plotters",
+        "Themes, Palettes, Fonts"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is an Information page in Windchill?",
+      "options": [
+        "A CAD editor workspace",
+        "Central page to view object details, history, related items, and perform actions",
+        "A local file browser",
+        "A chat portal"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which areas are consistent on Information pages?",
+      "options": [
+        "Top area (name, number, version, state, Actions), tabs, tables below",
+        "Footer only",
+        "Random layout per object",
+        "Left pane only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Can Information pages be customized?",
+      "options": [
+        "No customization is permitted",
+        "Yes—create custom tabs, select tables, and reorder elements",
+        "Only default tabs are static without any options",
+        "Only admins can lock pages permanently"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which functional domains are covered by Windchill?",
+      "options": [
+        "Data vaulting, document management, multi-CAD, process, product structure, change/configuration, visualization, project, classification, supplier, manufacturing, integration",
+        "DNS, DHCP, firewall, routing",
+        "UI themes, icons, wallpapers",
+        "Payroll, taxation, HR, accounting"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which are major business objects?",
+      "options": [
+        "Emails, calendar entries, chat logs",
+        "Parts/end items, CAD documents, Documents",
+        "Media files only",
+        "Invoices, purchase orders, shipments"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which relationship types exist?",
+      "options": [
+        "Login, logout, session",
+        "Encryption, compression, hashing",
+        "Description (version-to-version), Reference (latest), Usage (parent-child in structures)",
+        "Cache, buffer, queue"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which change objects form the change process?",
+      "options": [
+        "Sprint, Epic, Kanban, Backlog",
+        "Problem Report, Change Request, Change Notice, Change Tasks",
+        "Invoice, Payment, Refund, Credit",
+        "Patch, Hotfix, Reboot, Log"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "How does Windchill track versions?",
+      "options": [
+        "Random GUID solely",
+        "Timestamp only",
+        "Version string with revision (letter) and iteration (number), e.g., A.1",
+        "Binary hash only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Why are Check Out / Check In used?",
+      "options": [
+        "To change permissions automatically",
+        "Prevent concurrent modification, create working copy, then store new iteration",
+        "To lock all users indefinitely",
+        "To delete prior versions"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "When is Revise used?",
+      "options": [
+        "To reset user passwords",
+        "To archive objects permanently",
+        "To export to Office",
+        "When business rules restrict editing at a state; create new revision before changes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a lifecycle?",
+      "options": [
+        "CPU scheduling policy",
+        "Printer queue status",
+        "Defined states an object can exist in (e.g., In Work, Released, Obsolete)",
+        "Graphics renderer settings"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What does a workflow capture?",
+      "options": [
+        "CAD constraints",
+        "Business process routing tasks to appropriate roles",
+        "Email aliases",
+        "Network ACLs"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the role of Team objects?",
+      "options": [
+        "List of hardware devices",
+        "Billing contacts only",
+        "Set of roles used by workflows to assign tasks",
+        "Color palettes"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What does object history capture?",
+      "options": [
+        "Version evolution and lifecycle state changes for comparison",
+        "Clipboard contents",
+        "GPU temperatures",
+        "Browser cache size"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a product structure (BOM)?",
+      "options": [
+        "A list of emails",
+        "A photo gallery",
+        "Hierarchical set of parts with filters (version, state, view, effectivity, baseline, options)",
+        "An HR org chart only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which context types does Windchill PDMLink provide?",
+      "options": [
+        "Datacenter and Network",
+        "Products and Libraries (plus Project/Program in projects capability)",
+        "Graphics and Themes",
+        "Payroll and HR"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which attributes define an access control rule?",
+      "options": [
+        "IP address, Port, Protocol, VLAN",
+        "CPU, Memory, Disk, GPU",
+        "Domain, Object Type, Life Cycle State, Actor, Permissions",
+        "Theme, Icon, Font, Color"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which search methods are available in Windchill?",
+      "options": [
+        "Binary, Hex, Octal, Decimal",
+        "Simple, Advanced, Faceted, Classification (plus Integrated from authoring tools)",
+        "Local, Global, Cloud, Edge",
+        "UI, CLI, API, SDK"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What does Simple Search depend on?",
+      "options": [
+        "Current printer status",
+        "User theme preference only",
+        "GPU type",
+        "Object type selection and keyword criteria; may be standard or index search"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What do wildcards do in keyword search?",
+      "options": [
+        "Wildcards disable search",
+        "* replaces zero or more characters; ? replaces one character",
+        "* is mandatory; ? is illegal character",
+        "* encrypts text; ? compresses text"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What character treatment is noted for search criteria?",
+      "options": [
+        "Spaces are forbidden",
+        "All punctuation causes errors",
+        "., -, _ are interpreted literally; other special characters removed",
+        "Only emojis allowed"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What can Advanced Search add beyond keywords?",
+      "options": [
+        "Kernel modules",
+        "Type, Context, attribute Criteria (AND/OR), Related Object Search via report templates",
+        "Printer spooling",
+        "Firewall rules"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "When do Faceted results appear?",
+      "options": [
+        "Only for CAD drawings",
+        "Only in Kanban view",
+        "With Index Search enabled, facets preference set, indexed types, no Related Object Search, iteration not set to All",
+        "Always by default with no config"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are Saved Searches used for?",
+      "options": [
+        "Generate payroll reports",
+        "Install device drivers",
+        "Store predefined criteria for repeat execution; accessed via Search History and Saved Searches",
+        "Change OS registry keys"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What do Search Preferences control?",
+      "options": [
+        "Wallpaper selection",
+        "Enable Index Search/Facets, keyword behavior, default types, latest version, thumbnails",
+        "GPU fan curve",
+        "Email quotas"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "How do you open a mini information page?",
+      "options": [
+        "Press F12",
+        "Use Admin Console",
+        "Right-click the browser tab",
+        "Hover over a mini-thumbnail in Search Results or Folder Contents"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What does the mini information page show on the left?",
+      "options": [
+        "Only workflow definitions",
+        "Only printer queues",
+        "Only comments",
+        "Larger thumbnail and basic attributes with action icons"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which reports appear by default in mini info when navigating thumbnails?",
+      "options": [
+        "Where Used and Uses",
+        "Network Map and CPU Load",
+        "Theme and Icons",
+        "Billing and Invoices"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What can Folder Contents tools do?",
+      "options": [
+        "Mount network drives",
+        "Compile code",
+        "Encrypt files",
+        "Pick a View, sort/group by columns, filter text, open mini info, create custom views"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What does 'Pick a View' provide?",
+      "options": [
+        "Open BIOS settings",
+        "Select predefined or custom table views and save as view",
+        "Manage firewall rules",
+        "Draft payroll"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which column actions are available?",
+      "options": [
+        "Encrypt column",
+        "Install fonts",
+        "Set GPU priority",
+        "Sort ascending/descending, lock/unlock, wrap text, show/hide columns, group by field"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What steps define a new view?",
+      "options": [
+        "GPU setup; storage format; BIOS options",
+        "Email routing; signatures; themes",
+        "Name/Description/visibility; Object Types; Filters; Columns; Sort order",
+        "Tax setup; invoices; ledger"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Where can you access the Windchill Help Center?",
+      "options": [
+        "From Quick Links > Help",
+        "From Theme selector",
+        "From Spreadsheet tab",
+        "From Printer menu"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Help items are available?",
+      "options": [
+        "Router manual, Firewall list",
+        "About Windchill, Communities, Contact Documentation, Welcome, Quick Start Guide, What’s New",
+        "Wallpaper, Icon pack",
+        "Payroll guide, Tax forms"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which tables can be displayed on the Home page?",
+      "options": [
+        "Tasks, Updates, Checked-out Work, Packages, Workspaces, Meetings, Notebook, Subscriptions, Reports, Saved Reports, Data Monitors, Discussions, Smart Collections",
+        "Chat logs only",
+        "GPU temps, Fan speed, BIOS",
+        "Invoices, Payments, Taxes"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What do A.1, A.2, B.1 represent in history?",
+      "options": [
+        "Iterations and revisions with lifecycle states across milestones",
+        "Random hashes without meaning",
+        "Email thread numbers",
+        "Printer queue IDs"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "When searching multiple types, what columns are available in a custom view?",
+      "options": [
+        "Only attributes common among object types",
+        "No columns can be added",
+        "Only numeric fields",
+        "All attributes from any type"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does Text Preview column require?",
+      "options": [
+        "Export to Office first",
+        "Admin role only",
+        "Kanban view enabled",
+        "Index search enabled and supported types preference"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a Data Monitor?",
+      "options": [
+        "A printer spooler",
+        "A GPU temperature widget",
+        "Scheduled execution of a saved report that emails when thresholds are met",
+        "A chat notifier for comments"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What does the Clipboard in Quick Links do?",
+      "options": [
+        "Cut, copy, and paste objects/URLs within Windchill",
+        "Encrypt passwords",
+        "Resize images",
+        "Manage browser cookies"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which menu lets you select visible tables on Home page?",
+      "options": [
+        "Help",
+        "Customize",
+        "Quick Links",
+        "Navigator"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the Breadcrumb trail used for?",
+      "options": [
+        "Render CAD models",
+        "Manage chat rooms",
+        "Show CPU usage",
+        "Display navigation hierarchy and link to contexts/folders"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which table shows recently created or modified objects?",
+      "options": [
+        "Subscriptions",
+        "Updates",
+        "Packages",
+        "Meetings"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which table lists items assigned to you?",
+      "options": [
+        "My Emails",
+        "My Tasks",
+        "My Payroll",
+        "My Devices"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where are mini thumbnails commonly displayed?",
+      "options": [
+        "Quick Links only",
+        "Admin pages only",
+        "Preferences page only",
+        "Search Results and Folder Contents tables"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is Classification search?",
+      "options": [
+        "Search only by date",
+        "Search based on defined classifications; UI similar to Faceted",
+        "Search only by owner",
+        "Search only by filename"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What does 'Group By This Field' do?",
+      "options": [
+        "Enable bold font",
+        "Group table rows by selected column",
+        "Export to PDF",
+        "Lock column order"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "How can you save a table configuration quickly?",
+      "options": [
+        "Run kernel update",
+        "Install plugin",
+        "Change BIOS",
+        "Use Pick a View > Save As View"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which option filters Folder Contents by object type?",
+      "options": [
+        "Theme selector",
+        "View menu next to table label",
+        "System Tray",
+        "Clipboard"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 64)?",
+      "options": [
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking",
+        "Local text files with no links",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 65)?",
+      "options": [
+        "Role-based wiki pages with widgets connecting to reports",
+        "Standalone images unrelated to data",
+        "Manual emails without tracking",
+        "Local text files with no links"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 66)?",
+      "options": [
+        "Local text files with no links",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 67)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 68)?",
+      "options": [
+        "Manual emails without tracking",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 69)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links",
+        "Manual emails without tracking"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 70)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 71)?",
+      "options": [
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Standalone images unrelated to data",
+        "Manual emails without tracking"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 72)?",
+      "options": [
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 73)?",
+      "options": [
+        "Manual emails without tracking",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 74)?",
+      "options": [
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking",
+        "Standalone images unrelated to data",
+        "Local text files with no links"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 75)?",
+      "options": [
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 76)?",
+      "options": [
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 77)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Manual emails without tracking",
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 78)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 79)?",
+      "options": [
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 80)?",
+      "options": [
+        "Manual emails without tracking",
+        "Local text files with no links",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 81)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 82)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 83)?",
+      "options": [
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking",
+        "Local text files with no links",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 84)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 85)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Manual emails without tracking",
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 86)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 87)?",
+      "options": [
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 88)?",
+      "options": [
+        "Local text files with no links",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 89)?",
+      "options": [
+        "Local text files with no links",
+        "Standalone images unrelated to data",
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 90)?",
+      "options": [
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 91)?",
+      "options": [
+        "Manual emails without tracking",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 92)?",
+      "options": [
+        "Local text files with no links",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 93)?",
+      "options": [
+        "Manual emails without tracking",
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 94)?",
+      "options": [
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 95)?",
+      "options": [
+        "Standalone images unrelated to data",
+        "Local text files with no links",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 96)?",
+      "options": [
+        "Local text files with no links",
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 97)?",
+      "options": [
+        "Local text files with no links",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Manual emails without tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 98)?",
+      "options": [
+        "Manual emails without tracking",
+        "Standalone images unrelated to data",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 99)?",
+      "options": [
+        "Local text files with no links",
+        "Standalone images unrelated to data",
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability improves visibility via dashboards and reports (item 100)?",
+      "options": [
+        "Manual emails without tracking",
+        "Role-based wiki pages with widgets connecting to reports",
+        "Local text files with no links",
+        "Standalone images unrelated to data"
+      ],
+      "correct": 2
+    }
+  ]
+}

@@ -171,13 +171,6 @@
             animation: shake 0.5s;
         }
 
-        .question-section.has-error {
-            background: #fffbf0;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
             25% { transform: translateX(-5px); }
@@ -366,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v21.0</div>
+    <div class="version-info">v12.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -390,23 +383,6 @@
         let currentQuestions = [];
         let answers = {};
         let questionsLoaded = false;
-        let wrongQuestions = new Set(); // Track which questions have wrong answers
-
-        // Function to apply yellow highlights based on wrongQuestions Set
-        function applyWrongHighlights() {
-            // First, remove all wrong-hint classes
-            document.querySelectorAll('.option').forEach(opt => {
-                opt.classList.remove('wrong-hint');
-            });
-
-            // Then, add wrong-hint to currently selected options for wrong questions
-            wrongQuestions.forEach(questionName => {
-                const selected = document.querySelector(`input[name="${questionName}"]:checked`);
-                if (selected) {
-                    selected.parentElement.classList.add('wrong-hint');
-                }
-            });
-        }
 
         // Load questions from JSON file
         async function loadQuestions() {
@@ -519,60 +495,13 @@
             options.forEach(option => {
                 option.addEventListener('click', function() {
                     const radio = this.querySelector('input[type="radio"]');
-                    const name = radio.name;
-
-                    // If inputs are disabled (quiz was finalized with OK), re-enable everything
-                    if (radio.disabled) {
-                        // Re-enable all inputs
-                        document.querySelectorAll('input[type="radio"]').forEach(input => {
-                            input.disabled = false;
-                        });
-
-                        // Clear all red/incorrect highlighting (from final results)
-                        document.querySelectorAll('.option').forEach(opt => {
-                            opt.classList.remove('correct', 'incorrect');
-                        });
-
-                        // Clear question section error markers
-                        document.querySelectorAll('.question-section').forEach(section => {
-                            section.classList.remove('has-error');
-                        });
-
-                        // Clear wrong questions tracking
-                        wrongQuestions.clear();
-
-                        // Re-enable submit button
-                        const submitBtn = document.getElementById('submitBtn');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Submit Quiz';
-                        submitBtn.style.cursor = 'pointer';
-                    }
-
-                    // Check the new option
                     radio.checked = true;
 
-                    // Remove 'selected' from ALL options in this question
+                    const name = radio.name;
                     document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
-                        r.parentElement.classList.remove('selected');
+                        r.parentElement.classList.remove('selected', 'wrong-hint');
                     });
-
-                    // Add selected to the newly clicked option
                     this.classList.add('selected');
-
-                    // If user changed an answer for a question that was marked wrong,
-                    // remove it from wrongQuestions (they're attempting to fix it)
-                    if (wrongQuestions.has(name)) {
-                        wrongQuestions.delete(name);
-
-                        // Also remove the has-error class from the question section
-                        const questionSection = this.closest('.question-section');
-                        if (questionSection) {
-                            questionSection.classList.remove('has-error');
-                        }
-                    }
-
-                    // Re-apply all wrong highlights based on the current state
-                    applyWrongHighlights();
                 });
             });
         }
@@ -607,7 +536,7 @@
                 // User clicked Cancel - just return to main quiz screen
                 // Remove any result highlighting (green/red) from previous attempts
                 document.querySelectorAll('.option').forEach(opt => {
-                    opt.classList.remove('correct', 'incorrect', 'wrong-hint');
+                    opt.classList.remove('correct', 'incorrect');
                 });
 
                 // Make sure all inputs are enabled
@@ -615,69 +544,58 @@
                     input.disabled = false;
                 });
 
-                // Track which questions are wrong
-                wrongQuestions.clear();
-                let firstWrongSection = null;
+                // Clear previous wrong hints
+                document.querySelectorAll('.option').forEach(opt => {
+                    opt.classList.remove('wrong-hint');
+                });
 
+                // Now add yellow highlight ONLY to user's wrong answers
+                let firstWrongQuestion = null;
                 for (let question in answers) {
                     const selected = document.querySelector(`input[name="${question}"]:checked`);
                     if (selected && parseInt(selected.value) !== answers[question]) {
-                        // This question is wrong - track it
-                        wrongQuestions.add(question);
-
-                        // Find the question section and add a class to mark it as wrong
-                        const questionSection = selected.closest('.question-section');
-                        if (questionSection) {
-                            questionSection.classList.add('has-error');
-                            if (!firstWrongSection) {
-                                firstWrongSection = questionSection;
-                            }
+                        // This is a wrong answer - highlight it in yellow
+                        selected.parentElement.classList.add('wrong-hint');
+                        if (!firstWrongQuestion) {
+                            firstWrongQuestion = selected.parentElement;
                         }
                     }
                 }
 
-                // Apply yellow highlights to all wrong answers
-                applyWrongHighlights();
-
                 // Scroll to first wrong answer
-                if (firstWrongSection) {
-                    firstWrongSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (firstWrongQuestion) {
+                    firstWrongQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
-
-                // Make sure Submit button is enabled and ready for resubmission
-                this.disabled = false;
-                this.textContent = 'Submit Quiz';
-                this.style.cursor = 'pointer';
 
                 // Stay on main quiz screen - don't show results
                 return;
             }
 
-            // User confirmed - clear yellow hints and question error markers, show final results
+            // User confirmed - clear yellow hints and show final results
             document.querySelectorAll('.option').forEach(opt => {
                 opt.classList.remove('wrong-hint', 'selected');
             });
 
-            document.querySelectorAll('.question-section').forEach(section => {
-                section.classList.remove('has-error');
-            });
-
-            wrongQuestions.clear();
-
-            // Only show the user's incorrect selections in red (don't reveal correct answers)
+            // Now show the results with correct (green) and incorrect (red)
             for (let question in answers) {
                 const selected = document.querySelector(`input[name="${question}"]:checked`);
                 const correctAnswer = answers[question];
                 const allOptions = document.querySelectorAll(`input[name="${question}"]`);
 
                 allOptions.forEach(option => {
+                    const label = option.parentElement;
                     option.disabled = true;
-                });
 
-                // Only highlight user's incorrect selection in red
-                if (selected && parseInt(selected.value) !== correctAnswer) {
-                    selected.parentElement.classList.add('incorrect');
-                }
+                    // Show ALL correct answers in green
+                    if (parseInt(option.value) === correctAnswer) {
+                        label.classList.add('correct');
+                    }
+
+                    // Show user's incorrect selection in red
+                    if (selected && selected === option && parseInt(option.value) !== correctAnswer) {
+                        label.classList.add('incorrect');
+                    }
+                });
             }
 
             // Disable the submit button and show score at the top

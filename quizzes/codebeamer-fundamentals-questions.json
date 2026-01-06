@@ -1,6 +1,6 @@
 {
   "quizName": "Codebeamer Fundamentals Quiz",
-  "description": "100-question assessment based on CBFD-OVER Training Guide",
+  "description": "100-question assessment based on CBFD-OVER Training Guide (excluding exercises and knowledge checks)",
   "questions": [
     {
       "text": "What does ALM stand for?",
@@ -203,7 +203,7 @@
       "correct": 1
     },
     {
-      "text": "Question 21 based on Codebeamer guide content",
+      "text": "Explain: ALM development framework phases",
       "options": [
         "Option A",
         "Option B",
@@ -213,7 +213,7 @@
       "correct": 1
     },
     {
-      "text": "Question 22 based on Codebeamer guide content",
+      "text": "Explain: Common deliverables in ALM",
       "options": [
         "Option A",
         "Option B",
@@ -223,7 +223,7 @@
       "correct": 1
     },
     {
-      "text": "Question 23 based on Codebeamer guide content",
+      "text": "Explain: Benefits of using project templates",
       "options": [
         "Option A",
         "Option B",
@@ -233,7 +233,7 @@
       "correct": 1
     },
     {
-      "text": "Question 24 based on Codebeamer guide content",
+      "text": "Explain: Purpose of cbQL",
       "options": [
         "Option A",
         "Option B",
@@ -243,7 +243,7 @@
       "correct": 1
     },
     {
-      "text": "Question 25 based on Codebeamer guide content",
+      "text": "Explain: Role of traceability in compliance",
       "options": [
         "Option A",
         "Option B",
@@ -253,7 +253,7 @@
       "correct": 1
     },
     {
-      "text": "Question 26 based on Codebeamer guide content",
+      "text": "Explain: Difference between upstream and downstream references",
       "options": [
         "Option A",
         "Option B",
@@ -263,7 +263,7 @@
       "correct": 1
     },
     {
-      "text": "Question 27 based on Codebeamer guide content",
+      "text": "Explain: Workflow diagram purpose",
       "options": [
         "Option A",
         "Option B",
@@ -273,7 +273,7 @@
       "correct": 1
     },
     {
-      "text": "Question 28 based on Codebeamer guide content",
+      "text": "Explain: Entities in Codebeamer",
       "options": [
         "Option A",
         "Option B",
@@ -283,7 +283,7 @@
       "correct": 1
     },
     {
-      "text": "Question 29 based on Codebeamer guide content",
+      "text": "Explain: Purpose of Thing Model",
       "options": [
         "Option A",
         "Option B",
@@ -293,7 +293,7 @@
       "correct": 1
     },
     {
-      "text": "Question 30 based on Codebeamer guide content",
+      "text": "Explain: Integration of test management with bug management",
       "options": [
         "Option A",
         "Option B",

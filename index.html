@@ -80,6 +80,26 @@
             background: #5568d3;
         }
 
+        .quiz-selector {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 8px 15px;
+            font-size: 0.85em;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .quiz-selector:hover {
+            background: #f0f0ff;
+        }
+
+        body.large-font .quiz-selector {
+            font-size: 1em;
+            padding: 10px 18px;
+        }
+
         .question-section {
             margin-bottom: 20px;
         }
@@ -359,11 +379,16 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v20.0</div>
+    <div class="version-info">v21.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
-            <h1>Geography Quiz</h1>
+            <h1 id="quizTitle">Geography Quiz</h1>
+            <select id="quizSelector" class="quiz-selector">
+                <option value="geography-questions.json">Geography Quiz</option>
+                <option value="codebeamer-fundamentals-questions.json">Codebeamer Fundamentals</option>
+                <option value="Thingworx-fundamnetails-questions.json">ThingWorx Fundamentals</option>
+            </select>
             <button class="font-toggle-btn" id="fontToggle">Larger Text</button>
         </div>
 
@@ -385,9 +410,9 @@
         let questionsLoaded = false;
 
         // Load questions from JSON file
-        async function loadQuestions() {
+        async function loadQuestions(filename = 'geography-questions.json') {
             try {
-                const response = await fetch('./questions.json');
+                const response = await fetch(`./quizzes/${filename}`);
                 if (!response.ok) {
                     throw new Error('Failed to load questions');
                 }
@@ -407,7 +432,7 @@
 
                     // Update page title and heading
                     document.title = quizData.quizName;
-                    document.querySelector('h1').textContent = quizData.quizName;
+                    document.getElementById('quizTitle').textContent = quizData.quizName;
 
                     // Update meta description
                     const metaDesc = document.querySelector('meta[name="description"]');
@@ -443,7 +468,8 @@
         async function generateQuiz() {
             // Load questions if not already loaded
             if (!questionsLoaded) {
-                const loaded = await loadQuestions();
+                const selectedQuiz = document.getElementById('quizSelector').value;
+                const loaded = await loadQuestions(selectedQuiz);
                 if (!loaded) return;
             }
 
@@ -607,6 +633,21 @@
         // New Quiz button (reload page for fresh start)
         document.getElementById('retryBtn')?.addEventListener('click', async function() {
             window.location.reload();
+        });
+
+        // Quiz selector functionality
+        const quizSelector = document.getElementById('quizSelector');
+
+        // Load saved quiz selection from localStorage
+        const savedQuiz = localStorage.getItem('selectedQuiz') || 'geography-questions.json';
+        quizSelector.value = savedQuiz;
+
+        // Handle quiz selection change
+        quizSelector.addEventListener('change', async function() {
+            const selectedQuiz = this.value;
+            localStorage.setItem('selectedQuiz', selectedQuiz);
+            questionsLoaded = false;
+            await generateQuiz();
         });
 
         // Initialize quiz on page load

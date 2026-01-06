@@ -6,7 +6,8 @@
       "Bash(git commit:*)",
       "Bash(git push)",
       "WebFetch(domain:stevegw.github.io)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(ls:*)"
     ]
   }
 }

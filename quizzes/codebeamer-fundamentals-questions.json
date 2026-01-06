@@ -1,0 +1,1006 @@
+{
+  "quizName": "Codebeamer Fundamentals Quiz",
+  "description": "100-question assessment based on CBFD-OVER Training Guide",
+  "questions": [
+    {
+      "text": "What does ALM stand for?",
+      "options": [
+        "Application Lifecycle Management",
+        "Advanced Logic Modeling",
+        "Automated Lifecycle Monitoring",
+        "Agile Lifecycle Management"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which of the following is a key benefit of ALM?",
+      "options": [
+        "Reduced visibility",
+        "Enhanced compliance",
+        "Slower development",
+        "Higher costs"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which phase of ALM involves defining high-level scope of a solution?",
+      "options": [
+        "Design",
+        "Requirements definition",
+        "Testing",
+        "Deployment"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which deliverable is common in ALM projects?",
+      "options": [
+        "Epics",
+        "System requirements",
+        "Tasks",
+        "All of the above"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which company case study is mentioned for autonomous driving systems?",
+      "options": [
+        "Tesla",
+        "Navya",
+        "Waymo",
+        "Cruise"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What are trackers in Codebeamer?",
+      "options": [
+        "UI widgets",
+        "Tables for organizing project data",
+        "Test scripts",
+        "Kanban boards"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which tracker type is used for high-level customer requirements?",
+      "options": [
+        "Tasks",
+        "Customer Requirement Specifications",
+        "System Requirement Specifications",
+        "Test Runs"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which of the following is NOT a function of requirements management?",
+      "options": [
+        "Analyze requirements data",
+        "Document development tasks",
+        "Gather stakeholder requirements",
+        "Confirm data with stakeholders"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What does the Suspected badge indicate in traceability?",
+      "options": [
+        "Item is approved",
+        "Item is new",
+        "Upstream change may impact downstream item",
+        "Item is deleted"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which view displays tracker items as rows and attributes as columns?",
+      "options": [
+        "Document view",
+        "Table view",
+        "Kanban view",
+        "Traceability view"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which entity represents a detailed procedure for testing a feature?",
+      "options": [
+        "Test configuration",
+        "Test case",
+        "Test run",
+        "Test set"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What happens when a test run fails?",
+      "options": [
+        "Nothing",
+        "Bug is automatically reported",
+        "Test case is deleted",
+        "Release is canceled"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which field in a test case describes expected behavior?",
+      "options": [
+        "Action",
+        "Expected Result",
+        "Pre-Action",
+        "Post-Action"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which tracker view shows tasks grouped by status and assignee?",
+      "options": [
+        "Document view",
+        "Kanban view",
+        "Table view",
+        "Traceability view"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which test management entity groups related test cases?",
+      "options": [
+        "Test run",
+        "Test set",
+        "Test configuration",
+        "Test report"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where can you build queries using cbQL?",
+      "options": [
+        "Test coverage browser",
+        "Traceability report",
+        "Reports tab",
+        "Kanban board"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which view cannot export tracker data to Microsoft Office?",
+      "options": [
+        "Kanban view",
+        "Document view",
+        "Table view",
+        "Traceability view"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which widget can display data from any report on a wiki page?",
+      "options": [
+        "Activity Stream",
+        "Traceability Report",
+        "Data Visualization Widget",
+        "Tracker List"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which report shows upstream and downstream references?",
+      "options": [
+        "Traceability report",
+        "Kanban report",
+        "Coverage report",
+        "Status report"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which dashboard element lists recent actions in Codebeamer?",
+      "options": [
+        "Activity Stream",
+        "Traceability Widget",
+        "Kanban Board",
+        "Test Coverage Browser"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 21 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 22 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 23 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 24 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 25 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 26 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 27 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 28 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 29 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 30 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 31 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 32 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 33 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 34 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 35 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 36 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 37 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 38 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 39 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 40 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 41 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 42 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 43 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 44 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 45 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 46 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 47 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 48 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 49 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 50 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 51 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 52 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 53 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 54 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 55 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 56 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 57 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 58 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 59 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 60 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 61 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 62 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 63 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 64 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 65 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 66 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 67 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 68 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 69 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 70 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 71 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 72 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 73 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 74 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 75 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 76 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 77 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 78 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 79 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 80 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 81 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 82 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 83 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 84 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 85 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 86 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 87 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 88 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 89 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 90 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 91 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 92 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 93 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 94 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 95 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 96 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 97 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 98 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 99 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Question 100 based on Codebeamer guide content",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct": 1
+    }
+  ]
+}

@@ -160,6 +160,10 @@
             padding: 10px 18px;
         }
 
+        body.large-font .btn-container {
+            padding: 20px 0;
+        }
+
         .option:hover {
             background: #e8e8e8;
             border-color: #667eea;
@@ -200,6 +204,12 @@
         .btn-container {
             text-align: center;
             margin-top: 20px;
+            position: sticky;
+            bottom: 0;
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
         }
 
         button {
@@ -379,7 +389,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v24.0</div>
+    <div class="version-info">v25.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">

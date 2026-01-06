@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v13.0</div>
+    <div class="version-info">v14.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -498,8 +498,9 @@
                     radio.checked = true;
 
                     const name = radio.name;
+                    // Remove highlighting from all options in this question when user changes answer
                     document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
-                        r.parentElement.classList.remove('selected', 'wrong-hint');
+                        r.parentElement.classList.remove('selected', 'wrong-hint', 'incorrect');
                     });
                     this.classList.add('selected');
                 });
@@ -571,31 +572,24 @@
                 return;
             }
 
-            // User confirmed - clear yellow hints and show final results
+            // User confirmed - clear yellow hints and show incorrect answers in red
             document.querySelectorAll('.option').forEach(opt => {
-                opt.classList.remove('wrong-hint', 'selected');
+                opt.classList.remove('wrong-hint', 'selected', 'incorrect');
             });
 
-            // Now show the results with correct (green) and incorrect (red)
+            // Only show user's incorrect selections in red (don't reveal correct answers)
             for (let question in answers) {
                 const selected = document.querySelector(`input[name="${question}"]:checked`);
                 const correctAnswer = answers[question];
-                const allOptions = document.querySelectorAll(`input[name="${question}"]`);
 
-                allOptions.forEach(option => {
-                    option.disabled = true;
-                });
-
-                // Only show user's incorrect selection in red (don't reveal correct answers)
+                // Only highlight user's incorrect selection in red
                 if (selected && parseInt(selected.value) !== correctAnswer) {
                     selected.parentElement.classList.add('incorrect');
                 }
             }
 
-            // Disable the submit button and show score at the top
-            this.disabled = true;
-            this.textContent = `Final Score: ${score} out of 5`;
-            this.style.cursor = 'not-allowed';
+            // Keep inputs and submit button enabled so user can try again
+            // Red highlights will clear when user changes an answer
         });
 
         // New Quiz button (reload page for fresh start)

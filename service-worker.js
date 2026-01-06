@@ -1,5 +1,9 @@
 // IMPORTANT: Increment this version number whenever you deploy changes
+<<<<<<< HEAD
 const CACHE_VERSION = 'v21';
+=======
+const CACHE_VERSION = 'v11';
+>>>>>>> parent of 6214bf8 (Update to v12.0 and simplify quiz result display)
 const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
 const urlsToCache = [
   './geography_quiz.html',

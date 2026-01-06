@@ -4,7 +4,9 @@
       "Bash(gh auth:*)",
       "Bash(git mv:*)",
       "Bash(git commit:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "WebFetch(domain:stevegw.github.io)",
+      "Bash(git add:*)"
     ]
   }
 }

@@ -359,7 +359,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v17.0</div>
+    <div class="version-info">v18.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -484,7 +484,7 @@
                 questionSection.appendChild(optionsDiv);
                 container.appendChild(questionSection);
 
-                answers[`q${index}`] = q.correct;
+                answers[`q${index}`] = q.correct - 1;
             });
 
             setupOptionListeners();

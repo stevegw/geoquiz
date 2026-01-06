@@ -10,7 +10,7 @@
         "Experience",
         "Deploy"
       ],
-      "correct": 3
+      "correct": 4
     },
     {
       "text": "In the ThingWorx framework, which three stages can often be performed in parallel?",
@@ -20,7 +20,7 @@
         "Model, Analyze, Deploy",
         "Connect, Deploy, Experience"
       ],
-      "correct": 2
+      "correct": 3
     },
     {
       "text": "What does the Model stage focus on?",
@@ -30,7 +30,7 @@
         "Creating digital twins of physical assets",
         "Configuring network security"
       ],
-      "correct": 3
+      "correct": 4
     },
     {
       "text": "Which stage considers best practices for production environment scaling?",
@@ -40,7 +40,7 @@
         "Connect",
         "Analyze"
       ],
-      "correct": 2
+      "correct": 3
     },
     {
       "text": "The user interface that allows interaction with the model is created in which stage?",
@@ -50,7 +50,7 @@
         "Analyze",
         "Experience"
       ],
-      "correct": 2
+      "correct": 3
     },
     {
       "text": "Which four capabilities of a smart connected product form the foundation of IoT solutions?",
@@ -60,7 +60,7 @@
         "Plan, Build, Test, Deploy",
         "Connect, Model, Build, Analyze"
       ],
-      "correct": 2
+      "correct": 3
     },
     {
       "text": "According to the effort-value graph, which capability typically requires the most effort but yields the smallest initial value?",
@@ -80,7 +80,7 @@
         "To configure IndustrialThingShape",
         "To generate REST APIs automatically"
       ],
-      "correct": 2
+      "correct": 3
     },
     {
       "text": "Which assets are part of the PCB assembly line scenario in the course?",
@@ -90,7 +90,7 @@
         "3D printer, laser cutter, grinder",
         "Welding station, paint booth, curing oven"
       ],
-      "correct": 2
+      "correct": 3
     },
     {
       "text": "Which controller connects the assembly line assets in the scenario?",
@@ -100,7 +100,7 @@
         "PLC (Programmable Logic Controller)",
         "DCS (Distributed Control System)"
       ],
-      "correct": 3
+      "correct": 4
     }
   ]
 }

@@ -1,10 +1,13 @@
 // IMPORTANT: Increment this version number whenever you deploy changes
-const CACHE_VERSION = 'v15';
+const CACHE_VERSION = 'v30';
 const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
 const urlsToCache = [
-  './geography_quiz.html',
+  './index.html',
   './manifest.json',
-  './questions.json'
+  './quizzes/geography-questions.json',
+  './quizzes/codebeamer-fundamentals-questions.json',
+  './quizzes/Thingworx-fundamnetails-questions.json',
+  './quizzes/Windchill-fundamentals-questions.json'
 ];
 
 // Listen for SKIP_WAITING message

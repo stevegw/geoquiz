@@ -389,7 +389,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v28.0</div>
+    <div class="version-info">v29.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -567,7 +567,7 @@
 
             // Check for perfect score
             if (score === 5) {
-                const startNewQuiz = confirm('Nice job! You got all 5 correct!\n\nClick "OK" to start a new quiz or "Cancel" to review your answers.');
+                const startNewQuiz = confirm('Nice job! You got all 5 correct!\n\nStart a new quiz?\n\nOK = New Quiz\nCancel = Review Answers');
                 if (startNewQuiz) {
                     // User wants a new quiz
                     window.location.reload();
@@ -578,7 +578,7 @@
             }
 
             // Show confirmation with score for non-perfect scores
-            const confirmMessage = `You scored ${score} out of 5!\n\nDo you want to submit and see the full results?\n\nClick "OK" to submit or "Cancel" to go back and review your answers.`;
+            const confirmMessage = `You scored ${score} out of 5!\n\nDo you want to submit and see the full results?\n\nOK = Submit\nCancel = Review Answers`;
             const confirmed = confirm(confirmMessage);
 
             if (!confirmed) {

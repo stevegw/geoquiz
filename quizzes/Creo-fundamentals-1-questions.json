@@ -1,0 +1,976 @@
+{
+    "quizName": "Creo Parametric Modeling Quiz",
+    "description": "Test your knowledge of Creo concepts with refined questions",
+    "questions": [
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which tool in Creo is used to define geometric constraints?",
+            "options": [
+                "Dimension Tool",
+                "Constraint Tool",
+                "Pattern Tool",
+                "Sweep Tool"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which feature type creates a solid by revolving a sketch around an axis?",
+            "options": [
+                "Extrude",
+                "Revolve",
+                "Sweep",
+                "Blend"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which feature type creates a solid by revolving a sketch around an axis?",
+            "options": [
+                "Extrude",
+                "Revolve",
+                "Sweep",
+                "Blend"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which feature type creates a solid by revolving a sketch around an axis?",
+            "options": [
+                "Extrude",
+                "Revolve",
+                "Sweep",
+                "Blend"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which tool in Creo is used to define geometric constraints?",
+            "options": [
+                "Dimension Tool",
+                "Constraint Tool",
+                "Pattern Tool",
+                "Sweep Tool"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which feature type creates a solid by revolving a sketch around an axis?",
+            "options": [
+                "Extrude",
+                "Revolve",
+                "Sweep",
+                "Blend"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "Which tool in Creo is used to define geometric constraints?",
+            "options": [
+                "Dimension Tool",
+                "Constraint Tool",
+                "Pattern Tool",
+                "Sweep Tool"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which tool in Creo is used to define geometric constraints?",
+            "options": [
+                "Dimension Tool",
+                "Constraint Tool",
+                "Pattern Tool",
+                "Sweep Tool"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which tool in Creo is used to define geometric constraints?",
+            "options": [
+                "Dimension Tool",
+                "Constraint Tool",
+                "Pattern Tool",
+                "Sweep Tool"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which tool in Creo is used to define geometric constraints?",
+            "options": [
+                "Dimension Tool",
+                "Constraint Tool",
+                "Pattern Tool",
+                "Sweep Tool"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which feature type creates a solid by revolving a sketch around an axis?",
+            "options": [
+                "Extrude",
+                "Revolve",
+                "Sweep",
+                "Blend"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which tool in Creo is used to define geometric constraints?",
+            "options": [
+                "Dimension Tool",
+                "Constraint Tool",
+                "Pattern Tool",
+                "Sweep Tool"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "Which feature type creates a solid by revolving a sketch around an axis?",
+            "options": [
+                "Extrude",
+                "Revolve",
+                "Sweep",
+                "Blend"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What is the purpose of datum planes in Creo?",
+            "options": [
+                "To provide reference geometry for sketches and features",
+                "To apply material properties",
+                "To export models to other formats",
+                "To create assembly constraints"
+            ],
+            "correct": 0
+        },
+        {
+            "text": "What does parametric modeling mean in Creo?",
+            "options": [
+                "It allows models to update automatically when dimensions change",
+                "It fixes geometry without flexibility",
+                "It creates static models without relationships",
+                "It disables feature regeneration"
+            ],
+            "correct": 0
+        }
+    ]
+}

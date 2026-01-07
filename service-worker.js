@@ -1,10 +1,11 @@
 // IMPORTANT: Increment this version number whenever you deploy changes
-const CACHE_VERSION = 'v31';
+const CACHE_VERSION = 'v34';
 const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
 const urlsToCache = [
   './index.html',
   './manifest.json',
   './quizzes/Windchill-fundamentals-questions.json',
+  './quizzes/Creo-fundamentals-1-questions.json',
   './quizzes/codebeamer-fundamentals-questions.json',
   './quizzes/Thingworx-fundamnetails-questions.json',
   './quizzes/geography-questions.json'

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geography Quiz</title>
+    <title>PTC AI developed Quiz</title>
 
     <!-- PWA Meta Tags -->
     <meta name="description" content="Test your geography knowledge with randomized questions">
@@ -389,7 +389,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v36.0</div>
+    <div class="version-info">v37.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -429,7 +429,7 @@
         let questionsLoaded = false;
 
         // Load questions from JSON file
-        async function loadQuestions(filename = 'geography-questions.json') {
+        async function loadQuestions(filename = 'Windchill-fundamentals-questions.json') {
             try {
                 const response = await fetch(`./quizzes/${filename}`);
                 if (!response.ok) {
@@ -691,7 +691,7 @@
         const quizSelector = document.getElementById('quizSelector');
 
         // Load saved quiz selection from localStorage
-        const savedQuiz = localStorage.getItem('selectedQuiz') || 'geography-questions.json';
+        const savedQuiz = localStorage.getItem('selectedQuiz') || 'Windchill-fundamentals-questions.json';
         quizSelector.value = savedQuiz;
 
         // Handle quiz selection change

@@ -389,7 +389,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v34.0</div>
+    <div class="version-info">v35.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -482,13 +482,29 @@
         function selectRandomQuestions() {
             const countSelector = document.getElementById('questionCount');
             const count = countSelector.value;
-            const shuffled = shuffleArray(questionPool);
+
+            // Create a copy to avoid modifying the original pool
+            const poolCopy = [...questionPool];
+            const shuffled = shuffleArray(poolCopy);
 
             if (count === 'all') {
                 return shuffled;
             } else {
                 const numQuestions = Math.min(parseInt(count), questionPool.length);
-                return shuffled.slice(0, numQuestions);
+                const selected = shuffled.slice(0, numQuestions);
+
+                // Extra safety: ensure no duplicates (shouldn't happen, but just in case)
+                const uniqueQuestions = [];
+                const seenTexts = new Set();
+
+                for (const q of selected) {
+                    if (!seenTexts.has(q.text)) {
+                        seenTexts.add(q.text);
+                        uniqueQuestions.push(q);
+                    }
+                }
+
+                return uniqueQuestions;
             }
         }
 
@@ -500,10 +516,17 @@
                 if (!loaded) return;
             }
 
+            // Always get fresh random questions
             currentQuestions = selectRandomQuestions();
+
+            // Reset answers
             answers = {};
+
+            // Clear the container completely
             const container = document.getElementById('questionsContainer');
-            container.innerHTML = '';
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
 
             currentQuestions.forEach((q, index) => {
                 const questionSection = document.createElement('div');

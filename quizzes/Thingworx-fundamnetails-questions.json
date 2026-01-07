@@ -1,106 +1,1006 @@
 {
-  "quizName": "ThingWorx Fundamentals Quiz",
-  "description": "Corrected answers based on TWFD-OVER Training Guide",
+  "quizName": "TWFD Overview Concept Questions",
+  "description": "100 multiple‑choice questions derived from conceptual content of the TWFD‑OVER Training Guide (excludes exercises and slide option references).",
   "questions": [
     {
-      "text": "Which stage should always come first in the ThingWorx development process?",
+      "text": "What is the primary role of ThingWorx Composer?",
       "options": [
-        "Model",
-        "Analyze",
-        "Experience",
-        "Deploy"
+        "A database client for SQL schemas",
+        "A mobile app for field service only",
+        "A web-based modeling environment to define and manage entities",
+        "A desktop CAD tool for designing parts"
       ],
       "correct": 3
     },
     {
-      "text": "In the ThingWorx framework, which three stages can often be performed in parallel?",
+      "text": "Which description best fits a ThingWorx 'Thing'?",
       "options": [
-        "Experience, Model, Deploy",
-        "Analyze, Connect, Build",
-        "Model, Analyze, Deploy",
-        "Connect, Deploy, Experience"
+        "An entity that models a real or logical asset with properties, services, and events",
+        "A pure visualization widget",
+        "A static file used for styling mashups",
+        "A temporary session object"
       ],
-      "correct": 2
+      "correct": 1
     },
     {
-      "text": "What does the Model stage focus on?",
+      "text": "What is the relationship between Thing Templates and Things?",
       "options": [
-        "Creating UI mashups",
-        "Defining deployment best practices",
-        "Creating digital twins of physical assets",
-        "Configuring network security"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which stage considers best practices for production environment scaling?",
-      "options": [
-        "Build",
-        "Deploy",
-        "Connect",
-        "Analyze"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "The user interface that allows interaction with the model is created in which stage?",
-      "options": [
-        "Connect",
-        "Build",
-        "Analyze",
-        "Experience"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which four capabilities of a smart connected product form the foundation of IoT solutions?",
-      "options": [
-        "Sense, Analyze, Report, Act",
-        "Monitor, Control, Optimize, Automate",
-        "Plan, Build, Test, Deploy",
-        "Connect, Model, Build, Analyze"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "According to the effort-value graph, which capability typically requires the most effort but yields the smallest initial value?",
-      "options": [
-        "Automate",
-        "Optimize",
-        "Control",
-        "Monitor"
+        "Templates are only used by Data Tables",
+        "Things define templates automatically",
+        "Templates are runtime logs",
+        "Things can be instantiated from Thing Templates to inherit structure and behavior"
       ],
       "correct": 4
     },
     {
-      "text": "Why is it critical to start at the Experience stage?",
+      "text": "What is the purpose of Thing Shapes?",
       "options": [
-        "To select drivers for Kepware",
-        "To define user- and problem-centric criteria for value",
-        "To configure IndustrialThingShape",
-        "To generate REST APIs automatically"
+        "Mashup widgets for UI",
+        "Reusable sets of properties/services that can be composed into templates or things",
+        "Runtime access lists for users",
+        "External connectors for MQTT only"
       ],
       "correct": 2
     },
     {
-      "text": "Which assets are part of the PCB assembly line scenario in the course?",
+      "text": "Which artifact typically defines tabular schemas for InfoTables?",
       "options": [
-        "CNC mill, lathe, sandblaster",
-        "Stencil machine, pick and place, reflow oven, inspection station, conveyors",
-        "3D printer, laser cutter, grinder",
-        "Welding station, paint booth, curing oven"
+        "Data Shapes",
+        "Organizations",
+        "Style Definitions",
+        "Thing Shapes"
       ],
-      "correct": 2
+      "correct": 1
     },
     {
-      "text": "Which controller connects the assembly line assets in the scenario?",
+      "text": "What is an InfoTable used for in ThingWorx?",
       "options": [
-        "Microcontroller",
-        "SCADA server",
-        "PLC (Programmable Logic Controller)",
-        "DCS (Distributed Control System)"
+        "A structured in-memory table for passing data (rows defined by a Data Shape)",
+        "A binary file format",
+        "A widget layout manager",
+        "A persistent SQL table"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which entity contains visual UI pages assembled with widgets and data bindings?",
+      "options": [
+        "Projects",
+        "Streams",
+        "Mashups",
+        "Application Keys"
       ],
       "correct": 3
+    },
+    {
+      "text": "Which component enables organization and packaging of related artifacts?",
+      "options": [
+        "Users",
+        "Value Streams",
+        "Projects",
+        "Style Definitions"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are Style Definitions used for?",
+      "options": [
+        "Reusable styles to maintain consistent look and feel of widgets",
+        "Edge connection profiles",
+        "Security policies for REST APIs",
+        "Data persistence settings"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which editor binds data sources to widgets and configures events?",
+      "options": [
+        "ThingWorx Analytics Builder",
+        "Edge SDK",
+        "Mashup Builder",
+        "Composer Entities Grid"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which statement about Thing properties is correct?",
+      "options": [
+        "Properties are only strings",
+        "Properties cannot be overridden",
+        "Properties must always be transient",
+        "Properties represent state and can be persistent or non-persistent"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a service in ThingWorx?",
+      "options": [
+        "Executable server-side function that can be invoked to perform logic",
+        "A CSS style for a widget",
+        "A visualization-only element",
+        "A persisted value only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are events used for?",
+      "options": [
+        "To configure REST endpoints",
+        "To style mashup widgets",
+        "To signal that a notable condition occurred on an entity",
+        "To persist historical audit logs"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What do subscriptions do in ThingWorx?",
+      "options": [
+        "Import external data shapes",
+        "Collect KPI dashboards",
+        "Change user roles",
+        "Execute logic in response to events on entities"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which scripting language is commonly used for server-side services/subscriptions?",
+      "options": [
+        "CSS",
+        "HTML",
+        "Python only",
+        "JavaScript (server-side in ThingWorx)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which term describes logic that runs on a schedule without user interaction?",
+      "options": [
+        "Mashup bindings",
+        "Events",
+        "Data table queries",
+        "Timers (or schedulers)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which mechanism detects changes and triggers handlers on property updates?",
+      "options": [
+        "Style overrides",
+        "Mashup refresh",
+        "Tag updates",
+        "Data change events"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which flag defines whether a property value is saved across restarts?",
+      "options": [
+        "Persistent",
+        "Read-Only",
+        "Derived",
+        "Transient-only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which approach helps avoid duplicated code across multiple Things?",
+      "options": [
+        "Copy/paste services into every Thing",
+        "Define common logic in Thing Templates or Thing Shapes",
+        "Use only Mashup functions",
+        "Create per-user services"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which item commonly triggers a subscription besides custom events?",
+      "options": [
+        "Widget resize",
+        "Composer theme switch",
+        "Property change or data source event",
+        "User login background color"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "When should you mark a property as read-only?",
+      "options": [
+        "To allow mashups to write freely",
+        "When multiple users need to edit simultaneously",
+        "Whenever persistence is enabled",
+        "When the value is derived or managed exclusively by internal logic"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which best practice improves service maintainability?",
+      "options": [
+        "Write one monolithic service",
+        "Return only strings everywhere",
+        "Avoid comments and logs",
+        "Keep services small, testable, and use Data Shapes for typed inputs/outputs"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the purpose of Streams?",
+      "options": [
+        "Relational tables with updates",
+        "User session logs",
+        "UI-only history graphs",
+        "Append-only time-series storage of event-like records"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "How do Value Streams differ from Streams?",
+      "options": [
+        "They hold user passwords",
+        "They render mashups",
+        "Value Streams track property value history for Things",
+        "They store style definitions"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are Data Tables used for?",
+      "options": [
+        "Mashup widget composition",
+        "Temporary InfoTables only",
+        "Edge device configuration",
+        "Persist tabular business data with typed columns (via Data Shapes)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which store is best for property history?",
+      "options": [
+        "Value Streams",
+        "Data Tables",
+        "Streams",
+        "Organizations"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which artifact defines the column schema for Data Tables?",
+      "options": [
+        "Mashup",
+        "Thing Template",
+        "User Group",
+        "Data Shape"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which term describes non-persistent in-memory tables passed among services?",
+      "options": [
+        "Value Streams",
+        "Streams",
+        "InfoTables",
+        "Data Tables"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "How can you query a Data Table?",
+      "options": [
+        "Using Thing services that support filters and sorting based on Data Shape",
+        "Mashup widget IDs",
+        "Direct SQL-only",
+        "CSS selectors"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What practice improves data typing across services?",
+      "options": [
+        "Avoid schemas",
+        "Use Data Shapes to guarantee columns and types",
+        "Type as strings only",
+        "Use free-form JSON everywhere"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the advantage of using Streams for audit-like records?",
+      "options": [
+        "Allows random in-place updates",
+        "Append-only design simplifies immutable event logging",
+        "Optimized for styling",
+        "Requires mashup-only access"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What storage would you choose for stable business lists with lookup columns?",
+      "options": [
+        "Data Tables",
+        "Streams",
+        "Value Streams",
+        "Mashups"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which persistence decision helps performance for frequently changing properties?",
+      "options": [
+        "Write to Streams for every change",
+        "Use non-persistent properties unless history is required",
+        "Always persistent for everything",
+        "Store in Data Tables only"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "How do you return tabular results from a service?",
+      "options": [
+        "Return raw XML",
+        "Write to mashup logs",
+        "Return a CSS class",
+        "Create an InfoTable output typed by a Data Shape"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is an Organization used for?",
+      "options": [
+        "Manage CSS themes",
+        "Define hierarchical visibility domains for users/groups",
+        "Persist audit events",
+        "Host mashups"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "How are Users and User Groups used?",
+      "options": [
+        "To style mashups",
+        "To manage runtime trends",
+        "To authenticate and group permissions for entities",
+        "To store edge device telemetry"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is Visibility in ThingWorx?",
+      "options": [
+        "REST rate limits",
+        "Widget opacity setting",
+        "Mashup z-index",
+        "Who can see the entity (scope of discovery)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What do Runtime Permissions control?",
+      "options": [
+        "Printer access",
+        "Who can execute services, read properties, or invoke events",
+        "Only who can log in",
+        "Who can edit mashup CSS"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What do Design-Time Permissions control?",
+      "options": [
+        "CPU usage quotas",
+        "Who can zoom in mashups",
+        "Who can export CSV only",
+        "Who can create/modify entities and set metadata"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is an Application Key?",
+      "options": [
+        "A token granting programmatic access (e.g., REST calls) for a user",
+        "A widget ID",
+        "A Data Table primary key",
+        "A style sheet reference"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which best practice improves security for REST clients?",
+      "options": [
+        "Share keys publicly",
+        "Disable SSL",
+        "Use admin keys everywhere",
+        "Scope application keys minimally and rotate them"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the effect of visibility on search in Composer?",
+      "options": [
+        "They are read-only",
+        "They auto-export",
+        "They appear with warnings",
+        "Entities outside your visibility are not discoverable"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which permission should restrict who can run a critical service?",
+      "options": [
+        "Visibility only",
+        "Mashup edit rights",
+        "Design-time view metadata",
+        "Runtime execute permission"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which configuration enables anonymous REST clients safely?",
+      "options": [
+        "Rely on browser cache",
+        "Enable public admin",
+        "Use CSS tokens",
+        "Never — require authenticated access or locked-down anon roles"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the recommended way to grant wide read access while limiting writes?",
+      "options": [
+        "Disable groups entirely",
+        "Assign group read runtime permissions; restrict service execute",
+        "Hide entity visibility",
+        "Give everyone design-time edit"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where do you manage user password policies and lockouts?",
+      "options": [
+        "Stream configuration",
+        "Style definitions",
+        "Platform security settings / user directory",
+        "Mashup builder"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which protocol is commonly used by ThingWorx Edge for bi-directional connectivity?",
+      "options": [
+        "Telnet",
+        "POP3",
+        "AlwaysOn (WebSocket-based)",
+        "FTP"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which interface enables RESTful access to services and properties?",
+      "options": [
+        "ThingWorx REST API",
+        "MQTT only",
+        "SMTP",
+        "SNMP"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a Resource in ThingWorx?",
+      "options": [
+        "A global singleton providing reusable platform functions",
+        "A Data Table row",
+        "A CSS file",
+        "A mashup widget"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which connector type is ideal for industrial OPC data?",
+      "options": [
+        "SSH",
+        "POP3 mail",
+        "Kepware (via Industrial Connectivity)",
+        "FTP"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "How can external systems push data into ThingWorx without a persistent session?",
+      "options": [
+        "Upload CSV to mashups",
+        "Edit streams directly",
+        "Invoke REST endpoints with application keys",
+        "Email Composer"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the recommended way to model many similar assets?",
+      "options": [
+        "Hard-code services per device",
+        "Clone mashups per asset",
+        "Use a Thing Template + auto-create Things",
+        "Create one giant Thing"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which pattern helps normalize varied device payloads?",
+      "options": [
+        "Store payloads as CSS",
+        "Define Data Shapes and transform to InfoTables",
+        "Embed HTML in services",
+        "Use random JSON fields"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which mechanism executes code upon inbound MQTT/AlwaysOn events?",
+      "options": [
+        "Subscriptions bound to events on Things",
+        "Style overrides",
+        "Mashup animation",
+        "Project tags"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "How do you secure edge connectivity credentials?",
+      "options": [
+        "Share keys via email",
+        "Hard-code admin password",
+        "Disable encryption",
+        "Provision device-specific keys and rotate regularly"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the benefit of using Resources for utility logic?",
+      "options": [
+        "Disable testing",
+        "Hide services",
+        "Centralize shared functions to avoid duplication",
+        "Increase coupling"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which binding type connects widget properties to service outputs?",
+      "options": [
+        "Visibility rules",
+        "Style sheets",
+        "Data bindings",
+        "Application keys"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which practice improves mashup responsiveness?",
+      "options": [
+        "Load everything every second",
+        "Limit synchronous service calls and cache static data",
+        "Disable caching",
+        "Run all services on page load"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a repeater widget typically used for?",
+      "options": [
+        "Compile services",
+        "Store passwords",
+        "Render repeating data rows using a template",
+        "Authorize users"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which approach reduces mashup round-trips?",
+      "options": [
+        "Refresh every 500ms",
+        "Use only client scripting",
+        "Aggregate data in server-side services",
+        "Bind dozens of small services"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "How do you pass structured results to widgets?",
+      "options": [
+        "Modify CSS at runtime",
+        "Return free-form text",
+        "Attach binary blobs",
+        "Use InfoTables typed by Data Shapes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which widget helps visualize KPI time series?",
+      "options": [
+        "CheckBox",
+        "Gauge-only",
+        "Text Field",
+        "Line Chart"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which recommendation helps with very large tables?",
+      "options": [
+        "Use paging and server-side filtering",
+        "Disable filters",
+        "Use only client sorts",
+        "Render thousands of rows at once"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which technique styles multiple widgets consistently?",
+      "options": [
+        "Random hex colors",
+        "Inline CSS every widget",
+        "Apply Style Definitions",
+        "Per-user themes only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which event allows reacting to user actions in mashups?",
+      "options": [
+        "Style overrides only",
+        "Streams updates",
+        "Application key rotation",
+        "Widget events bound to services"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "How should you handle long-running logic?",
+      "options": [
+        "Move to async/background services; show progress",
+        "Block UI synchronously",
+        "Ignore timeouts",
+        "Disable logs"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which mashup design improves reusability?",
+      "options": [
+        "Hard-wire entity names",
+        "Avoid parameters",
+        "Copy entire pages",
+        "Build parameterized sub-mashups"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which binding connects a widget property back to a service input?",
+      "options": [
+        "CSS theme binding",
+        "Property-to-input binding",
+        "Visibility mapping",
+        "Project tag binding"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which practice ensures predictable updates when models change? (variant 1)",
+      "options": [
+        "Avoid templates",
+        "Capture design intent and use typed Data Shapes",
+        "Use ad-hoc strings",
+        "Disable history everywhere"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which artifact groups related entities for deployment? (variant 2)",
+      "options": [
+        "Streams",
+        "Projects",
+        "Value Streams",
+        "Users"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which store is best for immutable event logs? (variant 3)",
+      "options": [
+        "Mashups",
+        "Data Tables",
+        "Streams",
+        "Value Streams"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which security setting restricts who can edit entities? (variant 4)",
+      "options": [
+        "Design-time permissions",
+        "Mashup styles",
+        "Runtime read",
+        "Visibility only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which entity provides reusable platform utilities? (variant 5)",
+      "options": [
+        "Mashups",
+        "Users",
+        "Resources",
+        "Organizations"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which practice ensures predictable updates when models change? (variant 6)",
+      "options": [
+        "Disable history everywhere",
+        "Use ad-hoc strings",
+        "Capture design intent and use typed Data Shapes",
+        "Avoid templates"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which artifact groups related entities for deployment? (variant 7)",
+      "options": [
+        "Streams",
+        "Users",
+        "Value Streams",
+        "Projects"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which store is best for immutable event logs? (variant 8)",
+      "options": [
+        "Value Streams",
+        "Data Tables",
+        "Streams",
+        "Mashups"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which security setting restricts who can edit entities? (variant 9)",
+      "options": [
+        "Mashup styles",
+        "Runtime read",
+        "Design-time permissions",
+        "Visibility only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which entity provides reusable platform utilities? (variant 10)",
+      "options": [
+        "Mashups",
+        "Resources",
+        "Organizations",
+        "Users"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which practice ensures predictable updates when models change? (variant 11)",
+      "options": [
+        "Avoid templates",
+        "Disable history everywhere",
+        "Capture design intent and use typed Data Shapes",
+        "Use ad-hoc strings"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which artifact groups related entities for deployment? (variant 12)",
+      "options": [
+        "Projects",
+        "Streams",
+        "Value Streams",
+        "Users"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which store is best for immutable event logs? (variant 13)",
+      "options": [
+        "Data Tables",
+        "Streams",
+        "Mashups",
+        "Value Streams"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which security setting restricts who can edit entities? (variant 14)",
+      "options": [
+        "Design-time permissions",
+        "Runtime read",
+        "Mashup styles",
+        "Visibility only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which entity provides reusable platform utilities? (variant 15)",
+      "options": [
+        "Users",
+        "Organizations",
+        "Mashups",
+        "Resources"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which practice ensures predictable updates when models change? (variant 16)",
+      "options": [
+        "Capture design intent and use typed Data Shapes",
+        "Disable history everywhere",
+        "Use ad-hoc strings",
+        "Avoid templates"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which artifact groups related entities for deployment? (variant 17)",
+      "options": [
+        "Projects",
+        "Streams",
+        "Users",
+        "Value Streams"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which store is best for immutable event logs? (variant 18)",
+      "options": [
+        "Streams",
+        "Data Tables",
+        "Value Streams",
+        "Mashups"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which security setting restricts who can edit entities? (variant 19)",
+      "options": [
+        "Visibility only",
+        "Runtime read",
+        "Mashup styles",
+        "Design-time permissions"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which entity provides reusable platform utilities? (variant 20)",
+      "options": [
+        "Resources",
+        "Mashups",
+        "Users",
+        "Organizations"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which practice ensures predictable updates when models change? (variant 21)",
+      "options": [
+        "Use ad-hoc strings",
+        "Disable history everywhere",
+        "Capture design intent and use typed Data Shapes",
+        "Avoid templates"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which artifact groups related entities for deployment? (variant 22)",
+      "options": [
+        "Users",
+        "Streams",
+        "Projects",
+        "Value Streams"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which store is best for immutable event logs? (variant 23)",
+      "options": [
+        "Streams",
+        "Value Streams",
+        "Data Tables",
+        "Mashups"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which security setting restricts who can edit entities? (variant 24)",
+      "options": [
+        "Runtime read",
+        "Mashup styles",
+        "Visibility only",
+        "Design-time permissions"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which entity provides reusable platform utilities? (variant 25)",
+      "options": [
+        "Organizations",
+        "Resources",
+        "Users",
+        "Mashups"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which practice ensures predictable updates when models change? (variant 26)",
+      "options": [
+        "Avoid templates",
+        "Capture design intent and use typed Data Shapes",
+        "Disable history everywhere",
+        "Use ad-hoc strings"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which artifact groups related entities for deployment? (variant 27)",
+      "options": [
+        "Users",
+        "Value Streams",
+        "Streams",
+        "Projects"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which store is best for immutable event logs? (variant 28)",
+      "options": [
+        "Value Streams",
+        "Mashups",
+        "Streams",
+        "Data Tables"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which security setting restricts who can edit entities? (variant 29)",
+      "options": [
+        "Mashup styles",
+        "Visibility only",
+        "Design-time permissions",
+        "Runtime read"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which entity provides reusable platform utilities? (variant 30)",
+      "options": [
+        "Users",
+        "Organizations",
+        "Mashups",
+        "Resources"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which practice ensures predictable updates when models change? (variant 31)",
+      "options": [
+        "Avoid templates",
+        "Capture design intent and use typed Data Shapes",
+        "Use ad-hoc strings",
+        "Disable history everywhere"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which artifact groups related entities for deployment? (variant 32)",
+      "options": [
+        "Projects",
+        "Streams",
+        "Users",
+        "Value Streams"
+      ],
+      "correct": 1
     }
   ]
 }

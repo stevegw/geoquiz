@@ -1,8 +1,8 @@
 {
-  "name": "Geography Quiz",
-  "short_name": "Geo Quiz",
-  "description": "Test your geography knowledge with randomized questions",
-  "start_url": "./geography_quiz.html",
+  "name": "PTC AI Quiz",
+  "short_name": "PTC AI created Quiz",
+  "description": "Test your PTC knowledge with randomized questions created completely by AI!",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",

@@ -4,10 +4,10 @@ const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
 const urlsToCache = [
   './index.html',
   './manifest.json',
-  './quizzes/geography-questions.json',
+  './quizzes/Windchill-fundamentals-questions.json',
   './quizzes/codebeamer-fundamentals-questions.json',
   './quizzes/Thingworx-fundamnetails-questions.json',
-  './quizzes/Windchill-fundamentals-questions.json'
+  './quizzes/geography-questions.json'
 ];
 
 // Listen for SKIP_WAITING message

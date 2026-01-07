@@ -555,7 +555,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v38.0</div>
+    <div class="version-info">v40.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -643,6 +643,57 @@
             localStorage.removeItem('quizResults');
         }
 
+        // Question history tracking functions
+        function getQuestionHistory() {
+            return JSON.parse(localStorage.getItem('questionHistory') || '{}');
+        }
+
+        function trackShownQuestions(quizName, questionTexts) {
+            const history = getQuestionHistory();
+            const timestamp = Date.now();
+
+            if (!history[quizName]) {
+                history[quizName] = {};
+            }
+
+            // Record when each question was shown
+            questionTexts.forEach(text => {
+                history[quizName][text] = timestamp;
+            });
+
+            // Clean up old entries (older than 30 days)
+            const thirtyDaysAgo = timestamp - (30 * 24 * 60 * 60 * 1000);
+            for (const quiz in history) {
+                for (const question in history[quiz]) {
+                    if (history[quiz][question] < thirtyDaysAgo) {
+                        delete history[quiz][question];
+                    }
+                }
+            }
+
+            localStorage.setItem('questionHistory', JSON.stringify(history));
+        }
+
+        function clearQuestionHistory(quizName = null) {
+            if (quizName) {
+                const history = getQuestionHistory();
+                delete history[quizName];
+                localStorage.setItem('questionHistory', JSON.stringify(history));
+            } else {
+                localStorage.removeItem('questionHistory');
+            }
+        }
+
+        function getQuestionFreshness(quizName, questionText) {
+            const history = getQuestionHistory();
+            if (!history[quizName] || !history[quizName][questionText]) {
+                return Infinity; // Never shown = maximum freshness
+            }
+            const lastShown = history[quizName][questionText];
+            const daysSince = (Date.now() - lastShown) / (24 * 60 * 60 * 1000);
+            return daysSince;
+        }
+
         function getStatistics() {
             const results = getQuizResults();
 
@@ -711,6 +762,26 @@
                     // New format: object with quizName and questions
                     questionPool = quizData.questions;
 
+                    // Remove any duplicates from the loaded question pool
+                    const seenQuestions = new Set();
+                    const uniquePool = [];
+                    let duplicatesFound = 0;
+
+                    for (const q of questionPool) {
+                        if (!seenQuestions.has(q.text)) {
+                            seenQuestions.add(q.text);
+                            uniquePool.push(q);
+                        } else {
+                            duplicatesFound++;
+                            console.warn('Duplicate question found in JSON:', q.text.substring(0, 50) + '...');
+                        }
+                    }
+
+                    if (duplicatesFound > 0) {
+                        console.warn(`Removed ${duplicatesFound} duplicate questions from ${filename}`);
+                        questionPool = uniquePool;
+                    }
+
                     // Update page title and heading
                     document.title = quizData.quizName;
                     document.getElementById('quizTitle').textContent = quizData.quizName;
@@ -744,30 +815,65 @@
         function selectRandomQuestions() {
             const countSelector = document.getElementById('questionCount');
             const count = countSelector.value;
+            const quizName = quizData.quizName;
 
-            // Create a copy to avoid modifying the original pool
-            const poolCopy = [...questionPool];
-            const shuffled = shuffleArray(poolCopy);
+            // Create a copy and calculate freshness scores for prioritization
+            const poolCopy = [...questionPool].map(q => {
+                const daysSince = getQuestionFreshness(quizName, q.text);
+                return {
+                    question: q,
+                    freshness: daysSince,
+                    weight: daysSince === Infinity ? 10 : Math.max(1, Math.min(10, daysSince / 2))
+                };
+            });
 
-            if (count === 'all') {
-                return shuffled;
-            } else {
-                const numQuestions = Math.min(parseInt(count), questionPool.length);
-                const selected = shuffled.slice(0, numQuestions);
+            // Sort by freshness (prioritize unseen and older questions)
+            poolCopy.sort((a, b) => b.freshness - a.freshness);
 
-                // Extra safety: ensure no duplicates (shouldn't happen, but just in case)
-                const uniqueQuestions = [];
-                const seenTexts = new Set();
+            // Weighted random selection: pick from top 60% more often
+            const priorityCount = Math.ceil(poolCopy.length * 0.6);
+            const selected = [];
+            const seenTexts = new Set();
 
-                for (const q of selected) {
-                    if (!seenTexts.has(q.text)) {
-                        seenTexts.add(q.text);
-                        uniqueQuestions.push(q);
+            const numQuestions = count === 'all' ? questionPool.length : Math.min(parseInt(count), questionPool.length);
+
+            // First, try to fill from priority pool (unseen/old questions)
+            const priorityPool = poolCopy.slice(0, priorityCount);
+            const shuffledPriority = shuffleArray(priorityPool);
+
+            for (const item of shuffledPriority) {
+                if (selected.length >= numQuestions) break;
+                if (!seenTexts.has(item.question.text)) {
+                    seenTexts.add(item.question.text);
+                    selected.push(item.question);
+                }
+            }
+
+            // If we need more, fill from the rest
+            if (selected.length < numQuestions) {
+                const remainingPool = poolCopy.slice(priorityCount);
+                const shuffledRemaining = shuffleArray(remainingPool);
+
+                for (const item of shuffledRemaining) {
+                    if (selected.length >= numQuestions) break;
+                    if (!seenTexts.has(item.question.text)) {
+                        seenTexts.add(item.question.text);
+                        selected.push(item.question);
                     }
                 }
-
-                return uniqueQuestions;
             }
+
+            // Final shuffle of selected questions to randomize order
+            const finalQuestions = shuffleArray(selected);
+
+            // Count freshness for logging
+            const neverSeen = finalQuestions.filter(q =>
+                getQuestionFreshness(quizName, q.text) === Infinity
+            ).length;
+
+            console.log(`Selected ${finalQuestions.length} questions (${neverSeen} never seen before)`);
+
+            return finalQuestions;
         }
 
         async function generateQuiz() {
@@ -781,6 +887,27 @@
             // Always get fresh random questions
             currentQuestions = selectRandomQuestions();
 
+            // Final verification: ensure no duplicates in currentQuestions
+            const verifySet = new Set(currentQuestions.map(q => q.text));
+            if (verifySet.size !== currentQuestions.length) {
+                console.error('CRITICAL: Duplicates detected in currentQuestions!');
+                // Remove duplicates as a last resort
+                const finalUnique = [];
+                const finalSeen = new Set();
+                for (const q of currentQuestions) {
+                    if (!finalSeen.has(q.text)) {
+                        finalSeen.add(q.text);
+                        finalUnique.push(q);
+                    }
+                }
+                currentQuestions = finalUnique;
+                console.log('Duplicates removed, final count:', currentQuestions.length);
+            }
+
+            // Track shown questions to avoid repeating them soon
+            const questionTexts = currentQuestions.map(q => q.text);
+            trackShownQuestions(quizData.quizName, questionTexts);
+
             // Reset answers
             answers = {};
 
@@ -789,6 +916,8 @@
             while (container.firstChild) {
                 container.removeChild(container.firstChild);
             }
+
+            console.log('Rendering', currentQuestions.length, 'questions to DOM');
 
             currentQuestions.forEach((q, index) => {
                 const questionSection = document.createElement('div');
@@ -1081,9 +1210,20 @@
                 }
 
                 html += `</div>
-                    <button class="clear-stats-btn" id="clearStatsBtn">Clear All Statistics</button>`;
+                    <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button class="clear-stats-btn" id="resetQuestionHistoryBtn" style="background: #667eea; color: white;">Reset Question History</button>
+                        <button class="clear-stats-btn" id="clearStatsBtn">Clear All Statistics</button>
+                    </div>`;
 
                 statsBody.innerHTML = html;
+
+                // Add reset question history button listener
+                document.getElementById('resetQuestionHistoryBtn').addEventListener('click', function() {
+                    if (confirm('Reset question history? This will make all questions eligible to appear again immediately.')) {
+                        clearQuestionHistory();
+                        alert('Question history has been reset. You may see previously shown questions in your next quiz.');
+                    }
+                });
 
                 // Add clear stats button listener
                 document.getElementById('clearStatsBtn').addEventListener('click', function() {

@@ -8,6 +8,7 @@ const urlsToCache = [
   './quizzes/Creo-fundamentals-1-questions.json',
   './quizzes/codebeamer-fundamentals-questions.json',
   './quizzes/Thingworx-fundamnetails-questions.json',
+  './quizzes/Windchill-Objects-and-Types.json',
   './quizzes/geography-questions.json'
 ];
 

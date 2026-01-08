@@ -1,0 +1,1006 @@
+{
+  "quizName": "Windchill Objects & Types",
+  "description": "100 multiple-choice questions derived from conceptual content of the WCBA-OBTY Slides (ignores exercises, knowledge checks, and options references).",
+  "questions": [
+    {
+      "text": "What are Windchill objects stored as?",
+      "options": [
+        "Contexts",
+        "Types",
+        "Tables",
+        "Folders"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where do you find detailed information about a Windchill object?",
+      "options": [
+        "On the Team page",
+        "On the Search page",
+        "On the Life Cycle page",
+        "On its Information page"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which utility manages object types, subtypes, layouts, and attributes?",
+      "options": [
+        "Type and Attribute Management",
+        "Policy Administration",
+        "Domain Administration",
+        "Workflow Administration"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which display name corresponds to Java class wt.part.WTPart?",
+      "options": [
+        "Parts",
+        "Documents",
+        "CAD Documents",
+        "Managed Baselines"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which display name maps to wt.doc.WTDocument?",
+      "options": [
+        "EPMDocument",
+        "Dynamic Documents",
+        "WTChangeIssue",
+        "Documents"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Java class represents CAD Documents?",
+      "options": [
+        "wt.change2.WTChangeOrder2",
+        "wt.epm.EPMDocument",
+        "wt.fc.WTObject",
+        "wt.doc.WTDocument"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which change object class represents a Change Notice?",
+      "options": [
+        "wt.change2.WTChangeRequest2",
+        "wt.change2.WTChangeOrder2",
+        "wt.change2.WTChangeIssue",
+        "wt.change2.WTChangeActivity2"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which object type acts as the parent of all objects?",
+      "options": [
+        "WTDocument",
+        "WTPart",
+        "EPMDocument",
+        "WTObject"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which object type is highlighted as the common example in this course?",
+      "options": [
+        "Promotion Request",
+        "WTPart",
+        "WTProduct",
+        "Document"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Who can modify the layout of object Information pages?",
+      "options": [
+        "Administrators",
+        "Only team members",
+        "Any user",
+        "Only site guests"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does subtyping do in Windchill?",
+      "options": [
+        "Replaces the parent type",
+        "Deletes inherited layouts",
+        "Edits the database schema directly",
+        "Creates a new type based on an existing parent type"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which two reasons are given for extending a type?",
+      "options": [
+        "Modify report jobs",
+        "Enable email notifications",
+        "Add attributes and create custom layouts",
+        "Change folder names and numbering"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Where do subtypes created in an Organization context remain?",
+      "options": [
+        "Only in the Library context",
+        "Shared across all sites",
+        "Only in the Product context",
+        "Private to that organization"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What do layouts control for a type or subtype?",
+      "options": [
+        "Global enumerations",
+        "Which attributes are displayed and where",
+        "Workflow tasks",
+        "User passwords"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What does layout inheritance mean for a subtype?",
+      "options": [
+        "Layouts only inherit in Projects",
+        "A subtype automatically inherits the parent type's layouts",
+        "A subtype cannot inherit layouts",
+        "Layouts are always reset"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which feature enables values to be shown in a user's language?",
+      "options": [
+        "Automatic unit conversion only",
+        "Auto-translation of PDFs",
+        "Theme and icon packs",
+        "Localization of layouts/attributes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which icon indicates a value can be localized?",
+      "options": [
+        "The localize icon next to the value field",
+        "A warning triangle",
+        "A calendar icon",
+        "A lock icon"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "If the browser locale has no installed language match, which locale is assumed?",
+      "options": [
+        "en_GB",
+        "de_DE",
+        "fr_FR",
+        "en_US"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which utility manages a type’s properties, attributes, layouts, and relationship constraints?",
+      "options": [
+        "Type and Attribute Management",
+        "Access Control UI",
+        "WTSeries Editor",
+        "Workflow Administration"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which statement about duplicate and extend OOTB types is correct?",
+      "options": [
+        "You can duplicate and extend out-of-the-box types without coding",
+        "Only soft attributes are allowed",
+        "You must always write Java",
+        "Layouts cannot be extended"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "How many attribute categories are highlighted in the course?",
+      "options": [
+        "Five",
+        "Three",
+        "Four",
+        "Six"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which attribute type can be used by more than one parent type and is stored separately?",
+      "options": [
+        "Modeled attributes",
+        "Local attributes",
+        "Global attributes",
+        "Alias attributes"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which attribute type can only be used by one type and is stored in columns of the object class?",
+      "options": [
+        "Alias attributes",
+        "Local attributes",
+        "Calculated attributes",
+        "Global attributes"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which attribute type is derived using formulas from existing attributes?",
+      "options": [
+        "Local attributes",
+        "Calculated attributes",
+        "Alias attributes",
+        "Modeled attributes"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which attribute maps information from a related object via navigation operators?",
+      "options": [
+        "Alias attributes",
+        "Calculated attributes",
+        "Global attributes",
+        "Local attributes"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which attribute type is programmed in Java and not created in the Type and Attribute utility?",
+      "options": [
+        "Modeled attributes",
+        "Calculated attributes",
+        "Global attributes",
+        "Alias attributes"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which workflow steps are listed for adding an attribute?",
+      "options": [
+        "Create Enum, Map Values, Publish",
+        "Enter Edit Mode, Add Type, Set Name, Set Properties",
+        "Upload XML, Deploy, Restart",
+        "Create Table, Add Rows, Save"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What object areas can you manage to configure types and subtypes?",
+      "options": [
+        "Create types, add attributes, edit layouts, set constraints",
+        "Backup vaults, reset caches, reindex site",
+        "Set firewall, manage emails, style UI",
+        "Edit databases, modify JVM, change OS"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which visibility settings can be applied per screen to attributes?",
+      "options": [
+        "Masked, Encrypted, Public",
+        "Read/Write, Read-Only, Value Hidden, Hidden",
+        "Admin Only, Team Only, Guest Only",
+        "Checked, Disabled, Draft"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What do global enumerations provide?",
+      "options": [
+        "Widget color palettes only",
+        "Transient values for one session",
+        "Reusable selection lists stored independently and applicable to several types",
+        "Per-user private lists only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Where are global enumerations organized?",
+      "options": [
+        "Under organizers below the Root node",
+        "In the Life Cycle editor",
+        "In the Workflow monitor",
+        "Under Team Templates"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which measurement systems does Windchill support for attributes?",
+      "options": [
+        "ISO, DIN, JIS, ANSI",
+        "BTU, PSI, Ohm, Lux",
+        "FPS, Metric-only, ISO",
+        "SI, CGS, USCS, MKS"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What does 'Quantities of Measure' indicate in Windchill?",
+      "options": [
+        "Support for over 40 standard quantities of measure",
+        "Unsupported for attributes",
+        "Measures limited to length and mass",
+        "Only three quantities of measure"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which are examples of string-related constraints?",
+      "options": [
+        "String Length, Uppercase/Lowercase, Regular Expression",
+        "Mass Negative Only, Density Only",
+        "Version Series, Numbering",
+        "Team Template, Folder Path"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which constraints can require values or restrict multiplicity?",
+      "options": [
+        "Required and Single-Valued",
+        "Templates and Teams",
+        "Projects and Programs",
+        "State-Based and File-Based"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does a 'Legal or Suggested Value' constraint do?",
+      "options": [
+        "Hides values from users",
+        "Generates values via Java only",
+        "Pulls values from ERP",
+        "Defines a set of unique or suggested values bound to the type"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is an 'External Enumerated Value List' constraint?",
+      "options": [
+        "A site-only local list",
+        "A UI layout toggle",
+        "Retrieves legal values from another system via custom code",
+        "A life cycle phase"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which constraint type is modeled in Java and used for states or roles?",
+      "options": [
+        "Wildcard",
+        "Global Enumeration",
+        "Suggested Value",
+        "Enumerated Type"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Give an example of a constraint preventing invalid numeric attributes.",
+      "options": [
+        "Valid Range preventing negative mass or length",
+        "Single-Valued disallowing duplicates",
+        "Value Hidden masking numbers",
+        "Uppercase forcing caps"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a 'Legal Type List' constraint for?",
+      "options": [
+        "Restricting allowed related types or classifications",
+        "Setting user locales",
+        "Enforcing version letters",
+        "Choosing UI skins"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What do cascading attributes rules accomplish?",
+      "options": [
+        "Drive values of one attribute based on another",
+        "Disable localizations",
+        "Lock layouts permanently",
+        "Replace the type hierarchy"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Where are attribute constraints shown on a type?",
+      "options": [
+        "In the Reports tab only",
+        "In the Search preferences only",
+        "In the attribute’s Constraints section of the type",
+        "In the domain policy only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are typical visibility settings for the 'Context' attribute?",
+      "options": [
+        "Admin Only everywhere",
+        "No visibility options exist",
+        "Always Value Hidden",
+        "Read/Write in Create New; Hidden in Edit (example)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which best practice aids readability and collaboration for datum/attribute names?",
+      "options": [
+        "Use default names always",
+        "Rename features and attributes to meaningful names",
+        "Hide names from all users",
+        "Use random strings for uniqueness"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which behaviors can Object Initialization Rules control?",
+      "options": [
+        "Numbering, versioning, folder path, life cycle, team template",
+        "GPU settings, JVM heap, OS threads",
+        "Printer setup, email routing, theme colors",
+        "Search facets, dashboards, reports"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "In what format are OIRs written?",
+      "options": [
+        "JSON",
+        "XML",
+        "CSV",
+        "YAML"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where are OIRs available for configuration?",
+      "options": [
+        "Only at org",
+        "Only at product",
+        "Only at site",
+        "All contexts (site, org, product, library)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What can OIR management tables show at an Organization context?",
+      "options": [
+        "Only Site rules",
+        "Rules from both the Site and the Organization",
+        "Only Library rules",
+        "Only Project rules"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which rule associates a life cycle and team template to new objects?",
+      "options": [
+        "Report templates",
+        "Workflow templates",
+        "Search templates",
+        "Association rules in OIRs"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What does a versioning scheme rule define?",
+      "options": [
+        "Global enumeration sets",
+        "Default search filters",
+        "The labels applied to newly-created object revisions",
+        "User display themes"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the default out-of-the-box version series used in examples?",
+      "options": [
+        "wt.series.NumericSeries",
+        "wt.series.HarvardSeries",
+        "wt.series.CustomSeries",
+        "wt.series.MetricSeries"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which versioning scheme moves from A.1 to B.1?",
+      "options": [
+        "Standard Alphabetic",
+        "File-Based with mixed seeds",
+        "Standard Integer",
+        "State-Based Numeric"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which versioning scheme uses numbers like 1.1 then 2.1?",
+      "options": [
+        "Standard Alphabetic",
+        "File-Based",
+        "State-Based MILSTD",
+        "Standard Integer"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which example shows a state-based transition?",
+      "options": [
+        "B.1 → A.1",
+        "A.1 → 1.1",
+        "2.1 → 1.1",
+        "1.1 (In Work) → A.1 (Released)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What does a File-Based versioning scheme rely on?",
+      "options": [
+        "A domain ACL setting",
+        "An uploaded XML file defining series values",
+        "A site preference only",
+        "A report widget"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Arg value references a file-based series name?",
+      "options": [
+        "wt.series.FileXMLPath",
+        "wt.series.HarvardSeries.[SeriesName]",
+        "wt.series.AlphaNum",
+        "wt.series.StateBasedOnly"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What does an Arg value of wt.series.HarvardSeries.StateBased indicate?",
+      "options": [
+        "Use the integer-only series",
+        "Enable file upload only",
+        "Disable versioning",
+        "Use the state-based version series"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a best practice for editing new OIRs?",
+      "options": [
+        "Hard-code all values",
+        "Avoid comments",
+        "Start from OOTB XML documents and set only what you need",
+        "Edit at Site for all cases"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which components are included in an out-of-the-box numbering rule example?",
+      "options": [
+        "GPU core count, locale, layer",
+        "User theme, ACL mask, report job",
+        "Digits, default folder, life cycle state, version series, team template",
+        "Workflow name, role mapping, icon set"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which example shows OOTB numbering for WTDocument?",
+      "options": [
+        "Manual number, /Root, Released, Numeric-only, Custom team",
+        "10-digit number, /Default folder, Basic life cycle (In Work), Harvard series A.1, Default team",
+        "Alpha string, /Library, Obsolete, MILSTD, Any team",
+        "5-digit number, /Site, Open, N/A, Promotion team"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which series can be configured from Life Cycle Administrator's Version Series menu?",
+      "options": [
+        "Alphabetic-only",
+        "Integer-only",
+        "File-based only",
+        "State-based (Numeric and MILSTD seeds)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which example Arg sets a custom file-based series?",
+      "options": [
+        "wt.series.StateBased.XML",
+        "wt.series.CustomXMLPath",
+        "wt.series.HarvardSeries.ACMECustomer",
+        "wt.series.HarvardSeries.File"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the maximum value for Standard Integer per note?",
+      "options": [
+        "65535",
+        "2147483647",
+        "9999999999",
+        "4294967295"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which transitions are driven by Revise and Check Out/Check In?",
+      "options": [
+        "Revision and iteration (e.g., A.1 → A.2 → B.1)",
+        "Life cycle only",
+        "Team template only",
+        "Numbering only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Why use global enumerations for attributes?",
+      "options": [
+        "Hard-code values into layouts",
+        "Maintain sets of values independent of constraints and reuse across types",
+        "Tie values to a single type only",
+        "Limit values to one session"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which graphical attribute maps state-based values to colors?",
+      "options": [
+        "Pie Chart",
+        "Heat Map",
+        "Gauge",
+        "Traffic Light"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which graphical attribute displays percent complete on 0–100 range?",
+      "options": [
+        "Progress Bar",
+        "Status Icon",
+        "Percent Complete",
+        "Timeline"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which graphical attribute can display arbitrary ranges with a percentage tooltip?",
+      "options": [
+        "Progress Bar",
+        "Percent Complete",
+        "Pie Slice",
+        "Threshold Meter"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What data types are required for cascading rules in the If–Then example?",
+      "options": [
+        "String or Boolean",
+        "Integer only",
+        "Float only",
+        "Date only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What do the rules 'If' and 'And If' drive in cascading attributes?",
+      "options": [
+        "The choice of team template",
+        "The value of the Then attribute",
+        "The folder path",
+        "The life cycle selection"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "In the example, if Locale = Italy, which Facility value is driven?",
+      "options": [
+        "Lombardy",
+        "Tuscany",
+        "Sicily",
+        "Piedmont"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What scope do initialization rules apply to?",
+      "options": [
+        "Only library documents",
+        "Only site-wide objects",
+        "Object-class specific and can manage all subtypes of a rule",
+        "Only one subtype"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "At which contexts can you view OIR tables?",
+      "options": [
+        "Library only",
+        "Site and Organization (shown together in org view)",
+        "Project only",
+        "Product only"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which items are listed under 'Rules Impact These Attributes'?",
+      "options": [
+        "Vault migration, cache reset, index",
+        "Email server, printer queue, font set",
+        "Numbering, versioning, folder path, life cycle, team template",
+        "UI theme, language packs, icons"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which layout capability allows attribute grouping on Information pages?",
+      "options": [
+        "Set printer layout",
+        "Disable attribute editor",
+        "Edit stylesheet only",
+        "Change attribute layout to group/show/hide"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which object types table shows Display Name versus Java Class Name?",
+      "options": [
+        "Activities and Tasks",
+        "Reports and Jobs",
+        "Search and Filters",
+        "Common Objects Types and Classes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which constraint can enforce uppercase or lowercase entry?",
+      "options": [
+        "Folder constraint",
+        "Iteration constraint",
+        "Numbering constraint",
+        "Case constraint (Uppercase or Lowercase)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which constraint ensures strings match a pattern?",
+      "options": [
+        "Suggested Only",
+        "State-Based Only",
+        "Regular Expression",
+        "Wildcard only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which constraint marks an attribute as immutable?",
+      "options": [
+        "Translatable",
+        "Movable",
+        "Readable",
+        "Immutable"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which visibility option lets users see an attribute exists but not its value?",
+      "options": [
+        "Value Hidden",
+        "Admin Only",
+        "Masked",
+        "Encrypted"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which attribute list is maintained independent of a specific constraint?",
+      "options": [
+        "Alias map",
+        "Global Enumeration",
+        "Suggested Value list",
+        "Enumerated Type seed"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which management step completes attribute creation after setting properties?",
+      "options": [
+        "Restart Windchill",
+        "Publish to Site",
+        "Complete Attribute Creation",
+        "Reindex the vault"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which attribute types can display values as graphics like lights or bars?",
+      "options": [
+        "Modeled attributes",
+        "Graphical attributes",
+        "Alias attributes",
+        "Global attributes"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 84)?",
+      "options": [
+        "Versioning or numbering schemes",
+        "CAD visualization themes",
+        "Search facets preferences",
+        "Dashboards and reports"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 85)?",
+      "options": [
+        "Search facets preferences",
+        "Dashboards and reports",
+        "CAD visualization themes",
+        "Versioning or numbering schemes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 86)?",
+      "options": [
+        "Search facets preferences",
+        "CAD visualization themes",
+        "Versioning or numbering schemes",
+        "Dashboards and reports"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 87)?",
+      "options": [
+        "CAD visualization themes",
+        "Versioning or numbering schemes",
+        "Dashboards and reports",
+        "Search facets preferences"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 88)?",
+      "options": [
+        "Versioning or numbering schemes",
+        "Dashboards and reports",
+        "Search facets preferences",
+        "CAD visualization themes"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 89)?",
+      "options": [
+        "CAD visualization themes",
+        "Search facets preferences",
+        "Versioning or numbering schemes",
+        "Dashboards and reports"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 90)?",
+      "options": [
+        "Versioning or numbering schemes",
+        "Search facets preferences",
+        "CAD visualization themes",
+        "Dashboards and reports"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 91)?",
+      "options": [
+        "Search facets preferences",
+        "Versioning or numbering schemes",
+        "Dashboards and reports",
+        "CAD visualization themes"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 92)?",
+      "options": [
+        "Dashboards and reports",
+        "CAD visualization themes",
+        "Versioning or numbering schemes",
+        "Search facets preferences"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 93)?",
+      "options": [
+        "CAD visualization themes",
+        "Dashboards and reports",
+        "Search facets preferences",
+        "Versioning or numbering schemes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 94)?",
+      "options": [
+        "Search facets preferences",
+        "Dashboards and reports",
+        "CAD visualization themes",
+        "Versioning or numbering schemes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 95)?",
+      "options": [
+        "Versioning or numbering schemes",
+        "CAD visualization themes",
+        "Dashboards and reports",
+        "Search facets preferences"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 96)?",
+      "options": [
+        "Versioning or numbering schemes",
+        "CAD visualization themes",
+        "Dashboards and reports",
+        "Search facets preferences"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 97)?",
+      "options": [
+        "CAD visualization themes",
+        "Search facets preferences",
+        "Dashboards and reports",
+        "Versioning or numbering schemes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 98)?",
+      "options": [
+        "Dashboards and reports",
+        "CAD visualization themes",
+        "Search facets preferences",
+        "Versioning or numbering schemes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 99)?",
+      "options": [
+        "Versioning or numbering schemes",
+        "Dashboards and reports",
+        "CAD visualization themes",
+        "Search facets preferences"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability is configured via XML in Object Initialization Rules (item 100)?",
+      "options": [
+        "Dashboards and reports",
+        "Search facets preferences",
+        "Versioning or numbering schemes",
+        "CAD visualization themes"
+      ],
+      "correct": 3
+    }
+  ]
+}

@@ -1,0 +1,1006 @@
+{
+  "quizName": "Windchill Context Administration",
+  "description": "100 concept-only multiple-choice questions from WCBA-CNTX Training Guide (ignores exercises and knowledge checks).",
+  "questions": [
+    {
+      "text": "Which responsibilities fall under a Windchill business administrator?",
+      "options": [
+        "Develop ERP code and manage payroll",
+        "Author CAD geometry and run simulations",
+        "Configure policies, processes, and participants; manage data and system behavior",
+        "Operate network firewalls and storage arrays"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What do domain policies typically include?",
+      "options": [
+        "Visual styles and logos",
+        "Access rules, notification rules, and indexing rules",
+        "Only workflow definitions",
+        "Browser settings, printer queues, and CSS themes"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of life cycles in Windchill?",
+      "options": [
+        "Define user passwords",
+        "Control server uptime",
+        "Manage only CAD viewables",
+        "Represent object maturity states and transitions"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "How are workflows used?",
+      "options": [
+        "Lock file versions permanently",
+        "Automate processes, pass tasks, and drive states",
+        "Store project budgets",
+        "Change UI colors per role"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Who are participants in Windchill?",
+      "options": [
+        "Users, groups, organizations (principals)",
+        "Widgets, mashups, themes",
+        "Databases and servers",
+        "Only site administrators"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What do roles represent in Windchill?",
+      "options": [
+        "License types",
+        "Page layout areas",
+        "Performers of specific tasks (e.g., reviewer)",
+        "File extensions"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What do teams do in Windchill?",
+      "options": [
+        "Generate CAD content",
+        "Set database indexes",
+        "Schedule backups",
+        "Map participants to roles for contexts and processes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which tiers are in Windchill architecture?",
+      "options": [
+        "Front-end, cache, GPU",
+        "Client, application, database",
+        "Renderer, viewer, compiler",
+        "UI, middleware, printer"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a Windchill context?",
+      "options": [
+        "A single workflow task",
+        "A defined container where users work and data reside",
+        "A domain policy rule only",
+        "A CAD parameter"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Why is context strategy important?",
+      "options": [
+        "Only affects graphics quality",
+        "Determines CPU usage",
+        "Balances admin requirements and logical information storage",
+        "Sets printer preferences"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which three framework levels exist?",
+      "options": [
+        "Server, Client, Renderer",
+        "Network, Storage, Compute",
+        "Site, Organization, Application contexts",
+        "Product, Part, Document"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the Site context used for?",
+      "options": [
+        "Supplier lists exclusively",
+        "Only project plans",
+        "Storing product CAD data",
+        "Administrative capabilities and configurations"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What does an Organization context represent?",
+      "options": [
+        "A CAD workspace",
+        "A mashup UI",
+        "A major business unit/division; admin info and rules",
+        "A single folder"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which application contexts are available?",
+      "options": [
+        "Organizations only",
+        "Vaults only",
+        "Products, Libraries, Projects, Programs",
+        "Documents, Parts, Notes"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Typical product context characteristics?",
+      "options": [
+        "Stores product definition, structures, and related business info",
+        "Used exclusively for drawings",
+        "Stores only HR records",
+        "Holds only forum posts"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Typical library context characteristics?",
+      "options": [
+        "Stores reusable, cross-product data and standards",
+        "Stores project milestones only",
+        "Stores unique product CAD only",
+        "Only holds user notebooks"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Typical project context characteristics?",
+      "options": [
+        "Holds ERP bills only",
+        "Tracks plans, activities, deliverables; supports collaboration",
+        "Only site-level policies",
+        "Stores upgrade scripts only"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Typical program context characteristics?",
+      "options": [
+        "Stores all design data",
+        "Groups interrelated projects; central navigation",
+        "Only holds CAD assemblies",
+        "Manages server preferences"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What elements define a context setup?",
+      "options": [
+        "CAD templates only",
+        "GPU settings, CSS, printer profiles",
+        "Vault paths only",
+        "Folder structure, team, domain policies, OIR"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Why use folders?",
+      "options": [
+        "Enable email notifications",
+        "Ease finding info and apply access control to sensitive data",
+        "Improve rendering quality",
+        "Reduce database size"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What do context templates establish?",
+      "options": [
+        "Only UI color schemes",
+        "Only site backups",
+        "Initial settings for structure, roles, policies, OIR, lifecycle, workflows",
+        "Only user passwords"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Who can use product/library templates?",
+      "options": [
+        "Organization administrators and designated context creators",
+        "Only site visitors",
+        "Any guest user",
+        "Only external suppliers"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Benefits of templates for administrators?",
+      "options": [
+        "Automatic license creation",
+        "Higher GPU frame rates",
+        "Unlimited storage",
+        "Consistency, reduced setup burden, transferable environments"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "CAD document templates availability?",
+      "options": [
+        "Only for drawings",
+        "Site-level to all orgs; org-level to its contexts; sub-org to that context",
+        "Available only at project level",
+        "Always global regardless of level"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which Home page tabs exist for admins?",
+      "options": [
+        "Notes and Discussions",
+        "Internal and External",
+        "Draft and Final",
+        "Private and Public"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What can admins do on the Public Home tab?",
+      "options": [
+        "Reset index server",
+        "Configure standard tables and layout for all users",
+        "Change licensing",
+        "Edit server properties"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What does the Windchill calendar define?",
+      "options": [
+        "Vault replication schedule only",
+        "Rendering resolution",
+        "Working/non-working days and task delegation",
+        "Default CAD units"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Out-of-the-box non-working days?",
+      "options": [
+        "Friday and Saturday",
+        "Sunday only",
+        "None",
+        "Saturday and Sunday"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Preference Management enables?",
+      "options": [
+        "Set CAD mass properties only",
+        "Change OS kernel parameters",
+        "Set defaults per context; lock or allow overrides",
+        "Enable printer ink levels"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Users can set personal preferences for?",
+      "options": [
+        "CPU throttling",
+        "Display, content, search, tables, visualization, workspace, object types",
+        "Firewall rules",
+        "Database schema"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Difference between preferences and properties?",
+      "options": [
+        "Both require restart",
+        "Preferences via UI per context; properties via files requiring restart",
+        "Properties are only visual styles",
+        "Users change properties without admin"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Moving data between contexts allows you to?",
+      "options": [
+        "Move objects, folders, dependent items, templates, and associated objects",
+        "Clone site contexts only",
+        "Export only CAD documents",
+        "Change user passwords"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Product context sizing guidance?",
+      "options": [
+        "<5000 objects/folder, <50 folders, max three levels",
+        "Exactly 10 folders",
+        "Unlimited folders",
+        "Only one folder"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Organization context properties include?",
+      "options": [
+        "Only storage paths",
+        "Only user notebook folders",
+        "Only forum topics",
+        "Business rules, preferences, configuration, access control"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Participants referenced by policies and workflows are?",
+      "options": [
+        "Widgets, mashups, styles",
+        "Servers, vaults, indexes",
+        "Users, groups, organizations",
+        "Folders, files, printers"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which contexts are typically used for storing business objects?",
+      "options": [
+        "Application contexts (products, libraries, projects)",
+        "Server and Client",
+        "ERP and CRM",
+        "Site and Organization only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which items context creators commonly manage?",
+      "options": [
+        "GPU cores, CSS, logs",
+        "Site backups",
+        "Team roles, folders, templates, policies, OIR",
+        "Only purchase orders"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which admin element may be locked to avoid overrides?",
+      "options": [
+        "User passwords",
+        "Preference values",
+        "Workflow tasks",
+        "Forum topics"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where are global templates for organizations listed?",
+      "options": [
+        "Workflow > Tasks",
+        "Navigator > Vaults",
+        "Site > Templates",
+        "Search > Reports"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Programs are intended to?",
+      "options": [
+        "Hold only BOMs",
+        "Manage server configs",
+        "Store CAD assemblies",
+        "Link projects and centralize planning, not store design data"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Library templates example purpose?",
+      "options": [
+        "Changes OS drivers",
+        "Defines only lifecycle",
+        "Document Library sets folders, team, OIR, access policies",
+        "Creates VPN profiles"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Calendar delegation applies on?",
+      "options": [
+        "Organization calendar only",
+        "Individual user calendars for periods or indefinite",
+        "System calendar only",
+        "CAD calendar"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Preference 'scope' refers to?",
+      "options": [
+        "Vault scope",
+        "Context level (Site, Organization, Product, Project)",
+        "Server CPU scope",
+        "Browser tab scope"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which tool manages participants?",
+      "options": [
+        "Style Manager",
+        "Mashup Builder",
+        "Printer Manager",
+        "Participant Administration"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Home page default tables include?",
+      "options": [
+        "Licenses, Logs, Backups",
+        "Tasks, Updates, Checked Out Work",
+        "Servers, Printers, Views",
+        "Folders, Vaults, Domains"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Site context may contain?",
+      "options": [
+        "Only Projects",
+        "Only Libraries",
+        "One or more Organization contexts",
+        "No child contexts"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Who are context creators?",
+      "options": [
+        "Only CAD authors",
+        "Only site admins always",
+        "Members allowed to create/manage application contexts",
+        "Any external visitor"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Moving life cycle/workflow templates across hierarchy?",
+      "options": [
+        "Only between products",
+        "Not supported",
+        "Only at Site",
+        "From lower to higher contexts via Move action"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Templates ensure?",
+      "options": [
+        "Hidden preferences",
+        "Consistency and efficiency in new context setup",
+        "No inheritance",
+        "Randomized policies"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Visualization publication worker purpose?",
+      "options": [
+        "Generate lightweight viewables",
+        "Encrypt passwords",
+        "Manage ERP data",
+        "Backup vaults"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Indexing Server provides?",
+      "options": [
+        "License aggregation",
+        "SMTP services",
+        "Full-text search capability",
+        "CAD simulation"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Enterprise directory example?",
+      "options": [
+        "Vault file list",
+        "Local CSV",
+        "Printer spooler",
+        "Microsoft Active Directory for SSO"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Product creators group controls?",
+      "options": [
+        "Who can export PDFs",
+        "Who can restart server",
+        "Who can set kernel flags",
+        "Who can create product contexts"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Library creators group controls?",
+      "options": [
+        "Only site admins",
+        "Only suppliers",
+        "Only CAD users",
+        "Who can create library contexts"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Projects are not hierarchical meaning?",
+      "options": [
+        "Products can nest projects",
+        "Programs store design data",
+        "Projects can contain projects",
+        "Products cannot be nested inside projects"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Programs visibility characteristic?",
+      "options": [
+        "Provide central navigation; not directly visible as data stores",
+        "Are site-only",
+        "Replace organizations",
+        "Show all CAD parts"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Context setup often includes defining?",
+      "options": [
+        "GPU voltage",
+        "Team templates and access control policies",
+        "CSS themes",
+        "Browser cache"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Who typically manages libraries after creation?",
+      "options": [
+        "ERP admin",
+        "Parts librarian or supplier manager",
+        "Security officer",
+        "Site guests"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where to set user personal preferences?",
+      "options": [
+        "Workflow Editor",
+        "Site > Properties",
+        "Quick Links > My Settings > Preferences",
+        "Server OS Settings"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Calendar maintenance is conducted at?",
+      "options": [
+        "Project context",
+        "Library context",
+        "Per user only",
+        "Site context level (single system calendar)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Non-working day impact?",
+      "options": [
+        "Alters numbering scheme",
+        "Affects rendering",
+        "Workflow deadlines use working days, not calendar days",
+        "Changes unit systems"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Preference Manager descriptions include?",
+      "options": [
+        "Only site ones",
+        "Hidden tooltips only",
+        "None",
+        "Explanation of each preference"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Organization context automatically associates with?",
+      "options": [
+        "Program object",
+        "Folder",
+        "Product context",
+        "Organization participant (principal)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Restricted Directory Search option controls?",
+      "options": [
+        "Printer access",
+        "Interaction with users not in organization",
+        "Vault storage",
+        "License pooling"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Allow all members to create projects affects?",
+      "options": [
+        "CAD authorship",
+        "License assignment",
+        "Document numbering",
+        "Project creators membership by default"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Template Save as from product creates?",
+      "options": [
+        "User account",
+        "Folder template",
+        "Product context template from existing product",
+        "ERP record"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Site templates may be limited by?",
+      "options": [
+        "Installed Windchill modules",
+        "Browser version",
+        "Printer model",
+        "GPU vendor"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Document templates benefit users by?",
+      "options": [
+        "Setting unit systems",
+        "Encrypting files",
+        "Providing style, structure, layout and boilerplate",
+        "Enabling server restart"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Note templates provide?",
+      "options": [
+        "Vault paths",
+        "Standard boilerplate text for markup",
+        "CAD meshes",
+        "User passwords"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which item is set via context templates (variant 70)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "Theme colors only",
+        "GPU cores and caches"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 71)?",
+      "options": [
+        "GPU cores and caches",
+        "Theme colors only",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which item is set via context templates (variant 72)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "GPU cores and caches",
+        "Theme colors only",
+        "Mail server and logs"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 73)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "GPU cores and caches",
+        "Theme colors only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 74)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "GPU cores and caches",
+        "Theme colors only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 75)?",
+      "options": [
+        "Mail server and logs",
+        "GPU cores and caches",
+        "Theme colors only",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which item is set via context templates (variant 76)?",
+      "options": [
+        "GPU cores and caches",
+        "Theme colors only",
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which item is set via context templates (variant 77)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "GPU cores and caches",
+        "Theme colors only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 78)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Theme colors only",
+        "Mail server and logs",
+        "GPU cores and caches"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 79)?",
+      "options": [
+        "Mail server and logs",
+        "GPU cores and caches",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Theme colors only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which item is set via context templates (variant 80)?",
+      "options": [
+        "GPU cores and caches",
+        "Theme colors only",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which item is set via context templates (variant 81)?",
+      "options": [
+        "Theme colors only",
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "GPU cores and caches"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which item is set via context templates (variant 82)?",
+      "options": [
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Theme colors only",
+        "GPU cores and caches"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which item is set via context templates (variant 83)?",
+      "options": [
+        "Mail server and logs",
+        "Theme colors only",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "GPU cores and caches"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which item is set via context templates (variant 84)?",
+      "options": [
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Theme colors only",
+        "GPU cores and caches"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which item is set via context templates (variant 85)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "Theme colors only",
+        "GPU cores and caches"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 86)?",
+      "options": [
+        "Theme colors only",
+        "GPU cores and caches",
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which item is set via context templates (variant 87)?",
+      "options": [
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "GPU cores and caches",
+        "Theme colors only"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which item is set via context templates (variant 88)?",
+      "options": [
+        "Mail server and logs",
+        "Theme colors only",
+        "GPU cores and caches",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which item is set via context templates (variant 89)?",
+      "options": [
+        "GPU cores and caches",
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Theme colors only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which item is set via context templates (variant 90)?",
+      "options": [
+        "Theme colors only",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "GPU cores and caches",
+        "Mail server and logs"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which item is set via context templates (variant 91)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "GPU cores and caches",
+        "Theme colors only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 92)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "GPU cores and caches",
+        "Mail server and logs",
+        "Theme colors only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 93)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "Theme colors only",
+        "GPU cores and caches"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 94)?",
+      "options": [
+        "GPU cores and caches",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "Theme colors only"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which item is set via context templates (variant 95)?",
+      "options": [
+        "Theme colors only",
+        "GPU cores and caches",
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which item is set via context templates (variant 96)?",
+      "options": [
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Mail server and logs",
+        "Theme colors only",
+        "GPU cores and caches"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which item is set via context templates (variant 97)?",
+      "options": [
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Theme colors only",
+        "GPU cores and caches"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which item is set via context templates (variant 98)?",
+      "options": [
+        "GPU cores and caches",
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Theme colors only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which item is set via context templates (variant 99)?",
+      "options": [
+        "GPU cores and caches",
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows",
+        "Theme colors only"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which item is set via context templates (variant 100)?",
+      "options": [
+        "GPU cores and caches",
+        "Theme colors only",
+        "Mail server and logs",
+        "Folder structure, roles, policies, OIR, lifecycle, workflows"
+      ],
+      "correct": 4
+    }
+  ]
+}

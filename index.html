@@ -555,7 +555,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v44.0</div>
+    <div class="version-info">v45.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -578,6 +578,7 @@
             </select>
             <button class="font-toggle-btn" id="fontToggle">Larger Text</button>
             <button class="font-toggle-btn" id="statsBtn">Statistics</button>
+            <button class="font-toggle-btn" id="forceRefreshBtn" style="background: #28a745;" title="Force refresh to get latest version">🔄 Refresh</button>
         </div>
 
         <div id="quiz">
@@ -602,6 +603,19 @@
     </div>
 
     <script>
+        // Detect iOS and log version info for debugging
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
+                            window.navigator.standalone === true;
+
+        console.log('=== App Version Info ===');
+        console.log('Version: v45.0');
+        console.log('Platform: iOS =', isIOS);
+        console.log('Standalone Mode (PWA) =', isStandalone);
+        console.log('User Agent:', navigator.userAgent);
+        console.log('========================');
+
         let quizData = null;
         let questionPool = [];
         let currentQuestions = [];
@@ -1263,6 +1277,47 @@
                 newWorker.postMessage({ type: 'SKIP_WAITING' });
             }
         }
+
+        // Force refresh function for iOS and stubborn caches
+        function forceRefresh() {
+            console.log('Force refresh initiated');
+
+            // Clear all caches
+            if ('caches' in window) {
+                caches.keys().then(names => {
+                    names.forEach(name => {
+                        console.log('Deleting cache:', name);
+                        caches.delete(name);
+                    });
+                });
+            }
+
+            // Unregister service workers
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(registrations => {
+                    registrations.forEach(registration => {
+                        console.log('Unregistering service worker');
+                        registration.unregister();
+                    });
+
+                    // Wait a bit then reload with cache bypass
+                    setTimeout(() => {
+                        console.log('Reloading with cache bypass');
+                        window.location.reload(true);
+                    }, 500);
+                });
+            } else {
+                // If no service worker, just reload with cache bypass
+                window.location.reload(true);
+            }
+        }
+
+        // Add force refresh button handler
+        document.getElementById('forceRefreshBtn').addEventListener('click', function() {
+            if (confirm('Force refresh? This will clear all caches and reload the app with the latest version.\n\nNote: You may need to re-add to home screen on iOS after this.')) {
+                forceRefresh();
+            }
+        });
 
         // Register service worker for PWA functionality
         if ('serviceWorker' in navigator) {

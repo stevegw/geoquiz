@@ -1,5 +1,5 @@
 // IMPORTANT: Increment this version number whenever you deploy changes
-const CACHE_VERSION = 'v40';
+const CACHE_VERSION = 'v45';
 const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
 const urlsToCache = [
   './index.html',
@@ -9,6 +9,7 @@ const urlsToCache = [
   './quizzes/codebeamer-fundamentals-questions.json',
   './quizzes/Thingworx-fundamnetails-questions.json',
   './quizzes/Windchill-Objects-and-Types.json',
+  './quizzes/Windchill-Introduction-And-Context-Admin.json',
   './quizzes/geography-questions.json'
 ];
 
@@ -62,13 +63,21 @@ self.addEventListener('fetch', event => {
       url.pathname.endsWith('.json') ||
       url.pathname === '/' || url.pathname === '') {
     event.respondWith(
-      fetch(event.request)
+      fetch(event.request, {
+        cache: 'no-cache',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache'
+        }
+      })
         .then(response => {
-          // Cache the new version
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseToCache);
-          });
+          // Only cache successful responses
+          if (response && response.status === 200) {
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME).then(cache => {
+              cache.put(event.request, responseToCache);
+            });
+          }
           return response;
         })
         .catch(() => {

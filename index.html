@@ -636,7 +636,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v48.0</div>
+    <div class="version-info">v49.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -728,7 +728,7 @@
                 <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v48.0<br>
+                        <strong>Version:</strong> v49.0<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
@@ -745,7 +745,7 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v48.0');
+        console.log('Version: v49.0');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
@@ -755,12 +755,12 @@
         const SUPABASE_URL = 'https://mtdazmjlzdokikopsxmv.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10ZGF6bWpsemRva2lrb3BzeG12Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5Nzc5ODIsImV4cCI6MjA4MzU1Mzk4Mn0.VhhsNAXzrCCr8CD-Qkjnv3wXoaayx_yjbSBQHbWXZkw';
 
-        let supabase = null;
+        let supabaseClient = null;
         let currentSessionId = null;
 
         // Initialize Supabase client
         try {
-            supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
             console.log('Supabase client initialized');
         } catch (error) {
             console.error('Failed to initialize Supabase:', error);
@@ -790,18 +790,18 @@
 
         // Track app session
         async function trackAppSession() {
-            if (!supabase || !isTrackingEnabled()) {
+            if (!supabaseClient || !isTrackingEnabled()) {
                 console.log('Tracking disabled or Supabase not available');
                 return;
             }
 
             try {
                 const userId = getOrCreateUserId();
-                const { data, error } = await supabase
+                const { data, error } = await supabaseClient
                     .from('app_sessions')
                     .insert({
                         user_id: userId,
-                        app_version: 'v48.0',
+                        app_version: 'v49.0',
                         platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
                         is_pwa: isStandalone,
                         is_ios: isIOS,
@@ -823,13 +823,13 @@
 
         // Track quiz completion
         async function trackQuizCompletion(quizName, score, totalQuestions, percentage) {
-            if (!supabase || !isTrackingEnabled()) {
+            if (!supabaseClient || !isTrackingEnabled()) {
                 return;
             }
 
             try {
                 const userId = getOrCreateUserId();
-                const { error } = await supabase
+                const { error } = await supabaseClient
                     .from('quiz_completions')
                     .insert({
                         user_id: userId,

@@ -22,6 +22,10 @@
 
     <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="icon-192.png">
+
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <style>
         * {
             margin: 0;
@@ -632,7 +636,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v46.0</div>
+    <div class="version-info">v47.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -710,9 +714,21 @@
                 </div>
 
                 <div class="settings-option">
+                    <h4>🔒 Privacy Settings</h4>
+                    <p>Anonymous usage tracking helps improve the app. No personal information is collected.</p>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="enableTrackingCheck" checked>
+                        <label for="enableTrackingCheck">Enable anonymous usage tracking</label>
+                    </div>
+                    <p style="font-size: 0.85em; color: #888; margin-top: 10px;">
+                        Your anonymous ID: <code id="userIdDisplay" style="font-size: 0.75em;">Loading...</code>
+                    </p>
+                </div>
+
+                <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v46.0<br>
+                        <strong>Version:</strong> v47.0<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
@@ -729,11 +745,113 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v46.0');
+        console.log('Version: v47.0');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
         console.log('========================');
+
+        // Initialize Supabase
+        const SUPABASE_URL = 'https://mtdazmjlzdokikopsxmv.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10ZGF6bWpsemRva2lrb3BzeG12Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5Nzc5ODIsImV4cCI6MjA4MzU1Mzk4Mn0.VhhsNAXzrCCr8CD-Qkjnv3wXoaayx_yjbSBQHbWXZkw';
+
+        let supabase = null;
+        let currentSessionId = null;
+
+        // Initialize Supabase client
+        try {
+            supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            console.log('Supabase client initialized');
+        } catch (error) {
+            console.error('Failed to initialize Supabase:', error);
+        }
+
+        // Get or create anonymous user ID
+        function getOrCreateUserId() {
+            let userId = localStorage.getItem('anonymousUserId');
+            if (!userId) {
+                // Generate a UUID v4
+                userId = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                    const r = Math.random() * 16 | 0;
+                    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+                    return v.toString(16);
+                });
+                localStorage.setItem('anonymousUserId', userId);
+                console.log('Created new anonymous user ID');
+            }
+            return userId;
+        }
+
+        // Check if tracking is enabled
+        function isTrackingEnabled() {
+            const trackingPref = localStorage.getItem('enableTracking');
+            return trackingPref !== 'false'; // Enabled by default
+        }
+
+        // Track app session
+        async function trackAppSession() {
+            if (!supabase || !isTrackingEnabled()) {
+                console.log('Tracking disabled or Supabase not available');
+                return;
+            }
+
+            try {
+                const userId = getOrCreateUserId();
+                const { data, error } = await supabase
+                    .from('app_sessions')
+                    .insert({
+                        user_id: userId,
+                        app_version: 'v47.0',
+                        platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
+                        is_pwa: isStandalone,
+                        is_ios: isIOS,
+                        user_agent: navigator.userAgent
+                    })
+                    .select()
+                    .single();
+
+                if (error) {
+                    console.error('Failed to track session:', error);
+                } else {
+                    currentSessionId = data.id;
+                    console.log('Session tracked:', currentSessionId);
+                }
+            } catch (error) {
+                console.error('Error tracking session:', error);
+            }
+        }
+
+        // Track quiz completion
+        async function trackQuizCompletion(quizName, score, totalQuestions, percentage) {
+            if (!supabase || !isTrackingEnabled()) {
+                return;
+            }
+
+            try {
+                const userId = getOrCreateUserId();
+                const { error } = await supabase
+                    .from('quiz_completions')
+                    .insert({
+                        user_id: userId,
+                        session_id: currentSessionId,
+                        quiz_name: quizName,
+                        score: score,
+                        total_questions: totalQuestions,
+                        percentage: percentage
+                    });
+
+                if (error) {
+                    console.error('Failed to track quiz completion:', error);
+                } else {
+                    console.log('Quiz completion tracked:', quizName, score + '/' + totalQuestions);
+                }
+            } catch (error) {
+                console.error('Error tracking quiz completion:', error);
+            }
+        }
+
+        // Track session on app load
+        trackAppSession();
 
         let quizData = null;
         let questionPool = [];
@@ -1149,6 +1267,10 @@
             // Save result to history
             saveQuizResult(quizData.quizName, score, totalQuestions, questionDetails);
 
+            // Track quiz completion in Supabase
+            const percentage = Math.round((score / totalQuestions) * 100);
+            trackQuizCompletion(quizData.quizName, score, totalQuestions, percentage);
+
             // Check for perfect score
             if (score === totalQuestions) {
                 const startNewQuiz = confirm(`Nice job! You got all ${totalQuestions} correct!\n\nStart a new quiz?\n\nOK = New Quiz\nCancel = Review Answers`);
@@ -1470,6 +1592,14 @@
             document.getElementById('platformInfo').textContent = isIOS ? 'iOS' : 'Other';
             document.getElementById('modeInfo').textContent = isStandalone ? 'Standalone (PWA)' : 'Browser';
 
+            // Update tracking checkbox
+            const trackingEnabled = isTrackingEnabled();
+            document.getElementById('enableTrackingCheck').checked = trackingEnabled;
+
+            // Display anonymous user ID
+            const userId = getOrCreateUserId();
+            document.getElementById('userIdDisplay').textContent = userId;
+
             modal.classList.add('active');
         }
 
@@ -1516,6 +1646,19 @@
                 clearQuizResults();
                 alert('All statistics have been cleared.');
                 hideSettings();
+            }
+        });
+
+        // Tracking preference toggle
+        document.getElementById('enableTrackingCheck').addEventListener('change', function() {
+            const enabled = this.checked;
+            localStorage.setItem('enableTracking', enabled ? 'true' : 'false');
+            console.log('Usage tracking ' + (enabled ? 'enabled' : 'disabled'));
+
+            if (enabled) {
+                alert('Anonymous usage tracking enabled. This helps improve the app!');
+            } else {
+                alert('Usage tracking disabled. No data will be sent.');
             }
         });
 

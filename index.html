@@ -636,7 +636,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v47.0</div>
+    <div class="version-info">v48.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -728,7 +728,7 @@
                 <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v47.0<br>
+                        <strong>Version:</strong> v48.0<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
@@ -745,7 +745,7 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v47.0');
+        console.log('Version: v48.0');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
@@ -801,7 +801,7 @@
                     .from('app_sessions')
                     .insert({
                         user_id: userId,
-                        app_version: 'v47.0',
+                        app_version: 'v48.0',
                         platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
                         is_pwa: isStandalone,
                         is_ios: isIOS,

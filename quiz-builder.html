@@ -528,6 +528,9 @@
                     <button onclick="exportQuiz()">⬇️ Download JSON</button>
                     <button onclick="previewJSON()" style="background: #6c757d;">👁️ Preview JSON</button>
                 </div>
+                <div style="margin-top: 15px; text-align: center;">
+                    <button onclick="viewManifest()" style="background: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer;">📋 View Current Manifest</button>
+                </div>
                 <div id="validationError" class="validation-error"></div>
             </div>
         </div>
@@ -933,7 +936,144 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
 
-            showSuccess(`Quiz exported successfully!\n\nFile: ${filename}\n\nNext steps:\n1. Move file to quizzes/ folder\n2. Add entry to quizzes/manifest.json\n3. Commit and push`);
+            // Generate manifest entry
+            const manifestEntry = {
+                filename: filename,
+                displayName: quizData.quizName,
+                description: quizData.description
+            };
+
+            // Show modal with manifest entry and options
+            showManifestHelper(filename, manifestEntry);
+        }
+
+        function showManifestHelper(filename, manifestEntry) {
+            const manifestJson = JSON.stringify(manifestEntry, null, 2);
+
+            showModal({
+                icon: '✅',
+                title: 'Quiz Exported!',
+                message: `Quiz file saved: ${filename}\n\nAdd this entry to quizzes/manifest.json:`,
+                buttons: [
+                    {
+                        text: 'Copy Manifest Entry',
+                        type: 'primary',
+                        onClick: () => {
+                            navigator.clipboard.writeText(manifestJson).then(() => {
+                                showSuccess('Manifest entry copied to clipboard!\n\nPaste it into quizzes/manifest.json in the "quizzes" array.');
+                            });
+                        }
+                    },
+                    {
+                        text: 'Download Updated Manifest',
+                        type: 'primary',
+                        onClick: () => {
+                            downloadUpdatedManifest(manifestEntry);
+                        }
+                    },
+                    {
+                        text: 'Done',
+                        type: 'secondary',
+                        onClick: () => {}
+                    }
+                ]
+            });
+
+            // Also show the manifest entry in console for reference
+            console.log('Add this to manifest.json:');
+            console.log(manifestJson);
+        }
+
+        async function downloadUpdatedManifest(newEntry) {
+            try {
+                // Fetch current manifest
+                const response = await fetch('./quizzes/manifest.json');
+                const currentManifest = await response.json();
+
+                // Check if entry already exists
+                const existingIndex = currentManifest.quizzes.findIndex(
+                    q => q.filename === newEntry.filename
+                );
+
+                if (existingIndex >= 0) {
+                    // Update existing entry
+                    currentManifest.quizzes[existingIndex] = newEntry;
+                    showInfo(`Updated existing entry for "${newEntry.displayName}" in manifest.`);
+                } else {
+                    // Add new entry
+                    currentManifest.quizzes.push(newEntry);
+                    showInfo(`Added new entry for "${newEntry.displayName}" to manifest.`);
+                }
+
+                // Download updated manifest
+                const json = JSON.stringify(currentManifest, null, 2);
+                const blob = new Blob([json], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'manifest.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                showSuccess('Updated manifest.json downloaded!\n\nReplace the file in quizzes/ folder, then commit and push.');
+            } catch (error) {
+                showError('Error updating manifest: ' + error.message + '\n\nPlease update manifest.json manually.');
+            }
+        }
+
+        async function viewManifest() {
+            try {
+                const response = await fetch('./quizzes/manifest.json');
+                const manifest = await response.json();
+
+                const quizList = manifest.quizzes.map((q, index) =>
+                    `${index + 1}. ${q.displayName}\n   File: ${q.filename}`
+                ).join('\n\n');
+
+                showModal({
+                    icon: '📋',
+                    title: 'Current Quiz Manifest',
+                    message: `${manifest.quizzes.length} quizzes registered:\n\n${quizList}`,
+                    buttons: [
+                        {
+                            text: 'Download Manifest',
+                            type: 'primary',
+                            onClick: () => {
+                                const json = JSON.stringify(manifest, null, 2);
+                                const blob = new Blob([json], { type: 'application/json' });
+                                const url = URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = 'manifest.json';
+                                document.body.appendChild(a);
+                                a.click();
+                                document.body.removeChild(a);
+                                URL.revokeObjectURL(url);
+                                showSuccess('Manifest downloaded!');
+                            }
+                        },
+                        {
+                            text: 'Copy to Clipboard',
+                            type: 'secondary',
+                            onClick: () => {
+                                const json = JSON.stringify(manifest, null, 2);
+                                navigator.clipboard.writeText(json).then(() => {
+                                    showSuccess('Manifest copied to clipboard!');
+                                });
+                            }
+                        },
+                        {
+                            text: 'Close',
+                            type: 'secondary',
+                            onClick: () => {}
+                        }
+                    ]
+                });
+            } catch (error) {
+                showError('Error loading manifest: ' + error.message);
+            }
         }
 
         function previewJSON() {

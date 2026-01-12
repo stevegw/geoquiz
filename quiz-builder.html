@@ -347,7 +347,10 @@
 
             <div id="questionsContainer"></div>
 
-            <button class="add-question-btn" onclick="addQuestion()">➕ Add Question</button>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="add-question-btn" onclick="addQuestion()" style="flex: 1;">➕ Add Question</button>
+                <button class="add-question-btn" onclick="removeDuplicates()" style="flex: 1; background: #e74c3c;">🗑️ Remove All Duplicates</button>
+            </div>
         </div>
 
         <!-- Import Section -->
@@ -461,6 +464,47 @@
                 element.remove();
                 renumberQuestions();
                 updateStats();
+            }
+        }
+
+        function removeDuplicates() {
+            const questions = document.querySelectorAll('.question-card');
+
+            if (questions.length === 0) {
+                alert('No questions to check for duplicates.');
+                return;
+            }
+
+            const seenQuestions = new Set();
+            const duplicatesToRemove = [];
+            let duplicateCount = 0;
+
+            // Identify duplicates based on question text
+            questions.forEach((card, index) => {
+                const questionText = card.querySelector('.question-text').value.trim().toLowerCase();
+
+                if (questionText === '') {
+                    return; // Skip empty questions
+                }
+
+                if (seenQuestions.has(questionText)) {
+                    duplicatesToRemove.push(card);
+                    duplicateCount++;
+                } else {
+                    seenQuestions.add(questionText);
+                }
+            });
+
+            if (duplicateCount === 0) {
+                alert('✓ No duplicate questions found!');
+                return;
+            }
+
+            if (confirm(`Found ${duplicateCount} duplicate question(s). Remove them?`)) {
+                duplicatesToRemove.forEach(card => card.remove());
+                renumberQuestions();
+                updateStats();
+                alert(`✓ Removed ${duplicateCount} duplicate question(s)!`);
             }
         }
 

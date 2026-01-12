@@ -608,18 +608,30 @@
 
             const quizData = buildQuizObject();
             const json = JSON.stringify(quizData, null, 2);
+            const escapedJson = json.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
             const newWindow = window.open('', '_blank');
-            newWindow.document.write('<html><head><title>Quiz JSON Preview</title>');
-            newWindow.document.write('<style>body { font-family: monospace; padding: 20px; background: #f5f5f5; }</style>');
-            newWindow.document.write('<style>pre { background: white; padding: 20px; border-radius: 8px; overflow-x: auto; }</style>');
-            newWindow.document.write('<style>button { padding: 10px 20px; margin-bottom: 20px; cursor: pointer; }</style>');
-            newWindow.document.write('</head><body>');
-            newWindow.document.write('<h2>Quiz JSON Preview</h2>');
-            newWindow.document.write("<button onclick=\"navigator.clipboard.writeText(document.querySelector('pre').textContent).then(function() { alert('Copied to clipboard!'); })\">Copy to Clipboard</button>");
-            newWindow.document.write('<pre>' + json.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>');
-            newWindow.document.write('</body></html>');
-            newWindow.document.close();
+            const doc = newWindow.document;
+
+            doc.open();
+            doc.write('<html><head><title>Quiz JSON Preview<\/title>');
+            doc.write('<style>body { font-family: monospace; padding: 20px; background: #f5f5f5; }<\/style>');
+            doc.write('<style>pre { background: white; padding: 20px; border-radius: 8px; overflow-x: auto; }<\/style>');
+            doc.write('<style>button { padding: 10px 20px; margin-bottom: 20px; cursor: pointer; }<\/style>');
+            doc.write('<\/head><body>');
+            doc.write('<h2>Quiz JSON Preview<\/h2>');
+            doc.write('<button id="copyBtn">Copy to Clipboard<\/button>');
+            doc.write('<pre id="jsonContent"><\/pre>');
+            doc.write('<\/body><\/html>');
+            doc.close();
+
+            // Set content and add event listener after document is ready
+            newWindow.document.getElementById('jsonContent').textContent = json;
+            newWindow.document.getElementById('copyBtn').onclick = function() {
+                navigator.clipboard.writeText(json).then(function() {
+                    alert('Copied to clipboard!');
+                });
+            };
         }
 
         function loadQuizFromFile() {

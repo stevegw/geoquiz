@@ -806,6 +806,11 @@
                 }
 
                 updateStats();
+
+                // Automatically highlight duplicates after loading
+                if (quizData.questions && quizData.questions.length > 1) {
+                    highlightDuplicates();
+                }
             } catch (error) {
                 console.error('Error in loadQuizData:', error);
                 alert('❌ Error loading quiz data: ' + error.message);

@@ -104,6 +104,25 @@
             position: relative;
         }
 
+        .question-card.duplicate {
+            background: #ffe0e0;
+            border: 2px solid #ff6b6b;
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+        }
+
+        .question-card.duplicate::before {
+            content: '⚠️ DUPLICATE';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
         .question-header {
             display: flex;
             justify-content: space-between;
@@ -349,6 +368,7 @@
 
             <div style="display: flex; gap: 10px; margin-top: 15px;">
                 <button class="add-question-btn" onclick="addQuestion()" style="flex: 1;">➕ Add Question</button>
+                <button class="add-question-btn" onclick="highlightDuplicates()" style="flex: 1; background: #f39c12;">🔍 Highlight Duplicates</button>
                 <button class="add-question-btn" onclick="removeDuplicates()" style="flex: 1; background: #e74c3c;">🗑️ Remove All Duplicates</button>
             </div>
         </div>
@@ -464,6 +484,45 @@
                 element.remove();
                 renumberQuestions();
                 updateStats();
+            }
+        }
+
+        function highlightDuplicates() {
+            const questions = document.querySelectorAll('.question-card');
+
+            if (questions.length === 0) {
+                alert('No questions to check for duplicates.');
+                return;
+            }
+
+            // First, clear all existing duplicate highlights
+            questions.forEach(card => card.classList.remove('duplicate'));
+
+            const seenQuestions = new Map(); // Map question text to first occurrence
+            let duplicateCount = 0;
+
+            // Identify duplicates based on question text
+            questions.forEach((card, index) => {
+                const questionText = card.querySelector('.question-text').value.trim().toLowerCase();
+
+                if (questionText === '') {
+                    return; // Skip empty questions
+                }
+
+                if (seenQuestions.has(questionText)) {
+                    // Mark this card as a duplicate
+                    card.classList.add('duplicate');
+                    duplicateCount++;
+                } else {
+                    // Record first occurrence
+                    seenQuestions.set(questionText, card);
+                }
+            });
+
+            if (duplicateCount === 0) {
+                alert('✓ No duplicate questions found!');
+            } else {
+                alert(`⚠️ Found ${duplicateCount} duplicate question(s)!\n\nDuplicates are highlighted in red with a warning badge.\n\nScroll through the questions to review them, then click "Remove All Duplicates" if you want to delete them.`);
             }
         }
 

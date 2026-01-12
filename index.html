@@ -723,19 +723,13 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v51.0</div>
+    <div class="version-info">v52.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
             <h1 id="quizTitle">Windchill Fundamentals</h1>
             <select id="quizSelector" class="quiz-selector">
-                <option value="Windchill-fundamentals-questions.json">Windchill Fundamentals</option>
-                <option value="Creo-fundamentals-1-questions.json">Creo Parametric Modeling</option>
-                <option value="codebeamer-fundamentals-questions.json">Codebeamer Fundamentals</option>
-                <option value="Thingworx-fundamnetails-questions.json">ThingWorx Fundamentals</option>
-                <option value="Windchill-Objects-and-Types.json">Windchill Objects and Types</option>
-                <option value="Windchill-Introduction-And-Context-Admin.json">Windchill Context Administration</option>
-                <option value="geography-questions.json">Geography Quiz</option>
+                <option value="">Loading quizzes...</option>
             </select>
             <select id="questionCount" class="quiz-selector">
                 <option value="5">5 Questions</option>
@@ -816,7 +810,7 @@
                 <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v51.0<br>
+                        <strong>Version:</strong> v52.0<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
@@ -849,7 +843,7 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v51.0');
+        console.log('Version: v52.0');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
@@ -905,7 +899,7 @@
                     .from('app_sessions')
                     .insert({
                         user_id: userId,
-                        app_version: 'v51.0',
+                        app_version: 'v52.0',
                         platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
                         is_pwa: isStandalone,
                         is_ios: isIOS,
@@ -1458,9 +1452,51 @@
         // Quiz selector functionality
         const quizSelector = document.getElementById('quizSelector');
 
-        // Load saved quiz selection from localStorage
-        const savedQuiz = localStorage.getItem('selectedQuiz') || 'Windchill-fundamentals-questions.json';
-        quizSelector.value = savedQuiz;
+        // Load quiz manifest and populate dropdown
+        async function loadQuizManifest() {
+            try {
+                const response = await fetch('./quizzes/manifest.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load quiz manifest');
+                }
+                const manifest = await response.json();
+
+                // Clear existing options
+                quizSelector.innerHTML = '';
+
+                // Populate dropdown from manifest
+                manifest.quizzes.forEach(quiz => {
+                    const option = document.createElement('option');
+                    option.value = quiz.filename;
+                    option.textContent = quiz.displayName;
+                    option.title = quiz.description; // Tooltip
+                    quizSelector.appendChild(option);
+                });
+
+                console.log(`Loaded ${manifest.quizzes.length} quizzes from manifest`);
+                return manifest.quizzes;
+            } catch (error) {
+                console.error('Error loading quiz manifest:', error);
+                // Fallback to showing error
+                quizSelector.innerHTML = '<option value="">Error loading quizzes</option>';
+                return [];
+            }
+        }
+
+        // Initialize quiz dropdown
+        (async function initializeQuizSelector() {
+            await loadQuizManifest();
+
+            // Load saved quiz selection from localStorage
+            const savedQuiz = localStorage.getItem('selectedQuiz') || 'Windchill-fundamentals-questions.json';
+            quizSelector.value = savedQuiz;
+
+            // If saved quiz doesn't exist in dropdown, select first available
+            if (!quizSelector.value && quizSelector.options.length > 0) {
+                quizSelector.selectedIndex = 0;
+                localStorage.setItem('selectedQuiz', quizSelector.value);
+            }
+        })();
 
         // Handle quiz selection change
         quizSelector.addEventListener('change', async function() {

@@ -116,13 +116,30 @@ quiz_completions (
 
 ## Common Development Workflows
 
-### Adding a New Quiz
+### Adding a New Quiz (Auto-Discovery)
+
+**New as of v52.0:** Quizzes are automatically discovered from `quizzes/manifest.json`
 
 1. Create JSON file in `quizzes/` directory
 2. Use 1-based indexing for `correct` field
-3. Add to dropdown in `index.html` around line 644-651
-4. Add to service worker's `urlsToCache` array (line 4-14)
-5. Bump version number in all 5 locations
+3. Add entry to `quizzes/manifest.json`:
+   ```json
+   {
+     "filename": "your-quiz-questions.json",
+     "displayName": "Your Quiz Name",
+     "description": "Brief description"
+   }
+   ```
+4. Bump version number in all 5 locations
+5. App will automatically populate dropdown and cache the new quiz
+
+**No need to manually update:**
+- ❌ Dropdown HTML in `index.html`
+- ❌ Service worker `urlsToCache` array
+
+The app fetches `quizzes/manifest.json` on load and:
+- Builds the quiz selector dropdown dynamically
+- Service worker auto-caches all quiz files listed in manifest
 
 ### Cleaning Duplicate Questions
 
@@ -276,11 +293,25 @@ iOS Safari aggressively caches PWAs. The force refresh function:
 ## File Organization
 
 ```
-index.html          - Main application (all HTML/CSS/JS)
-service-worker.js   - PWA caching logic
-manifest.json       - PWA metadata
-quizzes/*.json      - Quiz question data
-icon-*.png          - App icons for PWA installation
+index.html              - Main application (all HTML/CSS/JS)
+service-worker.js       - PWA caching logic
+manifest.json           - PWA metadata
+quizzes/manifest.json   - Quiz auto-discovery manifest (v52.0+)
+quizzes/*.json          - Quiz question data
+icon-*.png              - App icons for PWA installation
 ```
 
-**No other files are required for the app to function.**
+**Quiz Manifest Structure** (`quizzes/manifest.json`):
+```json
+{
+  "quizzes": [
+    {
+      "filename": "quiz-file.json",
+      "displayName": "Display Name in Dropdown",
+      "description": "Optional tooltip description"
+    }
+  ]
+}
+```
+
+This manifest enables auto-discovery: the app and service worker dynamically load quiz files without hardcoding.

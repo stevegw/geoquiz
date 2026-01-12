@@ -1,16 +1,12 @@
 // IMPORTANT: Increment this version number whenever you deploy changes
-const CACHE_VERSION = 'v51';
+const CACHE_VERSION = 'v52';
 const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
-const urlsToCache = [
+
+// Core files that must be cached
+const coreFilesToCache = [
   './index.html',
   './manifest.json',
-  './quizzes/Windchill-fundamentals-questions.json',
-  './quizzes/Creo-fundamentals-1-questions.json',
-  './quizzes/codebeamer-fundamentals-questions.json',
-  './quizzes/Thingworx-fundamnetails-questions.json',
-  './quizzes/Windchill-Objects-and-Types.json',
-  './quizzes/Windchill-Introduction-And-Context-Admin.json',
-  './quizzes/geography-questions.json'
+  './quizzes/manifest.json'
 ];
 
 // Listen for SKIP_WAITING message
@@ -20,14 +16,47 @@ self.addEventListener('message', event => {
   }
 });
 
+// Load quiz manifest and build URLs to cache
+async function getUrlsToCache() {
+  try {
+    const response = await fetch('./quizzes/manifest.json');
+    if (!response.ok) {
+      throw new Error('Failed to load quiz manifest');
+    }
+    const manifest = await response.json();
+
+    // Build list of quiz file URLs
+    const quizUrls = manifest.quizzes.map(quiz => `./quizzes/${quiz.filename}`);
+
+    // Combine core files with quiz files
+    const allUrls = [...coreFilesToCache, ...quizUrls];
+    console.log('URLs to cache:', allUrls);
+    return allUrls;
+  } catch (error) {
+    console.error('Error loading manifest for caching:', error);
+    // Fallback to just core files if manifest fails
+    return coreFilesToCache;
+  }
+}
+
 // Install event - cache files
 self.addEventListener('install', event => {
   console.log('Installing new service worker, version:', CACHE_VERSION);
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Opened cache:', CACHE_NAME);
-        return cache.addAll(urlsToCache);
+    getUrlsToCache()
+      .then(urlsToCache => {
+        return caches.open(CACHE_NAME)
+          .then(cache => {
+            console.log('Opened cache:', CACHE_NAME);
+            console.log('Caching', urlsToCache.length, 'files');
+            return cache.addAll(urlsToCache);
+          });
+      })
+      .then(() => {
+        console.log('All files cached successfully');
+      })
+      .catch(error => {
+        console.error('Error during service worker install:', error);
       })
   );
   // Force the waiting service worker to become the active service worker

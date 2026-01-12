@@ -1,0 +1,39 @@
+{
+  "quizzes": [
+    {
+      "filename": "Windchill-fundamentals-questions.json",
+      "displayName": "Windchill Fundamentals",
+      "description": "Windchill PLM fundamentals"
+    },
+    {
+      "filename": "Creo-fundamentals-1-questions.json",
+      "displayName": "Creo Parametric Modeling",
+      "description": "Creo parametric modeling basics"
+    },
+    {
+      "filename": "codebeamer-fundamentals-questions.json",
+      "displayName": "Codebeamer Fundamentals",
+      "description": "Codebeamer ALM fundamentals"
+    },
+    {
+      "filename": "Thingworx-fundamnetails-questions.json",
+      "displayName": "ThingWorx Fundamentals",
+      "description": "ThingWorx IoT platform basics"
+    },
+    {
+      "filename": "Windchill-Objects-and-Types.json",
+      "displayName": "Windchill Objects and Types",
+      "description": "Windchill object model and types"
+    },
+    {
+      "filename": "Windchill-Introduction-And-Context-Admin.json",
+      "displayName": "Windchill Context Administration",
+      "description": "Windchill context and administration"
+    },
+    {
+      "filename": "geography-questions.json",
+      "displayName": "Geography Quiz",
+      "description": "World geography trivia"
+    }
+  ]
+}

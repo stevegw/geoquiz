@@ -628,6 +628,93 @@
             flex: 1;
             margin: 0;
         }
+
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .analytics-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .analytics-card-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .analytics-card-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .analytics-section {
+            margin: 30px 0;
+        }
+
+        .analytics-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .analytics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .analytics-table th,
+        .analytics-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .analytics-table th {
+            background: #f5f5f5;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .analytics-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .analytics-bar {
+            background: #e0e0e0;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .analytics-bar-fill {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .analytics-error {
+            text-align: center;
+            padding: 40px;
+            color: #dc3545;
+        }
+
+        .analytics-empty {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -636,7 +723,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v50.0</div>
+    <div class="version-info">v51.0</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -659,6 +746,7 @@
             </select>
             <button class="font-toggle-btn" id="fontToggle">Larger Text</button>
             <button class="font-toggle-btn" id="statsBtn">Statistics</button>
+            <button class="font-toggle-btn" id="analyticsBtn">📊 Analytics</button>
             <button class="font-toggle-btn" id="settingsBtn">⚙️ Settings</button>
         </div>
 
@@ -728,10 +816,26 @@
                 <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v50.0<br>
+                        <strong>Version:</strong> v51.0<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Modal -->
+    <div id="analyticsModal" class="stats-modal">
+        <div class="stats-content">
+            <div class="stats-header">
+                <h2>📊 Usage Analytics</h2>
+                <button class="close-btn" id="closeAnalyticsBtn">Close</button>
+            </div>
+            <div id="analyticsBody">
+                <div style="text-align: center; padding: 40px; color: #666;">
+                    <div style="font-size: 3em; margin-bottom: 10px;">⏳</div>
+                    <p>Loading analytics data...</p>
                 </div>
             </div>
         </div>
@@ -745,7 +849,7 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v50.0');
+        console.log('Version: v51.0');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
@@ -801,7 +905,7 @@
                     .from('app_sessions')
                     .insert({
                         user_id: userId,
-                        app_version: 'v50.0',
+                        app_version: 'v51.0',
                         platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
                         is_pwa: isStandalone,
                         is_ios: isIOS,
@@ -1659,6 +1763,273 @@
                 alert('Anonymous usage tracking enabled. This helps improve the app!');
             } else {
                 alert('Usage tracking disabled. No data will be sent.');
+            }
+        });
+
+        // Analytics Modal functionality
+        async function showAnalytics() {
+            const modal = document.getElementById('analyticsModal');
+            const analyticsBody = document.getElementById('analyticsBody');
+
+            // Show modal with loading state
+            modal.classList.add('active');
+            analyticsBody.innerHTML = `
+                <div style="text-align: center; padding: 40px; color: #666;">
+                    <div style="font-size: 3em; margin-bottom: 10px;">⏳</div>
+                    <p>Loading analytics data...</p>
+                </div>
+            `;
+
+            // Check if Supabase is available and tracking is enabled
+            if (!supabaseClient) {
+                analyticsBody.innerHTML = `
+                    <div class="analytics-error">
+                        <div style="font-size: 3em; margin-bottom: 10px;">⚠️</div>
+                        <h3>Analytics Unavailable</h3>
+                        <p>Supabase connection is not initialized.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            try {
+                // Fetch analytics data from Supabase
+                const now = new Date();
+                const oneDayAgo = new Date(now - 24 * 60 * 60 * 1000);
+                const sevenDaysAgo = new Date(now - 7 * 24 * 60 * 60 * 1000);
+                const thirtyDaysAgo = new Date(now - 30 * 24 * 60 * 60 * 1000);
+
+                // Get session counts
+                const { data: allSessions, error: sessionsError } = await supabaseClient
+                    .from('app_sessions')
+                    .select('*');
+
+                if (sessionsError) throw sessionsError;
+
+                const todaySessions = allSessions.filter(s => new Date(s.session_started_at) >= oneDayAgo).length;
+                const weekSessions = allSessions.filter(s => new Date(s.session_started_at) >= sevenDaysAgo).length;
+                const monthSessions = allSessions.filter(s => new Date(s.session_started_at) >= thirtyDaysAgo).length;
+                const uniqueUsers = new Set(allSessions.map(s => s.user_id)).size;
+
+                // Get quiz completions
+                const { data: allCompletions, error: completionsError } = await supabaseClient
+                    .from('quiz_completions')
+                    .select('*');
+
+                if (completionsError) throw completionsError;
+
+                const todayCompletions = allCompletions.filter(c => new Date(c.completed_at) >= oneDayAgo).length;
+                const weekCompletions = allCompletions.filter(c => new Date(c.completed_at) >= sevenDaysAgo).length;
+                const totalCompletions = allCompletions.length;
+
+                // Calculate quiz statistics
+                const quizStats = {};
+                allCompletions.forEach(completion => {
+                    if (!quizStats[completion.quiz_name]) {
+                        quizStats[completion.quiz_name] = {
+                            attempts: 0,
+                            totalScore: 0,
+                            perfectScores: 0
+                        };
+                    }
+                    quizStats[completion.quiz_name].attempts++;
+                    quizStats[completion.quiz_name].totalScore += completion.percentage;
+                    if (completion.percentage === 100) {
+                        quizStats[completion.quiz_name].perfectScores++;
+                    }
+                });
+
+                // Sort quizzes by popularity
+                const sortedQuizzes = Object.entries(quizStats)
+                    .map(([name, stats]) => ({
+                        name,
+                        attempts: stats.attempts,
+                        avgScore: Math.round(stats.totalScore / stats.attempts),
+                        perfectScores: stats.perfectScores
+                    }))
+                    .sort((a, b) => b.attempts - a.attempts);
+
+                // Platform breakdown
+                const iosSessions = allSessions.filter(s => s.is_ios).length;
+                const pwaSessions = allSessions.filter(s => s.is_pwa).length;
+
+                // Recent activity (last 10)
+                const recentSessions = allSessions
+                    .sort((a, b) => new Date(b.session_started_at) - new Date(a.session_started_at))
+                    .slice(0, 10);
+
+                const recentCompletions = allCompletions
+                    .sort((a, b) => new Date(b.completed_at) - new Date(a.completed_at))
+                    .slice(0, 10);
+
+                // Build HTML
+                let html = '';
+
+                // Check if we have any data
+                if (allSessions.length === 0 && allCompletions.length === 0) {
+                    html = `
+                        <div class="analytics-empty">
+                            <div style="font-size: 3em; margin-bottom: 10px;">📊</div>
+                            <h3>No Analytics Data Yet</h3>
+                            <p>Start using the app to see usage analytics here.</p>
+                            <p style="margin-top: 20px; font-size: 0.9em; color: #888;">
+                                Make sure "Enable anonymous usage tracking" is enabled in Settings.
+                            </p>
+                        </div>
+                    `;
+                    analyticsBody.innerHTML = html;
+                    return;
+                }
+
+                // Summary cards
+                html += '<div class="analytics-grid">';
+                html += `
+                    <div class="analytics-card">
+                        <div class="analytics-card-label">Total Sessions</div>
+                        <div class="analytics-card-value">${allSessions.length}</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-card-label">Unique Users</div>
+                        <div class="analytics-card-value">${uniqueUsers}</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-card-label">Quiz Completions</div>
+                        <div class="analytics-card-value">${totalCompletions}</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-card-label">Today's Activity</div>
+                        <div class="analytics-card-value">${todaySessions + todayCompletions}</div>
+                    </div>
+                `;
+                html += '</div>';
+
+                // Time period breakdown
+                html += '<div class="analytics-section">';
+                html += '<h3>Activity by Time Period</h3>';
+                html += '<table class="analytics-table">';
+                html += '<tr><th>Period</th><th>Sessions</th><th>Quiz Completions</th></tr>';
+                html += `<tr><td>Last 24 Hours</td><td>${todaySessions}</td><td>${todayCompletions}</td></tr>`;
+                html += `<tr><td>Last 7 Days</td><td>${weekSessions}</td><td>${weekCompletions}</td></tr>`;
+                html += `<tr><td>Last 30 Days</td><td>${monthSessions}</td><td>${totalCompletions}</td></tr>`;
+                html += `<tr><td><strong>All Time</strong></td><td><strong>${allSessions.length}</strong></td><td><strong>${totalCompletions}</strong></td></tr>`;
+                html += '</table>';
+                html += '</div>';
+
+                // Quiz popularity
+                if (sortedQuizzes.length > 0) {
+                    html += '<div class="analytics-section">';
+                    html += '<h3>Most Popular Quizzes</h3>';
+                    html += '<table class="analytics-table">';
+                    html += '<tr><th>Quiz Name</th><th>Attempts</th><th>Avg Score</th><th>Perfect Scores</th></tr>';
+                    sortedQuizzes.forEach(quiz => {
+                        const maxAttempts = sortedQuizzes[0].attempts;
+                        const barWidth = (quiz.attempts / maxAttempts * 100);
+                        html += `
+                            <tr>
+                                <td>
+                                    ${quiz.name}
+                                    <div class="analytics-bar">
+                                        <div class="analytics-bar-fill" style="width: ${barWidth}%"></div>
+                                    </div>
+                                </td>
+                                <td>${quiz.attempts}</td>
+                                <td>${quiz.avgScore}%</td>
+                                <td>${quiz.perfectScores}</td>
+                            </tr>
+                        `;
+                    });
+                    html += '</table>';
+                    html += '</div>';
+                }
+
+                // Platform breakdown
+                html += '<div class="analytics-section">';
+                html += '<h3>Platform & Mode</h3>';
+                html += '<div class="analytics-grid">';
+                html += `
+                    <div style="padding: 20px; background: #f5f5f5; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">📱</div>
+                        <div style="font-size: 1.5em; font-weight: bold; color: #667eea;">${iosSessions}</div>
+                        <div style="color: #666; margin-top: 5px;">iOS Sessions</div>
+                        <div style="font-size: 0.85em; color: #888; margin-top: 5px;">${Math.round(iosSessions / allSessions.length * 100)}%</div>
+                    </div>
+                    <div style="padding: 20px; background: #f5f5f5; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">💻</div>
+                        <div style="font-size: 1.5em; font-weight: bold; color: #667eea;">${allSessions.length - iosSessions}</div>
+                        <div style="color: #666; margin-top: 5px;">Other Sessions</div>
+                        <div style="font-size: 0.85em; color: #888; margin-top: 5px;">${Math.round((allSessions.length - iosSessions) / allSessions.length * 100)}%</div>
+                    </div>
+                    <div style="padding: 20px; background: #f5f5f5; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2em; margin-bottom: 10px;">🏠</div>
+                        <div style="font-size: 1.5em; font-weight: bold; color: #667eea;">${pwaSessions}</div>
+                        <div style="color: #666; margin-top: 5px;">PWA Installed</div>
+                        <div style="font-size: 0.85em; color: #888; margin-top: 5px;">${Math.round(pwaSessions / allSessions.length * 100)}%</div>
+                    </div>
+                `;
+                html += '</div>';
+                html += '</div>';
+
+                // Recent activity
+                if (recentCompletions.length > 0) {
+                    html += '<div class="analytics-section">';
+                    html += '<h3>Recent Quiz Completions</h3>';
+                    html += '<table class="analytics-table">';
+                    html += '<tr><th>Quiz</th><th>Score</th><th>Time</th></tr>';
+                    recentCompletions.forEach(completion => {
+                        const date = new Date(completion.completed_at);
+                        const timeAgo = getTimeAgo(date);
+                        html += `
+                            <tr>
+                                <td>${completion.quiz_name}</td>
+                                <td><strong>${completion.score}/${completion.total_questions}</strong> (${completion.percentage}%)</td>
+                                <td style="color: #888; font-size: 0.9em;">${timeAgo}</td>
+                            </tr>
+                        `;
+                    });
+                    html += '</table>';
+                    html += '</div>';
+                }
+
+                analyticsBody.innerHTML = html;
+
+            } catch (error) {
+                console.error('Error loading analytics:', error);
+                analyticsBody.innerHTML = `
+                    <div class="analytics-error">
+                        <div style="font-size: 3em; margin-bottom: 10px;">❌</div>
+                        <h3>Error Loading Analytics</h3>
+                        <p>${error.message}</p>
+                        <p style="margin-top: 15px; font-size: 0.9em; color: #888;">
+                            Make sure the database tables are created in Supabase.
+                        </p>
+                    </div>
+                `;
+            }
+        }
+
+        function hideAnalytics() {
+            const modal = document.getElementById('analyticsModal');
+            modal.classList.remove('active');
+        }
+
+        function getTimeAgo(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+
+            if (seconds < 60) return 'Just now';
+            if (seconds < 3600) return Math.floor(seconds / 60) + ' minutes ago';
+            if (seconds < 86400) return Math.floor(seconds / 3600) + ' hours ago';
+            if (seconds < 604800) return Math.floor(seconds / 86400) + ' days ago';
+            return date.toLocaleDateString();
+        }
+
+        // Analytics button listeners
+        document.getElementById('analyticsBtn').addEventListener('click', showAnalytics);
+        document.getElementById('closeAnalyticsBtn').addEventListener('click', hideAnalytics);
+
+        // Close analytics modal when clicking outside
+        document.getElementById('analyticsModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideAnalytics();
             }
         });
 

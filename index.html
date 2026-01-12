@@ -715,6 +715,119 @@
             padding: 40px;
             color: #666;
         }
+
+        /* Custom Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+        }
+
+        .modal-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .modal-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .modal-message {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 25px;
+            white-space: pre-line;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .modal-button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .modal-button.primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .modal-button.primary:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+        }
+
+        .modal-button.danger {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .modal-button.danger:hover {
+            background: #c0392b;
+            transform: translateY(-1px);
+        }
+
+        .modal-button.secondary {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .modal-button.secondary:hover {
+            background: #7f8c8d;
+            transform: translateY(-1px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -723,7 +836,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v52.4</div>
+    <div class="version-info">v52.5</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -810,7 +923,7 @@
                 <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v52.4<br>
+                        <strong>Version:</strong> v52.5<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
@@ -836,6 +949,98 @@
     </div>
 
     <script>
+        // Custom modal functions
+        function showModal(options) {
+            const modal = document.getElementById('customModal');
+            const icon = document.getElementById('modalIcon');
+            const title = document.getElementById('modalTitle');
+            const message = document.getElementById('modalMessage');
+            const buttons = document.getElementById('modalButtons');
+
+            icon.textContent = options.icon || '📝';
+            title.textContent = options.title || 'Notification';
+            message.textContent = options.message || '';
+
+            buttons.innerHTML = '';
+
+            if (options.buttons) {
+                options.buttons.forEach(btn => {
+                    const button = document.createElement('button');
+                    button.className = `modal-button ${btn.type || 'primary'}`;
+                    button.textContent = btn.text;
+                    button.onclick = () => {
+                        closeModal();
+                        if (btn.onClick) btn.onClick();
+                    };
+                    buttons.appendChild(button);
+                });
+            } else {
+                const button = document.createElement('button');
+                button.className = 'modal-button primary';
+                button.textContent = 'OK';
+                button.onclick = closeModal;
+                buttons.appendChild(button);
+            }
+
+            modal.classList.add('show');
+        }
+
+        function closeModal() {
+            document.getElementById('customModal').classList.remove('show');
+        }
+
+        function showSuccess(message) {
+            showModal({
+                icon: '✅',
+                title: 'Success',
+                message: message
+            });
+        }
+
+        function showWarning(message) {
+            showModal({
+                icon: '⚠️',
+                title: 'Warning',
+                message: message
+            });
+        }
+
+        function showError(message) {
+            showModal({
+                icon: '❌',
+                title: 'Error',
+                message: message
+            });
+        }
+
+        function showInfo(message) {
+            showModal({
+                icon: 'ℹ️',
+                title: 'Information',
+                message: message
+            });
+        }
+
+        function showConfirm(message, onConfirm, onCancel) {
+            showModal({
+                icon: '❓',
+                title: 'Confirm',
+                message: message,
+                buttons: [
+                    {
+                        text: 'Cancel',
+                        type: 'secondary',
+                        onClick: onCancel
+                    },
+                    {
+                        text: 'Confirm',
+                        type: 'danger',
+                        onClick: onConfirm
+                    }
+                ]
+            });
+        }
+
         // Detect iOS and log version info for debugging
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
                       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -843,7 +1048,7 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v52.4');
+        console.log('Version: v52.5');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
@@ -899,7 +1104,7 @@
                     .from('app_sessions')
                     .insert({
                         user_id: userId,
-                        app_version: 'v52.4',
+                        app_version: 'v52.5',
                         platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
                         is_pwa: isStandalone,
                         is_ios: isIOS,
@@ -1173,7 +1378,7 @@
                     errorMessage += 'Please try refreshing the page or selecting a different quiz.';
                 }
 
-                alert(errorMessage);
+                showError(errorMessage);
                 return false;
             }
         }
@@ -1369,7 +1574,7 @@
             const totalQuestions = Object.keys(answers).length;
 
             if (answered < totalQuestions) {
-                alert('Please answer all questions before submitting!');
+                showWarning('Please answer all questions before submitting!');
                 return;
             }
 
@@ -1395,77 +1600,99 @@
 
             // Check for perfect score
             if (score === totalQuestions) {
-                const startNewQuiz = confirm(`Nice job! You got all ${totalQuestions} correct!\n\nStart a new quiz?\n\nOK = New Quiz\nCancel = Review Answers`);
-                if (startNewQuiz) {
-                    // User wants a new quiz
-                    window.location.reload();
-                    return;
-                }
-                // User clicked Cancel - just return to quiz to review
+                showModal({
+                    icon: '🎉',
+                    title: 'Perfect Score!',
+                    message: `Nice job! You got all ${totalQuestions} correct!\n\nStart a new quiz?`,
+                    buttons: [
+                        {
+                            text: 'Review Answers',
+                            type: 'secondary',
+                            onClick: () => {} // Just close modal and return to quiz
+                        },
+                        {
+                            text: 'New Quiz',
+                            type: 'primary',
+                            onClick: () => {
+                                window.location.reload();
+                            }
+                        }
+                    ]
+                });
                 return;
             }
 
             // Show confirmation with score for non-perfect scores
-            const confirmMessage = `You scored ${score} out of ${totalQuestions}!\n\nDo you want to submit and see the full results?\n\nOK = Submit\nCancel = Review Answers`;
-            const confirmed = confirm(confirmMessage);
+            showModal({
+                icon: '📊',
+                title: 'Quiz Complete!',
+                message: `You scored ${score} out of ${totalQuestions}!\n\nDo you want to submit and see the full results?`,
+                buttons: [
+                    {
+                        text: 'Review Answers',
+                        type: 'secondary',
+                        onClick: () => {
+                            // User clicked Cancel - just return to main quiz screen
+                            // Remove any result highlighting (green/red) from previous attempts
+                            document.querySelectorAll('.option').forEach(opt => {
+                                opt.classList.remove('correct', 'incorrect');
+                            });
 
-            if (!confirmed) {
-                // User clicked Cancel - just return to main quiz screen
-                // Remove any result highlighting (green/red) from previous attempts
-                document.querySelectorAll('.option').forEach(opt => {
-                    opt.classList.remove('correct', 'incorrect');
-                });
+                            // Make sure all inputs are enabled
+                            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                                input.disabled = false;
+                            });
 
-                // Make sure all inputs are enabled
-                document.querySelectorAll('input[type="radio"]').forEach(input => {
-                    input.disabled = false;
-                });
+                            // Clear previous wrong hints
+                            document.querySelectorAll('.option').forEach(opt => {
+                                opt.classList.remove('wrong-hint');
+                            });
 
-                // Clear previous wrong hints
-                document.querySelectorAll('.option').forEach(opt => {
-                    opt.classList.remove('wrong-hint');
-                });
+                            // Now add yellow highlight ONLY to user's wrong answers
+                            let firstWrongQuestion = null;
+                            for (let question in answers) {
+                                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                                if (selected && parseInt(selected.value) !== answers[question]) {
+                                    // This is a wrong answer - highlight it in yellow
+                                    selected.parentElement.classList.add('wrong-hint');
+                                    if (!firstWrongQuestion) {
+                                        firstWrongQuestion = selected.parentElement;
+                                    }
+                                }
+                            }
 
-                // Now add yellow highlight ONLY to user's wrong answers
-                let firstWrongQuestion = null;
-                for (let question in answers) {
-                    const selected = document.querySelector(`input[name="${question}"]:checked`);
-                    if (selected && parseInt(selected.value) !== answers[question]) {
-                        // This is a wrong answer - highlight it in yellow
-                        selected.parentElement.classList.add('wrong-hint');
-                        if (!firstWrongQuestion) {
-                            firstWrongQuestion = selected.parentElement;
+                            // Scroll to first wrong answer
+                            if (firstWrongQuestion) {
+                                firstWrongQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        }
+                    },
+                    {
+                        text: 'Submit',
+                        type: 'primary',
+                        onClick: () => {
+                            // User confirmed - clear yellow hints and show incorrect answers in red
+                            document.querySelectorAll('.option').forEach(opt => {
+                                opt.classList.remove('wrong-hint', 'selected', 'incorrect');
+                            });
+
+                            // Only show user's incorrect selections in red (don't reveal correct answers)
+                            for (let question in answers) {
+                                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                                const correctAnswer = answers[question];
+
+                                // Only highlight user's incorrect selection in red
+                                if (selected && parseInt(selected.value) !== correctAnswer) {
+                                    selected.parentElement.classList.add('incorrect');
+                                }
+                            }
+
+                            // Keep inputs and submit button enabled so user can try again
+                            // Red highlights will clear when user changes an answer
                         }
                     }
-                }
-
-                // Scroll to first wrong answer
-                if (firstWrongQuestion) {
-                    firstWrongQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-
-                // Stay on main quiz screen - don't show results
-                return;
-            }
-
-            // User confirmed - clear yellow hints and show incorrect answers in red
-            document.querySelectorAll('.option').forEach(opt => {
-                opt.classList.remove('wrong-hint', 'selected', 'incorrect');
+                ]
             });
-
-            // Only show user's incorrect selections in red (don't reveal correct answers)
-            for (let question in answers) {
-                const selected = document.querySelector(`input[name="${question}"]:checked`);
-                const correctAnswer = answers[question];
-
-                // Only highlight user's incorrect selection in red
-                if (selected && parseInt(selected.value) !== correctAnswer) {
-                    selected.parentElement.classList.add('incorrect');
-                }
-            }
-
-            // Keep inputs and submit button enabled so user can try again
-            // Red highlights will clear when user changes an answer
         });
 
         // New Quiz button (reload page for fresh start)
@@ -1650,18 +1877,18 @@
 
                 // Add reset question history button listener
                 document.getElementById('resetQuestionHistoryBtn').addEventListener('click', function() {
-                    if (confirm('Reset question history? This will make all questions eligible to appear again immediately.')) {
+                    showConfirm('Reset question history? This will make all questions eligible to appear again immediately.', () => {
                         clearQuestionHistory();
-                        alert('Question history has been reset. You may see previously shown questions in your next quiz.');
-                    }
+                        showInfo('Question history has been reset. You may see previously shown questions in your next quiz.');
+                    });
                 });
 
                 // Add clear stats button listener
                 document.getElementById('clearStatsBtn').addEventListener('click', function() {
-                    if (confirm('Are you sure you want to clear all statistics? This cannot be undone.')) {
+                    showConfirm('Are you sure you want to clear all statistics? This cannot be undone.', () => {
                         clearQuizResults();
                         showStats(); // Refresh the display
-                    }
+                    });
                 });
             }
 
@@ -1800,27 +2027,27 @@
                 ? 'Force refresh and keep your data?\n\nThis will clear caches and reload the app while preserving your statistics.'
                 : 'Force refresh and clear ALL data?\n\nThis will delete statistics, question history, and all app data.';
 
-            if (confirm(message)) {
+            showConfirm(message, () => {
                 forceRefresh(keepData);
-            }
+            });
         });
 
         // Reset question history button in settings
         document.getElementById('resetQuestionHistoryBtn2').addEventListener('click', function() {
-            if (confirm('Reset question history? This will make all questions eligible to appear again immediately.')) {
+            showConfirm('Reset question history? This will make all questions eligible to appear again immediately.', () => {
                 clearQuestionHistory();
-                alert('Question history has been reset.');
+                showInfo('Question history has been reset.');
                 hideSettings();
-            }
+            });
         });
 
         // Clear stats button in settings
         document.getElementById('clearStatsBtn2').addEventListener('click', function() {
-            if (confirm('Are you sure you want to clear all statistics? This cannot be undone.')) {
+            showConfirm('Are you sure you want to clear all statistics? This cannot be undone.', () => {
                 clearQuizResults();
-                alert('All statistics have been cleared.');
+                showInfo('All statistics have been cleared.');
                 hideSettings();
-            }
+            });
         });
 
         // Tracking preference toggle
@@ -1830,9 +2057,9 @@
             console.log('Usage tracking ' + (enabled ? 'enabled' : 'disabled'));
 
             if (enabled) {
-                alert('Anonymous usage tracking enabled. This helps improve the app!');
+                showInfo('Anonymous usage tracking enabled. This helps improve the app!');
             } else {
-                alert('Usage tracking disabled. No data will be sent.');
+                showInfo('Usage tracking disabled. No data will be sent.');
             }
         });
 
@@ -2158,5 +2385,15 @@
             });
         }
     </script>
+
+    <!-- Custom Modal -->
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon"></div>
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-message" id="modalMessage"></div>
+            <div class="modal-buttons" id="modalButtons"></div>
+        </div>
+    </div>
 </body>
 </html>

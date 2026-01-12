@@ -1,5 +1,5 @@
 // IMPORTANT: Increment this version number whenever you deploy changes
-const CACHE_VERSION = 'v52.4';
+const CACHE_VERSION = 'v52.5';
 const CACHE_NAME = `geography-quiz-${CACHE_VERSION}`;
 
 // Core files that must be cached

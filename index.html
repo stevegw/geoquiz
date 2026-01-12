@@ -723,7 +723,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v52.2</div>
+    <div class="version-info">v52.3</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -810,7 +810,7 @@
                 <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v52.2<br>
+                        <strong>Version:</strong> v52.3<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
@@ -843,7 +843,7 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v52.2');
+        console.log('Version: v52.3');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
@@ -899,7 +899,7 @@
                     .from('app_sessions')
                     .insert({
                         user_id: userId,
-                        app_version: 'v52.2',
+                        app_version: 'v52.3',
                         platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
                         is_pwa: isStandalone,
                         is_ios: isIOS,
@@ -1097,8 +1097,18 @@
             try {
                 const response = await fetch(`./quizzes/${filename}`);
                 if (!response.ok) {
-                    throw new Error('Failed to load questions');
+                    if (response.status === 404) {
+                        throw new Error(`Quiz file not found: ${filename}`);
+                    }
+                    throw new Error(`Failed to load questions (HTTP ${response.status})`);
                 }
+
+                // Check content type to ensure we're getting JSON
+                const contentType = response.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    throw new Error(`Expected JSON but received ${contentType || 'unknown content type'}`);
+                }
+
                 quizData = await response.json();
 
                 // Support both old array format and new object format
@@ -1149,7 +1159,21 @@
                 return true;
             } catch (error) {
                 console.error('Error loading questions:', error);
-                alert('Failed to load quiz questions. Please refresh the page.');
+
+                // Clear the problematic quiz from localStorage
+                localStorage.removeItem('selectedQuiz');
+
+                // Provide helpful error message
+                let errorMessage = 'Failed to load quiz questions.\n\n';
+                if (error.message.includes('not found')) {
+                    errorMessage += `The quiz file "${filename}" could not be found.\n\n`;
+                    errorMessage += 'Please select a different quiz from the dropdown.';
+                } else {
+                    errorMessage += `Error: ${error.message}\n\n`;
+                    errorMessage += 'Please try refreshing the page or selecting a different quiz.';
+                }
+
+                alert(errorMessage);
                 return false;
             }
         }
@@ -1485,20 +1509,29 @@
 
         // Initialize quiz dropdown
         (async function initializeQuizSelector() {
-            await loadQuizManifest();
+            const availableQuizzes = await loadQuizManifest();
 
             // Load saved quiz selection from localStorage
             const savedQuiz = localStorage.getItem('selectedQuiz') || 'Windchill-fundamentals-questions.json';
-            quizSelector.value = savedQuiz;
+
+            // Validate that saved quiz exists in manifest
+            const quizExists = availableQuizzes.some(q => q.filename === savedQuiz);
+
+            if (quizExists) {
+                quizSelector.value = savedQuiz;
+            }
 
             // If saved quiz doesn't exist in dropdown, select first available
             if (!quizSelector.value && quizSelector.options.length > 0) {
+                console.log(`Saved quiz "${savedQuiz}" not found in manifest, selecting first available`);
                 quizSelector.selectedIndex = 0;
                 localStorage.setItem('selectedQuiz', quizSelector.value);
             }
 
             // Load and display the initial quiz
-            await generateQuiz();
+            if (quizSelector.value) {
+                await generateQuiz();
+            }
         })();
 
         // Handle quiz selection change

@@ -701,35 +701,56 @@
         }
 
         function loadQuizData(quizData) {
-            // Load metadata
-            document.getElementById('quizName').value = quizData.quizName || '';
-            document.getElementById('quizDescription').value = quizData.description || '';
+            try {
+                // Load metadata
+                document.getElementById('quizName').value = quizData.quizName || '';
+                document.getElementById('quizDescription').value = quizData.description || '';
 
-            // Clear existing questions
-            const container = document.getElementById('questionsContainer');
-            container.innerHTML = '';
-            questionCounter = 0;
+                // Clear existing questions
+                const container = document.getElementById('questionsContainer');
+                container.innerHTML = '';
+                questionCounter = 0;
 
-            // Load questions
-            if (quizData.questions && quizData.questions.length > 0) {
-                quizData.questions.forEach(q => {
+                // Load questions
+                if (quizData.questions && quizData.questions.length > 0) {
+                    console.log(`Loading ${quizData.questions.length} questions...`);
+                    let loadedCount = 0;
+                    let errorCount = 0;
+
+                    quizData.questions.forEach((q, index) => {
+                        try {
+                            addQuestion();
+                            const card = container.lastElementChild;
+
+                            card.querySelector('.question-text').value = q.text || '';
+                            card.querySelector('.option-1').value = q.options[0] || '';
+                            card.querySelector('.option-2').value = q.options[1] || '';
+                            card.querySelector('.option-3').value = q.options[2] || '';
+                            card.querySelector('.option-4').value = q.options[3] || '';
+
+                            const correctRadio = card.querySelector(`input[type="radio"][value="${q.correct}"]`);
+                            if (correctRadio) correctRadio.checked = true;
+
+                            loadedCount++;
+                        } catch (err) {
+                            console.error(`Error loading question ${index + 1}:`, err);
+                            errorCount++;
+                        }
+                    });
+
+                    console.log(`Successfully loaded ${loadedCount} questions, ${errorCount} errors`);
+                    if (errorCount > 0) {
+                        alert(`⚠️ Loaded ${loadedCount} questions with ${errorCount} errors. Check console for details.`);
+                    }
+                } else {
                     addQuestion();
-                    const card = container.lastElementChild;
+                }
 
-                    card.querySelector('.question-text').value = q.text || '';
-                    card.querySelector('.option-1').value = q.options[0] || '';
-                    card.querySelector('.option-2').value = q.options[1] || '';
-                    card.querySelector('.option-3').value = q.options[2] || '';
-                    card.querySelector('.option-4').value = q.options[3] || '';
-
-                    const correctRadio = card.querySelector(`input[type="radio"][value="${q.correct}"]`);
-                    if (correctRadio) correctRadio.checked = true;
-                });
-            } else {
-                addQuestion();
+                updateStats();
+            } catch (error) {
+                console.error('Error in loadQuizData:', error);
+                alert('❌ Error loading quiz data: ' + error.message);
             }
-
-            updateStats();
         }
     </script>
 </body>

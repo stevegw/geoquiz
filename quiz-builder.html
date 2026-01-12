@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Builder - Create Quiz JSON Files</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title span {
+            font-size: 1.5em;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .question-card {
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .question-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .remove-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .remove-btn:hover {
+            background: #c82333;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .option-input {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option-input input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .option-input input[type="text"] {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .option-label {
+            font-weight: bold;
+            color: #667eea;
+            min-width: 20px;
+        }
+
+        .correct-answer-note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #856404;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .add-question-btn {
+            width: 100%;
+            background: #28a745;
+            margin-top: 10px;
+        }
+
+        .add-question-btn:hover {
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+        }
+
+        .export-section {
+            background: #f0f8ff;
+            border: 2px dashed #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-input-label {
+            background: #6c757d;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .file-input-label:hover {
+            background: #5a6268;
+        }
+
+        .stats {
+            background: #e7f3ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box strong {
+            color: #667eea;
+        }
+
+        .validation-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 6px;
+            padding: 12px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .validation-error.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Quiz Builder</h1>
+        <p class="subtitle">Create quiz JSON files without writing code</p>
+
+        <!-- Quiz Metadata -->
+        <div class="section">
+            <div class="section-title">
+                <span>ℹ️</span>
+                <span>Quiz Information</span>
+            </div>
+            <div class="form-group">
+                <label for="quizName">Quiz Name *</label>
+                <input type="text" id="quizName" placeholder="e.g., Windchill Fundamentals" required>
+            </div>
+            <div class="form-group">
+                <label for="quizDescription">Description *</label>
+                <textarea id="quizDescription" placeholder="e.g., 50 multiple-choice questions about Windchill fundamentals" required></textarea>
+            </div>
+        </div>
+
+        <!-- Questions Section -->
+        <div class="section">
+            <div class="section-title">
+                <span>❓</span>
+                <span>Questions</span>
+            </div>
+
+            <div class="info-box">
+                <strong>Important:</strong> The correct answer uses 1-based indexing (1, 2, 3, or 4) matching the option number.
+                Select the radio button next to the correct answer.
+            </div>
+
+            <div id="questionsContainer"></div>
+
+            <button class="add-question-btn" onclick="addQuestion()">➕ Add Question</button>
+        </div>
+
+        <!-- Import Section -->
+        <div class="section">
+            <div class="section-title">
+                <span>📂</span>
+                <span>Import Existing Quiz</span>
+            </div>
+            <div class="file-input-wrapper">
+                <input type="file" id="fileInput" accept=".json" onchange="loadQuizFromFile()">
+                <label for="fileInput" class="file-input-label">Choose JSON File</label>
+            </div>
+            <p style="color: #666; margin-top: 10px; font-size: 0.9em;">Load an existing quiz JSON file to edit it</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="questionCount">0</div>
+                <div class="stat-label">Questions</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completedCount">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+        </div>
+
+        <!-- Export Section -->
+        <div class="section">
+            <div class="export-section">
+                <div class="section-title" style="justify-content: center;">
+                    <span>💾</span>
+                    <span>Export Quiz</span>
+                </div>
+                <p style="color: #666; margin-bottom: 20px;">Generate and download your quiz JSON file</p>
+                <div class="button-group" style="justify-content: center;">
+                    <button onclick="validateQuiz()">✓ Validate Quiz</button>
+                    <button onclick="exportQuiz()">⬇️ Download JSON</button>
+                    <button onclick="previewJSON()" style="background: #6c757d;">👁️ Preview JSON</button>
+                </div>
+                <div id="validationError" class="validation-error"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let questionCounter = 0;
+
+        // Initialize with one question
+        window.onload = function() {
+            addQuestion();
+            updateStats();
+        };
+
+        function addQuestion() {
+            questionCounter++;
+            const container = document.getElementById('questionsContainer');
+
+            const questionCard = document.createElement('div');
+            questionCard.className = 'question-card';
+            questionCard.id = `question-${questionCounter}`;
+
+            questionCard.innerHTML = `
+                <div class="question-header">
+                    <div class="question-number">Question ${questionCounter}</div>
+                    <button class="remove-btn" onclick="removeQuestion(${questionCounter})">🗑️ Remove</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Question Text *</label>
+                    <textarea class="question-text" placeholder="Enter your question here..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Answer Options (select the correct one)</label>
+                    <div class="options-grid">
+                        <div class="option-input">
+                            <span class="option-label">1.</span>
+                            <input type="radio" name="correct-${questionCounter}" value="1">
+                            <input type="text" class="option-1" placeholder="Option 1" required>
+                        </div>
+                        <div class="option-input">
+                            <span class="option-label">2.</span>
+                            <input type="radio" name="correct-${questionCounter}" value="2">
+                            <input type="text" class="option-2" placeholder="Option 2" required>
+                        </div>
+                        <div class="option-input">
+                            <span class="option-label">3.</span>
+                            <input type="radio" name="correct-${questionCounter}" value="3">
+                            <input type="text" class="option-3" placeholder="Option 3" required>
+                        </div>
+                        <div class="option-input">
+                            <span class="option-label">4.</span>
+                            <input type="radio" name="correct-${questionCounter}" value="4">
+                            <input type="text" class="option-4" placeholder="Option 4" required>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.appendChild(questionCard);
+            updateStats();
+
+            // Scroll to new question
+            questionCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function removeQuestion(id) {
+            if (confirm('Remove this question?')) {
+                const element = document.getElementById(`question-${id}`);
+                element.remove();
+                renumberQuestions();
+                updateStats();
+            }
+        }
+
+        function renumberQuestions() {
+            const questions = document.querySelectorAll('.question-card');
+            questions.forEach((card, index) => {
+                const number = index + 1;
+                card.querySelector('.question-number').textContent = `Question ${number}`;
+            });
+        }
+
+        function updateStats() {
+            const questions = document.querySelectorAll('.question-card');
+            document.getElementById('questionCount').textContent = questions.length;
+
+            let completed = 0;
+            questions.forEach(card => {
+                const text = card.querySelector('.question-text').value;
+                const opt1 = card.querySelector('.option-1').value;
+                const opt2 = card.querySelector('.option-2').value;
+                const opt3 = card.querySelector('.option-3').value;
+                const opt4 = card.querySelector('.option-4').value;
+                const correct = card.querySelector('input[type="radio"]:checked');
+
+                if (text && opt1 && opt2 && opt3 && opt4 && correct) {
+                    completed++;
+                }
+            });
+
+            document.getElementById('completedCount').textContent = completed;
+        }
+
+        // Update stats when typing
+        document.addEventListener('input', updateStats);
+        document.addEventListener('change', updateStats);
+
+        function validateQuiz() {
+            const errorDiv = document.getElementById('validationError');
+            const errors = [];
+
+            // Validate metadata
+            const quizName = document.getElementById('quizName').value.trim();
+            const quizDescription = document.getElementById('quizDescription').value.trim();
+
+            if (!quizName) errors.push('Quiz name is required');
+            if (!quizDescription) errors.push('Quiz description is required');
+
+            // Validate questions
+            const questions = document.querySelectorAll('.question-card');
+            if (questions.length === 0) {
+                errors.push('At least one question is required');
+            }
+
+            questions.forEach((card, index) => {
+                const num = index + 1;
+                const text = card.querySelector('.question-text').value.trim();
+                const opt1 = card.querySelector('.option-1').value.trim();
+                const opt2 = card.querySelector('.option-2').value.trim();
+                const opt3 = card.querySelector('.option-3').value.trim();
+                const opt4 = card.querySelector('.option-4').value.trim();
+                const correct = card.querySelector('input[type="radio"]:checked');
+
+                if (!text) errors.push(`Question ${num}: Question text is required`);
+                if (!opt1) errors.push(`Question ${num}: Option 1 is required`);
+                if (!opt2) errors.push(`Question ${num}: Option 2 is required`);
+                if (!opt3) errors.push(`Question ${num}: Option 3 is required`);
+                if (!opt4) errors.push(`Question ${num}: Option 4 is required`);
+                if (!correct) errors.push(`Question ${num}: Must select correct answer`);
+            });
+
+            if (errors.length > 0) {
+                errorDiv.innerHTML = '<strong>⚠️ Validation Errors:</strong><ul style="margin-top: 10px; margin-left: 20px;">' +
+                    errors.map(e => `<li>${e}</li>`).join('') +
+                    '</ul>';
+                errorDiv.classList.add('show');
+                errorDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                return false;
+            } else {
+                errorDiv.classList.remove('show');
+                alert('✓ Quiz is valid! Ready to export.');
+                return true;
+            }
+        }
+
+        function buildQuizObject() {
+            const quizName = document.getElementById('quizName').value.trim();
+            const quizDescription = document.getElementById('quizDescription').value.trim();
+
+            const questions = [];
+            const questionCards = document.querySelectorAll('.question-card');
+
+            questionCards.forEach(card => {
+                const text = card.querySelector('.question-text').value.trim();
+                const opt1 = card.querySelector('.option-1').value.trim();
+                const opt2 = card.querySelector('.option-2').value.trim();
+                const opt3 = card.querySelector('.option-3').value.trim();
+                const opt4 = card.querySelector('.option-4').value.trim();
+                const correct = card.querySelector('input[type="radio"]:checked');
+
+                if (text && opt1 && opt2 && opt3 && opt4 && correct) {
+                    questions.push({
+                        text: text,
+                        options: [opt1, opt2, opt3, opt4],
+                        correct: parseInt(correct.value)
+                    });
+                }
+            });
+
+            return {
+                quizName: quizName,
+                description: quizDescription,
+                questions: questions
+            };
+        }
+
+        function exportQuiz() {
+            if (!validateQuiz()) return;
+
+            const quizData = buildQuizObject();
+            const json = JSON.stringify(quizData, null, 2);
+
+            // Create download
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+
+            // Generate filename from quiz name
+            const filename = quizData.quizName
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-|-$/g, '') + '-questions.json';
+
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            alert(`✓ Quiz exported successfully!\nFile: ${filename}\n\nNext steps:\n1. Move file to quizzes/ folder\n2. Add entry to quizzes/manifest.json\n3. Commit and push`);
+        }
+
+        function previewJSON() {
+            if (!validateQuiz()) return;
+
+            const quizData = buildQuizObject();
+            const json = JSON.stringify(quizData, null, 2);
+
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write('<html><head><title>Quiz JSON Preview</title>');
+            newWindow.document.write('<style>body { font-family: monospace; padding: 20px; background: #f5f5f5; }</style>');
+            newWindow.document.write('</head><body>');
+            newWindow.document.write('<h2>Quiz JSON Preview</h2>');
+            newWindow.document.write('<button onclick="navigator.clipboard.writeText(document.querySelector(\'pre\').textContent); alert(\'Copied to clipboard!\')">Copy to Clipboard</button>');
+            newWindow.document.write('<pre style="background: white; padding: 20px; border-radius: 8px; overflow-x: auto;">' + json + '</pre>');
+            newWindow.document.write('</body></html>');
+        }
+
+        function loadQuizFromFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const quizData = JSON.parse(e.target.result);
+                    loadQuizData(quizData);
+                    alert('✓ Quiz loaded successfully!');
+                } catch (error) {
+                    alert('❌ Error loading quiz: ' + error.message);
+                }
+            };
+            reader.readAsText(file);
+
+            // Clear file input
+            fileInput.value = '';
+        }
+
+        function loadQuizData(quizData) {
+            // Load metadata
+            document.getElementById('quizName').value = quizData.quizName || '';
+            document.getElementById('quizDescription').value = quizData.description || '';
+
+            // Clear existing questions
+            const container = document.getElementById('questionsContainer');
+            container.innerHTML = '';
+            questionCounter = 0;
+
+            // Load questions
+            if (quizData.questions && quizData.questions.length > 0) {
+                quizData.questions.forEach(q => {
+                    addQuestion();
+                    const card = container.lastElementChild;
+
+                    card.querySelector('.question-text').value = q.text || '';
+                    card.querySelector('.option-1').value = q.options[0] || '';
+                    card.querySelector('.option-2').value = q.options[1] || '';
+                    card.querySelector('.option-3').value = q.options[2] || '';
+                    card.querySelector('.option-4').value = q.options[3] || '';
+
+                    const correctRadio = card.querySelector(`input[type="radio"][value="${q.correct}"]`);
+                    if (correctRadio) correctRadio.checked = true;
+                });
+            } else {
+                addQuestion();
+            }
+
+            updateStats();
+        }
+    </script>
+</body>
+</html>

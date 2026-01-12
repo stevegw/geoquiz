@@ -1,0 +1,1006 @@
+{
+  "quizName": "Windchill Advanced BOM Transformation and MPMLink",
+  "description": "100-question quiz generated from the WCBM-ABTT training guide (BOM Transformer, Smart Collections, Control Characteristics, Process Plans, Work Instructions)",
+  "questions": [
+    {
+      "text": "What is the primary goal when transforming an eBOM to an mBOM in Windchill MPMLink?",
+      "options": [
+        "Rename all engineering parts for compliance",
+        "Convert drawings into PDFs",
+        "Merge multiple CAD models into one file",
+        "Align the manufacturing view with how the product is intended to be built"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which action reuses an engineering part directly in the downstream mBOM?",
+      "options": [
+        "Add Selected Part",
+        "Create New Branch",
+        "New Part Number",
+        "Insert Multiple New"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which tool helps maintain associative links between eBOM and mBOM parts?",
+      "options": [
+        "Global attributes",
+        "Equivalent links",
+        "Workflow tasks",
+        "Redline marks"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which view represents the manufacturing perspective of how a product will be built?",
+      "options": [
+        "Design view",
+        "Service view",
+        "Manufacturing view",
+        "Simulation view"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which action is NOT listed as a method for transforming eBOM into mBOM?",
+      "options": [
+        "Publishing a Creo drawing",
+        "Creating a new branch",
+        "Reusing eBOM parts",
+        "Renaming eBOM parts"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which Windchill capability enables design and manufacturing teams to modify their BOMs while staying in sync?",
+      "options": [
+        "MPMLink",
+        "Navigate",
+        "Document Management",
+        "ProjectLink"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does the Split Assemblies action enable you to do in BOM Transformer?",
+      "options": [
+        "Publish PDF reports",
+        "Generate simulation meshes",
+        "Schedule workflow tasks",
+        "Create and manage multiple downstream assemblies from an upstream part"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Where do you initiate creation of split assemblies when the upstream part is selected?",
+      "options": [
+        "Upstream New/Add > New Split Assemblies",
+        "Downstream Actions > Insert",
+        "Process Plan > Insert Operations",
+        "Site Utilities > New Object"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "In a split assembly scenario, how are quantities handled downstream?",
+      "options": [
+        "Always summed into one operation",
+        "Ignored in manufacturing",
+        "Forced to match upstream quantities",
+        "Occur in different downstream assemblies with their own quantities"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which attribute must be set correctly when creating split assemblies to place objects in the right location?",
+      "options": [
+        "Lifecycle State",
+        "Context and Folder",
+        "Revision Label",
+        "Team Role"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What panel icon should you use after finishing split assembly creation to view results?",
+      "options": [
+        "Open in Creo",
+        "Start Workflow",
+        "Refresh Structure and Visualization",
+        "Export Table"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is a practical use of split assemblies?",
+      "options": [
+        "Manage consumption of child parts across multiple manufacturing assemblies",
+        "Reduce CAD feature count",
+        "Create supplier quotes",
+        "Unlock administrative domains"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does the Assemble action in BOM Transformer create?",
+      "options": [
+        "Workflow activities",
+        "Enterprise data objects",
+        "Alternate downstream assemblies",
+        "Upstream CAD references"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Alternate assemblies created by Assemble are described as…",
+      "options": [
+        "Automatically saved as standard procedures",
+        "Always merged at release",
+        "Mutually exclusive of each other",
+        "Always parallel sequences"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which example illustrates Assemble usage?",
+      "options": [
+        "Publish drawing title blocks",
+        "Create car seat fabric variants like Nylon, Leather, Polyester, Vinyl",
+        "Assign workflow participants",
+        "Add enterprise plant data"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where do you start Assemble for a selected upstream component?",
+      "options": [
+        "Process Plan > Insert Sequence",
+        "Downstream Right-click > Replace",
+        "Folder Actions > New Standard Procedure",
+        "Upstream New/Add > Assemble"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "When using Assemble, which type is typically chosen for new objects?",
+      "options": [
+        "WTProject",
+        "Resource",
+        "Part",
+        "Document"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which middle-pane actions improve detection and resolution of BOM changes?",
+      "options": [
+        "Detect Discrepancies and Resolve Discrepancies",
+        "Revise and Promote",
+        "Check In and Undo Checkout",
+        "Subscribe and Notify"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "After detecting discrepancies, what action propagates upstream changes to the downstream structure?",
+      "options": [
+        "Propagate changes to downstream",
+        "Export to Excel",
+        "Reassign Team",
+        "Set State to Released"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which status may appear when top-level structures are out of sync after changes?",
+      "options": [
+        "Locked visualization",
+        "Obsolete view",
+        "Not synchronized to latest iteration",
+        "Training-only mode"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What downstream command updates to the current upstream equivalent object?",
+      "options": [
+        "Insert Existing",
+        "Update to Current Upstream Equivalent Object",
+        "Rename Operations",
+        "Generate Work Instructions"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where are impacted components highlighted during discrepancy review?",
+      "options": [
+        "Only in the Job Monitor",
+        "On the workflow routing",
+        "In site utilities",
+        "In the structure tree"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which filter helps find control characteristic differences in BOM Transformer?",
+      "options": [
+        "User filter in Access Control",
+        "Plant filter in Organization Management",
+        "Control Characteristics filter in Propagate Upstream Changes",
+        "State filter in Life Cycle"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which consumption indicator signifies a part has been used more times downstream than upstream allows?",
+      "options": [
+        "Unknown consumption",
+        "Not allocated",
+        "Under consumed",
+        "Over consumed"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which indicator means downstream consumption is less than upstream usage?",
+      "options": [
+        "Under consumed",
+        "Over consumed",
+        "No equivalence",
+        "Out of date"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does 'Unknown consumption' indicate?",
+      "options": [
+        "Part is checked out",
+        "No equivalent link exists",
+        "Equivalent usage exists but consumption status is unknown",
+        "Part is released"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Where do you assess equivalent usage and status indicators?",
+      "options": [
+        "In BOM Transformer with status icons",
+        "In Workflow Templates",
+        "In CAD session parameters",
+        "In Windchill Domains"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which action refreshes indicator status after resolving occurrences?",
+      "options": [
+        "Publish Representation",
+        "Promote State",
+        "Update Status Indicators",
+        "Create Baseline"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is an equivalent occurrence?",
+      "options": [
+        "A CAD-to-part association",
+        "A manually created link between child occurrence paths of equivalent parent parts",
+        "A plant data override",
+        "A workflow role"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What prerequisite enables creation of equivalent occurrence links?",
+      "options": [
+        "Occurrence Enabler set to Yes",
+        "Allow Editing Navigation Criteria set to Yes",
+        "Auto Part Allocation set to Yes",
+        "Latest Iteration On Revise set to Yes"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "To create an equivalent occurrence link, you must select…",
+      "options": [
+        "Two standard procedures",
+        "An equivalent part upstream and an equivalent part downstream",
+        "Any two documents",
+        "Two operations in a sequence"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which toolbar command creates the occurrence link?",
+      "options": [
+        "New Representation",
+        "Allocate to Operation",
+        "Create Equivalent Occurrence Link",
+        "Insert Existing"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What tab visualizes the occurrence link graphically?",
+      "options": [
+        "Visualization tab",
+        "Documentation tab",
+        "Processing Resources tab",
+        "Control Characteristics tab"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What happens after creating an equivalent occurrence?",
+      "options": [
+        "CAD model auto-rebuilds",
+        "A baseline is created",
+        "Equivalent occurrence status updates",
+        "Lifecycle state auto-changes to Released"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Equivalent occurrences help monitor discrepancies at which level?",
+      "options": [
+        "Plant level",
+        "Workflow level",
+        "User role level",
+        "Occurrence level between downstream and upstream BOMs"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which preference auto-creates occurrences when inserting new usages?",
+      "options": [
+        "Automatically Create Occurrences for New Usages",
+        "Show Full Creo View in Illustration Editor",
+        "Auto Part Allocation",
+        "Latest Iteration On Revise"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does 'Prevent Over Consumption of Occurrences Downstream' do when set to Yes?",
+      "options": [
+        "Prevents consuming upstream occurrences already consumed downstream",
+        "Automatically renames operations",
+        "Queues publish jobs",
+        "Hides part images"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Where are site-wide occurrence preferences configured?",
+      "options": [
+        "Organization > Teams",
+        "Site Utilities > Preference Management",
+        "Project > Roles",
+        "Workflow > Administration"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which user action selects equivalent occurrences on the other side?",
+      "options": [
+        "Rename part",
+        "Insert New Sequence",
+        "Promote operation state",
+        "Right-click an occurrence and choose 'Select Equivalent Occurrences on Other Side'"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which structure view customization brings Reference Designators forward in the table?",
+      "options": [
+        "Enable 'Highlight Inconsistencies'",
+        "Set 'Auto Part Allocation' to Yes",
+        "Add 'Reference Designator' column and move it up",
+        "Add 'Work Center' column"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is a Smart Collection used for?",
+      "options": [
+        "Create ECRs",
+        "Schedule promotions",
+        "Define lifecycle templates",
+        "Divide complex structures into cohesive chunks for transformation and planning"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Where can you open a Smart Collection from?",
+      "options": [
+        "CAD session only",
+        "Team management page",
+        "Workflow queue only",
+        "Folder view, Information page, or search results"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which middle-panel command starts creating a Smart Collection?",
+      "options": [
+        "Uses > Insert Operations",
+        "Allocate to Operation",
+        "Work Instructions > Generate",
+        "Smart Collection > New Smart Collection"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which attributes are set when creating a Smart Collection?",
+      "options": [
+        "Plant, Work Center, Capability",
+        "Name, Number, Type, and Location",
+        "Lifecycle, Team, Baseline",
+        "Priority, State, Role"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What table column can mark objects likely to have use/value?",
+      "options": [
+        "Featured Object Status",
+        "Effectivity",
+        "Resource Capacity",
+        "Promotion Request"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Where is the Smart Collection icon located when editing in BOM Transformer?",
+      "options": [
+        "Middle panel",
+        "Site utilities",
+        "Access control page",
+        "Workflow tab"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which step lets you copy/paste part path info while editing a Smart Collection?",
+      "options": [
+        "Content step",
+        "Processing Resources step",
+        "Visualization step",
+        "Attributes step"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are control characteristics?",
+      "options": [
+        "Functional features or properties needing variation/deviation control",
+        "Project milestones",
+        "Workflow tasks",
+        "CAD layers"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Where are standard control characteristics created?",
+      "options": [
+        "CAD model browser",
+        "Site team page",
+        "Actions menu on a Product context folder (MPMLink only)",
+        "Workflow administration"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which attributes are REQUIRED when creating a control characteristic?",
+      "options": [
+        "Category, Name, Location",
+        "Number, Plant, Capability",
+        "Description, Owner, Team",
+        "Revision, State, Effectivity"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which attribute may be auto-generated depending on configuration?",
+      "options": [
+        "Number",
+        "Plant",
+        "Sequence",
+        "Work Center"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which are valid control characteristic categories?",
+      "options": [
+        "Examples include Angularity, Circularity, Flatness, Position",
+        "Workflow, Resource, Capability, Plant",
+        "Drafting, Surfacing, Modeling, Assembly",
+        "Request, Change, Release, Baseline"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which tab must be added to manage CC representations and annotations?",
+      "options": [
+        "Representations/Annotations on the Information page",
+        "Access Control",
+        "Change Summary",
+        "Routing"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which objects can be associated with a standard control characteristic?",
+      "options": [
+        "Baselines, audits, subscriptions",
+        "Reference documents, standard procedures, processing resources",
+        "Roles, groups, domains",
+        "Vaults, libraries, containers"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which attributes are editable after checking out a control characteristic?",
+      "options": [
+        "Number, Owner, Type",
+        "Lifecycle Template",
+        "Team Membership",
+        "Description, Long Description, Nominal Value, Upper/Lower Limits"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Where in BOM Transformer do you manage CCs for a selected part?",
+      "options": [
+        "Work Center Allocation tab",
+        "Standard Procedures tab",
+        "Documentation tab",
+        "Control Characteristics tab"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which CAD application step can designate annotations as control characteristics?",
+      "options": [
+        "Creo Parametric Annotation Feature with Designate and Control Characteristic",
+        "Creo Illustrate sequence export",
+        "Mathcad worksheet linking",
+        "Arbortext Editor tagging"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "How do you insert an EXISTING control characteristic in BOM Transformer?",
+      "options": [
+        "Use Insert Existing on the CC tab and Add Existing dialog",
+        "Drag from Tree Picker",
+        "Rename in Uses tab",
+        "Open in Creo View"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "How do you insert a NEW control characteristic in BOM Transformer?",
+      "options": [
+        "Paste from Template",
+        "Add in Visualization",
+        "Create in Workflow",
+        "Use Insert New on the CC tab to open New Standard Control Characteristics"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "How do you remove a standard control characteristic?",
+      "options": [
+        "Select it and use Remove icon or right-click Remove Standard Control Characteristic",
+        "Clear allocation",
+        "Delete from Vault",
+        "Set state to Obsolete"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which panel detects Out Of Date changes including Added Control Characteristic?",
+      "options": [
+        "Workflow Tracker",
+        "Access Control",
+        "Propagate Upstream Changes",
+        "Job Monitor"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Before running discrepancy searches for CCs, you must…",
+      "options": [
+        "Open Job Monitor",
+        "Check in the process plan",
+        "Select a part in the upstream view",
+        "Start a workflow"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which tab shows CCs uploaded from CAD into the upstream part?",
+      "options": [
+        "Processing Resources tab",
+        "Work Center Allocation tab",
+        "Control Characteristics tab in BOM Transformer",
+        "Part Allocation tab"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is extended data in Windchill?",
+      "options": [
+        "A versioned workable object storing data for ERP publishing",
+        "A workflow template",
+        "A read-only report",
+        "A CAD file alias"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Extended data can be associated to parts regardless of…",
+      "options": [
+        "Their team",
+        "Their view (Design or Manufacturing)",
+        "Their owner",
+        "Their vault"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which types of extended data does the system manage?",
+      "options": [
+        "Sequence data and capability data",
+        "Project data and user data",
+        "CAD data and document data",
+        "Enterprise data and plant data"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Enterprise data is shared across…",
+      "options": [
+        "Only the design view",
+        "Only the latest iteration",
+        "All revisions and iterations of a part master",
+        "Only the manufacturing view"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Plant data is shared across…",
+      "options": [
+        "Only released states",
+        "All revisions and iterations of a particular view of a part",
+        "Only downstream occurrences",
+        "Only service objects"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which page aggregates information and actions for extended data?",
+      "options": [
+        "Extended Data Information page",
+        "CAD workspace",
+        "Domain policy page",
+        "Workflow task page"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does a process plan provide?",
+      "options": [
+        "Legal release checklist",
+        "CAD drawing standard",
+        "Step-by-step instructions to produce, inspect, repair, or maintain",
+        "Supplier RFQ template"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "In ERP terminology, a process plan is most often called a…",
+      "options": [
+        "Discrepancy",
+        "Variant",
+        "Baseline",
+        "Routing"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which element represents the core manufacturing step?",
+      "options": [
+        "Standard Procedure",
+        "Operation",
+        "Sequence",
+        "Capability"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which type groups operations in regular succession?",
+      "options": [
+        "Allocation",
+        "Baseline",
+        "Lifecycle",
+        "Sequence"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which statement about standard procedures is TRUE?",
+      "options": [
+        "They can be associated to parts",
+        "They can contain sequences",
+        "They are referenced within process plans and propagate changes",
+        "They must be in Design view"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which PPB tabs show allocated parts and resources?",
+      "options": [
+        "Uses and Work Center Allocation",
+        "Documentation and Control Characteristics",
+        "Attributes and Visualization",
+        "Part Allocation and Processing Resources"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which PPB preference defaults to YES?",
+      "options": [
+        "Automatic Check In Operations and Sequences",
+        "Latest Iteration On Revise",
+        "Auto Part Allocation",
+        "Load Visualization On Demand"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which PPB preference defaults to NO?",
+      "options": [
+        "Automatic Check In Operations",
+        "Show Standard CC Allocations on Tree",
+        "Show Part Allocations on Tree",
+        "Load The Structure in Visualization Tab On Demand"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which two methods can create a process plan?",
+      "options": [
+        "Folder Actions > New Process Plan and BOM Transformer > Insert New",
+        "Workflow > New Process Plan",
+        "Job Monitor > New Process Plan",
+        "Tree Picker > New Process Plan"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which tab displays an operation’s long description for editing?",
+      "options": [
+        "Visualization",
+        "Documentation",
+        "Work Center Allocation",
+        "Attributes"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which command inserts multiple operations as sub-operations when right-clicking an operation?",
+      "options": [
+        "Rename Operations",
+        "Insert Operations After",
+        "Insert Operations",
+        "Insert Existing Standard Procedure"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which command inserts operations within an existing set after a selected one?",
+      "options": [
+        "Insert Operations After",
+        "Insert Operations from Capability",
+        "Insert From Template",
+        "Insert New Sequence"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which dialog is used to create a sequence or subsequence?",
+      "options": [
+        "Insert New Sequence",
+        "Open Tree Picker",
+        "Generate Work Instructions",
+        "Rename Operations"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Where are standard procedures created and maintained?",
+      "options": [
+        "Process Plan Browser",
+        "Site Utilities",
+        "BOM Transformer",
+        "Manufacturing Standards Explorer"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which command lets you copy operations from existing plans/templates?",
+      "options": [
+        "New Representation",
+        "Insert Operations from Template",
+        "Allocate to Operation",
+        "Detect Discrepancies"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "How do you rename multiple operations quickly?",
+      "options": [
+        "Edit in Visualization pane",
+        "Select them in Uses tab and use Rename Operations",
+        "Change in Job Monitor",
+        "Modify in Team page"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which fields often store task times for operations?",
+      "options": [
+        "Plan Time, CAD Time, Publish Time",
+        "Issue Time, Review Time, Approval Time",
+        "Start Time, End Time, Cycle State",
+        "Setup Time, Labor Time, Processing Time"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which attribute enables occurrence allocation from subassemblies (test-only)?",
+      "options": [
+        "Latest Iteration On Revise set to Yes",
+        "Allow Editing Navigation Criteria set to Yes",
+        "Occurrence Allocation From Any Level set to Yes",
+        "Auto Part Allocation set to Yes"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Where do you allocate BOM parts to operations?",
+      "options": [
+        "CAD workspace",
+        "Workflow editor",
+        "Organization admin",
+        "Process Plan Browser (PPB)"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which two ways allocate parts in PPB?",
+      "options": [
+        "Start a workflow",
+        "Drag-and-drop from Tree Picker or use Allocate to Operation",
+        "Check In from CAD",
+        "Publish to Creo View"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What happens to part images in Tree Picker after allocation?",
+      "options": [
+        "They display as phantom/transparent or are hidden based on options",
+        "They move to Document tab",
+        "They auto-release",
+        "They turn red"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which icon displays allocation percentage in Tree Picker?",
+      "options": [
+        "Open Playback Actions",
+        "Start Job Monitor",
+        "Update Status Indicators",
+        "Display Part Allocation Status"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which allocation type references parts outside the BOM used by an operation?",
+      "options": [
+        "BOM Allocated Parts",
+        "Operated On",
+        "Parallel Sequence",
+        "Standard Procedure"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Why can the same part usage not be allocated to more than one operation (without parallel sequence)?",
+      "options": [
+        "Because parts lack visualization",
+        "Because workflows forbid it",
+        "Because allocation signifies the component is now assembled and cannot be assembled again",
+        "Because domains restrict it"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "In MPMLink, work instructions are delivered as…",
+      "options": [
+        "Dynamically generated HTML pages",
+        "Static PDFs",
+        "CAD drawings",
+        "XML-only files"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which sizes are available when printing work instructions?",
+      "options": [
+        "A4, Letter, A3, Ledger",
+        "Poster only",
+        "Tabloid only",
+        "A0, B0, C0, D0"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which methods create illustrations for operations?",
+      "options": [
+        "Mathcad computations",
+        "Windchill Workflow Designer",
+        "Arbortext Editor only",
+        "Creo View annotations, Operation Illustration Editor, or associated documents"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What must exist before illustrations can be created for an operation?",
+      "options": [
+        "A job monitor subscription",
+        "A baseline",
+        "A default representation of the operation",
+        "A released state"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which playback action step creates the default representation?",
+      "options": [
+        "Click Allocate to Operation",
+        "Click New Representation in Playback Actions",
+        "Click Insert Sequence",
+        "Click Detect Discrepancies"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Where can you monitor successful publish jobs for representations?",
+      "options": [
+        "Access Control",
+        "Team Page",
+        "Workflow History",
+        "WVS Job Monitor"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What does the Process Plan 'Play' function do?",
+      "options": [
+        "Plays the assembly procedure, turning parts transparent as used",
+        "Exports the plan to Excel",
+        "Generates a promotion request",
+        "Starts a workflow route"
+      ],
+      "correct": 1
+    }
+  ]
+}

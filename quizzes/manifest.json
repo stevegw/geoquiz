@@ -34,6 +34,11 @@
       "filename": "geography-questions.json",
       "displayName": "Geography Quiz",
       "description": "World geography trivia"
+    },
+    {
+      "filename": "Windchill-Advanced-BOM-Trans-And-MPMlink.json",
+      "displayName": "Windchill Advanced BOM & MPMLink",
+      "description": "Advanced BOM transformations and MPMLink"
     }
   ]
 }

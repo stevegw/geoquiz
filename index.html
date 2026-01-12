@@ -723,7 +723,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v52.3</div>
+    <div class="version-info">v52.4</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -810,7 +810,7 @@
                 <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v52.3<br>
+                        <strong>Version:</strong> v52.4<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
@@ -843,7 +843,7 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v52.3');
+        console.log('Version: v52.4');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
@@ -899,7 +899,7 @@
                     .from('app_sessions')
                     .insert({
                         user_id: userId,
-                        app_version: 'v52.3',
+                        app_version: 'v52.4',
                         platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
                         is_pwa: isStandalone,
                         is_ios: isIOS,
@@ -1556,10 +1556,8 @@
             await generateQuiz();
         });
 
-        // Initialize quiz on page load
-        (async function() {
-            await generateQuiz();
-        })();
+        // NOTE: Quiz is initialized in initializeQuizSelector() after manifest loads
+        // No need for separate initialization here
 
         // Font size toggle functionality
         const fontToggleBtn = document.getElementById('fontToggle');

@@ -396,6 +396,10 @@
                 <div class="stat-value" id="completedCount">0</div>
                 <div class="stat-label">Completed</div>
             </div>
+            <div class="stat-item">
+                <div class="stat-value" id="duplicateCount" style="color: #e74c3c;">0</div>
+                <div class="stat-label">Duplicates</div>
+            </div>
         </div>
 
         <!-- Export Section -->
@@ -519,6 +523,9 @@
                 }
             });
 
+            // Update stats to reflect duplicate count
+            updateStats();
+
             if (duplicateCount === 0) {
                 alert('✓ No duplicate questions found!');
             } else {
@@ -580,6 +587,8 @@
             document.getElementById('questionCount').textContent = questions.length;
 
             let completed = 0;
+            let duplicates = 0;
+
             questions.forEach(card => {
                 const text = card.querySelector('.question-text').value;
                 const opt1 = card.querySelector('.option-1').value;
@@ -591,9 +600,15 @@
                 if (text && opt1 && opt2 && opt3 && opt4 && correct) {
                     completed++;
                 }
+
+                // Count duplicates
+                if (card.classList.contains('duplicate')) {
+                    duplicates++;
+                }
             });
 
             document.getElementById('completedCount').textContent = completed;
+            document.getElementById('duplicateCount').textContent = duplicates;
         }
 
         // Update stats when typing

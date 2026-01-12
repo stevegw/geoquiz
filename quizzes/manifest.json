@@ -31,14 +31,20 @@
       "description": "Windchill context and administration"
     },
     {
-      "filename": "geography-questions.json",
-      "displayName": "Geography Quiz",
-      "description": "World geography trivia"
-    },
-    {
       "filename": "Windchill-Advanced-BOM-Trans-And-MPMlink.json",
       "displayName": "Windchill Advanced BOM & MPMLink",
       "description": "Advanced BOM transformations and MPMLink"
+    },
+    {
+      "filename": "preparing-ebom-to-mbom-transformation-questions.json",
+      "displayName": "Windchill EBOM-MBOM Transformation",
+      "description": "Windchill EBOM-MBOM Transformation"
+    },
+    {
+      "filename": "geography-questions.json",
+      "displayName": "Geography Quiz or fun",
+      "description": "World geography trivia"
     }
+    
   ]
 }

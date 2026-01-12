@@ -1,0 +1,136 @@
+{
+  "quizName": "Preparing eBOM to mBOM Transformation",
+  "description": "100 questions based on Windchill: Preparing eBOM to mBOM Transformation training guide",
+  "questions": [
+    {
+      "text": "What is Manufacturing Process Management (MPM) primarily concerned with?",
+      "options": [
+        "Defining and managing processes to fabricate, assemble, and inspect products",
+        "Managing supplier contracts only",
+        "Documenting CAD models only",
+        "Setting ERP item numbers"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which key objective does MPMLink enable across product development?",
+      "options": [
+        "Automated purchasing",
+        "Sequential engineering then manufacturing",
+        "Concurrent product and process development",
+        "Service BOM only creation"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which three core questions must the MPM team answer?",
+      "options": [
+        "Which vendor, which currency, which incoterms",
+        "Who approves, who pays, who ships",
+        "Which CAD tool, which format, which viewer",
+        "What to produce, how to manufacture, and where/when/quantity to produce"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "In MPMLink end-to-end planning, which step comes AFTER creating the process plan?",
+      "options": [
+        "Publish to ERP/MES",
+        "Create mBOM (3D)",
+        "Allocate parts and resources (3D)",
+        "Evaluate design (3D)"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "In the typical MPM flow, which step transforms an eBOM into an mBOM?",
+      "options": [
+        "Advanced Manufacturing Planning",
+        "Concept Development",
+        "Production Ramp-up",
+        "Finalize NC/CMM programs"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "MPMLink extends PLM by providing what to manufacturing?",
+      "options": [
+        "Standalone spreadsheet workflows",
+        "An integral digital environment with associativity to design data",
+        "Paper-based release forms",
+        "A separate database without PDMLink"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which department is the primary user of MPMLink?",
+      "options": [
+        "Field service",
+        "Finance",
+        "Manufacturing engineering",
+        "Sales"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "A central benefit of concurrent development is…",
+      "options": [
+        "More changes occur earlier, reducing cost and time to market",
+        "Moving manufacturing after production start",
+        "Eliminating all design changes",
+        "Delaying changes until release"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which systems typically receive released mBOMs and routings?",
+      "options": [
+        "SCM/WMS",
+        "CRM/CPQ",
+        "ERP/MES",
+        "DMS/ECM"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which challenge does MPMLink address by coexisting with PDMLink?",
+      "options": [
+        "Real-time access to engineering data and integrated change processes",
+        "CAD license distribution",
+        "Automated supplier payments",
+        "Network performance tuning"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which task belongs to the manufacturing engineer in MPMLink?",
+      "options": [
+        "Approve marketing copy",
+        "Define company tax policy",
+        "Design, optimize, and document process plans",
+        "Authorize invoices"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which task is typical for the design engineer in this context?",
+      "options": [
+        "Design the product to produce the eBOM, 3D models, and drawings",
+        "Manage plant scheduling",
+        "Issue purchase orders",
+        "Allocate shop resources"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What does the NC programmer create for manufacturing?",
+      "options": [
+        "Supplier quality audits",
+        "CAD title blocks",
+        "ERP material masters",
+        "Programs that drive NC machines"
+      ],
+      "correct": 4
+    }
+  ]
+}

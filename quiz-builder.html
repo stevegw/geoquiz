@@ -312,6 +312,119 @@
             display: block;
         }
 
+        /* Custom Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+        }
+
+        .modal-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .modal-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .modal-message {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 25px;
+            white-space: pre-line;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .modal-button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .modal-button.primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .modal-button.primary:hover {
+            background: #5568d3;
+            transform: translateY(-1px);
+        }
+
+        .modal-button.danger {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .modal-button.danger:hover {
+            background: #c0392b;
+            transform: translateY(-1px);
+        }
+
+        .modal-button.secondary {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .modal-button.secondary:hover {
+            background: #7f8c8d;
+            transform: translateY(-1px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -420,8 +533,110 @@
         </div>
     </div>
 
+    <!-- Custom Modal -->
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon"></div>
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-message" id="modalMessage"></div>
+            <div class="modal-buttons" id="modalButtons"></div>
+        </div>
+    </div>
+
     <script>
         let questionCounter = 0;
+
+        // Custom modal functions
+        function showModal(options) {
+            const modal = document.getElementById('customModal');
+            const icon = document.getElementById('modalIcon');
+            const title = document.getElementById('modalTitle');
+            const message = document.getElementById('modalMessage');
+            const buttons = document.getElementById('modalButtons');
+
+            icon.textContent = options.icon || '📝';
+            title.textContent = options.title || 'Notification';
+            message.textContent = options.message || '';
+
+            buttons.innerHTML = '';
+
+            if (options.buttons) {
+                options.buttons.forEach(btn => {
+                    const button = document.createElement('button');
+                    button.className = `modal-button ${btn.type || 'primary'}`;
+                    button.textContent = btn.text;
+                    button.onclick = () => {
+                        closeModal();
+                        if (btn.onClick) btn.onClick();
+                    };
+                    buttons.appendChild(button);
+                });
+            } else {
+                const button = document.createElement('button');
+                button.className = 'modal-button primary';
+                button.textContent = 'OK';
+                button.onclick = closeModal;
+                buttons.appendChild(button);
+            }
+
+            modal.classList.add('show');
+        }
+
+        function closeModal() {
+            document.getElementById('customModal').classList.remove('show');
+        }
+
+        function showSuccess(message) {
+            showModal({
+                icon: '✅',
+                title: 'Success',
+                message: message
+            });
+        }
+
+        function showWarning(message) {
+            showModal({
+                icon: '⚠️',
+                title: 'Warning',
+                message: message
+            });
+        }
+
+        function showError(message) {
+            showModal({
+                icon: '❌',
+                title: 'Error',
+                message: message
+            });
+        }
+
+        function showInfo(message) {
+            showModal({
+                icon: 'ℹ️',
+                title: 'Information',
+                message: message
+            });
+        }
+
+        function showConfirm(message, onConfirm, onCancel) {
+            showModal({
+                icon: '❓',
+                title: 'Confirm',
+                message: message,
+                buttons: [
+                    {
+                        text: 'Cancel',
+                        type: 'secondary',
+                        onClick: onCancel
+                    },
+                    {
+                        text: 'Confirm',
+                        type: 'danger',
+                        onClick: onConfirm
+                    }
+                ]
+            });
+        }
 
         // Initialize with one question
         window.onload = function() {
@@ -483,19 +698,19 @@
         }
 
         function removeQuestion(id) {
-            if (confirm('Remove this question?')) {
+            showConfirm('Remove this question?', () => {
                 const element = document.getElementById(`question-${id}`);
                 element.remove();
                 renumberQuestions();
                 updateStats();
-            }
+            });
         }
 
         function highlightDuplicates() {
             const questions = document.querySelectorAll('.question-card');
 
             if (questions.length === 0) {
-                alert('No questions to check for duplicates.');
+                showInfo('No questions to check for duplicates.');
                 return;
             }
 
@@ -527,9 +742,9 @@
             updateStats();
 
             if (duplicateCount === 0) {
-                alert('✓ No duplicate questions found!');
+                showSuccess('No duplicate questions found!');
             } else {
-                alert(`⚠️ Found ${duplicateCount} duplicate question(s)!\n\nDuplicates are highlighted in red with a warning badge.\n\nScroll through the questions to review them, then click "Remove All Duplicates" if you want to delete them.`);
+                showWarning(`Found ${duplicateCount} duplicate question(s)!\n\nDuplicates are highlighted in red with a warning badge.\n\nScroll through the questions to review them, then click "Remove All Duplicates" if you want to delete them.`);
             }
         }
 
@@ -537,7 +752,7 @@
             const questions = document.querySelectorAll('.question-card');
 
             if (questions.length === 0) {
-                alert('No questions to check for duplicates.');
+                showInfo('No questions to check for duplicates.');
                 return;
             }
 
@@ -562,16 +777,16 @@
             });
 
             if (duplicateCount === 0) {
-                alert('✓ No duplicate questions found!');
+                showSuccess('No duplicate questions found!');
                 return;
             }
 
-            if (confirm(`Found ${duplicateCount} duplicate question(s). Remove them?`)) {
+            showConfirm(`Found ${duplicateCount} duplicate question(s). Remove them?`, () => {
                 duplicatesToRemove.forEach(card => card.remove());
                 renumberQuestions();
                 updateStats();
-                alert(`✓ Removed ${duplicateCount} duplicate question(s)!`);
-            }
+                showSuccess(`Removed ${duplicateCount} duplicate question(s)!`);
+            });
         }
 
         function renumberQuestions() {
@@ -658,7 +873,7 @@
                 return false;
             } else {
                 errorDiv.classList.remove('show');
-                alert('✓ Quiz is valid! Ready to export.');
+                showSuccess('Quiz is valid! Ready to export.');
                 return true;
             }
         }
@@ -718,7 +933,7 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
 
-            alert(`✓ Quiz exported successfully!\nFile: ${filename}\n\nNext steps:\n1. Move file to quizzes/ folder\n2. Add entry to quizzes/manifest.json\n3. Commit and push`);
+            showSuccess(`Quiz exported successfully!\n\nFile: ${filename}\n\nNext steps:\n1. Move file to quizzes/ folder\n2. Add entry to quizzes/manifest.json\n3. Commit and push`);
         }
 
         function previewJSON() {
@@ -763,9 +978,9 @@
                 try {
                     const quizData = JSON.parse(e.target.result);
                     loadQuizData(quizData);
-                    alert('✓ Quiz loaded successfully!');
+                    showSuccess('Quiz loaded successfully!');
                 } catch (error) {
-                    alert('❌ Error loading quiz: ' + error.message);
+                    showError('Error loading quiz: ' + error.message);
                 }
             };
             reader.readAsText(file);
@@ -814,7 +1029,7 @@
 
                     console.log(`Successfully loaded ${loadedCount} questions, ${errorCount} errors`);
                     if (errorCount > 0) {
-                        alert(`⚠️ Loaded ${loadedCount} questions with ${errorCount} errors. Check console for details.`);
+                        showWarning(`Loaded ${loadedCount} questions with ${errorCount} errors. Check console for details.`);
                     }
                 } else {
                     addQuestion();
@@ -828,7 +1043,7 @@
                 }
             } catch (error) {
                 console.error('Error in loadQuizData:', error);
-                alert('❌ Error loading quiz data: ' + error.message);
+                showError('Error loading quiz data: ' + error.message);
             }
         }
     </script>

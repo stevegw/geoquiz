@@ -616,7 +616,7 @@
             newWindow.document.write('<style>button { padding: 10px 20px; margin-bottom: 20px; cursor: pointer; }</style>');
             newWindow.document.write('</head><body>');
             newWindow.document.write('<h2>Quiz JSON Preview</h2>');
-            newWindow.document.write('<button onclick="navigator.clipboard.writeText(document.querySelector(\'pre\').textContent).then(function() { alert(\'Copied to clipboard!\'); })">Copy to Clipboard</button>');
+            newWindow.document.write("<button onclick=\"navigator.clipboard.writeText(document.querySelector('pre').textContent).then(function() { alert('Copied to clipboard!'); })\">Copy to Clipboard</button>");
             newWindow.document.write('<pre>' + json.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>');
             newWindow.document.write('</body></html>');
             newWindow.document.close();

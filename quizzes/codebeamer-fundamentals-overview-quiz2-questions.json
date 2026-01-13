@@ -1,1006 +1,1006 @@
 {
-  "quizName": "Codebeamer Fundamentals Overview Quiz (Unique, v2)",
-  "description": "100 unique MCQs derived from CBFD-OVER Training Guide; exercises & knowledge checks excluded.",
+  "quizName": "Codebeamer Fundamentals Overview",
+  "description": "100-question quiz covering ALM concepts and Codebeamer fundamentals (trackers, requirements, test management, traceability, views, reporting, and wiki dashboards).",
   "questions": [
     {
-      "text": "Which of the following is NOT a documented ALM benefit?",
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 1)",
       "options": [
-        "Enhanced compliance",
-        "Reduced traceability",
-        "Increased visibility",
-        "Faster development"
+        "ALM is a chat client",
+        "ALM manages the full product lifecycle with traceability",
+        "ALM is only for payroll",
+        "ALM replaces CAD"
       ],
       "correct": 2
     },
     {
-      "text": "Which of the following is NOT a primary tracker view?",
+      "text": "In Codebeamer, what are trackers most similar to? (variant 2)",
       "options": [
+        "Email folders",
+        "Image albums",
+        "Database tables",
+        "Network routes"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Tracker items are best described as which database concept? (variant 3)",
+      "options": [
+        "Indexes",
+        "Rows",
+        "Views",
+        "Columns"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which default view presents requirement descriptions in three panes? (variant 4)",
+      "options": [
+        "Gantt view",
+        "Calendar view",
         "Kanban view",
-        "Table view",
-        "Binary view",
         "Document view"
       ],
-      "correct": 3
+      "correct": 4
     },
     {
-      "text": "Which of the following is NOT a valid tracker type in the default project?",
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 5)",
       "options": [
-        "System Requirement Specifications",
-        "Tasks",
-        "Members",
-        "Customer Requirement Specifications"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which of the following is NOT one of the ALM framework phases listed in the guide?",
-      "options": [
-        "Requirements definition",
-        "Procurement only",
-        "Design",
-        "Development"
+        "ALM replaces CAD",
+        "ALM manages the full product lifecycle with traceability",
+        "ALM is only for payroll",
+        "ALM is a chat client"
       ],
       "correct": 2
     },
     {
-      "text": "Where are cbQL queries authored in Codebeamer?",
+      "text": "In Codebeamer, what are trackers most similar to? (variant 6)",
       "options": [
-        "Kanban board",
-        "Test coverage browser",
-        "Reports tab",
-        "Wiki layout"
+        "Image albums",
+        "Network routes",
+        "Email folders",
+        "Database tables"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Tracker items are best described as which database concept? (variant 7)",
+      "options": [
+        "Columns",
+        "Rows",
+        "Views",
+        "Indexes"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which default view presents requirement descriptions in three panes? (variant 8)",
+      "options": [
+        "Kanban view",
+        "Gantt view",
+        "Calendar view",
+        "Document view"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 9)",
+      "options": [
+        "ALM replaces CAD",
+        "ALM is only for payroll",
+        "ALM manages the full product lifecycle with traceability",
+        "ALM is a chat client"
       ],
       "correct": 3
     },
     {
-      "text": "From which view can you NOT export tracker data to Office?",
+      "text": "In Codebeamer, what are trackers most similar to? (variant 10)",
+      "options": [
+        "Database tables",
+        "Network routes",
+        "Image albums",
+        "Email folders"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Tracker items are best described as which database concept? (variant 11)",
+      "options": [
+        "Views",
+        "Columns",
+        "Rows",
+        "Indexes"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which default view presents requirement descriptions in three panes? (variant 12)",
       "options": [
         "Kanban view",
         "Document view",
-        "Test Run Browser (to Word)",
-        "Table view"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which widget combination was used to build a dashboard example?",
-      "options": [
-        "Kernel + Network",
-        "Mail + Calendar",
-        "Tracker List + Traceability Report",
-        "Binary log + GPU chart"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "What does clearing a 'Suspected' badge signify?",
-      "options": [
-        "Downstream impact has been reviewed",
-        "References deleted",
-        "Permissions changed",
-        "Item archived"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "What parameter controls how many reference levels the Traceability section displays?",
-      "options": [
-        "Render Depth",
-        "Layer Count",
-        "Max Hops",
-        "Number of Levels"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "What field is commonly used to estimate effort on a Task?",
-      "options": [
-        "Story Points",
-        "MAC address",
-        "Git hash",
-        "Image DPI"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Assigning a Task to a Release helps with what?",
-      "options": [
-        "License generation",
-        "UI theming",
-        "Automatic deployment",
-        "Timeboxed planning"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "During test execution, how are step outcomes captured?",
-      "options": [
-        "Screenshots only",
-        "Email threads",
-        "Actual Result entries and Pass/Fail marks",
-        "Code commits"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Creating a Bug from a failed step can copy properties from which items?",
-      "options": [
-        "The Theme",
-        "The DB server",
-        "The OS",
-        "The Test Run and the Test Case"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "What does a Test Configuration record?",
-      "options": [
-        "License server URL",
-        "Who wrote the feature",
-        "The conditions under which the test runs",
-        "Git remote name"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "What best describes a Test Run?",
-      "options": [
-        "A code branch",
-        "A permission set",
-        "Execution of a test case with a specific release and configuration",
-        "A backlog item"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 15 )?",
-      "options": [
-        "Reduced traceability",
-        "Increased visibility",
-        "Higher manual workload",
-        "Lower quality"
+        "Calendar view",
+        "Gantt view"
       ],
       "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 16 )?",
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 13)",
       "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Enhanced compliance",
-        "Reduced traceability"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 17 )?",
-      "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality",
-        "Faster development"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 18 )?",
-      "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Higher-quality products",
-        "Lower quality"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 19 )?",
-      "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality",
-        "Lower development costs"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 20 )?",
-      "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Reduced traceability",
-        "Increased visibility"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 21 )?",
-      "options": [
-        "Enhanced compliance",
-        "Lower quality",
-        "Higher manual workload",
-        "Reduced traceability"
+        "ALM manages the full product lifecycle with traceability",
+        "ALM replaces CAD",
+        "ALM is only for payroll",
+        "ALM is a chat client"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 22 )?",
+      "text": "In Codebeamer, what are trackers most similar to? (variant 14)",
       "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Faster development",
-        "Reduced traceability"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 23 )?",
-      "options": [
-        "Higher-quality products",
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 24 )?",
-      "options": [
-        "Lower development costs",
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 25 )?",
-      "options": [
-        "Reduced traceability",
-        "Higher manual workload",
-        "Lower quality",
-        "Increased visibility"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 26 )?",
-      "options": [
-        "Reduced traceability",
-        "Higher manual workload",
-        "Enhanced compliance",
-        "Lower quality"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 27 )?",
-      "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality",
-        "Faster development"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 28 )?",
-      "options": [
-        "Higher manual workload",
-        "Lower quality",
-        "Higher-quality products",
-        "Reduced traceability"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 29 )?",
-      "options": [
-        "Higher manual workload",
-        "Lower quality",
-        "Lower development costs",
-        "Reduced traceability"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 30 )?",
-      "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Increased visibility",
-        "Lower quality"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 31 )?",
-      "options": [
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability",
-        "Enhanced compliance"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 32 )?",
-      "options": [
-        "Lower quality",
-        "Reduced traceability",
-        "Higher manual workload",
-        "Faster development"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 33 )?",
-      "options": [
-        "Reduced traceability",
-        "Lower quality",
-        "Higher manual workload",
-        "Higher-quality products"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 34 )?",
-      "options": [
-        "Lower quality",
-        "Reduced traceability",
-        "Lower development costs",
-        "Higher manual workload"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 35 )?",
-      "options": [
-        "Increased visibility",
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 36 )?",
-      "options": [
-        "Enhanced compliance",
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 37 )?",
-      "options": [
-        "Reduced traceability",
-        "Higher manual workload",
-        "Lower quality",
-        "Faster development"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 38 )?",
-      "options": [
-        "Higher-quality products",
-        "Reduced traceability",
-        "Lower quality",
-        "Higher manual workload"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 39 )?",
-      "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower development costs",
-        "Lower quality"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 40 )?",
-      "options": [
-        "Increased visibility",
-        "Lower quality",
-        "Higher manual workload",
-        "Reduced traceability"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 41 )?",
-      "options": [
-        "Lower quality",
-        "Reduced traceability",
-        "Higher manual workload",
-        "Enhanced compliance"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 42 )?",
-      "options": [
-        "Lower quality",
-        "Faster development",
-        "Higher manual workload",
-        "Reduced traceability"
+        "Network routes",
+        "Database tables",
+        "Image albums",
+        "Email folders"
       ],
       "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 43 )?",
+      "text": "Tracker items are best described as which database concept? (variant 15)",
       "options": [
-        "Higher-quality products",
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 44 )?",
-      "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower development costs"
+        "Indexes",
+        "Columns",
+        "Views",
+        "Rows"
       ],
       "correct": 4
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 45 )?",
+      "text": "Which default view presents requirement descriptions in three panes? (variant 16)",
       "options": [
-        "Lower quality",
-        "Reduced traceability",
-        "Increased visibility",
-        "Higher manual workload"
+        "Document view",
+        "Kanban view",
+        "Gantt view",
+        "Calendar view"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 17)",
+      "options": [
+        "ALM manages the full product lifecycle with traceability",
+        "ALM replaces CAD",
+        "ALM is a chat client",
+        "ALM is only for payroll"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "In Codebeamer, what are trackers most similar to? (variant 18)",
+      "options": [
+        "Image albums",
+        "Database tables",
+        "Network routes",
+        "Email folders"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Tracker items are best described as which database concept? (variant 19)",
+      "options": [
+        "Indexes",
+        "Views",
+        "Columns",
+        "Rows"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which default view presents requirement descriptions in three panes? (variant 20)",
+      "options": [
+        "Kanban view",
+        "Calendar view",
+        "Document view",
+        "Gantt view"
       ],
       "correct": 3
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 46 )?",
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 21)",
       "options": [
-        "Lower quality",
-        "Enhanced compliance",
-        "Reduced traceability",
-        "Higher manual workload"
+        "ALM is a chat client",
+        "ALM manages the full product lifecycle with traceability",
+        "ALM is only for payroll",
+        "ALM replaces CAD"
       ],
       "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 47 )?",
+      "text": "In Codebeamer, what are trackers most similar to? (variant 22)",
       "options": [
-        "Faster development",
-        "Lower quality",
-        "Reduced traceability",
-        "Higher manual workload"
+        "Image albums",
+        "Network routes",
+        "Email folders",
+        "Database tables"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 48 )?",
+      "text": "Tracker items are best described as which database concept? (variant 23)",
       "options": [
-        "Reduced traceability",
-        "Higher-quality products",
-        "Higher manual workload",
-        "Lower quality"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 49 )?",
-      "options": [
-        "Lower development costs",
-        "Lower quality",
-        "Reduced traceability",
-        "Higher manual workload"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 50 )?",
-      "options": [
-        "Increased visibility",
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 51 )?",
-      "options": [
-        "Higher manual workload",
-        "Enhanced compliance",
-        "Lower quality",
-        "Reduced traceability"
+        "Indexes",
+        "Rows",
+        "Columns",
+        "Views"
       ],
       "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 52 )?",
+      "text": "Which default view presents requirement descriptions in three panes? (variant 24)",
       "options": [
-        "Faster development",
-        "Reduced traceability",
-        "Lower quality",
-        "Higher manual workload"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 53 )?",
-      "options": [
-        "Lower quality",
-        "Higher-quality products",
-        "Higher manual workload",
-        "Reduced traceability"
+        "Gantt view",
+        "Document view",
+        "Kanban view",
+        "Calendar view"
       ],
       "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 54 )?",
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 25)",
       "options": [
-        "Lower development costs",
-        "Reduced traceability",
-        "Lower quality",
-        "Higher manual workload"
+        "ALM is only for payroll",
+        "ALM is a chat client",
+        "ALM replaces CAD",
+        "ALM manages the full product lifecycle with traceability"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "In Codebeamer, what are trackers most similar to? (variant 26)",
+      "options": [
+        "Database tables",
+        "Image albums",
+        "Email folders",
+        "Network routes"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 55 )?",
+      "text": "Tracker items are best described as which database concept? (variant 27)",
       "options": [
-        "Increased visibility",
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability"
+        "Views",
+        "Indexes",
+        "Columns",
+        "Rows"
       ],
-      "correct": 1
+      "correct": 4
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 56 )?",
+      "text": "Which default view presents requirement descriptions in three panes? (variant 28)",
       "options": [
-        "Reduced traceability",
-        "Higher manual workload",
-        "Enhanced compliance",
-        "Lower quality"
+        "Gantt view",
+        "Calendar view",
+        "Document view",
+        "Kanban view"
       ],
       "correct": 3
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 57 )?",
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 29)",
       "options": [
-        "Higher manual workload",
-        "Lower quality",
-        "Faster development",
-        "Reduced traceability"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 58 )?",
-      "options": [
-        "Higher-quality products",
-        "Lower quality",
-        "Higher manual workload",
-        "Reduced traceability"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 59 )?",
-      "options": [
-        "Lower development costs",
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 60 )?",
-      "options": [
-        "Increased visibility",
-        "Reduced traceability",
-        "Higher manual workload",
-        "Lower quality"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 61 )?",
-      "options": [
-        "Lower quality",
-        "Enhanced compliance",
-        "Higher manual workload",
-        "Reduced traceability"
+        "ALM replaces CAD",
+        "ALM manages the full product lifecycle with traceability",
+        "ALM is a chat client",
+        "ALM is only for payroll"
       ],
       "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 62 )?",
+      "text": "In Codebeamer, what are trackers most similar to? (variant 30)",
       "options": [
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability",
-        "Faster development"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 63 )?",
-      "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality",
-        "Higher-quality products"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 64 )?",
-      "options": [
-        "Lower development costs",
-        "Lower quality",
-        "Reduced traceability",
-        "Higher manual workload"
+        "Database tables",
+        "Network routes",
+        "Image albums",
+        "Email folders"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 65 )?",
+      "text": "Tracker items are best described as which database concept? (variant 31)",
       "options": [
-        "Higher manual workload",
-        "Lower quality",
-        "Increased visibility",
-        "Reduced traceability"
+        "Indexes",
+        "Views",
+        "Columns",
+        "Rows"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which default view presents requirement descriptions in three panes? (variant 32)",
+      "options": [
+        "Kanban view",
+        "Calendar view",
+        "Document view",
+        "Gantt view"
       ],
       "correct": 3
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 66 )?",
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 33)",
       "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Enhanced compliance",
-        "Lower quality"
+        "ALM replaces CAD",
+        "ALM is a chat client",
+        "ALM manages the full product lifecycle with traceability",
+        "ALM is only for payroll"
       ],
       "correct": 3
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 67 )?",
+      "text": "In Codebeamer, what are trackers most similar to? (variant 34)",
       "options": [
-        "Higher manual workload",
-        "Faster development",
-        "Reduced traceability",
-        "Lower quality"
+        "Network routes",
+        "Image albums",
+        "Database tables",
+        "Email folders"
       ],
-      "correct": 2
+      "correct": 3
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 68 )?",
+      "text": "Tracker items are best described as which database concept? (variant 35)",
       "options": [
-        "Higher-quality products",
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability"
+        "Indexes",
+        "Views",
+        "Rows",
+        "Columns"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which default view presents requirement descriptions in three panes? (variant 36)",
+      "options": [
+        "Document view",
+        "Calendar view",
+        "Kanban view",
+        "Gantt view"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 69 )?",
+      "text": "Which statement best aligns with ALM in Codebeamer? (variant 37)",
       "options": [
-        "Reduced traceability",
-        "Lower development costs",
-        "Higher manual workload",
-        "Lower quality"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 70 )?",
-      "options": [
-        "Lower quality",
-        "Increased visibility",
-        "Reduced traceability",
-        "Higher manual workload"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 71 )?",
-      "options": [
-        "Enhanced compliance",
-        "Lower quality",
-        "Reduced traceability",
-        "Higher manual workload"
+        "ALM manages the full product lifecycle with traceability",
+        "ALM is a chat client",
+        "ALM is only for payroll",
+        "ALM replaces CAD"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 72 )?",
+      "text": "In Codebeamer, what are trackers most similar to? (variant 38)",
       "options": [
-        "Faster development",
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability"
+        "Database tables",
+        "Network routes",
+        "Email folders",
+        "Image albums"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 73 )?",
+      "text": "Tracker items are best described as which database concept? (variant 39)",
       "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Higher-quality products",
-        "Reduced traceability"
+        "Columns",
+        "Indexes",
+        "Views",
+        "Rows"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which default view presents requirement descriptions in three panes? (variant 40)",
+      "options": [
+        "Calendar view",
+        "Kanban view",
+        "Gantt view",
+        "Document view"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q41)",
+      "options": [
+        "Task",
+        "Release note",
+        "Bug",
+        "Test configuration"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q42)",
+      "options": [
+        "Release note",
+        "Test configuration",
+        "Task",
+        "Bug"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q43)",
+      "options": [
+        "Task",
+        "Release note",
+        "Test configuration",
+        "Bug"
       ],
       "correct": 3
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 74 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q44)",
       "options": [
-        "Reduced traceability",
-        "Lower development costs",
-        "Higher manual workload",
-        "Lower quality"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 75 )?",
-      "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Reduced traceability",
-        "Increased visibility"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 76 )?",
-      "options": [
-        "Higher manual workload",
-        "Lower quality",
-        "Reduced traceability",
-        "Enhanced compliance"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 77 )?",
-      "options": [
-        "Reduced traceability",
-        "Faster development",
-        "Lower quality",
-        "Higher manual workload"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 78 )?",
-      "options": [
-        "Higher-quality products",
-        "Lower quality",
-        "Reduced traceability",
-        "Higher manual workload"
+        "Test configuration",
+        "Bug",
+        "Task",
+        "Release note"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 79 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q45)",
       "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Lower development costs",
-        "Reduced traceability"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 80 )?",
-      "options": [
-        "Reduced traceability",
-        "Higher manual workload",
-        "Increased visibility",
-        "Lower quality"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 81 )?",
-      "options": [
-        "Reduced traceability",
-        "Enhanced compliance",
-        "Lower quality",
-        "Higher manual workload"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 82 )?",
-      "options": [
-        "Lower quality",
-        "Reduced traceability",
-        "Faster development",
-        "Higher manual workload"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 83 )?",
-      "options": [
-        "Lower quality",
-        "Reduced traceability",
-        "Higher manual workload",
-        "Higher-quality products"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 84 )?",
-      "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Lower development costs",
-        "Reduced traceability"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 85 )?",
-      "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Increased visibility",
-        "Lower quality"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 86 )?",
-      "options": [
-        "Enhanced compliance",
-        "Reduced traceability",
-        "Lower quality",
-        "Higher manual workload"
+        "Test configuration",
+        "Release note",
+        "Bug",
+        "Task"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 87 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q46)",
       "options": [
-        "Reduced traceability",
-        "Lower quality",
-        "Higher manual workload",
-        "Faster development"
+        "Task",
+        "Test configuration",
+        "Release note",
+        "Bug"
       ],
-      "correct": 4
+      "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 88 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q47)",
       "options": [
-        "Higher-quality products",
-        "Lower quality",
-        "Higher manual workload",
-        "Reduced traceability"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 89 )?",
-      "options": [
-        "Reduced traceability",
-        "Lower quality",
-        "Higher manual workload",
-        "Lower development costs"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 90 )?",
-      "options": [
-        "Lower quality",
-        "Higher manual workload",
-        "Increased visibility",
-        "Reduced traceability"
+        "Release note",
+        "Task",
+        "Test configuration",
+        "Bug"
       ],
       "correct": 3
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 91 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q48)",
       "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality",
-        "Enhanced compliance"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 92 )?",
-      "options": [
-        "Higher manual workload",
-        "Faster development",
-        "Lower quality",
-        "Reduced traceability"
+        "Task",
+        "Test configuration",
+        "Bug",
+        "Release note"
       ],
       "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 93 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q49)",
       "options": [
-        "Higher manual workload",
-        "Higher-quality products",
-        "Lower quality",
-        "Reduced traceability"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which ALM benefit is highlighted in the guide (variant 94 )?",
-      "options": [
-        "Lower development costs",
-        "Reduced traceability",
-        "Lower quality",
-        "Higher manual workload"
+        "Test configuration",
+        "Release note",
+        "Bug",
+        "Task"
       ],
       "correct": 1
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 95 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q50)",
       "options": [
-        "Higher manual workload",
-        "Increased visibility",
-        "Lower quality",
-        "Reduced traceability"
+        "Bug",
+        "Release note",
+        "Test configuration",
+        "Task"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q51)",
+      "options": [
+        "Test configuration",
+        "Release note",
+        "Bug",
+        "Task"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q52)",
+      "options": [
+        "Task",
+        "Release note",
+        "Bug",
+        "Test configuration"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q53)",
+      "options": [
+        "Bug",
+        "Test configuration",
+        "Task",
+        "Release note"
       ],
       "correct": 2
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 96 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q54)",
       "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality",
-        "Enhanced compliance"
+        "Release note",
+        "Bug",
+        "Task",
+        "Test configuration"
       ],
       "correct": 4
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 97 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q55)",
       "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality",
-        "Faster development"
+        "Bug",
+        "Release note",
+        "Test configuration",
+        "Task"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q56)",
+      "options": [
+        "Test configuration",
+        "Release note",
+        "Bug",
+        "Task"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q57)",
+      "options": [
+        "Release note",
+        "Task",
+        "Bug",
+        "Test configuration"
       ],
       "correct": 4
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 98 )?",
+      "text": "Which entity defines the scenario under which a test runs? (q58)",
       "options": [
-        "Higher manual workload",
-        "Reduced traceability",
-        "Lower quality",
-        "Higher-quality products"
+        "Release note",
+        "Bug",
+        "Test configuration",
+        "Task"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q59)",
+      "options": [
+        "Task",
+        "Test configuration",
+        "Release note",
+        "Bug"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which entity defines the scenario under which a test runs? (q60)",
+      "options": [
+        "Task",
+        "Release note",
+        "Bug",
+        "Test configuration"
       ],
       "correct": 4
     },
     {
-      "text": "Which ALM benefit is highlighted in the guide (variant 99 )?",
+      "text": "Which report visualizes upstream and downstream references? (q61)",
       "options": [
-        "Reduced traceability",
-        "Higher manual workload",
-        "Lower quality",
-        "Lower development costs"
+        "Attendance report",
+        "Theme report",
+        "Traceability report",
+        "Expense report"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q62)",
+      "options": [
+        "Expense report",
+        "Traceability report",
+        "Theme report",
+        "Attendance report"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q63)",
+      "options": [
+        "Theme report",
+        "Traceability report",
+        "Attendance report",
+        "Expense report"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q64)",
+      "options": [
+        "Traceability report",
+        "Theme report",
+        "Expense report",
+        "Attendance report"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q65)",
+      "options": [
+        "Attendance report",
+        "Theme report",
+        "Traceability report",
+        "Expense report"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q66)",
+      "options": [
+        "Expense report",
+        "Attendance report",
+        "Theme report",
+        "Traceability report"
       ],
       "correct": 4
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q67)",
+      "options": [
+        "Expense report",
+        "Attendance report",
+        "Traceability report",
+        "Theme report"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q68)",
+      "options": [
+        "Theme report",
+        "Expense report",
+        "Attendance report",
+        "Traceability report"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q69)",
+      "options": [
+        "Theme report",
+        "Attendance report",
+        "Expense report",
+        "Traceability report"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q70)",
+      "options": [
+        "Expense report",
+        "Traceability report",
+        "Theme report",
+        "Attendance report"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q71)",
+      "options": [
+        "Theme report",
+        "Attendance report",
+        "Traceability report",
+        "Expense report"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q72)",
+      "options": [
+        "Expense report",
+        "Attendance report",
+        "Theme report",
+        "Traceability report"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q73)",
+      "options": [
+        "Traceability report",
+        "Attendance report",
+        "Expense report",
+        "Theme report"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q74)",
+      "options": [
+        "Theme report",
+        "Expense report",
+        "Traceability report",
+        "Attendance report"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q75)",
+      "options": [
+        "Expense report",
+        "Theme report",
+        "Attendance report",
+        "Traceability report"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q76)",
+      "options": [
+        "Attendance report",
+        "Traceability report",
+        "Expense report",
+        "Theme report"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q77)",
+      "options": [
+        "Expense report",
+        "Attendance report",
+        "Traceability report",
+        "Theme report"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q78)",
+      "options": [
+        "Expense report",
+        "Theme report",
+        "Traceability report",
+        "Attendance report"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q79)",
+      "options": [
+        "Traceability report",
+        "Attendance report",
+        "Expense report",
+        "Theme report"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Which report visualizes upstream and downstream references? (q80)",
+      "options": [
+        "Attendance report",
+        "Traceability report",
+        "Expense report",
+        "Theme report"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q81)",
+      "options": [
+        "Render 3D models",
+        "Reuse artifacts across projects",
+        "Reset passwords",
+        "Encrypt emails"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q82)",
+      "options": [
+        "Render 3D models",
+        "Encrypt emails",
+        "Reset passwords",
+        "Reuse artifacts across projects"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q83)",
+      "options": [
+        "Reuse artifacts across projects",
+        "Reset passwords",
+        "Render 3D models",
+        "Encrypt emails"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q84)",
+      "options": [
+        "Render 3D models",
+        "Encrypt emails",
+        "Reset passwords",
+        "Reuse artifacts across projects"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q85)",
+      "options": [
+        "Reset passwords",
+        "Reuse artifacts across projects",
+        "Render 3D models",
+        "Encrypt emails"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q86)",
+      "options": [
+        "Reuse artifacts across projects",
+        "Encrypt emails",
+        "Reset passwords",
+        "Render 3D models"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q87)",
+      "options": [
+        "Render 3D models",
+        "Encrypt emails",
+        "Reuse artifacts across projects",
+        "Reset passwords"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q88)",
+      "options": [
+        "Reuse artifacts across projects",
+        "Encrypt emails",
+        "Render 3D models",
+        "Reset passwords"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q89)",
+      "options": [
+        "Render 3D models",
+        "Reuse artifacts across projects",
+        "Encrypt emails",
+        "Reset passwords"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q90)",
+      "options": [
+        "Reuse artifacts across projects",
+        "Encrypt emails",
+        "Render 3D models",
+        "Reset passwords"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q91)",
+      "options": [
+        "Render 3D models",
+        "Encrypt emails",
+        "Reset passwords",
+        "Reuse artifacts across projects"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q92)",
+      "options": [
+        "Reuse artifacts across projects",
+        "Reset passwords",
+        "Encrypt emails",
+        "Render 3D models"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q93)",
+      "options": [
+        "Reset passwords",
+        "Render 3D models",
+        "Encrypt emails",
+        "Reuse artifacts across projects"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q94)",
+      "options": [
+        "Render 3D models",
+        "Reuse artifacts across projects",
+        "Reset passwords",
+        "Encrypt emails"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a primary purpose of the Requirement Library? (q95)",
+      "options": [
+        "Render 3D models",
+        "Reset passwords",
+        "Reuse artifacts across projects",
+        "Encrypt emails"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "Which widget commonly appears on the top-level Wiki to show recent actions?",
+      "options": [
+        "Avatar wall",
+        "Activity Stream",
+        "CAD viewer",
+        "Chart"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which language can define sophisticated report queries in Codebeamer?",
+      "options": [
+        "SQL only",
+        "cbQL",
+        "HTML",
+        "IMAP"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What status propagation occurs when a test run includes a failed step?",
+      "options": [
+        "Run stays Passed",
+        "Run deletes case",
+        "Run becomes Skipped",
+        "Run becomes Failed"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which badge flags potentially impacted downstream items after an upstream change?",
+      "options": [
+        "Verified",
+        "Suspected",
+        "Golden",
+        "Archived"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which view cannot export items directly to Microsoft Office?",
+      "options": [
+        "Kanban view",
+        "Table view",
+        "Document view",
+        "Traceability report"
+      ],
+      "correct": 1
     }
   ]
 }

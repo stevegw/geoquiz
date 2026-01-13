@@ -6,11 +6,6 @@
       "description": "Windchill PLM fundamentals"
     },
     {
-      "filename": "codebeamer-fundamentals-questions.json",
-      "displayName": "Codebeamer Fundamentals",
-      "description": "Codebeamer ALM fundamentals"
-    },
-    {
       "filename": "Thingworx-fundamnetails-questions.json",
       "displayName": "ThingWorx Fundamentals",
       "description": "ThingWorx IoT platform basics"

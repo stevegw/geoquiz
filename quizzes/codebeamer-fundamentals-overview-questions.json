@@ -1,1006 +1,501 @@
 {
-  "quizName": "Codebeamer Fundamentals Overview",
-  "description": "100-question quiz covering ALM concepts and Codebeamer fundamentals (trackers, requirements, test management, traceability, views, reporting, and wiki dashboards).",
-  "questions": [
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 1)",
-      "options": [
-        "ALM is a chat client",
-        "ALM manages the full product lifecycle with traceability",
-        "ALM is only for payroll",
-        "ALM replaces CAD"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 2)",
-      "options": [
-        "Email folders",
-        "Image albums",
-        "Database tables",
-        "Network routes"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 3)",
-      "options": [
-        "Indexes",
-        "Rows",
-        "Views",
-        "Columns"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 4)",
-      "options": [
-        "Gantt view",
-        "Calendar view",
-        "Kanban view",
-        "Document view"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 5)",
-      "options": [
-        "ALM replaces CAD",
-        "ALM manages the full product lifecycle with traceability",
-        "ALM is only for payroll",
-        "ALM is a chat client"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 6)",
-      "options": [
-        "Image albums",
-        "Network routes",
-        "Email folders",
-        "Database tables"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 7)",
-      "options": [
-        "Columns",
-        "Rows",
-        "Views",
-        "Indexes"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 8)",
-      "options": [
-        "Kanban view",
-        "Gantt view",
-        "Calendar view",
-        "Document view"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 9)",
-      "options": [
-        "ALM replaces CAD",
-        "ALM is only for payroll",
-        "ALM manages the full product lifecycle with traceability",
-        "ALM is a chat client"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 10)",
-      "options": [
-        "Database tables",
-        "Network routes",
-        "Image albums",
-        "Email folders"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 11)",
-      "options": [
-        "Views",
-        "Columns",
-        "Rows",
-        "Indexes"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 12)",
-      "options": [
-        "Kanban view",
-        "Document view",
-        "Calendar view",
-        "Gantt view"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 13)",
-      "options": [
-        "ALM manages the full product lifecycle with traceability",
-        "ALM replaces CAD",
-        "ALM is only for payroll",
-        "ALM is a chat client"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 14)",
-      "options": [
-        "Network routes",
-        "Database tables",
-        "Image albums",
-        "Email folders"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 15)",
-      "options": [
-        "Indexes",
-        "Columns",
-        "Views",
-        "Rows"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 16)",
-      "options": [
-        "Document view",
-        "Kanban view",
-        "Gantt view",
-        "Calendar view"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 17)",
-      "options": [
-        "ALM manages the full product lifecycle with traceability",
-        "ALM replaces CAD",
-        "ALM is a chat client",
-        "ALM is only for payroll"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 18)",
-      "options": [
-        "Image albums",
-        "Database tables",
-        "Network routes",
-        "Email folders"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 19)",
-      "options": [
-        "Indexes",
-        "Views",
-        "Columns",
-        "Rows"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 20)",
-      "options": [
-        "Kanban view",
-        "Calendar view",
-        "Document view",
-        "Gantt view"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 21)",
-      "options": [
-        "ALM is a chat client",
-        "ALM manages the full product lifecycle with traceability",
-        "ALM is only for payroll",
-        "ALM replaces CAD"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 22)",
-      "options": [
-        "Image albums",
-        "Network routes",
-        "Email folders",
-        "Database tables"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 23)",
-      "options": [
-        "Indexes",
-        "Rows",
-        "Columns",
-        "Views"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 24)",
-      "options": [
-        "Gantt view",
-        "Document view",
-        "Kanban view",
-        "Calendar view"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 25)",
-      "options": [
-        "ALM is only for payroll",
-        "ALM is a chat client",
-        "ALM replaces CAD",
-        "ALM manages the full product lifecycle with traceability"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 26)",
-      "options": [
-        "Database tables",
-        "Image albums",
-        "Email folders",
-        "Network routes"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 27)",
-      "options": [
-        "Views",
-        "Indexes",
-        "Columns",
-        "Rows"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 28)",
-      "options": [
-        "Gantt view",
-        "Calendar view",
-        "Document view",
-        "Kanban view"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 29)",
-      "options": [
-        "ALM replaces CAD",
-        "ALM manages the full product lifecycle with traceability",
-        "ALM is a chat client",
-        "ALM is only for payroll"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 30)",
-      "options": [
-        "Database tables",
-        "Network routes",
-        "Image albums",
-        "Email folders"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 31)",
-      "options": [
-        "Indexes",
-        "Views",
-        "Columns",
-        "Rows"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 32)",
-      "options": [
-        "Kanban view",
-        "Calendar view",
-        "Document view",
-        "Gantt view"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 33)",
-      "options": [
-        "ALM replaces CAD",
-        "ALM is a chat client",
-        "ALM manages the full product lifecycle with traceability",
-        "ALM is only for payroll"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 34)",
-      "options": [
-        "Network routes",
-        "Image albums",
-        "Database tables",
-        "Email folders"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 35)",
-      "options": [
-        "Indexes",
-        "Views",
-        "Rows",
-        "Columns"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 36)",
-      "options": [
-        "Document view",
-        "Calendar view",
-        "Kanban view",
-        "Gantt view"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which statement best aligns with ALM in Codebeamer? (variant 37)",
-      "options": [
-        "ALM manages the full product lifecycle with traceability",
-        "ALM is a chat client",
-        "ALM is only for payroll",
-        "ALM replaces CAD"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "In Codebeamer, what are trackers most similar to? (variant 38)",
-      "options": [
-        "Database tables",
-        "Network routes",
-        "Email folders",
-        "Image albums"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Tracker items are best described as which database concept? (variant 39)",
-      "options": [
-        "Columns",
-        "Indexes",
-        "Views",
-        "Rows"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which default view presents requirement descriptions in three panes? (variant 40)",
-      "options": [
-        "Calendar view",
-        "Kanban view",
-        "Gantt view",
-        "Document view"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q41)",
-      "options": [
-        "Task",
-        "Release note",
-        "Bug",
-        "Test configuration"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q42)",
-      "options": [
-        "Release note",
-        "Test configuration",
-        "Task",
-        "Bug"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q43)",
-      "options": [
-        "Task",
-        "Release note",
-        "Test configuration",
-        "Bug"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q44)",
-      "options": [
-        "Test configuration",
-        "Bug",
-        "Task",
-        "Release note"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q45)",
-      "options": [
-        "Test configuration",
-        "Release note",
-        "Bug",
-        "Task"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q46)",
-      "options": [
-        "Task",
-        "Test configuration",
-        "Release note",
-        "Bug"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q47)",
-      "options": [
-        "Release note",
-        "Task",
-        "Test configuration",
-        "Bug"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q48)",
-      "options": [
-        "Task",
-        "Test configuration",
-        "Bug",
-        "Release note"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q49)",
-      "options": [
-        "Test configuration",
-        "Release note",
-        "Bug",
-        "Task"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q50)",
-      "options": [
-        "Bug",
-        "Release note",
-        "Test configuration",
-        "Task"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q51)",
-      "options": [
-        "Test configuration",
-        "Release note",
-        "Bug",
-        "Task"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q52)",
-      "options": [
-        "Task",
-        "Release note",
-        "Bug",
-        "Test configuration"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q53)",
-      "options": [
-        "Bug",
-        "Test configuration",
-        "Task",
-        "Release note"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q54)",
-      "options": [
-        "Release note",
-        "Bug",
-        "Task",
-        "Test configuration"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q55)",
-      "options": [
-        "Bug",
-        "Release note",
-        "Test configuration",
-        "Task"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q56)",
-      "options": [
-        "Test configuration",
-        "Release note",
-        "Bug",
-        "Task"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q57)",
-      "options": [
-        "Release note",
-        "Task",
-        "Bug",
-        "Test configuration"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q58)",
-      "options": [
-        "Release note",
-        "Bug",
-        "Test configuration",
-        "Task"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q59)",
-      "options": [
-        "Task",
-        "Test configuration",
-        "Release note",
-        "Bug"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which entity defines the scenario under which a test runs? (q60)",
-      "options": [
-        "Task",
-        "Release note",
-        "Bug",
-        "Test configuration"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q61)",
-      "options": [
-        "Attendance report",
-        "Theme report",
-        "Traceability report",
-        "Expense report"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q62)",
-      "options": [
-        "Expense report",
-        "Traceability report",
-        "Theme report",
-        "Attendance report"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q63)",
-      "options": [
-        "Theme report",
-        "Traceability report",
-        "Attendance report",
-        "Expense report"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q64)",
-      "options": [
-        "Traceability report",
-        "Theme report",
-        "Expense report",
-        "Attendance report"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q65)",
-      "options": [
-        "Attendance report",
-        "Theme report",
-        "Traceability report",
-        "Expense report"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q66)",
-      "options": [
-        "Expense report",
-        "Attendance report",
-        "Theme report",
-        "Traceability report"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q67)",
-      "options": [
-        "Expense report",
-        "Attendance report",
-        "Traceability report",
-        "Theme report"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q68)",
-      "options": [
-        "Theme report",
-        "Expense report",
-        "Attendance report",
-        "Traceability report"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q69)",
-      "options": [
-        "Theme report",
-        "Attendance report",
-        "Expense report",
-        "Traceability report"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q70)",
-      "options": [
-        "Expense report",
-        "Traceability report",
-        "Theme report",
-        "Attendance report"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q71)",
-      "options": [
-        "Theme report",
-        "Attendance report",
-        "Traceability report",
-        "Expense report"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q72)",
-      "options": [
-        "Expense report",
-        "Attendance report",
-        "Theme report",
-        "Traceability report"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q73)",
-      "options": [
-        "Traceability report",
-        "Attendance report",
-        "Expense report",
-        "Theme report"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q74)",
-      "options": [
-        "Theme report",
-        "Expense report",
-        "Traceability report",
-        "Attendance report"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q75)",
-      "options": [
-        "Expense report",
-        "Theme report",
-        "Attendance report",
-        "Traceability report"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q76)",
-      "options": [
-        "Attendance report",
-        "Traceability report",
-        "Expense report",
-        "Theme report"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q77)",
-      "options": [
-        "Expense report",
-        "Attendance report",
-        "Traceability report",
-        "Theme report"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q78)",
-      "options": [
-        "Expense report",
-        "Theme report",
-        "Traceability report",
-        "Attendance report"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q79)",
-      "options": [
-        "Traceability report",
-        "Attendance report",
-        "Expense report",
-        "Theme report"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "Which report visualizes upstream and downstream references? (q80)",
-      "options": [
-        "Attendance report",
-        "Traceability report",
-        "Expense report",
-        "Theme report"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q81)",
-      "options": [
-        "Render 3D models",
-        "Reuse artifacts across projects",
-        "Reset passwords",
-        "Encrypt emails"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q82)",
-      "options": [
-        "Render 3D models",
-        "Encrypt emails",
-        "Reset passwords",
-        "Reuse artifacts across projects"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q83)",
-      "options": [
-        "Reuse artifacts across projects",
-        "Reset passwords",
-        "Render 3D models",
-        "Encrypt emails"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q84)",
-      "options": [
-        "Render 3D models",
-        "Encrypt emails",
-        "Reset passwords",
-        "Reuse artifacts across projects"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q85)",
-      "options": [
-        "Reset passwords",
-        "Reuse artifacts across projects",
-        "Render 3D models",
-        "Encrypt emails"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q86)",
-      "options": [
-        "Reuse artifacts across projects",
-        "Encrypt emails",
-        "Reset passwords",
-        "Render 3D models"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q87)",
-      "options": [
-        "Render 3D models",
-        "Encrypt emails",
-        "Reuse artifacts across projects",
-        "Reset passwords"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q88)",
-      "options": [
-        "Reuse artifacts across projects",
-        "Encrypt emails",
-        "Render 3D models",
-        "Reset passwords"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q89)",
-      "options": [
-        "Render 3D models",
-        "Reuse artifacts across projects",
-        "Encrypt emails",
-        "Reset passwords"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q90)",
-      "options": [
-        "Reuse artifacts across projects",
-        "Encrypt emails",
-        "Render 3D models",
-        "Reset passwords"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q91)",
-      "options": [
-        "Render 3D models",
-        "Encrypt emails",
-        "Reset passwords",
-        "Reuse artifacts across projects"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q92)",
-      "options": [
-        "Reuse artifacts across projects",
-        "Reset passwords",
-        "Encrypt emails",
-        "Render 3D models"
-      ],
-      "correct": 1
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q93)",
-      "options": [
-        "Reset passwords",
-        "Render 3D models",
-        "Encrypt emails",
-        "Reuse artifacts across projects"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q94)",
-      "options": [
-        "Render 3D models",
-        "Reuse artifacts across projects",
-        "Reset passwords",
-        "Encrypt emails"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What is a primary purpose of the Requirement Library? (q95)",
-      "options": [
-        "Render 3D models",
-        "Reset passwords",
-        "Reuse artifacts across projects",
-        "Encrypt emails"
-      ],
-      "correct": 3
-    },
-    {
-      "text": "Which widget commonly appears on the top-level Wiki to show recent actions?",
-      "options": [
-        "Avatar wall",
-        "Activity Stream",
-        "CAD viewer",
-        "Chart"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which language can define sophisticated report queries in Codebeamer?",
-      "options": [
-        "SQL only",
-        "cbQL",
-        "HTML",
-        "IMAP"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "What status propagation occurs when a test run includes a failed step?",
-      "options": [
-        "Run stays Passed",
-        "Run deletes case",
-        "Run becomes Skipped",
-        "Run becomes Failed"
-      ],
-      "correct": 4
-    },
-    {
-      "text": "Which badge flags potentially impacted downstream items after an upstream change?",
-      "options": [
-        "Verified",
-        "Suspected",
-        "Golden",
-        "Archived"
-      ],
-      "correct": 2
-    },
-    {
-      "text": "Which view cannot export items directly to Microsoft Office?",
-      "options": [
-        "Kanban view",
-        "Table view",
-        "Document view",
-        "Traceability report"
-      ],
-      "correct": 1
-    }
-  ]
+    "quizName": "Codebeamer Fundamentals Quiz",
+    "description": "Test your knowledge of Codebeamer ALM platform fundamentals",
+    "questions": [
+        {
+            "text": "What does ALM stand for?",
+            "options": ["Application Lifecycle Management", "Advanced Logic Monitoring", "Automated Learning Module", "Application Logic Mechanism"],
+            "correct": 1
+        },
+        {
+            "text": "What is Codebeamer primarily used for?",
+            "options": ["Video editing", "Project management and ALM", "Database administration", "Web hosting"],
+            "correct": 2
+        },
+        {
+            "text": "Which company develops Codebeamer?",
+            "options": ["Microsoft", "IBM", "PTC", "Oracle"],
+            "correct": 3
+        },
+        {
+            "text": "What is the highest level of data organization in Codebeamer?",
+            "options": ["Projects", "Trackers", "Items", "Fields"],
+            "correct": 2
+        },
+        {
+            "text": "What are trackers equivalent to in a relational database?",
+            "options": ["Rows", "Columns", "Tables", "Indexes"],
+            "correct": 3
+        },
+        {
+            "text": "What are tracker items equivalent to in a relational database?",
+            "options": ["Tables", "Rows", "Columns", "Keys"],
+            "correct": 2
+        },
+        {
+            "text": "Which phase of ALM involves gathering and documenting business needs?",
+            "options": ["Testing", "Development", "Requirements definition", "Design"],
+            "correct": 3
+        },
+        {
+            "text": "Which phase of ALM produces system requirements as deliverables?",
+            "options": ["Requirements definition", "Design", "Development", "Testing"],
+            "correct": 2
+        },
+        {
+            "text": "What is the deliverable of the Development phase in ALM?",
+            "options": ["Test runs", "Customer requirements", "Tasks", "Epics"],
+            "correct": 3
+        },
+        {
+            "text": "What is the deliverable of the Testing phase in ALM?",
+            "options": ["System requirements", "Test runs", "User stories", "Tasks"],
+            "correct": 2
+        },
+        {
+            "text": "Which benefit of ALM provides traceability across the product lifecycle?",
+            "options": ["Lower costs", "Enhanced compliance", "Faster development", "Increased visibility"],
+            "correct": 2
+        },
+        {
+            "text": "What case study company was mentioned that specializes in autonomous driving systems?",
+            "options": ["Tesla", "Navya", "Waymo", "Cruise"],
+            "correct": 2
+        },
+        {
+            "text": "Which default tracker view shows items in a three-pane configuration?",
+            "options": ["Table view", "Kanban view", "Document view", "List view"],
+            "correct": 3
+        },
+        {
+            "text": "Which view displays tracker items as rows and attributes as columns?",
+            "options": ["Document view", "Table view", "Kanban view", "Tree view"],
+            "correct": 2
+        },
+        {
+            "text": "Which view shows tracker items arranged by work status on a board?",
+            "options": ["Document view", "Table view", "Kanban view", "Grid view"],
+            "correct": 3
+        },
+        {
+            "text": "What is the default view for requirement trackers?",
+            "options": ["Table view", "Kanban view", "List view", "Document view"],
+            "correct": 4
+        },
+        {
+            "text": "What is the default view for task trackers?",
+            "options": ["Document view", "Kanban view", "Table view", "Tree view"],
+            "correct": 3
+        },
+        {
+            "text": "What is a state transition in Codebeamer?",
+            "options": ["A change to a tracker item's status", "A new tracker creation", "A user role change", "A project migration"],
+            "correct": 1
+        },
+        {
+            "text": "What does the Library in Codebeamer allow you to do?",
+            "options": ["Store code", "Reuse requirements across projects", "Backup data", "Generate reports"],
+            "correct": 2
+        },
+        {
+            "text": "What are references in Codebeamer?",
+            "options": ["User comments", "Logical relationships among trackers", "File attachments", "Wiki links"],
+            "correct": 2
+        },
+        {
+            "text": "In tracker hierarchy, which direction do arrows point in the Configuration Diagram?",
+            "options": ["Downstream", "Upstream", "Sideways", "Bidirectional"],
+            "correct": 2
+        },
+        {
+            "text": "What is cbQL?",
+            "options": ["A programming language", "Codebeamer Query Language", "A database engine", "A testing framework"],
+            "correct": 2
+        },
+        {
+            "text": "What does the Suspected badge indicate on a tracker item?",
+            "options": ["The item is infected", "A change has been made upstream", "The item is outdated", "The item needs approval"],
+            "correct": 2
+        },
+        {
+            "text": "Which tool is used to visualize test coverage and success rates?",
+            "options": ["Kanban Board", "Traceability Report", "Test Run Browser", "Wiki Dashboard"],
+            "correct": 3
+        },
+        {
+            "text": "What is a test configuration?",
+            "options": ["A server setting", "A possible configuration of the product under testing", "A user permission", "A report template"],
+            "correct": 2
+        },
+        {
+            "text": "What is a test case?",
+            "options": ["A bug report", "A detailed procedure that tests a feature", "A user story", "A project milestone"],
+            "correct": 2
+        },
+        {
+            "text": "What is a test run?",
+            "options": ["A project sprint", "An execution of a test case using a specific release and configuration", "A system backup", "A performance metric"],
+            "correct": 2
+        },
+        {
+            "text": "What is a test set?",
+            "options": ["A collection of users", "A logical group of related test cases", "A configuration file", "A report template"],
+            "correct": 2
+        },
+        {
+            "text": "Which view cannot be used to export tracker data to Microsoft Office?",
+            "options": ["Document view", "Table view", "Kanban view", "Test coverage browser"],
+            "correct": 3
+        },
+        {
+            "text": "What does the Mass Edit feature allow you to do?",
+            "options": ["Delete multiple projects", "Apply identical customizations to multiple items", "Bulk import data", "Generate mass reports"],
+            "correct": 2
+        },
+        {
+            "text": "What is the purpose of swim lanes in a Kanban board?",
+            "options": ["To separate projects", "To group tasks by criteria like assigned user", "To archive old items", "To create backups"],
+            "correct": 2
+        },
+        {
+            "text": "What are widgets in Codebeamer?",
+            "options": ["Small applications", "Configurable components that display project data", "User avatars", "File types"],
+            "correct": 2
+        },
+        {
+            "text": "Where can you customize dashboards with widgets?",
+            "options": ["In the Trackers tab", "In the Wiki tab", "In the Admin tab", "In the Reports tab"],
+            "correct": 2
+        },
+        {
+            "text": "What type of report shows upstream and downstream references?",
+            "options": ["Status report", "Traceability report", "Performance report", "User report"],
+            "correct": 2
+        },
+        {
+            "text": "How many default trackers are included when creating a blank project?",
+            "options": ["3", "5", "9", "12"],
+            "correct": 3
+        },
+        {
+            "text": "Which tracker stores high-level customer requirements?",
+            "options": ["Tasks", "System Requirement Specifications", "Customer Requirement Specifications", "Test Cases"],
+            "correct": 3
+        },
+        {
+            "text": "Which tracker stores specific development goals for engineers?",
+            "options": ["Customer Requirement Specifications", "System Requirement Specifications", "Tasks", "Bugs"],
+            "correct": 2
+        },
+        {
+            "text": "What does requirements management involve?",
+            "options": ["Only gathering requirements", "Gathering, analyzing, confirming, and documenting business needs", "Writing code", "Testing software"],
+            "correct": 2
+        },
+        {
+            "text": "Which Agile concept aligns with customer requirements?",
+            "options": ["Sprints", "Tasks", "Epics", "Stand-ups"],
+            "correct": 3
+        },
+        {
+            "text": "Which Agile concept aligns with system requirements?",
+            "options": ["Epics", "User stories", "Sprints", "Retrospectives"],
+            "correct": 2
+        },
+        {
+            "text": "What does end-to-end traceability ensure in Codebeamer?",
+            "options": ["Faster coding", "Full visibility from requirements to testing", "Automated deployment", "Better graphics"],
+            "correct": 2
+        },
+        {
+            "text": "How are tracker items arranged for readability?",
+            "options": ["Alphabetically", "By date", "Hierarchically into parent and child items", "Randomly"],
+            "correct": 3
+        },
+        {
+            "text": "Does parent/child hierarchy among tracker items create logical relationships?",
+            "options": ["Yes, always", "No, it's for readability only", "Only for requirements", "Only for tasks"],
+            "correct": 2
+        },
+        {
+            "text": "What happens when you drag a library item to a requirement?",
+            "options": ["It deletes the requirement", "It creates a reference or association", "It moves the item", "It archives the requirement"],
+            "correct": 2
+        },
+        {
+            "text": "What is the purpose of a release in Codebeamer?",
+            "options": ["To delete old data", "To group related tasks and milestones", "To backup the project", "To export data"],
+            "correct": 2
+        },
+        {
+            "text": "Which view provides a hybrid of Document and Table views?",
+            "options": ["Kanban view", "Document edit view", "List view", "Grid view"],
+            "correct": 2
+        },
+        {
+            "text": "What is a workflow in Codebeamer?",
+            "options": ["A user manual", "Defined progression of work statuses an item may have", "A project template", "A backup procedure"],
+            "correct": 2
+        },
+        {
+            "text": "What does QA stand for in the context of tasks?",
+            "options": ["Quick Action", "Question and Answer", "Quality Assurance", "Quarterly Assessment"],
+            "correct": 3
+        },
+        {
+            "text": "What is the PTC Electric Car project used for in the training?",
+            "options": ["Actual product development", "A hypothetical use case scenario", "Marketing purposes", "Financial analysis"],
+            "correct": 2
+        },
+        {
+            "text": "Which three customer requirements were defined for the Electric Car project?",
+            "options": ["Engine, tires, battery", "Electric engine, transmission, driver-controlled electronics", "Radio, AC, GPS", "Paint, interior, wheels"],
+            "correct": 2
+        },
+        {
+            "text": "What status comes after Draft in the requirement workflow?",
+            "options": ["Approved", "Waiting for Approval", "Rejected", "Accepted"],
+            "correct": 2
+        },
+        {
+            "text": "What can happen after a requirement is set to Waiting for Approval status?",
+            "options": ["It's automatically deleted", "It can be accepted or rejected", "It's locked forever", "It's archived"],
+            "correct": 2
+        },
+        {
+            "text": "What industry-specific templates does Codebeamer provide?",
+            "options": ["Only software", "Automotive, medical, pharma, and aviation", "Only manufacturing", "Only finance"],
+            "correct": 2
+        },
+        {
+            "text": "What is the Agile Planner in Codebeamer?",
+            "options": ["A calendar app", "Built-in tool supporting Agile/SCRUM practices", "A scheduling algorithm", "A meeting organizer"],
+            "correct": 2
+        },
+        {
+            "text": "What does Lean/Kanban support include in Codebeamer?",
+            "options": ["Just a board view", "Kanban Board with WIP limits", "Only task lists", "Gantt charts only"],
+            "correct": 2
+        },
+        {
+            "text": "How many pre-defined widgets does Codebeamer come with?",
+            "options": ["5", "10", "20+", "50+"],
+            "correct": 3
+        },
+        {
+            "text": "What are Data Visualization Widgets?",
+            "options": ["Static images", "Widgets that display data from any report", "User profiles", "Help documentation"],
+            "correct": 2
+        },
+        {
+            "text": "What is a bug in Codebeamer?",
+            "options": ["A software license", "A documented software defect", "A user role", "A project type"],
+            "correct": 2
+        },
+        {
+            "text": "When is a bug typically reported in Codebeamer?",
+            "options": ["During requirement gathering", "After a test failure", "Before development starts", "During project planning"],
+            "correct": 2
+        },
+        {
+            "text": "What does the test coverage browser show?",
+            "options": ["User activity", "Results of test runs and coverage statistics", "File sizes", "Server status"],
+            "correct": 2
+        },
+        {
+            "text": "What is the purpose of filters in tracker views?",
+            "options": ["To delete items", "To narrow the view to items with certain conditions", "To change colors", "To add new fields"],
+            "correct": 2
+        },
+        {
+            "text": "Can you save custom filters in Codebeamer?",
+            "options": ["No, never", "Yes, as private or shared views", "Only admins can", "Only for 24 hours"],
+            "correct": 2
+        },
+        {
+            "text": "What is a bottom-up traceability report?",
+            "options": ["A user survey", "A report showing relationships from lower-level items upward", "A performance metric", "A financial report"],
+            "correct": 2
+        },
+        {
+            "text": "What is a top-down traceability report?",
+            "options": ["A bug list", "A report showing relationships from high-level items downward", "A user manual", "A configuration file"],
+            "correct": 2
+        },
+        {
+            "text": "Where can you build queries using cbQL?",
+            "options": ["In the Wiki tab", "In the Reports tab", "In the Admin tab", "In the Library"],
+            "correct": 2
+        },
+        {
+            "text": "What does integration with bug management mean in Codebeamer?",
+            "options": ["Bugs are ignored", "Bugs are automatically reported on test failures", "Bugs are deleted", "Bugs are hidden"],
+            "correct": 2
+        },
+        {
+            "text": "What is Navya's main challenge before adopting Codebeamer?",
+            "options": ["Too many developers", "Using unrelated tools causing traceability issues", "Not enough funding", "No office space"],
+            "correct": 2
+        },
+        {
+            "text": "What solution did Codebeamer provide to Navya?",
+            "options": ["More developers", "End-to-end view with full traceability", "Lower costs only", "New computers"],
+            "correct": 2
+        },
+        {
+            "text": "How do you create a downstream reference from a tracker item?",
+            "options": ["Delete the item", "Click the create downstream reference icon next to the item", "Export to Excel", "Change the status"],
+            "correct": 2
+        },
+        {
+            "text": "What happens when you update a task status to In Progress?",
+            "options": ["The task is deleted", "The status changes from New to In Progress", "The task is completed", "The task is archived"],
+            "correct": 2
+        },
+        {
+            "text": "What is the purpose of test steps in a test case?",
+            "options": ["To assign users", "To define actions and expected results for testing", "To delete tests", "To create bugs"],
+            "correct": 2
+        },
+        {
+            "text": "What are pre-actions and post-actions in test cases?",
+            "options": ["User permissions", "Steps performed before and after the main test", "Status changes", "Report filters"],
+            "correct": 2
+        },
+        {
+            "text": "What does it mean when a test case has Failed status?",
+            "options": ["All test runs passed", "At least one test run has failed", "No tests were run", "The test case was deleted"],
+            "correct": 2
+        },
+        {
+            "text": "What is story points in the context of tasks?",
+            "options": ["A narrative", "A relative measure of task complexity in Agile", "A status type", "A user role"],
+            "correct": 2
+        },
+        {
+            "text": "What is planned effort in a task?",
+            "options": ["The task description", "An estimate of hours needed to complete the task", "The task priority", "The task status"],
+            "correct": 2
+        },
+        {
+            "text": "What can you do with the Activity Stream widget?",
+            "options": ["Play videos", "View recent actions in Codebeamer", "Edit trackers", "Delete projects"],
+            "correct": 2
+        },
+        {
+            "text": "What is the purpose of the Tracker List widget?",
+            "options": ["To delete trackers", "To display items from selected tracker types", "To create users", "To backup data"],
+            "correct": 2
+        },
+        {
+            "text": "Can you change the layout of wiki pages?",
+            "options": ["No, it's fixed", "Yes, you can select different pane layouts", "Only admins can", "Only on Fridays"],
+            "correct": 2
+        },
+        {
+            "text": "What format can you export traceability reports to?",
+            "options": ["Only PDF", "Only HTML", "Microsoft Word or Excel", "Only text"],
+            "correct": 3
+        },
+        {
+            "text": "What happens when you assign a task to multiple users?",
+            "options": ["The task is deleted", "The task appears for all assigned users", "Only the first user sees it", "The task is locked"],
+            "correct": 2
+        },
+        {
+            "text": "What is the purpose of comments in tracker items?",
+            "options": ["To delete items", "To log progress and communicate about the item", "To change status", "To assign users"],
+            "correct": 2
+        },
+        {
+            "text": "Can you attach files to comments in Codebeamer?",
+            "options": ["No, never", "Yes, you can add attachments", "Only images", "Only PDFs"],
+            "correct": 2
+        },
+        {
+            "text": "What does the History tab show for a tracker item?",
+            "options": ["User profiles", "All changes and updates to the item", "Project settings", "Server logs"],
+            "correct": 2
+        },
+        {
+            "text": "What is the Traceability section in a tracker item?",
+            "options": ["A bug list", "A view of upstream and downstream references", "A user manual", "A status log"],
+            "correct": 2
+        },
+        {
+            "text": "How many levels of traceability can you display?",
+            "options": ["Only 1", "Configurable, typically 2-3 or more", "Always 5", "Unlimited always shown"],
+            "correct": 2
+        },
+        {
+            "text": "What is a sprint in Agile terminology?",
+            "options": ["A fast run", "A time-boxed iteration for completing tasks", "A user role", "A tracker type"],
+            "correct": 2
+        },
+        {
+            "text": "What is a product backlog in Agile?",
+            "options": ["Completed tasks", "A prioritized list of features and requirements", "Bug reports", "User accounts"],
+            "correct": 2
+        },
+        {
+            "text": "What is the purpose of a release dashboard in Codebeamer?",
+            "options": ["To delete releases", "To visualize release progress and metrics", "To create users", "To backup projects"],
+            "correct": 2
+        },
+        {
+            "text": "What does Codebeamer's regulatory compliance support help with?",
+            "options": ["Ignoring regulations", "Ensuring compliance with safety-critical standards", "Avoiding audits", "Deleting documentation"],
+            "correct": 2
+        },
+        {
+            "text": "Is Codebeamer a cloud-based or locally installed application in the training environment?",
+            "options": ["Cloud-based only", "Installed locally in the virtual environment", "Desktop software", "Mobile app only"],
+            "correct": 2
+        },
+        {
+            "text": "What is the significance of the Key ID for tracker items?",
+            "options": ["It's decorative", "It uniquely identifies items within a project", "It's the password", "It's the file size"],
+            "correct": 2
+        },
+        {
+            "text": "Can tracker items be organized into hierarchies for readability?",
+            "options": ["No, always flat", "Yes, as parent and child items", "Only for admins", "Only in reports"],
+            "correct": 2
+        },
+        {
+            "text": "What is the main benefit of using Codebeamer for ALM?",
+            "options": ["It's free", "Integrated platform with full traceability", "It's the newest", "It requires no training"],
+            "correct": 2
+        },
+        {
+            "text": "What are the four main ALM phases mentioned in the training?",
+            "options": ["Plan, Do, Check, Act", "Requirements definition, Design, Development, Testing", "Idea, Build, Launch, Maintain", "Start, Middle, End, Review"],
+            "correct": 2
+        },
+        {
+            "text": "What is one of the key advantages of Codebeamer over using multiple unrelated tools?",
+            "options": ["It's cheaper", "Full integration and traceability across the lifecycle", "It has better graphics", "It requires less storage"],
+            "correct": 2
+        },
+        {
+            "text": "In Codebeamer, what does it mean to 'clear the Suspected badge'?",
+            "options": ["Delete the item", "Acknowledge that you've reviewed the impact of upstream changes", "Approve the item", "Archive the item"],
+            "correct": 2
+        },
+        {
+            "text": "What is the purpose of test configurations in testing?",
+            "options": ["To configure servers", "To test under different product conditions or scenarios", "To set up user accounts", "To create backups"],
+            "correct": 2
+        },
+        {
+            "text": "What does 'activating' a test configuration mean?",
+            "options": ["Turning on a server", "Making the configuration available for use in test runs", "Deleting old configurations", "Creating a backup"],
+            "correct": 2
+        },
+        {
+            "text": "Can you create multiple test runs from a single test case?",
+            "options": ["No, only one ever", "Yes, with different configurations and releases", "Only for admins", "Only on weekends"],
+            "correct": 2
+        }
+    ]
 }

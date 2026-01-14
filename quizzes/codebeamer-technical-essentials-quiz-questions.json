@@ -1,0 +1,1006 @@
+{
+  "quizName": "Codebeamer Technical Essentials Quiz",
+  "description": "Test your knowledge of Codebeamer Technical Essentials with randomized questions",
+  "questions": [
+    {
+      "text": "What does ALM stand for?",
+      "options": [
+        "Automated Link Management",
+        "Application Lifecycle Management",
+        "Advanced Logic Modeling",
+        "Application Level Monitoring"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Which company develops Codebeamer?",
+      "options": [
+        "Oracle",
+        "Microsoft",
+        "IBM",
+        "PTC"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the primary purpose of Codebeamer?",
+      "options": [
+        "Financial reporting",
+        "Project scheduling only",
+        "Human resources management",
+        "Application lifecycle management"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What type of architecture does Codebeamer use?",
+      "options": [
+        "Client-server web-based",
+        "Standalone desktop",
+        "Mainframe-based",
+        "Peer-to-peer"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a tracker in Codebeamer?",
+      "options": [
+        "A GPS tracking feature",
+        "A performance monitoring dashboard",
+        "A time tracking tool",
+        "A customizable table for managing items"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What are tracker items in Codebeamer?",
+      "options": [
+        "Project templates",
+        "Configuration files",
+        "User accounts",
+        "Individual rows or records in a tracker"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "Which of these is a default tracker type in Codebeamer?",
+      "options": [
+        "Requirements",
+        "Timesheets",
+        "Invoices",
+        "Expenses"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of the Document View in Codebeamer?",
+      "options": [
+        "To manage user permissions",
+        "To export files",
+        "To view requirements in a hierarchical structure",
+        "To create PDF reports"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the Table View used for in Codebeamer?",
+      "options": [
+        "Creating database schemas",
+        "Viewing tracker items in rows and columns",
+        "Managing table relationships",
+        "Designing UI tables"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the Kanban View in Codebeamer used for?",
+      "options": [
+        "Visualizing work items by status",
+        "Creating organizational charts",
+        "Financial tracking",
+        "Managing calendars"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is cbQL in Codebeamer?",
+      "options": [
+        "A project management methodology",
+        "Codebeamer Query Language for creating filters",
+        "A programming language",
+        "A database type"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a baseline in Codebeamer?",
+      "options": [
+        "A snapshot of items at a specific point in time",
+        "The minimum budget",
+        "The project start date",
+        "The default configuration"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are associations in Codebeamer?",
+      "options": [
+        "Project templates",
+        "Configuration settings",
+        "Links between tracker items",
+        "User groups"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of references in Codebeamer?",
+      "options": [
+        "To reference documentation",
+        "To cite external sources",
+        "To create relationships between items",
+        "To link to help files"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is traceability in the context of ALM?",
+      "options": [
+        "Tracking software licenses",
+        "Following the path of requirements through development",
+        "Monitoring user activity",
+        "Tracking project expenses"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a project template in Codebeamer?",
+      "options": [
+        "A pre-configured project structure with trackers",
+        "A coding template",
+        "A report template",
+        "A document format"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are project roles used for in Codebeamer?",
+      "options": [
+        "Assigning project names",
+        "Defining user permissions and access",
+        "Categorizing projects",
+        "Creating project schedules"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the Library in Codebeamer?",
+      "options": [
+        "A document storage area",
+        "A repository of reusable tracker items",
+        "A training resource center",
+        "A code repository"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of workflows in Codebeamer?",
+      "options": [
+        "To define status transitions and lifecycle stages",
+        "To schedule tasks",
+        "To automate email sending",
+        "To create flowcharts"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a release in Codebeamer?",
+      "options": [
+        "A tracker for managing product versions and deployments",
+        "A user permission",
+        "A data export",
+        "A software version"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are test cases in Codebeamer?",
+      "options": [
+        "Detailed specifications for testing requirements",
+        "Example projects",
+        "User scenarios",
+        "Legal case studies"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a test run in Codebeamer?",
+      "options": [
+        "A trial period",
+        "A training session",
+        "The execution of test cases",
+        "A performance test"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are test sets used for in Codebeamer?",
+      "options": [
+        "Configuring test environments",
+        "Grouping related test cases together",
+        "Creating test data",
+        "Setting test parameters"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a test configuration in Codebeamer?",
+      "options": [
+        "Test case templates",
+        "Test environment setup",
+        "Specifications for different testing scenarios",
+        "Testing tool settings"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of the Wiki in Codebeamer?",
+      "options": [
+        "To provide collaborative documentation and dashboards",
+        "To store code snippets",
+        "To create encyclopedia entries",
+        "To manage project wikis"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are dashboard widgets in Codebeamer?",
+      "options": [
+        "Mobile apps",
+        "Desktop applications",
+        "Configurable elements for displaying project information",
+        "UI components"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the Tracker Tree in Codebeamer?",
+      "options": [
+        "A hierarchical view of tracker items",
+        "A file system",
+        "An organizational chart",
+        "A data structure"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of custom fields in Codebeamer trackers?",
+      "options": [
+        "To add custom code",
+        "To create custom reports",
+        "To extend tracker functionality with specific data",
+        "To define custom workflows"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are tracker permissions used for?",
+      "options": [
+        "Granting tracker access",
+        "Configuring tracker layouts",
+        "Controlling who can view and modify tracker items",
+        "Setting tracker properties"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the Reports feature in Codebeamer used for?",
+      "options": [
+        "Creating status reports",
+        "Creating expense reports",
+        "Generating customized data analysis and visualizations",
+        "Reporting bugs"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of importing requirements in Codebeamer?",
+      "options": [
+        "To backup data",
+        "To load project templates",
+        "To import user accounts",
+        "To bring requirements from external sources into trackers"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What file formats can Codebeamer import requirements from?",
+      "options": [
+        "Only text files",
+        "Only XML",
+        "Excel, Word, and other formats",
+        "Only PDF"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of mass editing in Codebeamer?",
+      "options": [
+        "Mass data deletion",
+        "Editing large files",
+        "Bulk user management",
+        "Modifying multiple tracker items simultaneously"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What are project categories in Codebeamer?",
+      "options": [
+        "User groups",
+        "Ways to organize and group related projects",
+        "Budget categories",
+        "Task categories"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of the History feature in Codebeamer?",
+      "options": [
+        "User login history",
+        "Tracking changes made to tracker items over time",
+        "Project timeline",
+        "Browsing history"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What are suspect links in Codebeamer?",
+      "options": [
+        "References that may be outdated due to changes",
+        "Untrusted external links",
+        "Broken hyperlinks",
+        "Suspicious user activities"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is impact analysis in Codebeamer?",
+      "options": [
+        "Evaluating how changes affect related items",
+        "Performance analysis",
+        "Environmental impact assessment",
+        "Risk analysis"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of tracker item versioning?",
+      "options": [
+        "Version control for code",
+        "Software versioning",
+        "Maintaining historical records of item changes",
+        "Document versioning"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are user stories in Codebeamer?",
+      "options": [
+        "User testimonials",
+        "Employee profiles",
+        "Case studies",
+        "Brief descriptions of features from user perspective"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the difference between system and customer requirements?",
+      "options": [
+        "There is no difference",
+        "System requirements are optional",
+        "System requirements are technical; customer requirements are business needs",
+        "Customer requirements are always more detailed"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is a sprint in Agile methodology within Codebeamer?",
+      "options": [
+        "A time-boxed iteration for completing work",
+        "A fast-track project",
+        "A quick meeting",
+        "An urgent task"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a product backlog in Codebeamer?",
+      "options": [
+        "Archived projects",
+        "Outdated products",
+        "Inventory of products",
+        "A prioritized list of features and requirements"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What are epics in Codebeamer?",
+      "options": [
+        "Large stories",
+        "Major releases",
+        "Critical bugs",
+        "Large bodies of work that can be broken into user stories"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the purpose of story points in Agile?",
+      "options": [
+        "Estimating relative effort or complexity",
+        "Counting story characters",
+        "Grading user satisfaction",
+        "Scoring stories"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a bug tracker used for in Codebeamer?",
+      "options": [
+        "Tracking insects",
+        "Recording and managing software defects",
+        "Tracking tracking errors",
+        "Monitoring system bugs"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of a task tracker in Codebeamer?",
+      "options": [
+        "Managing work items and assignments",
+        "Time tracking",
+        "Resource allocation",
+        "Task scheduling only"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are project members in Codebeamer?",
+      "options": [
+        "Users assigned to work on a project",
+        "Project components",
+        "Shareholders",
+        "Team meetings"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of project permissions?",
+      "options": [
+        "Controlling access to project resources and features",
+        "Project approval",
+        "Project authorization",
+        "Granting licenses"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a filter in Codebeamer?",
+      "options": [
+        "Data cleansing tool",
+        "A saved query to display specific tracker items",
+        "Email filter",
+        "User filter"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of the Review feature?",
+      "options": [
+        "Code reviews only",
+        "Performance reviews",
+        "Collaborative examination and approval of items",
+        "Product reviews"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are transitions in Codebeamer workflows?",
+      "options": [
+        "User role changes",
+        "Data migrations",
+        "Movements between different item statuses",
+        "Project phases"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of tracker item templates?",
+      "options": [
+        "Report templates",
+        "Email templates",
+        "Pre-filled forms for creating similar items quickly",
+        "Design templates"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the Coverage feature in Codebeamer?",
+      "options": [
+        "Network coverage",
+        "Analysis of test coverage for requirements",
+        "Documentation coverage",
+        "Insurance coverage"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What are downstream references?",
+      "options": [
+        "River references",
+        "Items that depend on or are derived from current item",
+        "Lower priority items",
+        "Archived items"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What are upstream references?",
+      "options": [
+        "Future items",
+        "Higher priority items",
+        "Parent items that the current item depends on",
+        "Source control"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of the Traceability Report?",
+      "options": [
+        "Audit trail",
+        "Visualizing relationships between requirements and other items",
+        "User activity tracking",
+        "Tracking shipments"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is field dependency in Codebeamer?",
+      "options": [
+        "Required fields",
+        "Database relationships",
+        "Calculated fields",
+        "Fields whose values or visibility depend on other fields"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What are tracker item statuses?",
+      "options": [
+        "Item types",
+        "Item importance levels",
+        "Priority levels",
+        "Current state or stage in the lifecycle"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the purpose of notifications in Codebeamer?",
+      "options": [
+        "System alerts only",
+        "Warning messages",
+        "Informing users about changes and updates",
+        "Error notifications"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is a comment in the context of tracker items?",
+      "options": [
+        "System logs",
+        "Feedback forms",
+        "User-added notes or discussions on items",
+        "Code comments"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of attachments in Codebeamer?",
+      "options": [
+        "Email attachments",
+        "System files",
+        "Plugin attachments",
+        "Files associated with tracker items"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What are tags used for in Codebeamer?",
+      "options": [
+        "Categorizing and labeling items for easy searching",
+        "Price tags",
+        "HTML tags",
+        "Name tags"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a project administrator role?",
+      "options": [
+        "System administrator",
+        "User with full control over project settings",
+        "Database administrator",
+        "Company administrator"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of the Global Search feature?",
+      "options": [
+        "Searching across all projects and items",
+        "Geographic search",
+        "Full-text search only",
+        "Internet search"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are tracker views?",
+      "options": [
+        "Visual themes",
+        "Different ways to display and interact with tracker data",
+        "View permissions",
+        "User perspectives"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of sorting in tracker views?",
+      "options": [
+        "Categorization",
+        "Organizing items by specific criteria",
+        "Data cleanup",
+        "Filtering data"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What are grouping options in tracker views?",
+      "options": [
+        "Organizing items by field values",
+        "Project grouping",
+        "Team grouping",
+        "User groups"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of the Export feature?",
+      "options": [
+        "Saving tracker data to external formats",
+        "Data backup only",
+        "Moving projects",
+        "Shipping items"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What formats can Codebeamer export data to?",
+      "options": [
+        "Only XML",
+        "Only PDF",
+        "Only CSV",
+        "Excel, Word, PDF, and other formats"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a project homepage in Codebeamer?",
+      "options": [
+        "Company website",
+        "User profile page",
+        "Central dashboard for project information",
+        "Project documentation"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of project settings?",
+      "options": [
+        "Application settings",
+        "User settings",
+        "Configuring project-specific options and behaviors",
+        "System settings"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are swimlanes in Kanban view?",
+      "options": [
+        "Workflow paths",
+        "Priority levels",
+        "Horizontal rows for categorizing work items",
+        "Pool lanes"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of the Document Edit view?",
+      "options": [
+        "PDF editing",
+        "Word processing",
+        "Editing documents",
+        "Inline editing of requirements in hierarchical view"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a tracker configuration?",
+      "options": [
+        "Network configuration",
+        "Settings that define tracker behavior and fields",
+        "User configuration",
+        "System configuration"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What are mandatory fields in a tracker?",
+      "options": [
+        "Fields that must be filled when creating items",
+        "Admin fields",
+        "System fields",
+        "Primary keys"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of field formulas in Codebeamer?",
+      "options": [
+        "Automatically calculating values based on other fields",
+        "Mathematical calculations only",
+        "Data validation",
+        "Field formatting"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is a tracker item ID?",
+      "options": [
+        "Unique identifier for each tracker item",
+        "User ID",
+        "Item type",
+        "Tracker number"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of item descriptions?",
+      "options": [
+        "Product descriptions",
+        "Detailed explanations of tracker items",
+        "User descriptions",
+        "Marketing descriptions"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What are choice fields in Codebeamer?",
+      "options": [
+        "Decision fields",
+        "Multiple choice tests",
+        "Optional fields",
+        "Fields with predefined options to select from"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the purpose of date fields in trackers?",
+      "options": [
+        "Calendar management",
+        "Scheduling only",
+        "Tracking temporal information for items",
+        "Time tracking"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What are reference fields used for?",
+      "options": [
+        "Citations",
+        "Linking to other tracker items",
+        "External links",
+        "Bibliography"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a text field in Codebeamer trackers?",
+      "options": [
+        "String variables",
+        "Text files",
+        "Field for entering textual information",
+        "SMS messages"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of the Priority field?",
+      "options": [
+        "Task ordering",
+        "Indicating importance or urgency of items",
+        "Sorting items",
+        "Ranking items"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the Assigned To field used for?",
+      "options": [
+        "Resource assignment",
+        "User allocation",
+        "Specifying who is responsible for an item",
+        "Task assignment"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of the Start Date field?",
+      "options": [
+        "Indicating when work on an item begins",
+        "Project start",
+        "Deadline",
+        "Calendar start"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the End Date field used for?",
+      "options": [
+        "Indicating when work on an item should finish",
+        "Due date",
+        "Deadline",
+        "Project completion"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are color fields used for in Codebeamer?",
+      "options": [
+        "Design elements",
+        "Visual categorization and identification",
+        "Status indication",
+        "Theming"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of the Severity field in bug tracking?",
+      "options": [
+        "Bug priority",
+        "Punishment severity",
+        "Bug complexity",
+        "Indicating the impact level of a defect"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is a wiki page in Codebeamer?",
+      "options": [
+        "Wikipedia page",
+        "Collaborative document for information sharing",
+        "Web page",
+        "Help page"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is the purpose of branching in Codebeamer?",
+      "options": [
+        "Version control",
+        "Creating parallel development paths",
+        "Organization structure",
+        "Code branching"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What are project reports used for?",
+      "options": [
+        "Analyzing and visualizing project data",
+        "Financial reports",
+        "Status updates",
+        "Management reports"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of the Project Outline?",
+      "options": [
+        "Project summary",
+        "Hierarchical view of project structure",
+        "Project sketch",
+        "Project plan"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is a tracker relationship?",
+      "options": [
+        "Defined connections between different trackers",
+        "User relationships",
+        "Network connections",
+        "Database relationships"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of tracker columns?",
+      "options": [
+        "Layout design",
+        "Table structure",
+        "Data organization",
+        "Defining what information is displayed in views"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What are tracker item links?",
+      "options": [
+        "Connections between related tracker items",
+        "Navigation links",
+        "Hyperlinks",
+        "Web links"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What is the purpose of the Test Coverage Browser?",
+      "options": [
+        "Test statistics",
+        "Analyzing which requirements are covered by tests",
+        "Code coverage",
+        "Browser testing"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "What is platform administration in Codebeamer?",
+      "options": [
+        "Hardware management",
+        "Operating system management",
+        "System-wide configuration and management",
+        "Network administration"
+      ],
+      "correct": 3
+    },
+    {
+      "text": "What is the purpose of user management in Codebeamer?",
+      "options": [
+        "Creating and controlling user accounts and access",
+        "Team management",
+        "HR management",
+        "Customer management"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "What are project templates used to create?",
+      "options": [
+        "Documents",
+        "Trackers only",
+        "Reports",
+        "New projects with predefined structures"
+      ],
+      "correct": 4
+    },
+    {
+      "text": "What is the purpose of Codebeamer's REST API?",
+      "options": [
+        "Performance optimization",
+        "Programmatic integration with external systems",
+        "Sleep mode",
+        "Taking breaks"
+      ],
+      "correct": 2
+    }
+  ]
+}

@@ -30,15 +30,21 @@
       "displayName": "Windchill EBOM-MBOM Transformation",
       "description": "Windchill EBOM-MBOM Transformation"
     },
+        {
+      "filename": "codebeamer-fundamentals-overview-questions.json",
+      "displayName": "Codebeamer Fundamentals Overview",
+      "description": "100 unique MCQs derived from CBFD-OVER Training Guide; exercises & knowledge checks excluded. The pompt used was\ncan you build a set of 100 unique questions from attached pdf and build a json file using the format of the questions.json file attached. The format is text for the question and options for the answers and correct numeric 1,2,3, or 4 for the answer. The 100 questions must have no duplicate questions. Ignore exercises and knowledge check sections"
+    },
+    {
+      "filename": "codebeamer-technical-essentials-questions.json",
+      "displayName": "Codebeamer Technical Essentials",
+      "description": "Test your knowledge of Codebeamer Technical Essentials"
+    },
     {
       "filename": "geography-questions.json",
       "displayName": "Geography Quiz or fun",
       "description": "World geography trivia"
-    },
-    {
-      "filename": "codebeamer-fundamentals-overview-questions.json",
-      "displayName": "Codebeamer Fundamentals Overview Quiz2",
-      "description": "100 unique MCQs derived from CBFD-OVER Training Guide; exercises & knowledge checks excluded. The pompt used was\ncan you build a set of 100 unique questions from attached pdf and build a json file using the format of the questions.json file attached. The format is text for the question and options for the answers and correct numeric 1,2,3, or 4 for the answer. The 100 questions must have no duplicate questions. Ignore exercises and knowledge check sections"
     }
+
   ]
 }

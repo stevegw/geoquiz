@@ -1,6 +1,6 @@
 {
-  "quizName": "Codebeamer Technical Essentials Quiz",
-  "description": "Test your knowledge of Codebeamer Technical Essentials with randomized questions",
+  "quizName": "Codebeamer Technical Essentials",
+  "description": "Test your knowledge of Codebeamer Technical Essentials",
   "questions": [
     {
       "text": "What does ALM stand for?",

@@ -1,0 +1,996 @@
+{
+    "quizName": "Windchill: Automate Change Processes",
+    "description": "Test your knowledge of Windchill life cycles, workflows, and business process automation",
+    "questions": [
+        {
+            "text": "What is a life cycle in Windchill?",
+            "options": [
+                "A versioning system for objects",
+                "A workflow template for approval processes",
+                "An automated graphical model that employs phases and gates to manage objects from conceptualization to obsolescence",
+                "A team template for role assignment"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is the primary difference between life cycle states and versioning?",
+            "options": [
+                "Versioning defines maturity, life cycle states reflect history",
+                "They are the same thing",
+                "Life cycle states are numerical, versioning is alphabetical",
+                "Life cycle states define maturity, while versioning reflects an object's history"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What are the two distinct areas that comprise a life cycle state?",
+            "options": [
+                "Phase and Gate",
+                "Start and End",
+                "Activity and Robot",
+                "Workflow and Template"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "How many template types define Windchill's business process definition?",
+            "options": [
+                "Three",
+                "Five",
+                "Two",
+                "Four"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What do Team templates and Context teams work together to accomplish?",
+            "options": [
+                "Create workflow processes",
+                "Map participants to generic roles used in life cycles and workflows",
+                "Manage queue processing",
+                "Define life cycle states"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What type of transitions do Basic life cycles use?",
+            "options": [
+                "Robot-based transitions",
+                "Workflow-based transitions",
+                "Predefined transitions",
+                "Custom Java transitions"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "Which life cycle type is recommended for most Windchill objects?",
+            "options": [
+                "Routing",
+                "Advanced",
+                "Basic",
+                "Custom"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What do Advanced life cycles use for life cycle movement?",
+            "options": [
+                "Only robot nodes",
+                "Only custom Java code",
+                "Only predefined transitions",
+                "Workflows and predefined transitions"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "Where can you access the Life Cycle Template Administration utility?",
+            "options": [
+                "Only from the Organization context",
+                "From the Utilities page in site, organization, product, or library contexts",
+                "Only from the Site context",
+                "From the workflow editor"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "To apply a life cycle throughout the entire system, where should you create it?",
+            "options": [
+                "In the Library context",
+                "In the Organization context",
+                "In the Product context",
+                "In the Site context"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What is a transition in a life cycle?",
+            "options": [
+                "A robot node",
+                "A workflow template",
+                "A named path from a source state to a destination state",
+                "A team member assignment"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "For Basic life cycles, what is the only means of life cycle movement?",
+            "options": [
+                "Manual user actions",
+                "Workflows",
+                "Transitions",
+                "Robot nodes"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "How many states does the PTC Publications Basic life cycle have?",
+            "options": [
+                "Four",
+                "Five",
+                "Three",
+                "Six"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What object class is recommended to set when creating a life cycle?",
+            "options": [
+                "wt.workflow.WTWorkflow",
+                "wt.fc.WTObject",
+                "wt.part.WTPart",
+                "wt.doc.WTDocument"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "In Windchill versions before 12.1, where must new state names be added?",
+            "options": [
+                "In the workflow template",
+                "In the wt.properties file",
+                "In the life cycle GUI",
+                "In the StateRB.rbInfo file"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "In Windchill 12.1 and later, where can you add new state names?",
+            "options": [
+                "In the Type and Attribute Management utility in the Customize Modeled Enumerations list",
+                "Only in the StateRB.rbInfo file",
+                "In the wt.properties file",
+                "In the workflow editor"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "Which transition type defines the path used when promoting or demoting the state of objects?",
+            "options": [
+                "Revise",
+                "Change",
+                "Promote",
+                "Set State"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "Which transition type defines the path used when creating a new version of an object?",
+            "options": [
+                "Revise",
+                "Promote",
+                "Review",
+                "Change"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What transition type is only valid for promotion requests and used as an interim state?",
+            "options": [
+                "Change",
+                "Review",
+                "Lock",
+                "Promote"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What determines the life cycle template used to manage an object's development?",
+            "options": [
+                "Object initialization rules",
+                "Team templates",
+                "Context teams",
+                "Workflow templates"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What happens if the system cannot locate a life cycle template by the name in the object initialization rules?",
+            "options": [
+                "It prompts the user to select a life cycle",
+                "It uses the default life cycle",
+                "It removes the ability to create the object in the specified context",
+                "It creates a new life cycle automatically"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is state-based versioning?",
+            "options": [
+                "Manual version assignment",
+                "Using different versioning schemes depending on the object life cycle state",
+                "Automatically incrementing version numbers",
+                "Using only numeric versioning"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What are the two choices for state-based version series?",
+            "options": [
+                "Major and Minor",
+                "Sequential and Random",
+                "Numeric and Alphabetic",
+                "Mil Std and Numeric"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "When using state-based versioning, what determines the initial versioning scheme?",
+            "options": [
+                "The organization default",
+                "The version series in the object initialization rules",
+                "The version series identified for the first state",
+                "The user's preference"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "In Advanced life cycles, what do roles enable you to do?",
+            "options": [
+                "Create workflows",
+                "Set queue priorities",
+                "Define transitions",
+                "Reuse life cycles and workflow templates across many product lines or libraries"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What is the most flexible, common, and recommended method of conducting role resolution?",
+            "options": [
+                "Resolving roles with teams",
+                "Resolving roles to users directly",
+                "Resolving roles to groups",
+                "Resolving roles to organizations"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What type of access control is life cycle access control?",
+            "options": [
+                "Deny-only",
+                "Grant-only",
+                "Inherited from domain",
+                "Both grant and deny"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What permissions are all roles automatically given in life cycle access control?",
+            "options": [
+                "Delete",
+                "Read",
+                "Modify",
+                "Full Control"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What can override life cycle access control rules?",
+            "options": [
+                "Absolute deny rules from the domain or security labels",
+                "Team template permissions",
+                "Workflow settings",
+                "User preferences"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "For each state in an Advanced life cycle, where can you assign workflow templates?",
+            "options": [
+                "Only in the gate",
+                "Phase only, gate only, both phase and gate, or no workflows",
+                "Only in the phase",
+                "Only in both phase and gate together"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "When creating a new advanced life cycle state, what workflows are added by default?",
+            "options": [
+                "Custom workflow for phase only",
+                "No workflows",
+                "Submit workflow for phase and Review workflow for gate",
+                "Review workflow for both phase and gate"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What should you always do after adding a new advanced life cycle state to avoid unattended process startup?",
+            "options": [
+                "Save immediately",
+                "Use the Clear button",
+                "Assign roles",
+                "Set deadlines"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What is a best practice regarding the number of states in a life cycle?",
+            "options": [
+                "Use a minimum of states to simplify access rights and transitions",
+                "Use as many states as possible",
+                "Always use exactly five states",
+                "Use different numbers for each object type"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What should you do with out-of-the-box life cycles before customizing them?",
+            "options": [
+                "Export them",
+                "Do not modify them; keep them as a reference and create new ones with a save-as action",
+                "Modify them directly",
+                "Delete them"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What prevents an object from modification in life cycle gates?",
+            "options": [
+                "User permissions",
+                "Team templates",
+                "Life cycle gates prevent modification",
+                "Workflow robots"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What are workflow templates used to establish?",
+            "options": [
+                "Object versions",
+                "The specific events and tasks that occur in each life cycle state",
+                "Life cycle states",
+                "Team memberships"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What are the types of nodes used in workflows?",
+            "options": [
+                "Create, Read, Update, and Delete",
+                "Activity, Process, Connector, Robot, and Terminal",
+                "Start, Stop, Pause, Resume, and End",
+                "Input, Output, Decision, and Action"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What does an Activity node define in a workflow?",
+            "options": [
+                "User assignments and participation",
+                "System tasks",
+                "Process termination",
+                "Queue management"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What does a Connector node define in a workflow?",
+            "options": [
+                "Email notifications",
+                "Robot actions",
+                "User tasks",
+                "Process execution requirements"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What does a Robot node do in a workflow?",
+            "options": [
+                "Automates system tasks",
+                "Assigns tasks to users",
+                "Defines transitions",
+                "Terminates processes"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What does a Terminal node do in a workflow?",
+            "options": [
+                "Assigns activities",
+                "Terminates a process sequence",
+                "Sends notifications",
+                "Starts a process"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "In the Modular workflow approach, what is the main benefit?",
+            "options": [
+                "Automatic state changes",
+                "Fewer roles required",
+                "Workflow template reuse",
+                "Faster execution"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "In the Single workflow approach, where is the complete workflow mapped?",
+            "options": [
+                "Across all phases",
+                "In the final state",
+                "In each gate",
+                "In the phase of the first state"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What is an advantage of the Single workflow approach?",
+            "options": [
+                "Easier to reuse",
+                "Lower server load",
+                "Better flexibility on event configuration",
+                "Works better with gates"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is a disadvantage of the Single workflow approach?",
+            "options": [
+                "Requires more roles",
+                "Extra server load",
+                "Cannot use robots",
+                "Difficult to maintain"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What approach should be used when all state move procedures are not formalized?",
+            "options": [
+                "Combined approach",
+                "Change and Promotion Request approach",
+                "Single approach",
+                "Modular approach"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What is an advantage of the Change and Promotion Request approach?",
+            "options": [
+                "Requires advanced life cycles",
+                "More workflow templates needed",
+                "No need to associate a workflow template to a business object",
+                "More complex configuration"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "How do you create a new workflow template?",
+            "options": [
+                "From the object initialization rules",
+                "Open the Workflow Template Administration utility and click the New template icon",
+                "From the life cycle editor",
+                "From the team template page"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What is the Responsible Role in workflow template properties?",
+            "options": [
+                "The role that creates workflows",
+                "The role that terminates processes",
+                "The backup role used during role resolution issues and recipient of deadline or error notifications",
+                "The role that approves all tasks"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "How many tabs are in the workflow template properties?",
+            "options": [
+                "Six",
+                "Eight",
+                "Five",
+                "Seven"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What does an assigned activity node represent?",
+            "options": [
+                "An automated system task",
+                "A step where a user or group must perform a task or make a business decision",
+                "A queue entry",
+                "A process termination point"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "Where do users receive assigned activities?",
+            "options": [
+                "In the life cycle view",
+                "In their Tasks table",
+                "In email only",
+                "In the workflow editor"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What is special about an Ad Hoc activity?",
+            "options": [
+                "It has a special screen so the recipient can create and assign additional activities to other users at runtime",
+                "It bypasses all roles",
+                "It automatically completes",
+                "It requires approval"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "How many tabs are in the activity Properties?",
+            "options": [
+                "Nine",
+                "Seven",
+                "Ten",
+                "Eight"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What does the Start connector represent?",
+            "options": [
+                "A decision point",
+                "The starting point in a process",
+                "An approval gate",
+                "The end of a process"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "How many Start connectors can each process have?",
+            "options": [
+                "As many as needed",
+                "Multiple",
+                "One",
+                "Two"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "When does the And connector allow the process to continue?",
+            "options": [
+                "Immediately",
+                "When any incoming link is fired",
+                "When every incoming link is fired",
+                "After a time delay"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "When does the Or connector allow the process to continue?",
+            "options": [
+                "When any incoming link is fired",
+                "When all incoming links are fired",
+                "After a deadline",
+                "After user approval"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What happens to incomplete activities when an Or connector fires?",
+            "options": [
+                "They continue running",
+                "They generate errors",
+                "They are reassigned",
+                "They are terminated and removed from the assignee's task list"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What does the Conditional router use to determine which path to follow?",
+            "options": [
+                "Time delays",
+                "Predefined rules",
+                "User input",
+                "Custom criteria specified in Java code"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What does the Threshold connector do?",
+            "options": [
+                "Waits for all links",
+                "Terminates the process",
+                "Allows the process to continue after a set number of incoming links have been fired",
+                "Waits for any link"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is the difference between terminal nodes and connectors?",
+            "options": [
+                "Terminals are faster",
+                "Terminals do not have outgoing links",
+                "Terminals use workflows",
+                "Terminals require approval"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What does the Ground terminal do?",
+            "options": [
+                "Requires user approval",
+                "Does not have outgoing links but permits active nodes in parallel branches to continue",
+                "Sends notifications",
+                "Stops the entire process"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What does the End terminal do?",
+            "options": [
+                "Stops the process entirely, ending all processing and active activities",
+                "Creates a new version",
+                "Sends notifications",
+                "Pauses the process"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "Must all workflows eventually lead to an End terminal?",
+            "options": [
+                "Yes, or the process will not stop without administrative intervention",
+                "Only if using advanced life cycles",
+                "No, they can end with Ground terminals",
+                "No, they can end with any terminal"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What do links define in workflows?",
+            "options": [
+                "User assignments",
+                "Life cycle states",
+                "The flow control among nodes and which actions are performed",
+                "Team memberships"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What are the two most common actions selected in link properties?",
+            "options": [
+                "Enable and Disable",
+                "Complete and Terminate",
+                "Start and Fire",
+                "Approve and Reject"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is the most common event in link properties?",
+            "options": [
+                "Start",
+                "Approve",
+                "Complete",
+                "Disable"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is a loop link used for?",
+            "options": [
+                "To send notifications",
+                "To terminate processes",
+                "To reenable nodes in a loop so they may be executed again",
+                "To assign roles"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What are Block processes used for?",
+            "options": [
+                "To assign permissions",
+                "To simplify complex workflows by grouping related activities into smaller process blocks",
+                "To create standalone workflows",
+                "To terminate workflows"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "Can Block processes be referenced by other workflow templates?",
+            "options": [
+                "Yes, by any workflow",
+                "No, only by the parent workflow template",
+                "Yes, but only with special permissions",
+                "Yes, but only in the same organization"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What are Proxy processes used for?",
+            "options": [
+                "To assign tasks",
+                "To delete workflows",
+                "To create embedded workflows",
+                "To simplify complex workflows by referencing other standalone workflow templates stored in Windchill"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "Can Proxy processes be referenced by multiple parent workflow templates?",
+            "options": [
+                "Only in the same product",
+                "Yes, several parent workflow templates can reference these workflow processes",
+                "No, only one parent",
+                "Only in the same organization"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What is the primary purpose of using robots in workflows?",
+            "options": [
+                "To create life cycles",
+                "To enforce consistency and improve process efficiency by automating common process tasks",
+                "To assign user tasks",
+                "To define transitions"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What are the four basic robot types?",
+            "options": [
+                "Activity, Process, Connector, Terminal",
+                "Create, Read, Update, Delete",
+                "Notification, Checkpoint, Method, Timer",
+                "Start, Stop, Pause, Resume"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What knowledge is required to use advanced robots effectively?",
+            "options": [
+                "SQL and database design",
+                "HTML and CSS",
+                "Only workflow configuration",
+                "Java, Info*Engine, and the Windchill API"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What are Windchill background queues used for?",
+            "options": [
+                "For processing many tasks like email notifications, life cycles, and workflows",
+                "Only for email notifications",
+                "Only for workflows",
+                "Only for indexing"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "When are background queues created?",
+            "options": [
+                "When first workflow runs",
+                "Automatically during installation",
+                "Manually by administrators",
+                "When first user logs in"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What file controls the configuration of all background queues?",
+            "options": [
+                "server.xml",
+                "workflow.properties",
+                "queue.config",
+                "wt.properties"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What is tuning in the context of Windchill workflows?",
+            "options": [
+                "Creating new workflows",
+                "Deleting old workflows",
+                "Adjusting the server to improve response time and maximize throughput in the background",
+                "Assigning user permissions"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "Where can you access the Queue Management utility?",
+            "options": [
+                "From the life cycle page",
+                "From the Site Utilities page",
+                "From the team template page",
+                "From the workflow editor"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What are the three primary Windchill queues used for processing workflow tasks?",
+            "options": [
+                "EmailQueue, NotificationQueue, TaskQueue",
+                "StartQueue, ProcessQueue, EndQueue",
+                "WfPropagationQueue, WfUserWorkQueue, WfScheduleQueue",
+                "ActivityQueue, RobotQueue, ConnectorQueue"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What does the WfPropagationQueue handle?",
+            "options": [
+                "Email notifications",
+                "Robot actions",
+                "Connectors, assigned activities, and links state changes",
+                "Timed events"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What does the WfUserWorkQueue handle?",
+            "options": [
+                "Instantiating workflow robots and executing workflow robot actions",
+                "User login",
+                "Email sending",
+                "Life cycle transitions"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What does the WfScheduleQueue handle?",
+            "options": [
+                "User assignments",
+                "All timed events including deadline checks",
+                "Robot instantiation",
+                "Email notifications"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What do failed entries in workflow queues indicate?",
+            "options": [
+                "Queue is full",
+                "Normal operation",
+                "Something failed to process correctly",
+                "Server is restarting"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is the default type for all workflow queues?",
+            "options": [
+                "Schedule type",
+                "Dedicated type",
+                "Pool type",
+                "Process type"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "How do pool queues process entries?",
+            "options": [
+                "In batches",
+                "Sequentially on multiple servers",
+                "One at a time",
+                "In parallel, dynamically generating threads"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What is the default value for wt.queue.execEntriesCount property?",
+            "options": [
+                "12",
+                "24",
+                "4",
+                "6"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What happens to daemon threads when there are no more entries to process?",
+            "options": [
+                "They continue running",
+                "They become idle and are removed after a set idle time",
+                "They hibernate",
+                "They restart"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What is the default idle time before daemon threads are removed?",
+            "options": [
+                "Thirty seconds",
+                "Ten seconds",
+                "Five seconds",
+                "One second"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is queue pooling?",
+            "options": [
+                "A pool of multiple WfUserWorkQueue and WfPropagationQueue queues",
+                "A single large queue",
+                "A backup queue system",
+                "A temporary queue"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What property controls the number of UserWork queues in queue pooling?",
+            "options": [
+                "wt.queue.userWorkSize",
+                "wt.workflow.engine.queueSize",
+                "wt.workflow.engine.poolCount",
+                "wt.workflow.engine.userWorkPoolSize"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What are dedicated queues?",
+            "options": [
+                "Queues tied to specific workflow templates",
+                "Queues for email only",
+                "Temporary queues",
+                "Queues for administrators"
+            ],
+            "correct": 1
+        },
+        {
+            "text": "What must you do first to enable dedicated queue processing?",
+            "options": [
+                "Create a new workflow",
+                "Restart all users",
+                "Set the wt.workflow.engine.dedicatedQueueMode property in wt.properties",
+                "Clear all queues"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What is the default value for wt.workflow.engine.dedicatedQueueMode?",
+            "options": [
+                "userWork",
+                "all",
+                "none",
+                "propagation"
+            ],
+            "correct": 3
+        },
+        {
+            "text": "What does the 'All' value mean for wt.workflow.engine.dedicatedQueueMode?",
+            "options": [
+                "All queues are pool queues",
+                "All queues are disabled",
+                "All workflows use shared queues",
+                "Dedicated WfUserWorkQueue and WfPropagationQueue for workflow templates with dedicated queue flag enabled"
+            ],
+            "correct": 4
+        },
+        {
+            "text": "What property determines if newly created workflow templates have dedicated queues by default?",
+            "options": [
+                "wt.workflow.engine.defaultQueue",
+                "wt.workflow.engine.dedicatedQueue",
+                "wt.workflow.engine.newQueueMode",
+                "wt.workflow.engine.queueType"
+            ],
+            "correct": 2
+        },
+        {
+            "text": "What does wt.workflow.engine.dedicatedQueuePerProcess property do when set to true?",
+            "options": [
+                "Disables queue creation",
+                "Creates one queue for all processes",
+                "Creates a new queue for every instance of a process initiated from a template with Has Dedicated Queue flag",
+                "Shares queues across all templates"
+            ],
+            "correct": 3
+        }
+    ]
+}

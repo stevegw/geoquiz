@@ -318,7 +318,7 @@ icon-*.png              - App icons for PWA installation
 ```
  prompts used to generate questions
 
- can you build a set of 100 unique questions from attached pdf to a schema like the attached geography-questions.json file. The questions are textual and options for the answers will a numeric index 1,2,3, or 4 for the answer and random. The 100 questions must have no duplicate questions. The questions should ignore exercises and knowledge check sections in the pdf. The answers options should be random through 1,2,3 and 4 
+ can you build a set of 100 unique questions from attached pdf to a schema like the attached geography-questions.json file. The questions are textual and options for the answers will a numeric index 1,2,3, or 4 for the answer and random. The 100 questions must have no duplicate questions. The questions should ignore exercises and knowledge check sections in the pdf. The answers options positions should be random through 1,2,3 and 4 
 
 
  ```

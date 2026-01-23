@@ -191,12 +191,52 @@
         .option.incorrect {
             background: #f8d7da;
             border-color: #dc3545;
+            position: relative;
+        }
+
+        .option.incorrect::after {
+            content: '✗ Incorrect';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #dc3545;
+            color: white;
+            font-size: 0.75em;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        body.large-font .option.incorrect::after {
+            font-size: 0.85em;
+            padding: 5px 10px;
         }
 
         .option.wrong-hint {
             background: #fff3cd;
             border-color: #ffc107;
             animation: shake 0.5s;
+            position: relative;
+        }
+
+        .option.wrong-hint::after {
+            content: '✗ Incorrect';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #dc3545;
+            color: white;
+            font-size: 0.75em;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        body.large-font .option.wrong-hint::after {
+            font-size: 0.85em;
+            padding: 5px 10px;
         }
 
         @keyframes shake {
@@ -836,7 +876,7 @@
         <button onclick="updateApp()">Update Now</button>
     </div>
 
-    <div class="version-info">v52.13</div>
+    <div class="version-info">v52.14</div>
 
     <div class="quiz-container">
         <div class="header-controls">
@@ -923,7 +963,7 @@
                 <div class="settings-option">
                     <h4>ℹ️ App Information</h4>
                     <p>
-                        <strong>Version:</strong> v52.5<br>
+                        <strong>Version:</strong> v52.14<br>
                         <strong>Platform:</strong> <span id="platformInfo"></span><br>
                         <strong>Mode:</strong> <span id="modeInfo"></span>
                     </p>
@@ -1048,7 +1088,7 @@
                             window.navigator.standalone === true;
 
         console.log('=== App Version Info ===');
-        console.log('Version: v52.5');
+        console.log('Version: v52.14');
         console.log('Platform: iOS =', isIOS);
         console.log('Standalone Mode (PWA) =', isStandalone);
         console.log('User Agent:', navigator.userAgent);
@@ -1104,7 +1144,7 @@
                     .from('app_sessions')
                     .insert({
                         user_id: userId,
-                        app_version: 'v52.6',
+                        app_version: 'v52.14',
                         platform: isIOS ? 'iOS' : (navigator.platform || 'Unknown'),
                         is_pwa: isStandalone,
                         is_ios: isIOS,
